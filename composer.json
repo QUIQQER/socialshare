@@ -1,0 +1,30 @@
+{
+    "name" : "quiqqer/socialshare",
+    "type" : "quiqqer-module",
+    "description" : "QUIQQER social share buttons",
+    "version" : "dev-master",
+    "license" : "GPL-3.0+",
+
+    "authors" : [{
+        "name": "Michael Danielczok",
+        "email": "michael@pcsg.de",
+        "homepage": "http://www.pcsg.de",
+        "role": "Developer"
+    }],
+
+    "support" : {
+        "email": "support@pcsg.de",
+        "url": "http://www.pcsg.de"
+    },
+
+    "require": {
+        "php" : ">=5.3",
+        "quiqqer/quiqqer" : "*@dev"
+    },
+
+    "autoload": {
+        "psr-0" : {
+            "QUI" : "src/"
+        }
+    }
+}
