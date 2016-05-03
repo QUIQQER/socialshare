@@ -17,5 +17,5 @@ use QUI\Socialshare\Socialshare;
 
 class Pinterest extends Socialshare
 {
-
+    
 }

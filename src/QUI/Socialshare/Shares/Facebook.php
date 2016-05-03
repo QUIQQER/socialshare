@@ -14,8 +14,23 @@ use QUI\Socialshare\Socialshare;
  * @author  www.pcsg.de (Michael Danielczok)
  * @package quiqqer/socialshare
  */
-
 class Facebook extends Socialshare
 {
+    /**
+     * @return string
+     */
+    public function getShareUrl()
+    {
 
+    }
+
+    public function getLabel()
+    {
+        // TODO: Implement getLabel() method.
+    }
+    
+    public function getLogo()
+    {
+        // TODO: Implement getLogo() method.
+    }
 }
