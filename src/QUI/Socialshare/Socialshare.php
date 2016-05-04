@@ -6,7 +6,7 @@
 
 namespace QUI\Socialshare;
 
-use QUI\QDOM;
+use QUI\Control;
 
 /**
  * Social share class
@@ -14,7 +14,7 @@ use QUI\QDOM;
  * @author  www.pcsg.de (Michael Danielczok)
  * @package quiqqer/socialshare
  */
-abstract class Socialshare extends QDOM
+abstract class Socialshare extends Control
 {
     private $iconLogo;
 
@@ -25,9 +25,10 @@ abstract class Socialshare extends QDOM
             'showLabel' => true,
             'showCount' => true,
             'showIcon'  => true,
+            'nodeName'  => 'a'
         ));
 
-        $this->setAttributes($params);
+        parent::__construct($params);
     }
 
     /**
@@ -70,12 +71,33 @@ abstract class Socialshare extends QDOM
      *
      * @return string
      */
-    public function create()
+    public function getBody()
     {
-        return '<div class="quiqqer-socialshare">' .
-        $this->createLogo() .
-        $this->createLabel() .
-        '</div>';
+        $body = '';
+
+        $body .= $this->createLogo();
+        if ($this->showLabel())
+        {
+            $body .= $this->createLabel();
+        }
+
+        $this->setAttribute('href', $this->getShareUrl());
+        $this->setAttribute('target', '_blank');
+
+        $this->addCSSClass('quiqqer-socialshare');
+
+        switch ($this->getAttribute('theme')) {
+            case'classic':
+                $this->addCSSClass('quiqqer-socialshare-classic');
+                $this->addCSSFile('quiqqer-socialshare-classic');
+                break;
+            case 'flat':
+                $this->addCSSClass('quiqqer-socialshare-flat');
+                $this->addCSSFile('quiqqer-socialshare-flat');
+                break;
+        }
+
+        return $body;
     }
 
     /**
@@ -113,6 +135,9 @@ abstract class Socialshare extends QDOM
                 $this->setAttribute('theme', $theme);
                 break;
             case 'flat':
+                $this->setAttribute('theme', $theme);
+                break;
+            case 'custom':
                 $this->setAttribute('theme', $theme);
                 break;
             default:

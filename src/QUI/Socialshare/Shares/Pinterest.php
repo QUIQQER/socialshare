@@ -3,9 +3,8 @@
  * This file contains QUI\Socialshare\Shares\Pinterest
  */
 
-namespace QUI\Socialshare\Socialshare;
+namespace QUI\Socialshare\Shares;
 
-use QUI\QDOM;
 use QUI;
 use QUI\Socialshare\Socialshare;
 
