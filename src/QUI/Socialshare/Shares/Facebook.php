@@ -6,6 +6,7 @@
 namespace QUI\Socialshare\Shares;
 
 use QUI\QDOM;
+use QUI;
 use QUI\Socialshare\Socialshare;
 
 /**
@@ -16,21 +17,31 @@ use QUI\Socialshare\Socialshare;
  */
 class Facebook extends Socialshare
 {
-    /**
-     * @return string
-     */
+    public function getCountUrl()
+    {
+        // TODO: Implement getCountUrl() method.
+    }
+
+    public function getCount()
+    {
+        // TODO: Implement getCount() method.
+    }
+
     public function getShareUrl()
     {
+        
 
+        $shareUrl = "ich will die URL von aktueler Seite";
+        return 'https://facebook.com/sharer/sharer.php?u=' . $shareUrl;
     }
 
     public function getLabel()
     {
-        // TODO: Implement getLabel() method.
+        return QUI::getLocale()->get('quiqqer/socialshare', 'label-facebook');
     }
     
     public function getLogo()
     {
-        // TODO: Implement getLogo() method.
+        return 'fa fa-facebook';
     }
 }

@@ -6,6 +6,7 @@
 namespace QUI\Socialshare\Socialshare;
 
 use QUI\QDOM;
+use QUI;
 use QUI\Socialshare\Socialshare;
 
 /**
@@ -14,8 +15,31 @@ use QUI\Socialshare\Socialshare;
  * @author  www.pcsg.de (Michael Danielczok)
  * @package quiqqer/socialshare
  */
-
 class Pinterest extends Socialshare
 {
-    
+    public function getCountUrl()
+    {
+        // TODO: Implement getCountUrl() method.
+    }
+
+    public function getCount()
+    {
+        // TODO: Implement getCount() method.
+    }
+
+    public function getShareUrl()
+    {
+        $shareUrl = "brauche die URL von aktueler Seite";
+        return '' . $shareUrl;
+    }
+
+    public function getLogo()
+    {
+        return 'fa pinterest';
+    }
+
+    public function getLabel()
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'label-pinterest');
+    }
 }

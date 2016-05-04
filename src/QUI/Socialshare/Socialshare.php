@@ -16,6 +16,8 @@ use QUI\QDOM;
  */
 abstract class Socialshare extends QDOM
 {
+    private $iconLogo;
+
     public function __construct($params = array())
     {
         $this->setAttributes(array(
@@ -138,20 +140,19 @@ abstract class Socialshare extends QDOM
         $this->setAttribute('showLabel', false);
     }
 
-
     /**
      * Show or hide font awesome icon
      *
      * @param bool $show
      *
-     * @return ??????
-     * das gleich wie oben
+     * @return void
      */
     public function showIcon($show)
     {
-        if ($show === false) {
+        if ($show === true) {
+            $this->setAttribute('showIcon', true);
+        } else {
             $this->setAttribute('showIcon', false);
         }
     }
 }
-

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locales>
+    <groups name="quiqqer/socialshare" datatype="php">
+        <locale name="label-facebook">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
+        <locale name="label-pinterest">
+            <de><![CDATA[Pin it]]></de>
+            <en><![CDATA[Pin it]]></en>
+            <pl><![CDATA[Pin it]]></pl>
+        </locale>
+    </groups>
+</locales>
