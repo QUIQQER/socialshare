@@ -26,6 +26,11 @@ class Facebook extends Socialshare
         // TODO: Implement getCount() method.
     }
 
+    public function getName()
+    {
+        return 'quiqqer-socialshare-facebook';
+    }
+
     public function getShareUrl()
     {
         $Request = QUI::getRequest();

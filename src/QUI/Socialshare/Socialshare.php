@@ -16,7 +16,6 @@ use QUI\Control;
  */
 abstract class Socialshare extends Control
 {
-    private $iconLogo;
 
     public function __construct($params = array())
     {
@@ -67,6 +66,13 @@ abstract class Socialshare extends Control
     abstract public function getLabel();
 
     /**
+     * Set the name (facebook, twitter, etc.)
+     *
+     * @return string
+     */
+    abstract public function getName();
+
+    /**
      * Create the share button
      *
      * @return string
@@ -75,25 +81,28 @@ abstract class Socialshare extends Control
     {
         $body = '';
 
-        $body .= $this->createLogo();
-        if ($this->showLabel())
-        {
+        if ($this->getAttribute('showIcon') === true) {
+            $body .= $this->createLogo();
+        }
+        if ($this->getAttribute('showLabel') === true) {
             $body .= $this->createLabel();
         }
 
         $this->setAttribute('href', $this->getShareUrl());
         $this->setAttribute('target', '_blank');
 
-        $this->addCSSClass('quiqqer-socialshare');
+        $this->addCSSClass('quiqqer-socialshare '.$this->getName());
+        $this->addCSSFile(dirname(__FILE__) . '/Socialshare.css');
+
 
         switch ($this->getAttribute('theme')) {
             case'classic':
                 $this->addCSSClass('quiqqer-socialshare-classic');
-                $this->addCSSFile('quiqqer-socialshare-classic');
+                $this->addCSSFile(dirname(__FILE__) . '/Themes/Classic.css');
                 break;
             case 'flat':
                 $this->addCSSClass('quiqqer-socialshare-flat');
-                $this->addCSSFile('quiqqer-socialshare-flat');
+                $this->addCSSFile(dirname(__FILE__) . '/Themes/Flat.css');
                 break;
         }
 
@@ -146,7 +155,7 @@ abstract class Socialshare extends Control
     }
 
     /**
-     * Setting to show the label
+     * Show the label
      *
      * @return void
      */
@@ -156,7 +165,7 @@ abstract class Socialshare extends Control
     }
 
     /**
-     * Setting to hide the label
+     * hide the label
      *
      * @return void
      */
@@ -166,18 +175,22 @@ abstract class Socialshare extends Control
     }
 
     /**
-     * Show or hide font awesome icon
-     *
-     * @param bool $show
+     * Show font awesome icon
      *
      * @return void
      */
-    public function showIcon($show)
+    public function showIcon()
     {
-        if ($show === true) {
-            $this->setAttribute('showIcon', true);
-        } else {
-            $this->setAttribute('showIcon', false);
-        }
+        $this->setAttribute('showIcon', true);
+    }
+
+    /**
+     * Hide font awesome icon
+     *
+     * @return void
+     */
+    public function hideIcon()
+    {
+        $this->setAttribute('showIcon', false);
     }
 }

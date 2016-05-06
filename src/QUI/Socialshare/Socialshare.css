@@ -1,0 +1,39 @@
+a.quiqqer-socialshare {
+    display: inline-block;
+    text-decoration: none;
+    padding: 4px 10px;
+    color: #fff;
+    vertical-align: top;
+    margin: 0.3em;
+    transition: background 200ms ease-in-out 0s, border-color 200ms ease-in-out 0s;
+    font-weight: normal;
+}
+
+.quiqqer-socialshare-logo {
+    padding-right: 4px;
+    width: 1em;
+    vertical-align: middle;
+    font-size: 1.5em;
+}
+
+.quiqqer-socialshare-label {
+
+}
+
+/* Facebook */
+.quiqqer-socialshare-facebook {
+    background: #3b5998;
+    border: 1px solid #344e86;
+}
+.quiqqer-socialshare-facebook:hover {
+    background: #2d4373;
+}
+
+/* Pinterest */
+.quiqqer-socialshare-pinterest {
+    background: #cb2027;
+    border: 1px solid #b51d23;
+}
+.quiqqer-socialshare-pinterest:hover {
+    background: #9f191f;
+}

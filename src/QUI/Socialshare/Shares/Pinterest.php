@@ -26,15 +26,23 @@ class Pinterest extends Socialshare
         // TODO: Implement getCount() method.
     }
 
+    public function getName()
+    {
+        return 'quiqqer-socialshare-pinterest';
+    }
+
     public function getShareUrl()
     {
-        $shareUrl = "brauche die URL von aktueler Seite";
-        return '' . $shareUrl;
+        $Request = QUI::getRequest();
+        $baseurl = $Request->getScheme() . '://' . $Request->getHttpHost() . $Request->getBasePath();
+        $baseurl = $baseurl . $_SERVER['REQUEST_URI'];
+
+        return 'https://pinterest.com/pin/create/button/?url=' . $baseurl;
     }
 
     public function getLogo()
     {
-        return 'fa pinterest';
+        return 'fa fa-pinterest';
     }
 
     public function getLabel()
