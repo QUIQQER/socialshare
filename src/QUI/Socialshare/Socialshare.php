@@ -20,10 +20,10 @@ abstract class Socialshare extends Control
     public function __construct($params = array())
     {
         $this->setAttributes(array(
-            'theme'     => 'classic',
-            'showLabel' => true,
-            'showCount' => true,
+            'theme'     => 'flat',
+            'showLabel' => false,
             'showIcon'  => true,
+            'showCount' => true,
             'nodeName'  => 'a'
         ));
 
@@ -85,6 +85,9 @@ abstract class Socialshare extends Control
             $body .= $this->createLogo();
         }
         if ($this->getAttribute('showLabel') === true) {
+            if ($this->getAttribute('showIcon')) {
+                $this->addCSSClass('quiqqer-socialshare-icon-spacing');
+            }
             $body .= $this->createLabel();
         }
 
@@ -105,6 +108,14 @@ abstract class Socialshare extends Control
             case 'flat':
                 $this->addCSSClass('quiqqer-socialshare-flat');
                 $this->addCSSFile(dirname(__FILE__) . '/Themes/Flat.css');
+                break;
+            case 'minimalistic':
+                $this->addCSSClass('quiqqer-socialshare-minimalistic');
+                $this->addCSSFile(dirname(__FILE__) . '/Themes/Minimalistic.css');
+                break;
+            default:
+                $this->addCSSClass('quiqqer-socialshare-classic');
+                $this->addCSSFile(dirname(__FILE__) . '/Themes/Classic.css');
                 break;
         }
 

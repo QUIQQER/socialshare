@@ -16,19 +16,19 @@ use QUI\Socialshare\Socialshare;
  */
 class Facebook extends Socialshare
 {
-    public function getCountUrl()
-    {
-        // TODO: Implement getCountUrl() method.
-    }
-
-    public function getCount()
-    {
-        // TODO: Implement getCount() method.
-    }
-
     public function getName()
     {
         return 'quiqqer-socialshare-facebook';
+    }
+
+    public function getLabel()
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'label-facebook');
+    }
+
+    public function getLogo()
+    {
+        return 'fa fa-facebook';
     }
 
     public function getShareUrl()
@@ -40,13 +40,13 @@ class Facebook extends Socialshare
         return 'https://facebook.com/sharer/sharer.php?u=' . $baseurl;
     }
 
-    public function getLabel()
+    public function getCount()
     {
-        return QUI::getLocale()->get('quiqqer/socialshare', 'label-facebook');
+        // TODO: Implement getCount() method.
     }
 
-    public function getLogo()
+    public function getCountUrl()
     {
-        return 'fa fa-facebook';
+        // TODO: Implement getCountUrl() method.
     }
 }

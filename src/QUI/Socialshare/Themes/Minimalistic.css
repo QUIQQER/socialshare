@@ -1,0 +1,42 @@
+a.quiqqer-socialshare {
+    padding: 4px 2px;
+}
+
+.quiqqer-socialshare-icon-spacing  span:first-child {
+    margin-right: .15em;
+}
+
+/* Facebook */
+a.quiqqer-socialshare-facebook {
+    background: none;
+    color: #3b5998;
+    border: none;
+}
+a.quiqqer-socialshare-facebook:hover {
+    color: #2d4373;
+    background: none;
+}
+
+/* Pinterest */
+a.quiqqer-socialshare-pinterest {
+    color: #cb2027;
+    background: none;
+    border: none;
+}
+a.quiqqer-socialshare-pinterest:hover {
+    color: #9f191f;
+    background: none;
+}
+
+/* Tweeter */
+
+a.quiqqer-socialshare-twitter {
+    background: none;
+    color: #00aced;
+    border: none;
+}
+
+a.quiqqer-socialshare-twitter:hover {
+    color: #0099d4;
+    background: none;
+}

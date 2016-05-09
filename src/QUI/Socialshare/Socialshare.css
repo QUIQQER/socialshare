@@ -5,19 +5,23 @@ a.quiqqer-socialshare {
     color: #fff;
     vertical-align: top;
     margin: 0.3em;
-    transition: background 200ms ease-in-out 0s, border-color 200ms ease-in-out 0s;
+    transition: all 200ms ease-in-out;
     font-weight: normal;
 }
 
 .quiqqer-socialshare-logo {
-    padding-right: 4px;
     width: 1em;
     vertical-align: middle;
     font-size: 1.5em;
+    text-align: center;
 }
 
 .quiqqer-socialshare-label {
 
+}
+
+.quiqqer-socialshare-icon-spacing  span:first-child {
+    margin-right: .3em;
 }
 
 /* Facebook */
@@ -36,4 +40,15 @@ a.quiqqer-socialshare {
 }
 .quiqqer-socialshare-pinterest:hover {
     background: #9f191f;
+}
+
+/* Tweeter */
+
+.quiqqer-socialshare-twitter {
+    background: #00aced;
+    border: 1px solid #0099d4;
+}
+
+.quiqqer-socialshare-twitter:hover {
+    background: #0087ba;
 }

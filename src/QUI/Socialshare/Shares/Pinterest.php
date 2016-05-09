@@ -16,21 +16,21 @@ use QUI\Socialshare\Socialshare;
  */
 class Pinterest extends Socialshare
 {
-    public function getCountUrl()
-    {
-        // TODO: Implement getCountUrl() method.
-    }
-
-    public function getCount()
-    {
-        // TODO: Implement getCount() method.
-    }
-
     public function getName()
     {
         return 'quiqqer-socialshare-pinterest';
     }
 
+    public function getLabel()
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'label-pinterest');
+    }
+
+    public function getLogo()
+    {
+        return 'fa fa-pinterest';
+    }
+    
     public function getShareUrl()
     {
         $Request = QUI::getRequest();
@@ -39,14 +39,14 @@ class Pinterest extends Socialshare
 
         return 'https://pinterest.com/pin/create/button/?url=' . $baseurl;
     }
-
-    public function getLogo()
+    
+    public function getCount()
     {
-        return 'fa fa-pinterest';
+        // TODO: Implement getCount() method.
     }
 
-    public function getLabel()
+    public function getCountUrl()
     {
-        return QUI::getLocale()->get('quiqqer/socialshare', 'label-pinterest');
+        // TODO: Implement getCountUrl() method.
     }
 }
