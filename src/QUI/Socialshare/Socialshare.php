@@ -88,6 +88,8 @@ abstract class Socialshare extends Control
             $body .= $this->createLabel();
         }
 
+
+
         $this->setAttribute('href', $this->getShareUrl());
         $this->setAttribute('target', '_blank');
 
