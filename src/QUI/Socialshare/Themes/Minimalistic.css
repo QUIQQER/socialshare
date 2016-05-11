@@ -1,42 +1,42 @@
-a.quiqqer-socialshare {
+.quiqqer-socialshare-minimalistic {
     padding: 4px 2px;
 }
 
-.quiqqer-socialshare-icon-spacing  span:first-child {
+.quiqqer-socialshare-minimalistic.quiqqer-socialshare-icon-spacing  span:first-child {
     margin-right: .15em;
 }
 
 /* Facebook */
-a.quiqqer-socialshare-facebook {
+.quiqqer-socialshare-minimalistic.quiqqer-socialshare-facebook {
     background: none;
     color: #3b5998;
     border: none;
 }
-a.quiqqer-socialshare-facebook:hover {
+.quiqqer-socialshare-minimalistic.quiqqer-socialshare-facebook:hover {
     color: #2d4373;
     background: none;
 }
 
 /* Pinterest */
-a.quiqqer-socialshare-pinterest {
+.quiqqer-socialshare-minimalistic.quiqqer-socialshare-pinterest {
     color: #cb2027;
     background: none;
     border: none;
 }
-a.quiqqer-socialshare-pinterest:hover {
+.quiqqer-socialshare-minimalistic.quiqqer-socialshare-pinterest:hover {
     color: #9f191f;
     background: none;
 }
 
 /* Tweeter */
 
-a.quiqqer-socialshare-twitter {
+.quiqqer-socialshare-minimalistic.quiqqer-socialshare-twitter {
     background: none;
     color: #00aced;
     border: none;
 }
 
-a.quiqqer-socialshare-twitter:hover {
+.quiqqer-socialshare-minimalistic.quiqqer-socialshare-twitter:hover {
     color: #0099d4;
     background: none;
 }

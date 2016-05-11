@@ -20,8 +20,8 @@ abstract class Socialshare extends Control
     public function __construct($params = array())
     {
         $this->setAttributes(array(
-            'theme'     => 'flat',
-            'showLabel' => false,
+            'theme'     => 'minimalistic',
+            'showLabel' => true,
             'showIcon'  => true,
             'showCount' => true,
             'nodeName'  => 'a'

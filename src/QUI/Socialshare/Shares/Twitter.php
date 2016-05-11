@@ -28,7 +28,8 @@ class Twitter extends Socialshare
         $label = "Tweet";
         if (QUI::getLocale()->get('quiqqer-socialshare', 'label-twitter'))
         {
-            QUI::getLocale()->get('quiqqer-socialshare', 'label-twitter');
+            $label = QUI::getLocale()->get('quiqqer-socialshare', 'label-twitter');
+            echo $label;
         }
         return $label;
     }
