@@ -29,7 +29,6 @@
 }
 
 /* Tweeter */
-
 .quiqqer-socialshare-minimalistic.quiqqer-socialshare-twitter {
     background: none;
     color: #00aced;
@@ -38,5 +37,17 @@
 
 .quiqqer-socialshare-minimalistic.quiqqer-socialshare-twitter:hover {
     color: #0099d4;
+    background: none;
+}
+
+/* Google */
+.quiqqer-socialshare-minimalistic.quiqqer-socialshare-google {
+    background: none;
+    color: #dd4b39;
+    border: none;
+}
+
+.quiqqer-socialshare-minimalistic.quiqqer-socialshare-google:hover {
+    color: #d73925;
     background: none;
 }

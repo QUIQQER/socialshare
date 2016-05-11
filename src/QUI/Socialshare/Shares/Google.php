@@ -25,10 +25,10 @@ class Google extends Socialshare
     public function getLabel()
     {
         $label = '+1';
-        if (QUI::getLocale()->get('quiqqer-socialshare', 'label-google'))
+        /*if (QUI::getLocale()->get('quiqqer-socialshare', 'label-google'))
         {
             $label = QUI::getLocale()->get('quiqqer-socialshare', 'label-google');
-        }
+        }*/
         return $label;
     }
 

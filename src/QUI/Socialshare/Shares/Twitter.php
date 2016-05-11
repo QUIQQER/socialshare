@@ -26,11 +26,11 @@ class Twitter extends Socialshare
     public function getLabel()
     {
         $label = "Tweet";
-        if (QUI::getLocale()->get('quiqqer-socialshare', 'label-twitter'))
+        /*if (QUI::getLocale()->get('quiqqer-socialshare', 'label-twitter'))
         {
             $label = QUI::getLocale()->get('quiqqer-socialshare', 'label-twitter');
             echo $label;
-        }
+        }*/
         return $label;
     }
 
