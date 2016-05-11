@@ -1,0 +1,53 @@
+.quiqqer-socialshare-minima {
+    padding: 4px 2px;
+}
+
+.quiqqer-socialshare-minima.quiqqer-socialshare-icon-spacing  span:first-child {
+    margin-right: .15em;
+}
+
+/* Facebook */
+.quiqqer-socialshare-minima.quiqqer-socialshare-facebook {
+    background: none;
+    color: #3b5998;
+    border: none;
+}
+.quiqqer-socialshare-minima.quiqqer-socialshare-facebook:hover {
+    color: #2d4373;
+    background: none;
+}
+
+/* Pinterest */
+.quiqqer-socialshare-minima.quiqqer-socialshare-pinterest {
+    color: #cb2027;
+    background: none;
+    border: none;
+}
+.quiqqer-socialshare-minima.quiqqer-socialshare-pinterest:hover {
+    color: #9f191f;
+    background: none;
+}
+
+/* Tweeter */
+.quiqqer-socialshare-minima.quiqqer-socialshare-twitter {
+    background: none;
+    color: #00aced;
+    border: none;
+}
+
+.quiqqer-socialshare-minima.quiqqer-socialshare-twitter:hover {
+    color: #0099d4;
+    background: none;
+}
+
+/* Google */
+.quiqqer-socialshare-minima.quiqqer-socialshare-google {
+    background: none;
+    color: #dd4b39;
+    border: none;
+}
+
+.quiqqer-socialshare-minima.quiqqer-socialshare-google:hover {
+    color: #d73925;
+    background: none;
+}

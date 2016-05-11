@@ -20,7 +20,7 @@ abstract class Socialshare extends Control
     public function __construct($params = array())
     {
         $this->setAttributes(array(
-            'theme'     => 'minimalistic',
+            'theme'     => 'minima',
             'showLabel' => true,
             'showIcon'  => true,
             'showCount' => true,
@@ -109,9 +109,9 @@ abstract class Socialshare extends Control
                 $this->addCSSClass('quiqqer-socialshare-flat');
                 $this->addCSSFile(dirname(__FILE__) . '/Themes/Flat.css');
                 break;
-            case 'minimalistic':
-                $this->addCSSClass('quiqqer-socialshare-minimalistic');
-                $this->addCSSFile(dirname(__FILE__) . '/Themes/Minimalistic.css');
+            case 'minima':
+                $this->addCSSClass('quiqqer-socialshare-minima');
+                $this->addCSSFile(dirname(__FILE__) . '/Themes/Minima.css');
                 break;
             default:
                 $this->addCSSClass('quiqqer-socialshare-classic');

@@ -39,7 +39,11 @@ class Google extends Socialshare
 
     public function getShareUrl()
     {
-        // TODO: Implement getShareUrl() method.
+        $Request = QUI::getRequest();
+        $baseurl = $Request->getScheme(). '://' . $Request->getHttpHost() . $Request->getBasePath();
+        $baseurl = $baseurl . $_SERVER['REQUEST_URI'];
+
+        return 'https://plus.google.com/share?url=' . $baseurl;
     }
 
     public function getCount()

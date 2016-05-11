@@ -7,6 +7,7 @@
     margin: 0.3em;
     transition: all 200ms ease-in-out;
     font-weight: normal;
+    overflow: hidden;
 }
 
 .quiqqer-socialshare-logo {
@@ -16,12 +17,9 @@
     text-align: center;
 }
 
-.quiqqer-socialshare-label {
-
-}
-
 .quiqqer-socialshare-icon-spacing  span:first-child {
     margin-right: .3em;
+
 }
 
 /* Facebook */
