@@ -15,7 +15,8 @@
     box-shadow: 0 1px 3px rgba(255, 255, 255, 0.3) inset, 0 1px 3px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 */
-.quiqqer-socialshare-classic {
+.quiqqer-socialshare-classic .quiqqer-socialshare-container,
+.quiqqer-socialshare-count{
     border-radius: 0.3em;
     box-shadow: 0 1px 3px rgba(255, 255, 255, 0.3) inset, 0 1px 3px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.15);
 }

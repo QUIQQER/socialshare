@@ -42,6 +42,7 @@ class Pinterest extends Socialshare
     
     public function getCount()
     {
+        return "5,4k";
         // TODO: Implement getCount() method.
     }
 

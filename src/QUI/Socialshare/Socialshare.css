@@ -1,4 +1,5 @@
-.quiqqer-socialshare {
+
+.quiqqer-socialshare .quiqqer-socialshare-container {
     display: inline-block;
     text-decoration: none;
     padding: 4px 10px;
@@ -19,43 +20,64 @@
 
 .quiqqer-socialshare-icon-spacing  span:first-child {
     margin-right: .3em;
+}
 
+
+.quiqqer-socialshare-triangle {
+    background: transparent none repeat scroll 0 0;
+    display: inline-block;
+    height: 0;
+    vertical-align: middle;
+    width: 0;
+    border-right: 8px solid #eee;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+}
+
+.quiqqer-socialshare-count {
+    border: 1px solid transparent;
+    display: inline-block;
+    padding: 4px 10px;
+    margin: 0.3em 0;
+    background: #eee;
+    text-decoration: none;
+    color: #444;
 }
 
 /* Facebook */
-.quiqqer-socialshare-facebook {
+.quiqqer-socialshare-facebook .quiqqer-socialshare-container{
     background: #3b5998;
     border: 1px solid #344e86;
 }
-.quiqqer-socialshare-facebook:hover {
+.quiqqer-socialshare-facebook:hover .quiqqer-socialshare-container{
     background: #2d4373;
 }
 
 /* Pinterest */
-.quiqqer-socialshare-pinterest {
+.quiqqer-socialshare-pinterest .quiqqer-socialshare-container{
     background: #cb2027;
     border: 1px solid #b51d23;
 }
-.quiqqer-socialshare-pinterest:hover {
+.quiqqer-socialshare-pinterest:hover .quiqqer-socialshare-container{
     background: #9f191f;
 }
 
 /* Tweeter */
-.quiqqer-socialshare-twitter {
+.quiqqer-socialshare-twitter .quiqqer-socialshare-container{
     background: #00aced;
     border: 1px solid #0099d4;
 }
 
-.quiqqer-socialshare-twitter:hover {
+.quiqqer-socialshare-twitter:hover .quiqqer-socialshare-container{
     background: #0087ba;
 }
 
 /* Google */
-.quiqqer-socialshare-google {
+.quiqqer-socialshare-google .quiqqer-socialshare-container{
     background: #dd4b39;
     border: 1px solid #d73925;
 }
 
-.quiqqer-socialshare-google:hover {
+.quiqqer-socialshare-google:hover .quiqqer-socialshare-container{
     background: #c23321;
 }

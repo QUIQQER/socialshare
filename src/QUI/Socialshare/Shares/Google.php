@@ -48,6 +48,7 @@ class Google extends Socialshare
 
     public function getCount()
     {
+        return '500k';
         // TODO: Implement getCount() method.
     }
 

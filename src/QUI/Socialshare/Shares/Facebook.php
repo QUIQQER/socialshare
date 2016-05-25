@@ -39,14 +39,16 @@ class Facebook extends Socialshare
 
         return 'https://facebook.com/sharer/sharer.php?u=' . $baseurl;
     }
-
+    
     public function getCount()
     {
-        // TODO: Implement getCount() method.
+        return '123'; // Test zuerst
     }
 
     public function getCountUrl()
     {
         // TODO: Implement getCountUrl() method.
     }
+    
+    
 }

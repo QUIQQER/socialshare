@@ -48,9 +48,10 @@ class Twitter extends Socialshare
         return 'https://twitter.com/home?status=' . $baseurl;
     }
 
+    // No counter for Twitter
     public function getCount()
     {
-        // TODO: Implement getCount() method.
+        return;
     }
 
     public function getCountUrl()

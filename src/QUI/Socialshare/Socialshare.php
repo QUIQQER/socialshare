@@ -20,7 +20,7 @@ abstract class Socialshare extends Control
     public function __construct($params = array())
     {
         $this->setAttributes(array(
-            'theme'     => 'minima',
+            'theme'     => 'flat',
             'showLabel' => true,
             'showIcon'  => true,
             'showCount' => true,
@@ -38,7 +38,7 @@ abstract class Socialshare extends Control
     abstract public function getCountUrl();
 
     /**
-     * ??????
+     * Return the counter
      *
      * @return string
      */
@@ -79,7 +79,7 @@ abstract class Socialshare extends Control
      */
     public function getBody()
     {
-        $body = '';
+        $body = '<span class="quiqqer-socialshare-container">';
 
         if ($this->getAttribute('showIcon') === true) {
             $body .= $this->createLogo();
@@ -90,8 +90,6 @@ abstract class Socialshare extends Control
             }
             $body .= $this->createLabel();
         }
-
-
 
         $this->setAttribute('href', $this->getShareUrl());
         $this->setAttribute('target', '_blank');
@@ -118,7 +116,11 @@ abstract class Socialshare extends Control
                 $this->addCSSFile(dirname(__FILE__) . '/Themes/Classic.css');
                 break;
         }
+        $body .= '</span>';
 
+        if ($this->getAttribute('showCount') === true) {
+            $body .= $this->createCount();
+        }
         return $body;
     }
 
@@ -140,6 +142,18 @@ abstract class Socialshare extends Control
     public function createLabel()
     {
         return '<span class="quiqqer-socialshare-label">' . $this->getLabel() . '</span>';
+    }
+
+    /**
+     * Create the counter
+     *
+     * @return string
+     */
+    public function createCount()
+    {
+        if ($this->getCount() != null) {
+            return '<div class="quiqqer-socialshare-triangle"></div><span class="quiqqer-socialshare-count">' . $this->getCount() . '</span>';
+        }
     }
 
     /**
@@ -178,7 +192,7 @@ abstract class Socialshare extends Control
     }
 
     /**
-     * hide the label
+     * Hide the label
      *
      * @return void
      */
@@ -205,5 +219,15 @@ abstract class Socialshare extends Control
     public function hideIcon()
     {
         $this->setAttribute('showIcon', false);
+    }
+
+    public function showCount()
+    {
+        $this->setAttribute('showCount', true);
+    }
+
+    public function hideCount()
+    {
+        $this->setAttribute('showCount', false);
     }
 }
