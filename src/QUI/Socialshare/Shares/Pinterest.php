@@ -16,21 +16,49 @@ use QUI\Socialshare\Socialshare;
  */
 class Pinterest extends Socialshare
 {
+    public function __construct(array $params)
+    {
+        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Pinterest');
+        parent::__construct($params);
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
+     * @see \QUI\Socialshare\Socialshare::getName()
+     */
     public function getName()
     {
         return 'quiqqer-socialshare-pinterest';
     }
 
+    /**
+     *
+     *
+     * @return array|string
+     */
     public function getLabel()
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-pinterest');
+        // TODO: Implement getCountUrl() method.
+        // Warum return array|string und wie besser implementieren
     }
 
+    /**
+     * (non-PHPdoc)
+     *
+     * @see \QUI\Socialshare\Socialshare::getLogo()
+     */
     public function getLogo()
     {
         return 'fa fa-pinterest';
     }
-    
+
+    /**
+     * (non-PHPdoc)
+     *
+     * @see \QUI\Socialshare\Socialshare::getShareUrl()
+     */
     public function getShareUrl()
     {
         $Request = QUI::getRequest();
@@ -39,13 +67,23 @@ class Pinterest extends Socialshare
 
         return 'https://pinterest.com/pin/create/button/?url=' . $baseurl;
     }
-    
+
+    /**
+     * (non-PHPdoc)
+     *
+     * @see \QUI\Socialshare\Socialshare::getCount()
+     */
     public function getCount()
     {
         return "5,4k";
         // TODO: Implement getCount() method.
     }
 
+    /**
+     * (non-PHPdoc)
+     *
+     * @see \QUI\Socialshare\Socialshare::getCountUrl
+     */
     public function getCountUrl()
     {
         // TODO: Implement getCountUrl() method.

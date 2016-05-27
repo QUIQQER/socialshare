@@ -17,11 +17,27 @@ use QUI\Socialshare\Socialshare;
 
 class Google extends Socialshare
 {
+    public function __construct(array $params)
+    {
+        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Google');
+        parent::__construct($params);
+    }
+
+    /**
+     * (non-PHPdoc)
+     * 
+     * @see \QUI\Socialshare\Socialshare::getName()
+     */
     public function getName()
     {
         return 'quiqqer-socialshare-google';
     }
 
+    /**
+     * (non-PHPdoc)
+     * 
+     * @see \QUI\Socialshare\Socialshare::getLabel()
+     */
     public function getLabel()
     {
         $label = '+1';
@@ -32,11 +48,21 @@ class Google extends Socialshare
         return $label;
     }
 
+    /**
+     * (non-PHPdoc)
+     * 
+     * @see \QUI\Socialshare\Socialshare::getLogo()
+     */
     public function getLogo()
     {
         return 'fa fa-google';
     }
 
+    /**
+     * (non-PHPdoc)
+     * 
+     * @see \QUI\Socialshare\Socialshare::getShareUrl()
+     */
     public function getShareUrl()
     {
         $Request = QUI::getRequest();
@@ -46,12 +72,22 @@ class Google extends Socialshare
         return 'https://plus.google.com/share?url=' . $baseurl;
     }
 
+    /**
+     * (non-PHPdoc)
+     * 
+     * @see \QUI\Socialshare\Socialshare::getCount()
+     */
     public function getCount()
     {
         return '500k';
         // TODO: Implement getCount() method.
     }
 
+    /**
+     * (non-PHPdoc)
+     * 
+     * @see \QUI\Socialshare\Socialshare::getCountUrl()
+     */
     public function getCountUrl()
     {
         // TODO: Implement getCountUrl() method.

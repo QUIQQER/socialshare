@@ -20,7 +20,7 @@ abstract class Socialshare extends Control
     public function __construct($params = array())
     {
         $this->setAttributes(array(
-            'theme'     => 'flat',
+            'theme'     => 'minima',
             'showLabel' => true,
             'showIcon'  => true,
             'showCount' => true,
@@ -94,7 +94,7 @@ abstract class Socialshare extends Control
         $this->setAttribute('href', $this->getShareUrl());
         $this->setAttribute('target', '_blank');
 
-        $this->addCSSClass('quiqqer-socialshare '.$this->getName());
+        $this->addCSSClass('quiqqer-socialshare ' . $this->getName());
         $this->addCSSFile(dirname(__FILE__) . '/Socialshare.css');
 
 
@@ -121,6 +121,7 @@ abstract class Socialshare extends Control
         if ($this->getAttribute('showCount') === true) {
             $body .= $this->createCount();
         }
+
         return $body;
     }
 
