@@ -17,7 +17,7 @@ use QUI\Socialshare\Socialshare;
  */
 class Twitter extends Socialshare
 {
-    public function __construct(array $params)
+    public function __construct($params = array())
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Twitter');
         parent::__construct($params);

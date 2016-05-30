@@ -11,5 +11,10 @@
             <en><![CDATA[Pin it]]></en>
             <pl><![CDATA[Pin it]]></pl>
         </locale>
+        <locale name="label-mail">
+            <de><![CDATA[Mailen]]></de>
+            <en><![CDATA[Mail]]></en>
+            <pl><![CDATA[Wyślij]]></pl>
+        </locale>
     </groups>
 </locales>

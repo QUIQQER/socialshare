@@ -16,7 +16,7 @@ use QUI\Socialshare\Socialshare;
  */
 class Facebook extends Socialshare
 {
-    public function __construct(array $params)
+    public function __construct($params = array())
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Facebook' );
         parent::__construct($params);
@@ -86,6 +86,4 @@ class Facebook extends Socialshare
     {
         // TODO: Implement getCountUrl() method.
     }
-    
-    
 }

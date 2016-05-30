@@ -17,6 +17,12 @@ use QUI\Socialshare\Socialshare;
 
 class Mail extends Socialshare {
 
+    public function __construct($params = array())
+    {
+        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Mail');
+        parent::__construct($params);
+    }
+
     /**
      * (non-PHPdoc)
      *
@@ -24,22 +30,29 @@ class Mail extends Socialshare {
      */
     public function getName()
     {
-        // TODO: Implement getName() method.
+        return 'quiqqer-socialshare-mail';
     }
 
     public function getLabel()
     {
-        // TODO: Implement getLabel() method.
+        return QUI::getLocale()->get('quiqqer/socialshare', 'label-mail');
     }
 
     public function getLogo()
     {
-        // TODO: Implement getLogo() method.
+        return 'fa fa-at';
     }
 
     public function getShareUrl()
     {
-        // TODO: Implement getShareUrl() method.
+        $Request = QUI::getRequest();
+        $baseUrl = $Request->getScheme() . '://' . $Request->getHttpHost() . $Request->getBasePath();
+        $subject = "thema";
+        $mail = "test@mail.de";
+
+        $siteTitle = QUI::getRewrite()->getSite()->getAttribute('title');
+
+        return 'mailto:' . $mail . '?subject=' . $siteTitle . '&body=' . $baseUrl;
     }
 
     public function getCount()

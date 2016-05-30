@@ -1,23 +1,22 @@
-define('package/quiqqer/socialshare/bin/controls/Pinterest', [
+define('package/quiqqer/socialshare/bin/controls/Mail', [
 
     'qui/QUI',
     'qui/controls/Control',
-    'Ajax'
+    'qui/controls/windows/Popup'
 
-], function (QUI, QUIControl, Ajax) {
+], function (QUI, QUIControl, QUIPopup) {
     "use strict";
 
     return new Class({
 
         Extends: QUIControl,
-        Type   : 'package/quiqqer/socialshare/bin/controls/Pinterest',
+        Type   : 'package/quiqqer/socialshare/bin/controls/Mail',
 
         Binds: [
             '$onImport'
         ],
 
         initialize: function () {
-            this.$Count = null;
             this.addEvents({
                                onImport: this.$onImport
                            });
@@ -26,18 +25,12 @@ define('package/quiqqer/socialshare/bin/controls/Pinterest', [
         $onImport: function () {
             var self = this;
 
-            this.$Count = this.getElm().getElement('.quiqqer-socialshare-count');
-
             this.getElm().addEvent('click', function (event) {
                 event.stop();
 
                 // var href = this.get('href');
 
-                window.open(
-                    this.get('href'),
-                    'social',
-                    'width=750,height=540,location=0, menubar=0, resizeable=0, scrollbars=0, status=0, titlebar=0, toolbar=0'
-                );
+                window.open(this.get('href'), 'social', 'width=500,height=400');
 
                 // var Popup = new QUIPopup({
                 //     title : 'huhu',
@@ -61,19 +54,7 @@ define('package/quiqqer/socialshare/bin/controls/Pinterest', [
                 // }).delay(3000);
             });
 
-            this.refresh();
-
-        },
-
-        refresh: function () {
-            Ajax.get('package_quiqqer_socialshare_ajax_getCount', function (result) {
-                this.$Count.set('html', result);
-            }.bind(this), {
-                         'package': 'quiqqer/socialshare',
-                         url      : window.location.toString(),
-                         social   : 'Pinterest'
-                     });
         }
-    });
 
+    });
 });

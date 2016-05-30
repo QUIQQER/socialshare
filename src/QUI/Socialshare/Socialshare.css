@@ -22,27 +22,69 @@
     margin-right: .3em;
 }
 
+.quiqqer-socialshare-count {
+    border: 1px solid #eee;
+    border-radius: 0.3em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    line-height: 1.7em;
+    position: relative;
 
-.quiqqer-socialshare-triangle {
+    border: 1px solid transparent;
+    display: inline-block;
+    padding: 4px 10px;
+    margin: 0.3em 0.5em;
+    text-decoration: none;
+}
+
+.quiqqer-socialshare-count:after {
+    border-color: #fff transparent;
+    border-style: solid;
+    border-width: 6px 7px 0;
+    content: "";
+    display: block;
+    left: -11px;
+    position: absolute;
+    top: 0.92em;
+    transform: rotate(90deg);
+    width: 0;
+}
+
+.quiqqer-socialshare-count:before {
+    border-color: #dcdcdc transparent;
+    border-style: solid;
+    border-width: 8px 8px 0;
+    content: "";
+    display: block;
+    left: -13px;
+    position: absolute;
+    top: 0.9em;
+    transform: rotate(90deg);
+    width: 0;
+}
+
+
+/*.quiqqer-socialshare-triangle {
     background: transparent none repeat scroll 0 0;
     display: inline-block;
     height: 0;
     vertical-align: middle;
     width: 0;
-    border-right: 8px solid #eee;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-}
 
+    position: relative;
+    left: 1px;
+    border-right: 10px solid #f1f1f1;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
 .quiqqer-socialshare-count {
     border: 1px solid transparent;
     display: inline-block;
     padding: 4px 10px;
     margin: 0.3em 0;
-    background: #eee;
+    background: #f1f1f1;
     text-decoration: none;
-    color: #444;
-}
+}*/
+
 
 /* Facebook */
 .quiqqer-socialshare-facebook .quiqqer-socialshare-container{
@@ -80,4 +122,14 @@
 
 .quiqqer-socialshare-google:hover .quiqqer-socialshare-container{
     background: #c23321;
+}
+
+/* Mail */
+.quiqqer-socialshare-mail .quiqqer-socialshare-container{
+    background: #3490f3;
+    border: 1px solid #3490f3;
+}
+
+.quiqqer-socialshare-mail:hover .quiqqer-socialshare-container{
+    background: #0e76e6;
 }

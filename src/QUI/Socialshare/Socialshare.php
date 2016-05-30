@@ -20,7 +20,7 @@ abstract class Socialshare extends Control
     public function __construct($params = array())
     {
         $this->setAttributes(array(
-            'theme'     => 'minima',
+            'theme'     => 'classic',
             'showLabel' => true,
             'showIcon'  => true,
             'showCount' => true,
@@ -153,7 +153,7 @@ abstract class Socialshare extends Control
     public function createCount()
     {
         if ($this->getCount() != null) {
-            return '<div class="quiqqer-socialshare-triangle"></div><span class="quiqqer-socialshare-count">' . $this->getCount() . '</span>';
+            return '<!--<div class="quiqqer-socialshare-triangle"></div>--><span class="quiqqer-socialshare-count"><span class="fa fa-spinner fa-spin"></span></span>';
         }
     }
 

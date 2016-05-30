@@ -16,7 +16,7 @@ use QUI\Socialshare\Socialshare;
  */
 class Pinterest extends Socialshare
 {
-    public function __construct(array $params)
+    public function __construct($params = array())
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Pinterest');
         parent::__construct($params);

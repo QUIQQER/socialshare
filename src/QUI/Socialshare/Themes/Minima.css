@@ -6,7 +6,7 @@
     margin-right: .15em;
 }
 
-.quiqqer-socialshare-minima .quiqqer-socialshare-count {
+/*.quiqqer-socialshare-minima .quiqqer-socialshare-count {
     background: none;
     border: 2px solid #eee;
     border-radius: 6px;
@@ -16,6 +16,10 @@
     border-bottom: 6px solid transparent;
     border-right: 6px solid #eee;
     border-top: 6px solid transparent;
+}*/
+
+.quiqqer-socialshare-minima .quiqqer-socialshare-count {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
 }
 
 /* Facebook */
@@ -62,4 +66,16 @@
 .quiqqer-socialshare-minima.quiqqer-socialshare-google .quiqqer-socialshare-container:hover {
     color: #d73925;
     background: none;
+}
+
+/* Mail */
+.quiqqer-socialshare-minima.quiqqer-socialshare-mail .quiqqer-socialshare-container{
+    background: none;
+    border: none;
+    color: #3490f3;
+}
+
+.quiqqer-socialshare-minima.quiqqer-socialshare-mail .quiqqer-socialshare-container:hover{
+    background: none;
+    color: #0e76e6;
 }

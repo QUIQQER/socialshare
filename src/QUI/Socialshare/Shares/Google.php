@@ -14,10 +14,9 @@ use QUI\Socialshare\Socialshare;
  * @author  www.pcsg.de (Michael Danielczok)
  * @package quiqqer/socialshare
  */
-
 class Google extends Socialshare
 {
-    public function __construct(array $params)
+    public function __construct($params = array())
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Google');
         parent::__construct($params);
@@ -80,7 +79,6 @@ class Google extends Socialshare
     public function getCount()
     {
         return '500k';
-        // TODO: Implement getCount() method.
     }
 
     /**
