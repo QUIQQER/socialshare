@@ -30,7 +30,7 @@ define('package/quiqqer/socialshare/bin/controls/Facebook', [
 
                 // var href = this.get('href');
 
-                window.open(this.get('href'), 'social', 'width=500,height=400');
+                window.open(this.get('href'), 'social', 'width=500,height=400, location=0, menubar=0, resizeable=0, scrollbars=0, status=0, titlebar=0, toolbar=0');
 
                 // var Popup = new QUIPopup({
                 //     title : 'huhu',
