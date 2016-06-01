@@ -72,7 +72,9 @@ define('package/quiqqer/socialshare/bin/controls/Facebook', [
             }.bind(this), {                                  // weitere Parameter
                          'package': 'quiqqer/socialshare', // was für ein Package das ist
                          url      : window.location.toString(),
-                         social   : 'Facebook'
+                         social   : 'Facebook',
+                         project  : JSON.encode(QUIQQER_PROJECT),
+                         siteId   : QUIQQER_SITE.id
                      });
         }
 

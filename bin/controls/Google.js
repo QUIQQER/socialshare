@@ -41,7 +41,9 @@ define('package/quiqqer/socialshare/bin/controls/Google', [
             }.bind(this), {
                          'package': 'quiqqer/socialshare',
                          url      : window.location.toString(),
-                         social   : 'Google'
+                         social   : 'Google',
+                project  : JSON.encode(QUIQQER_PROJECT),
+                siteId   : QUIQQER_SITE.id
                      });
         }
     });

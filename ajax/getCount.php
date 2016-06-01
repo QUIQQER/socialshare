@@ -6,20 +6,27 @@
 
 /**
  *
+ * @param string $social - social name
+ * @param string $url - url
+ *
  * @return string
  */
 QUI::$Ajax->registerFunction(
     'package_quiqqer_socialshare_ajax_getCount',
-    function ($social, $url) {
-        $Social = null;
+    function ($social, $url, $project, $siteId) {
+        $Social  = null;
+        $Project = QUI::getProjectManager()->decode($project);
+        $Site    = $Project->get($siteId);
 
-        $str = 'QUI\Socialshare\Shares\\'. $social;
+        $str = 'QUI\Socialshare\Shares\\' . $social;
 
         if (!class_exists($str)) {
             return 0;
         }
 
+        /* @var $Social QUI\Socialshare\Socialshare */
         $Social = new $str();
+        $Social->setAttribute('Site', $Site);
 
         if (is_null($Social)) {
             return 0;
@@ -27,10 +34,6 @@ QUI::$Ajax->registerFunction(
 
         return $Social->getCount();
     },
-    array('social', 'url'),
+    array('social', 'url', 'project', 'siteId'),
     false // Rechte
 );
-
-
-
-

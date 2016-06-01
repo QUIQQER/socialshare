@@ -6,6 +6,7 @@
 
 namespace QUI\Socialshare;
 
+use QUI;
 use QUI\Control;
 
 /**
@@ -24,7 +25,8 @@ abstract class Socialshare extends Control
             'showLabel' => true,
             'showIcon'  => true,
             'showCount' => true,
-            'nodeName'  => 'a'
+            'nodeName'  => 'a',
+            'Site'      => false
         ));
 
         parent::__construct($params);
@@ -230,5 +232,20 @@ abstract class Socialshare extends Control
     public function hideCount()
     {
         $this->setAttribute('showCount', false);
+    }
+
+    /**
+     *
+     *
+     * @return QUI\Projects\Site
+     */
+    public function getSite()
+    {
+        if ($this->getAttribute('Site')) {
+            return $this->getAttribute('Site');
+        }
+
+        return QUI::getRewrite()->getSite();
+
     }
 }

@@ -71,7 +71,9 @@ define('package/quiqqer/socialshare/bin/controls/Pinterest', [
             }.bind(this), {
                          'package': 'quiqqer/socialshare',
                          url      : window.location.toString(),
-                         social   : 'Pinterest'
+                         social   : 'Pinterest',
+                project  : JSON.encode(QUIQQER_PROJECT),
+                siteId   : QUIQQER_SITE.id
                      });
         }
     });
