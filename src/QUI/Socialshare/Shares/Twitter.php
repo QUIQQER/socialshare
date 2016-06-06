@@ -79,6 +79,7 @@ class Twitter extends Socialshare
      * (non-PHPdoc)
      *
      * @see \QUI\Socialshare\Socialshare::getCount()
+     * (no Twitter count)
      */
     public function getCount()
     {
@@ -89,6 +90,7 @@ class Twitter extends Socialshare
      * (non-PHPdoc)
      *
      * @see \QUI\Socialshare\Socialshare::getCountUrl()
+     * (no Twitter count)
      */
     public function getCountUrl()
     {

@@ -42,6 +42,7 @@ class Pinterest extends Socialshare
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-pinterest');
         // TODO: Implement getCountUrl() method.
         // Warum return array|string und wie besser implementieren
+
     }
 
     /**
@@ -75,8 +76,29 @@ class Pinterest extends Socialshare
      */
     public function getCount()
     {
-        return "5,4k";
-        // TODO: Implement getCount() method.
+
+        return '10';
+
+        $cacheName = 'quiqqer/socialshare/' . md5($this->getCountUrl());
+
+        try {
+            return QUI\Cache\Manager::get($cacheName);
+        } catch (QUI\Cache\Exception $Exception) {
+        }
+
+        $countUrl = QUI\Utils\Request\Url::get($this->getCountUrl());
+        $data     = json_decode($countUrl, true);
+
+        echo $countUrl;
+        var_dump($data);
+        if (!isset($data['count'])) {
+            return 0;
+        }
+
+        $result = number_format($data['count']);
+        QUI\Cache\Manager::set($cacheName, $result, 1800);
+
+        return $result;
     }
 
     /**
@@ -86,6 +108,17 @@ class Pinterest extends Socialshare
      */
     public function getCountUrl()
     {
-        // TODO: Implement getCountUrl() method.
+        $Site = $this->getSite();
+        $Request = QUI::getRequest();
+
+        // @todo warten auf URL Site Objekt, damit kein Request mehr verwendet wird
+        // hier ist sonst noch ein fehler mit den vhosts
+        $baseurl = $Request->getScheme() . '://' . $Request->getHttpHost();
+        $baseurl = $baseurl . $Site->getUrlRewritten();
+        $encoded = urlencode($baseurl);
+
+        $url = "http://api.pinterest.com/v1/urls/count.json?&callback=&url=";
+        $url .= "http://www.craftsbycourtney.com/get-pinterest-pin-count/";
+        return $url;
     }
 }

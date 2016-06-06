@@ -74,7 +74,7 @@ class Facebook extends Socialshare
      */
     public function getCount()
     {
-        $cacheName = 'quiqqer/socialshares/' . md5($this->getCountUrl());
+        $cacheName = 'quiqqer/socialshare/' . md5($this->getCountUrl());
 
         try {
             return QUI\Cache\Manager::get($cacheName);
