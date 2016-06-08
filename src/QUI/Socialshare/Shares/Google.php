@@ -72,7 +72,7 @@ class Google extends Socialshare
 
         $nowyUrl = 'http://www.allesuebergoogleplus.de/googleplus-tipps/google-beitraege-richtig-teilen-hinweise-und-tipps/';
 
-        return 'https://plus.google.com/share?url=' . $nowyUrl;
+        return 'https://plus.google.com/share?url=' . $baseurl;
     }
 
     /**
@@ -121,7 +121,7 @@ class Google extends Socialshare
         if (!isset($data['0']['result']['metadata']['globalCounts']['count'])) {
             return 0;
         }
-        
+
         $result = isset($data[0]['result']['metadata']['globalCounts']['count']) ? intval($data[0]['result']['metadata']['globalCounts']['count']) : 0;
         QUI\Cache\Manager::set($cacheName, $result, 30);
 
@@ -142,13 +142,11 @@ class Google extends Socialshare
         // hier ist sonst noch ein fehler mit den vhosts
         $baseurl = $Request->getScheme() . '://' . $Request->getHttpHost();
         $baseurl .= $Site->getUrlRewritten();
-        $encoded = urlencode($baseurl);
-
 
         $testSeite = 'http://www.allesuebergoogleplus.de/googleplus-tipps/google-beitraege-richtig-teilen-hinweise-und-tipps/';
+        $testSeite2 = 'https://www.google.de';
+        $url = 'https://clients6.google.com/rpc?key=AIzaSyD7w376VnMIJnW2VliRyTKmnmrFn3zUw3w' . $testSeite;
 
-        $url = 'https://clients6.google.com/rpc?key=AIzaSyD7w376VnMIJnW2VliRyTKmnmrFn3zUw3w' . $encoded;
-
-        return $url;
+        return $testSeite2;
     }
 }

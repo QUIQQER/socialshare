@@ -77,7 +77,6 @@ class Pinterest extends Socialshare
     public function getCount()
     {
 
-        return '10';
 
         $cacheName = 'quiqqer/socialshare/' . md5($this->getCountUrl());
 
@@ -89,16 +88,19 @@ class Pinterest extends Socialshare
         $countUrl = QUI\Utils\Request\Url::get($this->getCountUrl());
         $data     = json_decode($countUrl, true);
 
-        echo $countUrl;
-        var_dump($data);
-        if (!isset($data['count'])) {
-            return 0;
-        }
+        QUI\System\Log::writeRecursive($countUrl);
+        QUI\System\Log::writeRecursive('##################################');
+        QUI\System\Log::writeRecursive($data);
 
-        $result = number_format($data['count']);
-        QUI\Cache\Manager::set($cacheName, $result, 1800);
-
-        return $result;
+//        if (!isset($data['count'])) {
+//            return 0;
+//        }
+//
+//        $result = number_format($data['count']);
+//        QUI\Cache\Manager::set($cacheName, $result, 1800);
+//
+//        return $result;
+        return 0;
     }
 
     /**
@@ -117,8 +119,12 @@ class Pinterest extends Socialshare
         $baseurl = $baseurl . $Site->getUrlRewritten();
         $encoded = urlencode($baseurl);
 
-        $url = "http://api.pinterest.com/v1/urls/count.json?&callback=&url=";
-        $url .= "http://www.craftsbycourtney.com/get-pinterest-pin-count/";
+//        $url = "http://api.pinterest.com/v1/urls/count.json?callback=&url=";
+//        $url .= urlencode('http://www.craftsbycourtney.com/get-pinterest-pin-count/');
+//        QUI\System\Log::writeRecursive($url); ."&callback=?"
+        $url = "https://api.pinterest.com/v1/urls/count.json?&url=";
+        $url .= urlencode('http://www.craftsbycourtney.com/get-pinterest-pin-count/');
+echo $url;
         return $url;
     }
 }
