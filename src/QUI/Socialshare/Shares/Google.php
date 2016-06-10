@@ -143,10 +143,8 @@ class Google extends Socialshare
         $baseurl = $Request->getScheme() . '://' . $Request->getHttpHost();
         $baseurl .= $Site->getUrlRewritten();
 
-        $testSeite = 'http://www.allesuebergoogleplus.de/googleplus-tipps/google-beitraege-richtig-teilen-hinweise-und-tipps/';
-        $testSeite2 = 'https://www.google.de';
-        $url = 'https://clients6.google.com/rpc?key=AIzaSyD7w376VnMIJnW2VliRyTKmnmrFn3zUw3w' . $testSeite;
+        $url = 'https://clients6.google.com/rpc?key=AIzaSyD7w376VnMIJnW2VliRyTKmnmrFn3zUw3w' . $baseurl;
 
-        return $testSeite2;
+        return $url;
     }
 }

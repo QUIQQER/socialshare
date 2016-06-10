@@ -76,8 +76,6 @@ class Pinterest extends Socialshare
      */
     public function getCount()
     {
-
-
         $cacheName = 'quiqqer/socialshare/' . md5($this->getCountUrl());
 
         try {
@@ -86,21 +84,19 @@ class Pinterest extends Socialshare
         }
 
         $countUrl = QUI\Utils\Request\Url::get($this->getCountUrl());
+
+        // keine offiziele API verfügbar, daher zuerst preg_replace und dann json_decode
+        $countUrl = preg_replace('/^receiveCount\((.*)\)$/', "\\1", $countUrl);
         $data     = json_decode($countUrl, true);
 
-        QUI\System\Log::writeRecursive($countUrl);
-        QUI\System\Log::writeRecursive('##################################');
-        QUI\System\Log::writeRecursive($data);
+        if (!isset($data['count'])) {
+            return 0;
+        }
 
-//        if (!isset($data['count'])) {
-//            return 0;
-//        }
-//
-//        $result = number_format($data['count']);
-//        QUI\Cache\Manager::set($cacheName, $result, 1800);
-//
-//        return $result;
-        return 0;
+        $result = number_format($data['count']);
+        QUI\Cache\Manager::set($cacheName, $result, 1800);
+
+        return $result;
     }
 
     /**
@@ -114,17 +110,14 @@ class Pinterest extends Socialshare
         $Request = QUI::getRequest();
 
         // @todo warten auf URL Site Objekt, damit kein Request mehr verwendet wird
-        // hier ist sonst noch ein fehler mit den vhosts
+        // hier ist sonst noch ein Fehler mit den vhosts
         $baseurl = $Request->getScheme() . '://' . $Request->getHttpHost();
         $baseurl = $baseurl . $Site->getUrlRewritten();
         $encoded = urlencode($baseurl);
 
-//        $url = "http://api.pinterest.com/v1/urls/count.json?callback=&url=";
-//        $url .= urlencode('http://www.craftsbycourtney.com/get-pinterest-pin-count/');
-//        QUI\System\Log::writeRecursive($url); ."&callback=?"
-        $url = "https://api.pinterest.com/v1/urls/count.json?&url=";
-        $url .= urlencode('http://www.craftsbycourtney.com/get-pinterest-pin-count/');
-echo $url;
+        $url = 'https://api.pinterest.com/v1/urls/count.json?&url=';
+        $url .= $encoded;
+
         return $url;
     }
 }
