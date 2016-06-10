@@ -143,8 +143,6 @@ class Google extends Socialshare
         $baseurl = $Request->getScheme() . '://' . $Request->getHttpHost();
         $baseurl .= $Site->getUrlRewritten();
 
-        $url = 'https://clients6.google.com/rpc?key=AIzaSyD7w376VnMIJnW2VliRyTKmnmrFn3zUw3w' . $baseurl;
-
-        return $url;
+        return $baseurl;
     }
 }
