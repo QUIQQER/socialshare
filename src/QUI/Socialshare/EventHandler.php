@@ -20,7 +20,9 @@ class EventHandler
      */
     public static function onTemplateGetHeader($Template)
     {
-
+        // Pinterest type
+//        $Site = getSite();
+//        $pinType = $Site->getAttribute('quiqqer.pin.type');
+//        $Template->extendHeader('<meta property="og:type" content="' . $pinType . '" />', 1);
     }
-
 }

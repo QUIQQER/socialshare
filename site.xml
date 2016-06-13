@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+
+    <types>
+        <type type="types/socialshare" icon="fa fa-facebook">
+            <locale group="quiqqer/news" var="admin.types.news.list" />
+            <desc>
+                <locale group="quiqqer/socialshare" var="admin.types.socialshare.desc" />
+            </desc>
+
+            <!-- extra attributes -->
+            <attributes>
+                <attribute>quiqqer.pin.type</attribute>
+            </attributes>
+
+            <!-- list settings -->
+            <settings>
+
+                <category name="news-list-settings">
+                    <settings>
+                        <title>
+                            <locale group="quiqqer/socialshare" var="quiqqer.pin.type.title" />
+                        </title>
+
+                        <input conf="quiqqer.pin.type">
+                            <text>
+                                <locale group="quiqqer/socialshare" var="quiqqer.pin.type" />
+                            </text>
+                        </input>
+                    </settings>
+                </category>
+
+            </settings>
+        </type>
+    </types>
+
+</site>
