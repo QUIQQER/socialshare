@@ -7,6 +7,7 @@
 namespace QUI\Socialshare;
 
 use QUI;
+use QUI\Socialshare\Socialshare;
 
 /**
  * Class Events
@@ -20,9 +21,13 @@ class EventHandler
      */
     public static function onTemplateGetHeader($Template)
     {
-        // Pinterest type
-//        $Site = getSite();
-//        $pinType = $Site->getAttribute('quiqqer.pin.type');
-//        $Template->extendHeader('<meta property="og:type" content="' . $pinType . '" />', 1);
+        $Site = QUI::getRewrite()->getSite();
+
+
+
+        $title = $Site->getAttribute('quiqqer.socialshare.title');
+        echo $title;
+//        $Template->extendHeader('<meta property="og:title" content="' . "DUPA DUPA". '" />', 1);
+//echo $Site;
     }
 }

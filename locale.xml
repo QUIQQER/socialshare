@@ -16,5 +16,72 @@
             <en><![CDATA[Mail]]></en>
             <pl><![CDATA[Wyślij]]></pl>
         </locale>
+
+
+        <!-- page settings -->
+
+        <locale name="quiqqer.socialshare.settings.title">
+            <de><![CDATA[Social Media Einstellungen - Metadaten]]></de>
+            <en><![CDATA[Social media settings - metadata]]></en>
+            <pl><![CDATA[Ustawienia sieci społecznościowych - metadane]]></pl>
+        </locale>
+
+        <locale name="quiqqer.socialshare.title.text">
+            <de><![CDATA[Seitentitel]]></de>
+            <en><![CDATA[Site title]]></en>
+            <pl><![CDATA[Tytuł strony]]></pl>
+        </locale>
+
+        <locale name="quiqqer.socialshare.description.text">
+            <de><![CDATA[Seiten Beschreibung]]></de>
+            <en><![CDATA[Site description]]></en>
+            <pl><![CDATA[Opis strony]]></pl>
+        </locale>
+
+        <locale name="quiqqer.socialshare.type.text">
+            <de><![CDATA[Seitentyp]]></de>
+            <en><![CDATA[Site type]]></en>
+            <pl><![CDATA[Typ strony]]></pl>
+        </locale>
+
+        <locale name="quiqqer.socialshare.description">
+            <de><![CDATA[Kurze Bescrheibung der möglichen Typen, die zur Verfügung stehen.]]></de>
+            <en><![CDATA[The type of media of your content.]]></en>
+            <pl><![CDATA[]]></pl>
+        </locale>
+
+        <locale name="quiqqer.socialshare.type.article">
+            <de><![CDATA[Artikel]]></de>
+            <en><![CDATA[Article]]></en>
+            <pl><![CDATA[Artykuł]]></pl>
+        </locale>
+        <locale name="quiqqer.socialshare.type.movie">
+            <de><![CDATA[Film]]></de>
+            <en><![CDATA[Film]]></en>
+            <pl><![CDATA[Film]]></pl>
+        </locale>
+        <locale name="quiqqer.socialshare.type.blog">
+            <de><![CDATA[Blog]]></de>
+            <en><![CDATA[Blog]]></en>
+            <pl><![CDATA[Blog]]></pl>
+        </locale>
+
+        <locale name="quiqqer.socialshare.url.text">
+            <de><![CDATA[Die komplette URL]]></de>
+            <en><![CDATA[The canonical URL for the page]]></en>
+            <pl><![CDATA[Adres strony]]></pl>
+        </locale>
+
+        <locale name="quiqqer.socialshare.sitename.text">
+            <de><![CDATA[Seitenname, z.B. "PC Welt"]]></de>
+            <en><![CDATA[Site name, for example. "New York Times"]]></en>
+            <pl><![CDATA[Nazwa strony, np. "Onet"]]></pl>
+        </locale>
+
+        <locale name="quiqqer.socialshare.author.text">
+            <de><![CDATA[Autor]]></de>
+            <en><![CDATA[Author]]></en>
+            <pl><![CDATA[Autor]]></pl>
+        </locale>
     </groups>
 </locales>

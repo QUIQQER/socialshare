@@ -1,37 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
 
-    <types>
-        <type type="types/socialshare" icon="fa fa-facebook">
-            <locale group="quiqqer/news" var="admin.types.news.list" />
-            <desc>
-                <locale group="quiqqer/socialshare" var="admin.types.socialshare.desc" />
-            </desc>
+    <locale group="quiqqer/news" var="admin.types.socialshare" />
+    <desc>
+        <locale group="quiqqer/socialshare" var="admin.types.socialshare.desc" />
+    </desc>
 
-            <!-- extra attributes -->
-            <attributes>
-                <attribute>quiqqer.pin.type</attribute>
-            </attributes>
+    <!-- extra attributes -->
+    <attributes>
+        <attribute>quiqqer.socialshare.title</attribute>
+        <attribute>quiqqer.socialshare.description</attribute>
+        <attribute>quiqqer.socialshare.type</attribute>
+        <attribute>quiqqer.socialshare.url</attribute>
+        <attribute>quiqqer.socialshare.sitename</attribute>
+        <attribute>quiqqer.socialshare.author</attribute>
+    </attributes>
 
-            <!-- list settings -->
+    <!-- social share settings -->
+    <settings>
+
+        <category name="socialshare-settings">
             <settings>
+                <title>
+                    <locale group="quiqqer/socialshare" var="quiqqer.socialshare.settings.title" />
+                </title>
 
-                <category name="news-list-settings">
-                    <settings>
-                        <title>
-                            <locale group="quiqqer/socialshare" var="quiqqer.pin.type.title" />
-                        </title>
+                <input conf="quiqqer.socialshare.title">
+                    <text>
+                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.title.text" />
+                    </text>
+                </input>
 
-                        <input conf="quiqqer.pin.type">
-                            <text>
-                                <locale group="quiqqer/socialshare" var="quiqqer.pin.type" />
-                            </text>
-                        </input>
-                    </settings>
-                </category>
+                <input conf="quiqqer.socialshare.description">
+                    <text>
+                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.description.text" />
+                    </text>
+                </input>
 
+                <select conf="quiqqer.socialshare.type">
+                    <text>
+                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.type.text" />
+                    </text>
+
+                    <description>
+                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.type.description" />
+                    </description>
+
+                    <option value="article">
+                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.type.article" />
+                    </option>
+                    <option value="movie">
+                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.type.movie" />
+                    </option>
+                    <option value="blog">
+                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.type.blog" />
+                    </option>
+                </select>
+
+                <input conf="quiqqer.socialshare.url">
+                    <text>
+                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.url.text" />
+                    </text>
+                </input>
+
+                <input conf="quiqqer.socialshare.sitename">
+                    <text>
+                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.sitename.text" />
+                    </text>
+                </input>
+                <input conf="quiqqer.socialshare.author">
+                    <text>
+                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.author.text" />
+                    </text>
+                </input>
             </settings>
-        </type>
-    </types>
+        </category>
+
+    </settings>
 
 </site>
