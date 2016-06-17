@@ -11,9 +11,12 @@
         <attribute>quiqqer.socialshare.title</attribute>
         <attribute>quiqqer.socialshare.description</attribute>
         <attribute>quiqqer.socialshare.type</attribute>
-        <attribute>quiqqer.socialshare.url</attribute>
+        <!--<attribute>quiqqer.socialshare.url</attribute>-->
         <attribute>quiqqer.socialshare.sitename</attribute>
         <attribute>quiqqer.socialshare.author</attribute>
+        <attribute>quiqqer.socialshare.image</attribute>
+        <attribute>quiqqer.socialshare.twitter.card</attribute>
+        <attribute>quiqqer.socialshare.twitter.site</attribute>
     </attributes>
 
     <!-- social share settings -->
@@ -46,6 +49,9 @@
                         <locale group="quiqqer/socialshare" var="quiqqer.socialshare.type.description" />
                     </description>
 
+                    <option value="website">
+                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.type.website" />
+                    </option>
                     <option value="article">
                         <locale group="quiqqer/socialshare" var="quiqqer.socialshare.type.article" />
                     </option>
@@ -57,11 +63,11 @@
                     </option>
                 </select>
 
-                <input conf="quiqqer.socialshare.url">
+                <!--<input conf="quiqqer.socialshare.url">
                     <text>
                         <locale group="quiqqer/socialshare" var="quiqqer.socialshare.url.text" />
                     </text>
-                </input>
+                </input>-->
 
                 <input conf="quiqqer.socialshare.sitename">
                     <text>
@@ -73,6 +79,42 @@
                         <locale group="quiqqer/socialshare" var="quiqqer.socialshare.author.text" />
                     </text>
                 </input>
+
+                <input conf="quiqqer.socialshare.image" type="text" class="media-image">
+                    <text>
+                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.image.text" />
+                    </text>
+                </input>
+
+                <!-- Twitter only -->
+                <text></text>
+                <text>
+                    <locale group="quiqqer/socialshare" var="quiqqer.socialshare.twitteronly" />
+                </text>
+
+                <select conf="quiqqer.socialshare.twitter.card">
+                    <text>
+                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.twitter.card.text" />
+                    </text>
+
+                    <option value="summary">
+                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.twitter.card.summary" />
+                    </option>
+                    <option value="summary_large_image">
+                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.twitter.card.summaryLargeImage" />
+                    </option>
+                    <option value="player">
+                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.twitter.card.player" />
+                    </option>
+                </select>
+
+                <input conf="quiqqer.socialshare.twitter.site">
+                    <text>
+                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.twitter.site.text" />
+                    </text>
+                </input>
+
+
             </settings>
         </category>
 

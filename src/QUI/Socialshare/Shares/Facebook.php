@@ -110,7 +110,7 @@ class Facebook extends Socialshare
     public function getCountUrl()
     {
         $Site    = $this->getSite();
-        $Request = QUI::getRequest();
+            $Request = QUI::getRequest();
 
         // @todo warten auf URL Site Objekt, damit kein Request mehr verwendet wird
         // hier ist sonst noch ein fehler mit den vhosts

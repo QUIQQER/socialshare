@@ -50,6 +50,11 @@
             <pl><![CDATA[]]></pl>
         </locale>
 
+        <locale name="quiqqer.socialshare.type.website">
+            <de><![CDATA[Website]]></de>
+            <en><![CDATA[Website]]></en>
+            <pl><![CDATA[Strona internetowa]]></pl>
+        </locale>
         <locale name="quiqqer.socialshare.type.article">
             <de><![CDATA[Artikel]]></de>
             <en><![CDATA[Article]]></en>
@@ -74,7 +79,7 @@
 
         <locale name="quiqqer.socialshare.sitename.text">
             <de><![CDATA[Seitenname, z.B. "PC Welt"]]></de>
-            <en><![CDATA[Site name, for example. "New York Times"]]></en>
+            <en><![CDATA[Site name, for example. "The New York Times"]]></en>
             <pl><![CDATA[Nazwa strony, np. "Onet"]]></pl>
         </locale>
 
@@ -82,6 +87,45 @@
             <de><![CDATA[Autor]]></de>
             <en><![CDATA[Author]]></en>
             <pl><![CDATA[Autor]]></pl>
+        </locale>
+
+        <locale name="quiqqer.socialshare.image.text">
+            <de><![CDATA[Seiten Bild]]></de>
+            <en><![CDATA[Site image]]></en>
+            <pl><![CDATA[Obrazek wyróżniający]]></pl>
+        </locale>
+
+        <!-- Twitter only -->
+        <locale name="quiqqer.socialshare.twitteronly">
+            <de><![CDATA[Metadaten für Twitter relevant]]></de>
+            <en><![CDATA[Metadata only for Twitter]]></en>
+            <pl><![CDATA[Metadane specyficzne dla Twittera]]></pl>
+        </locale>
+        <locale name="quiqqer.socialshare.twitter.card.text">
+            <de><![CDATA[Erweiterte Tweets: Tweeter Cards]]></de>
+            <en><![CDATA[Tweeter Cards]]></en>
+            <pl><![CDATA[Tweeter Cards]]></pl>
+        </locale>
+        <locale name="quiqqer.socialshare.twitter.card.summary">
+            <de><![CDATA[Summary Card]]></de>
+            <en><![CDATA[Summary Card]]></en>
+            <pl><![CDATA[Summary Card]]></pl>
+        </locale>
+        <locale name="quiqqer.socialshare.twitter.card.summaryLargeImage">
+            <de><![CDATA[Summary Card with Large Image]]></de>
+            <en><![CDATA[Summary Card with Large Image]]></en>
+            <pl><![CDATA[Summary Card with Large Image]]></pl>
+        </locale>
+        <locale name="quiqqer.socialshare.twitter.card.player">
+            <de><![CDATA[Player Card]]></de>
+            <en><![CDATA[Player Card]]></en>
+            <pl><![CDATA[Player Card]]></pl>
+        </locale>
+
+        <locale name="quiqqer.socialshare.twitter.site.text">
+            <de><![CDATA[Twitter @username]]></de>
+            <en><![CDATA[Twitter @username]]></en>
+            <pl><![CDATA[Twitter @username]]></pl>
         </locale>
     </groups>
 </locales>
