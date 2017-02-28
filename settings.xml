@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiqqer>
+    <project>
+
+        <settings>
+            <config>
+                <section name="socialshare.settings">
+                    <conf name="Facebook">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="Twitter">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="Google">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="Pinterest">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="Mail">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+
+
+                    <conf name="showLabel">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="showIcon">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="showCount">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+
+                    <conf name="theme">
+                        <type><![CDATA[string]]></type>
+                    </conf>
+                </section>
+            </config>
+
+            <window>
+                <categories>
+                    <category name="socialshare">
+                        <text>
+                            <locale group="quiqqer/socialshare"
+                                    var="socialshare.settings.category"/>
+                        </text>
+                        <icon>fa fa-facebook</icon>
+
+                        <settings title="socialshare.settings" name="socialshare.settings">
+                            <title>
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.title"/>
+                                </text>
+                            </title>
+
+                            <input conf="socialshare.settings.Facebook" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.facebook"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.Twitter" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.twitter"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.Google" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.google"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.Pinterest" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.pinterest"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.Mail" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.mail"/>
+                                </text>
+                            </input>
+
+                        </settings>
+
+                        <settings title="socialshare.settings" name="socialshare.settings.theme">
+
+                            <input conf="socialshare.settings.showLabel" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.showLabel"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.showIcon" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.showIcon"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.showCount" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.showCount"/>
+                                </text>
+                            </input>
+
+                            <select conf="socialshare.settings.theme">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.theme"/>
+                                </text>
+                                <option value="classic">
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.theme.classic"/>
+                                </option>
+                                <option value="flat">
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.theme.flat"/>
+                                </option>
+                                <option value="minima">
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.theme.minima"/>
+                                </option>
+                            </select>
+                        </settings>
+                    </category>
+                </categories>
+
+            </window>
+        </settings>
+
+    </project>
+</quiqqer>

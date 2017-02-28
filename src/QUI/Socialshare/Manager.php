@@ -9,7 +9,7 @@ use QUI;
 use QUI\Control;
 
 /**
- * Social share Manager
+ * Social share Manager - helper Class
  *
  * @package quiqqer/socialshare
  */
@@ -18,38 +18,55 @@ class Manager extends Control
     /**
      * @var array
      */
-    private $availableSocials = array('facebook', 'twitter', 'google');
+    private static $availableSocials = array('Facebook', 'Twitter', 'Google', 'Pinterest', 'Mail');
 
-    /**
-     * Manager constructor.
-     * @param array $params
-     */
-    public function __construct($params = array())
-    {
-        $this->setAttributes(array(
-            'theme'     => 'classic',
-            'showLabel' => true,
-            'showIcon'  => true,
-            'showCount' => true,
-            'nodeName'  => 'a',
-            'Site'      => false
-        ));
-
-        parent::__construct($params);
-    }
+    // defoultsetting
+    private static $settings = array(
+        'theme'     => 'classic',
+        'showLabel' => false,
+        'showIcon'  => false,
+        'showCount' => false,
+        'nodeName'  => 'a'
+    );
 
     /**
      *
      */
-    public static function getSocials($params = array())
+    public static function get()
     {
-        foreach ($params as $item => $value) {
-            if (isset($item, $availableSocials)) {
-                $social = strtolower($item);
-                $social = upfirst($social);
+        $Control = new Control();
+        $Engine = QUI::getTemplateManager()->getEngine();
 
-                $social = new QUI\Socialshare\Shares\ . $social . ();
-            }
+        if ($Control->getProject()->getConfig('socialshare.settings.theme')) {
+            self::$settings['theme'] = $Control->getProject()->getConfig('socialshare.settings.theme');
         }
+
+        if ($Control->getProject()->getConfig('socialshare.settings.showLabel')) {
+            self::$settings['showLabel'] = $Control->getProject()->getConfig('socialshare.settings.showLabel');
+        }
+
+        if ($Control->getProject()->getConfig('socialshare.settings.showIcon')) {
+            self::$settings['showIcon'] = $Control->getProject()->getConfig('socialshare.settings.showIcon');
+        }
+
+        if ($Control->getProject()->getConfig('socialshare.settings.showCount')) {
+            self::$settings['showCount'] = $Control->getProject()->getConfig('socialshare.settings.showCount');
+        }
+
+        $socialArr = array();
+        foreach (self::$availableSocials as $social) {
+            $setting = 'socialshare.settings.' . $social;
+            if (!$Control->getProject()->getConfig($setting)) {
+                continue;
+            }
+
+            $class = 'QUI\Socialshare\Shares\\' . $social;
+            $Social = new $class(self::$settings);
+            array_push($socialArr, $Social);
+        };
+
+        $Engine->assign('Socials', $socialArr);
+
+        return $Engine->fetch(dirname(__FILE__) . '/Socialshare.html');
     }
 }

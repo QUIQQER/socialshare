@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
 
-    <locale group="quiqqer/news" var="admin.types.socialshare" />
+    <locale group="quiqqer/socialshare" var="admin.types.socialshare" />
     <desc>
         <locale group="quiqqer/socialshare" var="admin.types.socialshare.desc" />
     </desc>

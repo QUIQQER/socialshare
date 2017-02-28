@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <locales>
-    <groups name="quiqqer/socialshare" datatype="php">
+    <groups name="quiqqer/socialshare" datatype="php, js">
         <locale name="label-facebook">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
@@ -126,6 +126,81 @@
             <de><![CDATA[Twitter @username]]></de>
             <en><![CDATA[Twitter @username]]></en>
             <pl><![CDATA[Twitter @username]]></pl>
+        </locale>
+
+        <!-- settings.xml -->
+        <locale name="socialshare.settings.category">
+            <de><![CDATA[Social Share]]></de>
+            <en><![CDATA[Social share]]></en>
+            <pl><![CDATA[Social media]]></pl>
+        </locale>
+
+        <locale name="socialshare.settings.title">
+            <de><![CDATA[Social Share nzeigen]]></de>
+            <en><![CDATA[Social share display]]></en>
+            <pl><![CDATA[Pokaż social share]]></pl>
+        </locale>
+            <locale name="socialshare.settings.show.facebook">
+                <de><![CDATA[Facebook]]></de>
+                <en><![CDATA[Facebook]]></en>
+                <pl><![CDATA[Facebook]]></pl>
+            </locale>
+            <locale name="socialshare.settings.show.twitter">
+                <de><![CDATA[Twitter]]></de>
+                <en><![CDATA[Twitter]]></en>
+                <pl><![CDATA[Twitter]]></pl>
+            </locale>
+            <locale name="socialshare.settings.show.google">
+                <de><![CDATA[Google]]></de>
+                <en><![CDATA[Google]]></en>
+                <pl><![CDATA[Google]]></pl>
+            </locale>
+            <locale name="socialshare.settings.show.pinterest">
+                <de><![CDATA[Pinterest]]></de>
+                <en><![CDATA[Pinterest]]></en>
+                <pl><![CDATA[Pinterest]]></pl>
+            </locale>
+            <locale name="socialshare.settings.show.mail">
+                <de><![CDATA[E-Mail]]></de>
+                <en><![CDATA[E-Mail]]></en>
+                <pl><![CDATA[E-Mail]]></pl>
+            </locale>
+
+        <locale name="socialshare.settings.theme">
+            <de><![CDATA[Theme]]></de>
+            <en><![CDATA[Theme]]></en>
+            <pl><![CDATA[Wygląd]]></pl>
+        </locale>
+            <locale name="socialshare.settings.theme.classic">
+                <de><![CDATA[Classic]]></de>
+                <en><![CDATA[Classic]]></en>
+                <pl><![CDATA[Classic]]></pl>
+            </locale>
+            <locale name="socialshare.settings.theme.flat">
+                <de><![CDATA[Flat]]></de>
+                <en><![CDATA[Flat]]></en>
+                <pl><![CDATA[Flat]]></pl>
+            </locale>
+            <locale name="socialshare.settings.theme.minima">
+                <de><![CDATA[Minima]]></de>
+                <en><![CDATA[Minima]]></en>
+                <pl><![CDATA[Minima]]></pl>
+            </locale>
+
+        <locale name="socialshare.settings.showLabel">
+            <de><![CDATA[Label anzeigen]]></de>
+            <en><![CDATA[Show label]]></en>
+            <pl><![CDATA[Pokaż tekst]]></pl>
+        </locale>
+        <locale name="socialshare.settings.showIcon">
+            <de><![CDATA[Icon anzeigen]]></de>
+            <en><![CDATA[Show icon]]></en>
+            <pl><![CDATA[Pokaż ikonę]]></pl>
+        </locale>
+        <locale name="socialshare.settings.showCount">
+            <de><![CDATA[Zähler anzeigen]]></de>
+            <en><![CDATA[Show counter]]></en>
+            <pl><![CDATA[Pokaż licznik]]></pl>
         </locale>
     </groups>
 </locales>

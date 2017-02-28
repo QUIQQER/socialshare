@@ -17,7 +17,10 @@ use QUI\Control;
  */
 abstract class Socialshare extends Control
 {
-
+    /**
+     * Socialshare constructor.
+     * @param array $params
+     */
     public function __construct($params = array())
     {
         $this->setAttributes(array(
@@ -81,16 +84,10 @@ abstract class Socialshare extends Control
      */
     public function getBody()
     {
-        $param = array('twitter', 'facebook', 'google');
 
-        $arr = array('facebook', 'twitter', 'google', 'pinterest');
-
-        foreach ($param as $item) {
-            if (isset($item, $arr)) {
-                echo $item . "<br />";
-            }
-        }
-
+        echo "<pre>";
+        print_r($this->getAttributes());
+        echo "</pre>";
         $body = '<span class="quiqqer-socialshare-container">';
 
         if ($this->getAttribute('showIcon') === true) {
@@ -102,6 +99,8 @@ abstract class Socialshare extends Control
             }
             $body .= $this->createLabel();
         }
+
+
 
         $this->setAttribute('href', $this->getShareUrl());
         $this->setAttribute('target', '_blank');
