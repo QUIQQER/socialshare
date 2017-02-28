@@ -81,6 +81,16 @@ abstract class Socialshare extends Control
      */
     public function getBody()
     {
+        $param = array('twitter', 'facebook', 'google');
+
+        $arr = array('facebook', 'twitter', 'google', 'pinterest');
+
+        foreach($param as $item) {
+            if (isset($item, $arr)) {
+                echo $item . "<br />";
+            }
+        }
+
         $body = '<span class="quiqqer-socialshare-container">';
 
         if ($this->getAttribute('showIcon') === true) {
