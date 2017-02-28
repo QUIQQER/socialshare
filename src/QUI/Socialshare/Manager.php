@@ -43,7 +43,7 @@ class Manager extends Control
      */
     public static function getSocials($params = array())
     {
-        foreach($params as $item => $value) {
+        foreach ($params as $item => $value) {
             if (isset($item, $availableSocials)) {
                 $social = strtolower($item);
                 $social = upfirst($social);

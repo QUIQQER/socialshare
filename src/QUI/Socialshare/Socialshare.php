@@ -85,7 +85,7 @@ abstract class Socialshare extends Control
 
         $arr = array('facebook', 'twitter', 'google', 'pinterest');
 
-        foreach($param as $item) {
+        foreach ($param as $item) {
             if (isset($item, $arr)) {
                 echo $item . "<br />";
             }
@@ -111,7 +111,7 @@ abstract class Socialshare extends Control
 
 
         switch ($this->getAttribute('theme')) {
-            case'classic':
+            case 'classic':
                 $this->addCSSClass('quiqqer-socialshare-classic');
                 $this->addCSSFile(dirname(__FILE__) . '/Themes/Classic.css');
                 break;
@@ -256,6 +256,5 @@ abstract class Socialshare extends Control
         }
 
         return QUI::getRewrite()->getSite();
-
     }
 }
