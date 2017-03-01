@@ -67,6 +67,7 @@ define('package/quiqqer/socialshare/bin/controls/Facebook', [
         },
 
         refresh: function () {
+            return;
             Ajax.get('package_quiqqer_socialshare_ajax_getCount', function (result) {
                 this.$Count.set('html', result);
             }.bind(this), {                                  // weitere Parameter

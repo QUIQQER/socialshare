@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiqqer>
+    <bricks>
+
+        <brick control="\QUI\Socialshare\Manager\TeamList">
+            <title>
+                <locale group="quiqqer/teampage"
+                        var="bricks.team-list.title"
+                />
+            </title>
+            <description>
+                <locale group="quiqqer/teamlist"
+                        var="bricks.team-list.description"
+                />
+            </description>
+
+            <settings>
+                <setting name="quiqqer.settings.teamPage.group" data-qui="controls/usersAndGroups/Select">
+                    <locale group="quiqqer/teampage" var="teamPage.settings.chooseUser" />
+                </setting>
+
+                <!-- template / layout -->
+                <setting name="quiqqer.settings.teamPage.template" type="select">
+                    <locale group="quiqqer/teampage" var="teamPage.settings.design" />
+                    <option value="standard">
+                        <locale group="quiqqer/teampage" var="teamPage.settings.design.circle"/>
+                    </option>
+                    <option value="HoverText">
+                        <locale group="quiqqer/teampage" var="teamPage.settings.design.hoverText"/>
+                    </option>
+                    <option value="ImgLeft">
+                        <locale group="quiqqer/teampage" var="teamPage.settings.design.imgLeft"/>
+                    </option>
+                </setting>
+
+                <!-- sort / order -->
+                <setting name="quiqqer.settings.teamPage.sort" type="select">
+                    <locale group="quiqqer/team-page" var="teamPage.settings.sort"/>
+                    <option value="firstNameASC">
+                        <locale group="quiqqer/team-page" var="teamPage.settings.sort.firstNameASC"/>
+                    </option>
+                    <option value="firstNameDESC">
+                        <locale group="quiqqer/team-page" var="teamPage.settings.sort.firstNameDESC"/>
+                    </option>
+                    <option value="lastNameASC">
+                        <locale group="quiqqer/team-page" var="teamPage.settings.sort.lastNameASC"/>
+                    </option>
+                    <option value="lastNameDESC">
+                        <locale group="quiqqer/team-page" var="teamPage.settings.sort.lastNameDESC"/>
+                    </option>
+                    <!--<option value="userNameASC">
+                        <locale group="quiqqer/team-page" var="teamPage.settings.sort.userNameASC"/>
+                    </option>
+                    <option value="userNameDESC">
+                        <locale group="quiqqer/team-page" var="teamPage.settings.sort.userNameDESC"/>
+                    </option>-->
+                </setting>
+
+                <setting name="quiqqer.settings.teamPage.showPhone" type="checkbox">
+                    <locale group="quiqqer/teampage" var="teamPage.settings.showPhone" />
+                </setting>
+
+                <setting name="quiqqer.settings.teamPage.showSocial" type="checkbox">
+                    <locale group="quiqqer/teampage" var="teamPage.settings.showSocial" />
+                </setting>
+
+                <setting name="quiqqer.settings.teamPage.perRow" type="number">
+                    <locale group="quiqqer/teampage" var="teamPage.settings.perRow" />
+                </setting>
+
+            </settings>
+        </brick>
+
+    </bricks>
+</quiqqer>

@@ -14,8 +14,8 @@ use QUI\Socialshare\Socialshare;
  * @author  www.pcsg.de (Michael Danielczok)
  * @package quiqqer/socialshare
  */
-
-class Mail extends Socialshare {
+class Mail extends Socialshare
+{
 
     public function __construct($params = array())
     {
@@ -45,23 +45,33 @@ class Mail extends Socialshare {
 
     public function getShareUrl()
     {
-        $Request = QUI::getRequest();
-        $baseUrl = $Request->getScheme() . '://' . $Request->getHttpHost() . $Request->getBasePath();
-        $subject = "thema";
-        $mail = "test@mail.de";
-
+        $Site      = QUI::getRewrite()->getSite();
+        $Request   = QUI::getRequest();
+        $baseUrl   = $Request->getScheme() . '://' .
+            $Request->getHttpHost() . $Request->getBasePath() . $Site->getUrlRewritten();
         $siteTitle = QUI::getRewrite()->getSite()->getAttribute('title');
 
-        return 'mailto:' . $mail . '?subject=' . $siteTitle . '&body=' . $baseUrl;
+        return 'mailto:' . '?subject=' . $siteTitle . '&body=' . $baseUrl;
     }
 
+    /**
+     * (non-PHPdoc)
+     *
+     * @see \QUI\Socialshare\Socialshare::getCount()
+     */
     public function getCount()
     {
-        // TODO: Implement getCount() method.
+        // todo man kann manuel einen Zähler setzten
+        return false;
     }
 
+    /**
+     * (non-PHPdoc)
+     *
+     * @see \QUI\Socialshare\Socialshare::getCountUrl
+     */
     public function getCountUrl()
     {
-        // TODO: Implement getCountUrl() method.
+        return false;
     }
 }

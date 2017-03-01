@@ -84,23 +84,17 @@ abstract class Socialshare extends Control
      */
     public function getBody()
     {
-
-        echo "<pre>";
-        print_r($this->getAttributes());
-        echo "</pre>";
         $body = '<span class="quiqqer-socialshare-container">';
 
-        if ($this->getAttribute('showIcon') === true) {
+        if ($this->getAttribute('showIcon')) {
             $body .= $this->createLogo();
         }
-        if ($this->getAttribute('showLabel') === true) {
+        if ($this->getAttribute('showLabel')) {
             if ($this->getAttribute('showIcon')) {
                 $this->addCSSClass('quiqqer-socialshare-icon-spacing');
             }
             $body .= $this->createLabel();
         }
-
-
 
         $this->setAttribute('href', $this->getShareUrl());
         $this->setAttribute('target', '_blank');
@@ -129,7 +123,7 @@ abstract class Socialshare extends Control
         }
         $body .= '</span>';
 
-        if ($this->getAttribute('showCount') === true) {
+        if ($this->getAttribute('showCount')) {
             $body .= $this->createCount();
         }
 
@@ -164,7 +158,7 @@ abstract class Socialshare extends Control
     public function createCount()
     {
         if ($this->getCount() != null) {
-            return '<!--<div class="quiqqer-socialshare-triangle"></div>--><span class="quiqqer-socialshare-count"><span class="fa fa-spinner fa-spin"></span></span>';
+            return '<span class="quiqqer-socialshare-count"><span class="fa fa-spinner fa-spin"></span></span>';
         }
     }
 
@@ -244,7 +238,7 @@ abstract class Socialshare extends Control
     }
 
     /**
-     *
+     * Return the site object
      *
      * @return QUI\Projects\Site
      */

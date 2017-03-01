@@ -36,6 +36,7 @@ define('package/quiqqer/socialshare/bin/controls/Google', [
         },
 
         refresh: function () {
+            return;
             Ajax.get('package_quiqqer_socialshare_ajax_getCount', function (result) {
                 this.$Count.set('html', result);
             }.bind(this), {

@@ -68,6 +68,18 @@
     background: none;
 }
 
+/* Whatsapp */
+.quiqqer-socialshare-minima.quiqqer-socialshare-whatsapp .quiqqer-socialshare-container{
+    background: none;
+    color: #29a628;
+    border: none;
+}
+
+.quiqqer-socialshare-minima.quiqqer-socialshare-whatsapp .quiqqer-socialshare-container:hover {
+    color: #1f7d1e;
+    background: none;
+}
+
 /* Mail */
 .quiqqer-socialshare-minima.quiqqer-socialshare-mail .quiqqer-socialshare-container{
     background: none;

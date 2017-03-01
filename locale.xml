@@ -6,10 +6,25 @@
             <en><![CDATA[Share]]></en>
             <pl><![CDATA[Udostępnij]]></pl>
         </locale>
+        <locale name="label-tweeter">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Tweetnij]]></pl>
+        </locale>
+        <locale name="label-google">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Tweet]]></en>
+            <pl><![CDATA[Podziel się]]></pl>
+        </locale>
+        <locale name="label-whatsapp">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
         <locale name="label-pinterest">
-            <de><![CDATA[Pin it]]></de>
-            <en><![CDATA[Pin it]]></en>
-            <pl><![CDATA[Pin it]]></pl>
+            <de><![CDATA[Pin it!]]></de>
+            <en><![CDATA[Pin it!]]></en>
+            <pl><![CDATA[Pin it!]]></pl>
         </locale>
         <locale name="label-mail">
             <de><![CDATA[Mailen]]></de>
@@ -27,27 +42,21 @@
         </locale>
 
         <locale name="quiqqer.socialshare.title.text">
-            <de><![CDATA[Seitentitel]]></de>
-            <en><![CDATA[Site title]]></en>
-            <pl><![CDATA[Tytuł strony]]></pl>
+            <de><![CDATA[Titel]]></de>
+            <en><![CDATA[Title]]></en>
+            <pl><![CDATA[Tytuł]]></pl>
         </locale>
 
         <locale name="quiqqer.socialshare.description.text">
-            <de><![CDATA[Seiten Beschreibung]]></de>
-            <en><![CDATA[Site description]]></en>
-            <pl><![CDATA[Opis strony]]></pl>
+            <de><![CDATA[Kurze Beschreibung]]></de>
+            <en><![CDATA[Short description]]></en>
+            <pl><![CDATA[Krotki opis strony]]></pl>
         </locale>
 
         <locale name="quiqqer.socialshare.type.text">
             <de><![CDATA[Seitentyp]]></de>
             <en><![CDATA[Site type]]></en>
             <pl><![CDATA[Typ strony]]></pl>
-        </locale>
-
-        <locale name="quiqqer.socialshare.description">
-            <de><![CDATA[Kurze Bescrheibung der möglichen Typen, die zur Verfügung stehen.]]></de>
-            <en><![CDATA[The type of media of your content.]]></en>
-            <pl><![CDATA[]]></pl>
         </locale>
 
         <locale name="quiqqer.socialshare.type.website">
@@ -77,12 +86,6 @@
             <pl><![CDATA[Adres strony]]></pl>
         </locale>
 
-        <locale name="quiqqer.socialshare.sitename.text">
-            <de><![CDATA[Seitenname, z.B. "PC Welt"]]></de>
-            <en><![CDATA[Site name, for example. "The New York Times"]]></en>
-            <pl><![CDATA[Nazwa strony, np. "Onet"]]></pl>
-        </locale>
-
         <locale name="quiqqer.socialshare.author.text">
             <de><![CDATA[Autor]]></de>
             <en><![CDATA[Author]]></en>
@@ -95,38 +98,25 @@
             <pl><![CDATA[Obrazek wyróżniający]]></pl>
         </locale>
 
-        <!-- Twitter only -->
-        <locale name="quiqqer.socialshare.twitteronly">
-            <de><![CDATA[Metadaten für Twitter relevant]]></de>
-            <en><![CDATA[Metadata only for Twitter]]></en>
-            <pl><![CDATA[Metadane specyficzne dla Twittera]]></pl>
-        </locale>
-        <locale name="quiqqer.socialshare.twitter.card.text">
-            <de><![CDATA[Erweiterte Tweets: Tweeter Cards]]></de>
-            <en><![CDATA[Tweeter Cards]]></en>
-            <pl><![CDATA[Tweeter Cards]]></pl>
-        </locale>
-        <locale name="quiqqer.socialshare.twitter.card.summary">
-            <de><![CDATA[Summary Card]]></de>
-            <en><![CDATA[Summary Card]]></en>
-            <pl><![CDATA[Summary Card]]></pl>
-        </locale>
-        <locale name="quiqqer.socialshare.twitter.card.summaryLargeImage">
-            <de><![CDATA[Summary Card with Large Image]]></de>
-            <en><![CDATA[Summary Card with Large Image]]></en>
-            <pl><![CDATA[Summary Card with Large Image]]></pl>
-        </locale>
-        <locale name="quiqqer.socialshare.twitter.card.player">
-            <de><![CDATA[Player Card]]></de>
-            <en><![CDATA[Player Card]]></en>
-            <pl><![CDATA[Player Card]]></pl>
+        <locale name="quiqqer.socialshare.image.description">
+            <de><![CDATA[Dieses Bild wird als Vorschau im Social-Media angezeigt. (Facebook, Twitter, Google+)]]></de>
+            <en><![CDATA[This image is displayed as a preview in the social media. (Facebook, Twitter, Google+)]]></en>
+            <pl><![CDATA[]]></pl>
         </locale>
 
-        <locale name="quiqqer.socialshare.twitter.site.text">
+
+        <!-- Twitter only -->
+        <!--<locale name="quiqqer.socialshare.twitteronly">
+            <de><![CDATA[Metadaten für Twitter]]></de>
+            <en><![CDATA[Metadata only for Twitter]]></en>
+            <pl><![CDATA[Metadane specyficzne dla Twittera]]></pl>
+        </locale>-->
+
+        <!--<locale name="quiqqer.socialshare.twitter.site.text">
             <de><![CDATA[Twitter @username]]></de>
             <en><![CDATA[Twitter @username]]></en>
             <pl><![CDATA[Twitter @username]]></pl>
-        </locale>
+        </locale>-->
 
         <!-- settings.xml -->
         <locale name="socialshare.settings.category">
@@ -136,7 +126,7 @@
         </locale>
 
         <locale name="socialshare.settings.title">
-            <de><![CDATA[Social Share nzeigen]]></de>
+            <de><![CDATA[Social Share anzeigen]]></de>
             <en><![CDATA[Social share display]]></en>
             <pl><![CDATA[Pokaż social share]]></pl>
         </locale>
@@ -155,6 +145,11 @@
                 <en><![CDATA[Google]]></en>
                 <pl><![CDATA[Google]]></pl>
             </locale>
+        <locale name="socialshare.settings.show.whatsapp">
+            <de><![CDATA[WhatsApp]]></de>
+            <en><![CDATA[WhatsApp]]></en>
+            <pl><![CDATA[WhatsApp]]></pl>
+        </locale>
             <locale name="socialshare.settings.show.pinterest">
                 <de><![CDATA[Pinterest]]></de>
                 <en><![CDATA[Pinterest]]></en>
@@ -166,41 +161,81 @@
                 <pl><![CDATA[E-Mail]]></pl>
             </locale>
 
-        <locale name="socialshare.settings.theme">
+
+
+        <locale name="socialshare.settings.general.title">
+            <de><![CDATA[Allgemeine Einstellunge]]></de>
+            <en><![CDATA[General settings]]></en>
+            <pl><![CDATA[Ustawienia ogólne]]></pl>
+        </locale>
+        <locale name="socialshare.settings.general.theme">
             <de><![CDATA[Theme]]></de>
             <en><![CDATA[Theme]]></en>
             <pl><![CDATA[Wygląd]]></pl>
         </locale>
-            <locale name="socialshare.settings.theme.classic">
+            <locale name="socialshare.settings.general.theme.classic">
                 <de><![CDATA[Classic]]></de>
                 <en><![CDATA[Classic]]></en>
                 <pl><![CDATA[Classic]]></pl>
             </locale>
-            <locale name="socialshare.settings.theme.flat">
+            <locale name="socialshare.settings.general.theme.flat">
                 <de><![CDATA[Flat]]></de>
                 <en><![CDATA[Flat]]></en>
                 <pl><![CDATA[Flat]]></pl>
             </locale>
-            <locale name="socialshare.settings.theme.minima">
+            <locale name="socialshare.settings.general.theme.minima">
                 <de><![CDATA[Minima]]></de>
                 <en><![CDATA[Minima]]></en>
                 <pl><![CDATA[Minima]]></pl>
             </locale>
 
-        <locale name="socialshare.settings.showLabel">
+        <locale name="socialshare.settings.general.showLabel">
             <de><![CDATA[Label anzeigen]]></de>
             <en><![CDATA[Show label]]></en>
             <pl><![CDATA[Pokaż tekst]]></pl>
         </locale>
-        <locale name="socialshare.settings.showIcon">
+        <locale name="socialshare.settings.general.showIcon">
             <de><![CDATA[Icon anzeigen]]></de>
             <en><![CDATA[Show icon]]></en>
             <pl><![CDATA[Pokaż ikonę]]></pl>
         </locale>
-        <locale name="socialshare.settings.showCount">
+        <locale name="socialshare.settings.general.showCount">
             <de><![CDATA[Zähler anzeigen]]></de>
             <en><![CDATA[Show counter]]></en>
             <pl><![CDATA[Pokaż licznik]]></pl>
+        </locale>
+        <locale name="socialshare.settings.general.siteName">
+            <de><![CDATA[Seitenname, z.B. "PC Welt"]]></de>
+            <en><![CDATA[Site name, for example. "The New York Times"]]></en>
+            <pl><![CDATA[Nazwa strony, np. "Onet"]]></pl>
+        </locale>
+
+
+        <!-- twitter -->
+        <locale name="socialshare.settings.twitter.title">
+            <de><![CDATA[Twitter]]></de>
+            <en><![CDATA[Twitter]]></en>
+            <pl><![CDATA[Twitter]]></pl>
+        </locale>
+        <locale name="socialshare.settings.twitter.card">
+            <de><![CDATA[Tweeter Cards]]></de>
+            <en><![CDATA[Tweeter Cards]]></en>
+            <pl><![CDATA[Tweeter Cards]]></pl>
+        </locale>
+        <locale name="socialshare.settings.twitter.card.summary">
+            <de><![CDATA[Summary Card]]></de>
+            <en><![CDATA[Summary Card]]></en>
+            <pl><![CDATA[Summary Card]]></pl>
+        </locale>
+        <locale name="socialshare.settings.twitter.card.summaryLargeImage">
+            <de><![CDATA[Summary Card with Large Image]]></de>
+            <en><![CDATA[Summary Card with Large Image]]></en>
+            <pl><![CDATA[Summary Card with Large Image]]></pl>
+        </locale>
+        <locale name="socialshare.settings.twitter.card.player">
+            <de><![CDATA[Player Card]]></de>
+            <en><![CDATA[Player Card]]></en>
+            <pl><![CDATA[Player Card]]></pl>
         </locale>
     </groups>
 </locales>

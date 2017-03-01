@@ -124,6 +124,16 @@
     background: #c23321;
 }
 
+/* Whatsapp */
+.quiqqer-socialshare-whatsapp .quiqqer-socialshare-container{
+    background: #29a628;
+    border: 1px solid #29a628;
+}
+
+.quiqqer-socialshare-whatsapp:hover .quiqqer-socialshare-container{
+    background: #1f7d1e;
+}
+
 /* Mail */
 .quiqqer-socialshare-mail .quiqqer-socialshare-container{
     background: #3490f3;

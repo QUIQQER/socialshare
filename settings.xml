@@ -14,6 +14,9 @@
                     <conf name="Google">
                         <type><![CDATA[bool]]></type>
                     </conf>
+                    <conf name="Whatsapp">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
                     <conf name="Pinterest">
                         <type><![CDATA[bool]]></type>
                     </conf>
@@ -22,17 +25,25 @@
                     </conf>
 
 
-                    <conf name="showLabel">
+                    <conf name="general.showLabel">
                         <type><![CDATA[bool]]></type>
                     </conf>
-                    <conf name="showIcon">
+                    <conf name="general.showIcon">
                         <type><![CDATA[bool]]></type>
                     </conf>
-                    <conf name="showCount">
+                    <conf name="general.showCount">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="general.siteName">
                         <type><![CDATA[bool]]></type>
                     </conf>
 
-                    <conf name="theme">
+                    <conf name="general.theme">
+                        <type><![CDATA[string]]></type>
+                    </conf>
+
+
+                    <conf name="twitter.card">
                         <type><![CDATA[string]]></type>
                     </conf>
                 </section>
@@ -73,6 +84,12 @@
                                             var="socialshare.settings.show.google"/>
                                 </text>
                             </input>
+                            <input conf="socialshare.settings.Whatsapp" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.whatsapp"/>
+                                </text>
+                            </input>
                             <input conf="socialshare.settings.Pinterest" type="checkbox">
                                 <text>
                                     <locale group="quiqqer/socialshare"
@@ -88,43 +105,82 @@
 
                         </settings>
 
-                        <settings title="socialshare.settings" name="socialshare.settings.theme">
+                        <settings title="socialshare.settings" name="socialshare.settings.general">
+                            <title>
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.general.title"/>
+                                </text>
+                            </title>
+                            <input conf="socialshare.settings.general.showLabel" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.general.showLabel"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.general.showIcon" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.general.showIcon"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.general.showCount" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.general.showCount"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.general.siteName">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.general.siteName" />
+                                </text>
+                            </input>
 
-                            <input conf="socialshare.settings.showLabel" type="checkbox">
+                            <select conf="socialshare.settings.general.theme">
                                 <text>
                                     <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.showLabel"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.showIcon" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.showIcon"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.showCount" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.showCount"/>
-                                </text>
-                            </input>
-
-                            <select conf="socialshare.settings.theme">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.theme"/>
+                                            var="socialshare.settings.general.theme"/>
                                 </text>
                                 <option value="classic">
                                     <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.theme.classic"/>
+                                            var="socialshare.settings.general.theme.classic"/>
                                 </option>
                                 <option value="flat">
                                     <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.theme.flat"/>
+                                            var="socialshare.settings.general.theme.flat"/>
                                 </option>
                                 <option value="minima">
                                     <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.theme.minima"/>
+                                            var="socialshare.settings.general.theme.minima"/>
+                                </option>
+                            </select>
+                        </settings>
+
+                        <settings title="socialshare.settings" name="socialshare.settings.twitter">
+                            <title>
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.twitter.title"/>
+                                </text>
+                            </title>
+                            <select conf="socialshare.settings.twitter.card">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.twitter.card" />
+                                </text>
+
+                                <option value="summary">
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.twitter.card.summary" />
+                                </option>
+                                <option value="summary_large_image">
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.twitter.card.summaryLargeImage" />
+                                </option>
+                                <option value="player">
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.twitter.card.player" />
                                 </option>
                             </select>
                         </settings>

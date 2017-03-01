@@ -61,11 +61,12 @@ define('package/quiqqer/socialshare/bin/controls/Pinterest', [
                 // }).delay(3000);
             });
 
-            this.refresh();
+//            this.refresh();
 
-        },
+        }/*,
 
         refresh: function () {
+            return;
             Ajax.get('package_quiqqer_socialshare_ajax_getCount', function (result) {
                 this.$Count.set('html', result);
             }.bind(this), {
@@ -75,7 +76,7 @@ define('package/quiqqer/socialshare/bin/controls/Pinterest', [
                 project  : JSON.encode(QUIQQER_PROJECT),
                 siteId   : QUIQQER_SITE.id
                      });
-        }
+        }*/
     });
 
 });
