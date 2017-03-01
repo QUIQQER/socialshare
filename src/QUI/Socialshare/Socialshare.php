@@ -102,7 +102,6 @@ abstract class Socialshare extends Control
         $this->addCSSClass('quiqqer-socialshare ' . $this->getName());
         $this->addCSSFile(dirname(__FILE__) . '/Socialshare.css');
 
-
         switch ($this->getAttribute('theme')) {
             case 'classic':
                 $this->addCSSClass('quiqqer-socialshare-classic');
@@ -123,9 +122,10 @@ abstract class Socialshare extends Control
         }
         $body .= '</span>';
 
-        if ($this->getAttribute('showCount')) {
+        // todo counter implementieren
+        /*if ($this->getAttribute('showCount')) {
             $body .= $this->createCount();
-        }
+        }*/
 
         return $body;
     }

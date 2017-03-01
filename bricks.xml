@@ -1,3 +1,4 @@
+<!--
 <?xml version="1.0" encoding="UTF-8"?>
 <quiqqer>
     <bricks>
@@ -19,7 +20,7 @@
                     <locale group="quiqqer/teampage" var="teamPage.settings.chooseUser" />
                 </setting>
 
-                <!-- template / layout -->
+                &lt;!&ndash; template / layout &ndash;&gt;
                 <setting name="quiqqer.settings.teamPage.template" type="select">
                     <locale group="quiqqer/teampage" var="teamPage.settings.design" />
                     <option value="standard">
@@ -33,7 +34,7 @@
                     </option>
                 </setting>
 
-                <!-- sort / order -->
+                &lt;!&ndash; sort / order &ndash;&gt;
                 <setting name="quiqqer.settings.teamPage.sort" type="select">
                     <locale group="quiqqer/team-page" var="teamPage.settings.sort"/>
                     <option value="firstNameASC">
@@ -48,12 +49,12 @@
                     <option value="lastNameDESC">
                         <locale group="quiqqer/team-page" var="teamPage.settings.sort.lastNameDESC"/>
                     </option>
-                    <!--<option value="userNameASC">
+                    &lt;!&ndash;<option value="userNameASC">
                         <locale group="quiqqer/team-page" var="teamPage.settings.sort.userNameASC"/>
                     </option>
                     <option value="userNameDESC">
                         <locale group="quiqqer/team-page" var="teamPage.settings.sort.userNameDESC"/>
-                    </option>-->
+                    </option>&ndash;&gt;
                 </setting>
 
                 <setting name="quiqqer.settings.teamPage.showPhone" type="checkbox">
@@ -72,4 +73,4 @@
         </brick>
 
     </bricks>
-</quiqqer>
+</quiqqer>-->

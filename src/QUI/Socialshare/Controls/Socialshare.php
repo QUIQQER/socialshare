@@ -30,12 +30,13 @@ class Socialshare extends Control
     public function getBody()
     {
         $Engine      = QUI::getTemplateManager()->getEngine();
-        $Socialshare = new QUI\Socialshare\Manager();
+        $Social = new QUI\Socialshare\Manager();
+        $socials = $Social->get();
 
         $Engine->assign(array(
-            'socialshare' => $Socialshare->get()
+            'socials' => $socials
         ));
 
-        return $Engine->fetch(dirname(__FILE__) . 'Socialshare.html');
+        return $Engine->fetch(dirname(__FILE__) . '/Socialshare.html');
     }
 }
