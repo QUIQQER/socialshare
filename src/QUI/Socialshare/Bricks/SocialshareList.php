@@ -30,11 +30,10 @@ class SocialshareList extends QUI\Control
      */
     public function getBody()
     {
-        $Engine = QUI::getTemplateManager()->getEngine();
+        /*$Engine = QUI::getTemplateManager()->getEngine();
 
         $Control = new QUI\Socialshare\Manager();
 
-        return $Engine->fetch(dirname(__FILE__) . $template);
-
+        return $Engine->fetch(dirname(__FILE__) . $template);*/
     }
 }

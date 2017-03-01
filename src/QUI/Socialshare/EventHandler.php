@@ -111,6 +111,5 @@ class EventHandler
         }
         $Template->extendHeader('<meta name="twitter:card" content="' .
             htmlspecialchars($card) . '" />');
-
     }
 }
