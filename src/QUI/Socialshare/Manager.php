@@ -96,14 +96,12 @@ class Manager
      */
     private static function setSocialSettings($settings = array())
     {
-        foreach ($settings as $settings) {
-
-        }
-
-
         self::$settings['theme']     = QUI::getRewrite()->getProject()->getConfig('socialshare.settings.general.theme');
         self::$settings['showLabel'] = QUI::getRewrite()->getProject()->getConfig('socialshare.settings.general.showLabel');
         self::$settings['showIcon']  = QUI::getRewrite()->getProject()->getConfig('socialshare.settings.general.showIcon');
         self::$settings['showCount'] = QUI::getRewrite()->getProject()->getConfig('socialshare.settings.general.showCount');
+        /*foreach ($settings as $settings) {
+
+        }*/
     }
 }
