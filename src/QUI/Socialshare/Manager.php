@@ -78,7 +78,7 @@ class Manager
         $htmlSocial = "";
 
         if (!isset($availableSocials[$social])) {
-            throw new QUI\Exception('Social Klasse ' . $social . 'existiert nicht', 404);
+            throw new QUI\Exception('Social class ' . $social . 'not exist. First letter capitalized?', 404);
         }
 
         $class      = 'QUI\Socialshare\Shares\\' . $social;

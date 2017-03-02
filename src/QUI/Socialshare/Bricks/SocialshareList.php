@@ -8,32 +8,35 @@ namespace QUI\Socialshare\Bricks;
 use QUI;
 
 /**
- * Class Team
+ * Class SocialshareList
  *
  * @author  www.pcsg.de (Michael Danielczok)
  */
 class SocialshareList extends QUI\Control
 {
     /**
-     * TeamList constructor.
+     * SocialshareList constructor.
      * @param array $attributes
      */
-    public function __construct(array $attributes)
+    public function __construct($attributes = array())
     {
 
+        $this->setAttributes(array(
+            'class' => 'quiqqer-socialshare-brick',
+            'theme' => '' // todo brick settings
+        ));
         parent::__construct($attributes);
     }
 
     /**
-     * @inheritdoc
      * @return string
      */
     public function getBody()
     {
-        /*$Engine = QUI::getTemplateManager()->getEngine();
+        $Control = new QUI\Socialshare\Controls\Socialshare(array(
+            'theme' => 'flat' // todo brick settings
+        ));
 
-        $Control = new QUI\Socialshare\Manager();
-
-        return $Engine->fetch(dirname(__FILE__) . $template);*/
+        return $Control->create();
     }
 }

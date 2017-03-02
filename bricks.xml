@@ -1,76 +1,60 @@
-<!--
 <?xml version="1.0" encoding="UTF-8"?>
 <quiqqer>
     <bricks>
 
-        <brick control="\QUI\Socialshare\Manager\TeamList">
+        <!-- Social Share List -->
+        <brick control="\QUI\Socialshare\Bricks\SocialshareList">
             <title>
-                <locale group="quiqqer/teampage"
-                        var="bricks.team-list.title"
+                <locale group="quiqqer/socialshare"
+                        var="bricks.socialshareList.title"
                 />
             </title>
             <description>
-                <locale group="quiqqer/teamlist"
-                        var="bricks.team-list.description"
+                <locale group="quiqqer/socialshare"
+                        var="bricks.socialshareList.description"
                 />
             </description>
 
             <settings>
-                <setting name="quiqqer.settings.teamPage.group" data-qui="controls/usersAndGroups/Select">
-                    <locale group="quiqqer/teampage" var="teamPage.settings.chooseUser" />
+
+                <!-- show label -->
+                <setting name="socialshare.settings.general.showLabel" type="checkbox">
+                    <text>
+                        <locale group="quiqqer/socialshare"
+                                var="socialshare.settings.general.showLabel"/>
+                    </text>
                 </setting>
 
-                &lt;!&ndash; template / layout &ndash;&gt;
-                <setting name="quiqqer.settings.teamPage.template" type="select">
-                    <locale group="quiqqer/teampage" var="teamPage.settings.design" />
-                    <option value="standard">
-                        <locale group="quiqqer/teampage" var="teamPage.settings.design.circle"/>
-                    </option>
-                    <option value="HoverText">
-                        <locale group="quiqqer/teampage" var="teamPage.settings.design.hoverText"/>
-                    </option>
-                    <option value="ImgLeft">
-                        <locale group="quiqqer/teampage" var="teamPage.settings.design.imgLeft"/>
-                    </option>
+                <!-- show icon  -->
+                <setting name="socialshare.settings.general.showIcon" type="checkbox">
+                    <text>
+                        <locale group="quiqqer/socialshare"
+                                var="socialshare.settings.general.showIcon"/>
+                    </text>
                 </setting>
 
-                &lt;!&ndash; sort / order &ndash;&gt;
-                <setting name="quiqqer.settings.teamPage.sort" type="select">
-                    <locale group="quiqqer/team-page" var="teamPage.settings.sort"/>
-                    <option value="firstNameASC">
-                        <locale group="quiqqer/team-page" var="teamPage.settings.sort.firstNameASC"/>
+                <!-- theme -->
+                <setting name="socialshare.settings.general.theme" type="select">
+                    <text>
+                        <locale group="quiqqer/socialshare"
+                                var="socialshare.settings.general.theme"/>
+                    </text>
+                    <option value="classic">
+                        <locale group="quiqqer/socialshare"
+                                var="socialshare.settings.general.theme.classic"/>
                     </option>
-                    <option value="firstNameDESC">
-                        <locale group="quiqqer/team-page" var="teamPage.settings.sort.firstNameDESC"/>
+                    <option value="flat">
+                        <locale group="quiqqer/socialshare"
+                                var="socialshare.settings.general.theme.flat"/>
                     </option>
-                    <option value="lastNameASC">
-                        <locale group="quiqqer/team-page" var="teamPage.settings.sort.lastNameASC"/>
+                    <option value="minima">
+                        <locale group="quiqqer/socialshare"
+                                var="socialshare.settings.general.theme.minima"/>
                     </option>
-                    <option value="lastNameDESC">
-                        <locale group="quiqqer/team-page" var="teamPage.settings.sort.lastNameDESC"/>
-                    </option>
-                    &lt;!&ndash;<option value="userNameASC">
-                        <locale group="quiqqer/team-page" var="teamPage.settings.sort.userNameASC"/>
-                    </option>
-                    <option value="userNameDESC">
-                        <locale group="quiqqer/team-page" var="teamPage.settings.sort.userNameDESC"/>
-                    </option>&ndash;&gt;
-                </setting>
-
-                <setting name="quiqqer.settings.teamPage.showPhone" type="checkbox">
-                    <locale group="quiqqer/teampage" var="teamPage.settings.showPhone" />
-                </setting>
-
-                <setting name="quiqqer.settings.teamPage.showSocial" type="checkbox">
-                    <locale group="quiqqer/teampage" var="teamPage.settings.showSocial" />
-                </setting>
-
-                <setting name="quiqqer.settings.teamPage.perRow" type="number">
-                    <locale group="quiqqer/teampage" var="teamPage.settings.perRow" />
                 </setting>
 
             </settings>
         </brick>
 
     </bricks>
-</quiqqer>-->
+</quiqqer>

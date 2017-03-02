@@ -29,7 +29,8 @@ abstract class Socialshare extends Control
             'showIcon'  => true,
             'showCount' => true,
             'nodeName'  => 'a',
-            'Site'      => false
+            'Site'      => false,
+            'class'     => 'quiqqer-socialshare-link'
         ));
 
         parent::__construct($params);
@@ -84,7 +85,9 @@ abstract class Socialshare extends Control
      */
     public function getBody()
     {
-        $body = '<span class="quiqqer-socialshare-container">';
+        $body = '<span class="quiqqer-socialshare-wrapper">';
+//        $body = '';
+//        $this->addCSSClass('quiqqer-socialshare-container');
 
         if ($this->getAttribute('showIcon')) {
             $body .= $this->createLogo();
@@ -99,8 +102,7 @@ abstract class Socialshare extends Control
         $this->setAttribute('href', $this->getShareUrl());
         $this->setAttribute('target', '_blank');
 
-        $this->addCSSClass('quiqqer-socialshare ' . $this->getName());
-        $this->addCSSFile(dirname(__FILE__) . '/Socialshare.css');
+        $this->addCSSClass($this->getName());
 
         switch ($this->getAttribute('theme')) {
             case 'classic':
@@ -120,7 +122,9 @@ abstract class Socialshare extends Control
                 $this->addCSSFile(dirname(__FILE__) . '/Themes/Classic.css');
                 break;
         }
+
         $body .= '</span>';
+//        $body .= '';
 
         // todo counter implementieren
         /*if ($this->getAttribute('showCount')) {

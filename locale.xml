@@ -104,20 +104,6 @@
             <pl><![CDATA[]]></pl>
         </locale>
 
-
-        <!-- Twitter only -->
-        <!--<locale name="quiqqer.socialshare.twitteronly">
-            <de><![CDATA[Metadaten für Twitter]]></de>
-            <en><![CDATA[Metadata only for Twitter]]></en>
-            <pl><![CDATA[Metadane specyficzne dla Twittera]]></pl>
-        </locale>-->
-
-        <!--<locale name="quiqqer.socialshare.twitter.site.text">
-            <de><![CDATA[Twitter @username]]></de>
-            <en><![CDATA[Twitter @username]]></en>
-            <pl><![CDATA[Twitter @username]]></pl>
-        </locale>-->
-
         <!-- settings.xml -->
         <locale name="socialshare.settings.category">
             <de><![CDATA[Social Share]]></de>
@@ -233,6 +219,19 @@
             <pl><![CDATA[Summary Card with Large Image]]></pl>
         </locale>
         <locale name="socialshare.settings.twitter.card.player">
+            <de><![CDATA[Player Card]]></de>
+            <en><![CDATA[Player Card]]></en>
+            <pl><![CDATA[Player Card]]></pl>
+        </locale>
+
+
+        <!-- brick / socialshareList -->
+        <locale name="bricks.socialshareList.title">
+            <de><![CDATA[Social Share]]></de>
+            <en><![CDATA[Social Share]]></en>
+            <pl><![CDATA[Social Share]]></pl>
+        </locale>
+        <locale name="bricks.socialshareList.description">
             <de><![CDATA[Player Card]]></de>
             <en><![CDATA[Player Card]]></en>
             <pl><![CDATA[Player Card]]></pl>
