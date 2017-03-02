@@ -40,7 +40,7 @@ class Manager
      *
      * @return string
      */
-    public static function get()
+    public static function get($settings = array())
     {
         self::setSocialSettings();
 
@@ -68,13 +68,13 @@ class Manager
      * @return string
      * @throws QUI\Exception
      */
-    public static function getSocial($social)
+    public static function getSocial($social = array())
     {
-        self::setSocialSettings();
+//        self::setSocialSettings();
 
-        $Engine = QUI::getTemplateManager()->getEngine();
+//        $Engine = QUI::getTemplateManager()->getEngine();
 
-        self::setSocialSettings();
+//        self::setSocialSettings();
 
         $htmlSocial = "";
         if (!isset(self::$availableSocials[$social])) {
@@ -94,11 +94,20 @@ class Manager
     /**
      * Set the settings
      */
-    private static function setSocialSettings()
+    private static function setSocialSettings($settings = array())
     {
+
+        foreach ($settings as $settings) {
+
+        }
+
+
         self::$settings['theme']     = QUI::getRewrite()->getProject()->getConfig('socialshare.settings.general.theme');
         self::$settings['showLabel'] = QUI::getRewrite()->getProject()->getConfig('socialshare.settings.general.showLabel');
         self::$settings['showIcon']  = QUI::getRewrite()->getProject()->getConfig('socialshare.settings.general.showIcon');
         self::$settings['showCount'] = QUI::getRewrite()->getProject()->getConfig('socialshare.settings.general.showCount');
+
+
+
     }
 }
