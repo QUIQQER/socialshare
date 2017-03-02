@@ -232,9 +232,9 @@
             <pl><![CDATA[Social Share]]></pl>
         </locale>
         <locale name="bricks.socialshareList.description">
-            <de><![CDATA[Player Card]]></de>
-            <en><![CDATA[Player Card]]></en>
-            <pl><![CDATA[Player Card]]></pl>
+            <de><![CDATA[Social media share buttons - geeignet zum Teilen einer Seite (Artikel, Blog, usw.).]]></de>
+            <en><![CDATA[Social media share buttons - allow to share content of your web page.]]></en>
+            <pl><![CDATA[Umozliwa wstawienie przycisków social media do dzielenia się stroną że znajomymi]]></pl>
         </locale>
     </groups>
 </locales>

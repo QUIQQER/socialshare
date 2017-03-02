@@ -1,8 +1,8 @@
 {
     "name" : "quiqqer/socialshare",
     "type" : "quiqqer-module",
-    "description" : "QUIQQER social share buttons",
-    "version" : "dev-master",
+    "description" : "QUIQQER Social share buttons",
+    "version" : "dev-dev",
     "license" : "GPL-3.0+",
 
     "authors" : [{
@@ -18,7 +18,6 @@
     },
 
     "require": {
-        "php" : ">=5.3",
         "quiqqer/quiqqer" : "*@dev"
     },
 

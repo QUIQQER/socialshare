@@ -70,24 +70,25 @@ class Manager
      */
     public static function getSocial($social)
     {
+        self::setSocialSettings();
 
         $Engine = QUI::getTemplateManager()->getEngine();
 
         self::setSocialSettings();
 
         $htmlSocial = "";
-
-        if (!isset($availableSocials[$social])) {
-            throw new QUI\Exception('Social class ' . $social . 'not exist. First letter capitalized?', 404);
+        if (!isset(self::$availableSocials[$social])) {
+            throw new QUI\Exception('Social class "' . $social . '" not exist. First letter capitalized?', 404);
         }
 
         $class      = 'QUI\Socialshare\Shares\\' . $social;
         $Social     = new $class(self::$settings);
         $htmlSocial = $Social->create();
+// todo warum Erstellen von nur einem Button nicht geht
+//        $Engine->assign('htmlSocial', $htmlSocial);
 
-        $Engine->assign('htmlSocial', $htmlSocial);
-
-        return $Engine->fetch(dirname(__FILE__) . '/Socialshare.html');
+//        return $Engine->fetch(dirname(__FILE__) . '/Socialshare.html');
+        return $htmlSocial;
     }
 
     /**
