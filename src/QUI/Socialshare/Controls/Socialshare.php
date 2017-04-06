@@ -24,8 +24,11 @@ class Socialshare extends Control
     public function __construct($params = array())
     {
         $this->setAttributes(array(
-            'class' => 'quiqqer-socialshare'
-//            'theme' => 'flat' // todo brick settings
+            'class'     => 'quiqqer-socialshare',
+            'theme'     => $params['theme'],
+            'showLabel' => $params['showLabel'],
+            'showIcon'  => $params['showIcon'],
+            'showCount' => $params['showCount']
         ));
 
         parent::__construct($params);
@@ -37,8 +40,13 @@ class Socialshare extends Control
     public function getBody()
     {
         $Engine  = QUI::getTemplateManager()->getEngine();
-        $Social  = new QUI\Socialshare\Manager();
-        $socials = $Social->get();
+
+        $socials = QUI\Socialshare\Manager::get(array(
+            'theme'     => $this->getAttribute('theme'),
+            'showLabel' => $this->getAttribute('showLabel'),
+            'showIcon'  => $this->getAttribute('showIcon'),
+            'showCount' => $this->getAttribute('showCount'),
+        ));
 
         $Engine->assign(array(
             'this'    => $this,

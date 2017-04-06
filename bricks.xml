@@ -18,7 +18,7 @@
             <settings>
 
                 <!-- show label -->
-                <setting name="socialshare.settings.general.showLabel" type="checkbox">
+                <setting name="socialshare.brick.settings.showLabel" type="checkbox">
                     <text>
                         <locale group="quiqqer/socialshare"
                                 var="socialshare.settings.general.showLabel"/>
@@ -26,7 +26,7 @@
                 </setting>
 
                 <!-- show icon  -->
-                <setting name="socialshare.settings.general.showIcon" type="checkbox">
+                <setting name="socialshare.brick.settings.showIcon" type="checkbox">
                     <text>
                         <locale group="quiqqer/socialshare"
                                 var="socialshare.settings.general.showIcon"/>
@@ -34,7 +34,7 @@
                 </setting>
 
                 <!-- theme -->
-                <setting name="socialshare.settings.general.theme" type="select">
+                <setting name="socialshare.brick.settings.theme" type="select">
                     <text>
                         <locale group="quiqqer/socialshare"
                                 var="socialshare.settings.general.theme"/>
