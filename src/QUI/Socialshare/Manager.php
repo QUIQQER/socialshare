@@ -12,7 +12,7 @@ use QUI;
  *
  * @package quiqqer/socialshare
  */
-class Manager
+class Manager extends QUI\Controls\Control
 {
     /**
      * @var array
@@ -35,14 +35,24 @@ class Manager
         'nodeName'  => 'a'
     );
 
+    /*public function __construct($params = array())
+    {
+        $this->setAttributes(array(
+            'theme'     => $params['theme'],
+            'showLabel' => $params['showLabel'],
+            'showIcon'  => $params['showIcon'],
+            'showCount' => $params['showCount']
+        ));
+    }*/
+
     /**
      * Get social
      *
      * @return string
      */
-    public static function get()
+    public static function get($settings = array())
     {
-        self::setSocialSettings();
+        self::setSocialSettings($settings);
 
         $htmlSocial = "";
 
@@ -68,13 +78,13 @@ class Manager
      * @return string
      * @throws QUI\Exception
      */
-    public static function getSocial($social)
+    public static function getSocial($social = array())
     {
-        self::setSocialSettings();
+//        self::setSocialSettings();
 
-        $Engine = QUI::getTemplateManager()->getEngine();
+//        $Engine = QUI::getTemplateManager()->getEngine();
 
-        self::setSocialSettings();
+//        self::setSocialSettings();
 
         $htmlSocial = "";
         if (!isset(self::$availableSocials[$social])) {
@@ -84,7 +94,6 @@ class Manager
         $class      = 'QUI\Socialshare\Shares\\' . $social;
         $Social     = new $class(self::$settings);
         $htmlSocial = $Social->create();
-// todo warum Erstellen von nur einem Button nicht geht
 //        $Engine->assign('htmlSocial', $htmlSocial);
 
 //        return $Engine->fetch(dirname(__FILE__) . '/Socialshare.html');
@@ -94,11 +103,21 @@ class Manager
     /**
      * Set the settings
      */
-    private static function setSocialSettings()
+    private static function setSocialSettings($settings = array())
     {
+        // set the general settings
         self::$settings['theme']     = QUI::getRewrite()->getProject()->getConfig('socialshare.settings.general.theme');
         self::$settings['showLabel'] = QUI::getRewrite()->getProject()->getConfig('socialshare.settings.general.showLabel');
         self::$settings['showIcon']  = QUI::getRewrite()->getProject()->getConfig('socialshare.settings.general.showIcon');
         self::$settings['showCount'] = QUI::getRewrite()->getProject()->getConfig('socialshare.settings.general.showCount');
+
+        // overwrite the general setting...
+        foreach ($settings as $key => $value) {
+            // ...if the setting is available in brick
+            if (!$value) {
+                continue;
+            }
+            self::$settings[$key] = $value;
+        }
     }
 }
