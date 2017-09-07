@@ -1,7 +1,7 @@
 {
     "name" : "quiqqer/socialshare",
     "type" : "quiqqer-module",
-    "description" : "QUIQQER Social share buttons",
+    "description" : "The extension allows adding different social share buttons (including Facebook, Twitter, Google, Whatsapp). In addition, the head area is extended by new meta tags (OpenGraph and Schema.org).",
     "version" : "dev-dev",
     "license" : "GPL-3.0+",
 
