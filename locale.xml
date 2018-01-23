@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <locales>
     <groups name="quiqqer/socialshare" datatype="php, js">
+
+        <!--descritpion & title  -->
+        <locale name="package.title">
+            <de><![CDATA[Social share]]></de>
+            <en><![CDATA[Social share]]></en>
+            <pl><![CDATA[Social share]]></pl>
+        </locale>
+
+        <locale name="package.description">
+            <de><![CDATA[Die Erweiterung ermöglicht das Hinzufügen von verschiedenen social share Buttons (u.a. Facebook, Twitter, Google, Pinterest).]]></de>
+            <en><![CDATA[This plugin allows you to simply place social share buttons on your website (Facebook, Twitter, Pinterest, etc).]]></en>
+            <pl><![CDATA[Rozszerzenie pozwala w prosty sposób umieszczać przyciski udostępniania znanych portali spolecznosciowych (Facebook, Twitter, Pinterest, itp.) na swojej stronie internetowej.]]></pl>
+        </locale>
+
         <locale name="label-facebook">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
@@ -30,6 +44,16 @@
             <de><![CDATA[Mailen]]></de>
             <en><![CDATA[Mail]]></en>
             <pl><![CDATA[Wyślij]]></pl>
+        </locale>
+        <locale name="label-linkedin">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
+        <locale name="label-xing">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
 
 
@@ -136,17 +160,26 @@
             <en><![CDATA[WhatsApp]]></en>
             <pl><![CDATA[WhatsApp]]></pl>
         </locale>
-            <locale name="socialshare.settings.show.pinterest">
-                <de><![CDATA[Pinterest]]></de>
-                <en><![CDATA[Pinterest]]></en>
-                <pl><![CDATA[Pinterest]]></pl>
-            </locale>
-            <locale name="socialshare.settings.show.mail">
-                <de><![CDATA[E-Mail]]></de>
-                <en><![CDATA[E-Mail]]></en>
-                <pl><![CDATA[E-Mail]]></pl>
-            </locale>
-
+        <locale name="socialshare.settings.show.pinterest">
+            <de><![CDATA[Pinterest]]></de>
+            <en><![CDATA[Pinterest]]></en>
+            <pl><![CDATA[Pinterest]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.mail">
+            <de><![CDATA[E-Mail]]></de>
+            <en><![CDATA[E-Mail]]></en>
+            <pl><![CDATA[E-Mail]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.linkedin">
+            <de><![CDATA[LinkedIn]]></de>
+            <en><![CDATA[LinkedIn]]></en>
+            <pl><![CDATA[LinkedIn]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.xing">
+            <de><![CDATA[Xing]]></de>
+            <en><![CDATA[Xing]]></en>
+            <pl><![CDATA[Xing]]></pl>
+        </locale>
 
 
         <locale name="socialshare.settings.general.title">

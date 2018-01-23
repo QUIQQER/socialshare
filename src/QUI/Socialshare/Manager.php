@@ -23,7 +23,9 @@ class Manager extends QUI\Controls\Control
         'Google',
         'Pinterest',
         'Mail',
-        'Whatsapp'
+        'Whatsapp',
+        'LinkedIn',
+        'Xing'
     );
 
     // defoultsetting

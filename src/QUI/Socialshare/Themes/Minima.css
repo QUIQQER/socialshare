@@ -91,3 +91,26 @@
     background: none;
     color: #0e76e6;
 }
+
+/* LinkedIn */
+.quiqqer-socialshare-minima.quiqqer-socialshare-linkedin .quiqqer-socialshare-wrapper{
+    background: none;
+    border: none;
+    color: #007bb6;
+}
+
+.quiqqer-socialshare-minima.quiqqer-socialshare-linkedin:hover .quiqqer-socialshare-wrapper{
+    color: #005983;
+}
+
+/* Xing */
+.quiqqer-socialshare-xing .quiqqer-socialshare-wrapper {
+    background: none;
+    border: none;
+    color: #006567;
+}
+
+.quiqqer-socialshare-xing:hover .quiqqer-socialshare-wrapper {
+    background: none;
+    color: #005456;
+}
