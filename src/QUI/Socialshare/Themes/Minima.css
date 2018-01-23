@@ -102,3 +102,15 @@
 .quiqqer-socialshare-minima.quiqqer-socialshare-linkedin:hover .quiqqer-socialshare-wrapper{
     color: #005983;
 }
+
+/* Xing */
+.quiqqer-socialshare-xing .quiqqer-socialshare-wrapper {
+    background: none;
+    border: none;
+    color: #006567;
+}
+
+.quiqqer-socialshare-xing:hover .quiqqer-socialshare-wrapper {
+    background: none;
+    color: #005456;
+}
