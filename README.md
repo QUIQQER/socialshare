@@ -1,9 +1,10 @@
 ![QUIQQER Social Share](bin/images/Readme.jpg)
 
-Social share Plugin
+Social share
 ========
-Die Erweiterung ermöglicht das Hinzufügen von verschiedenen social share Buttons (u.a. Facebook, Twitter, Google, Whatsapp).
-Der Head-Bereich wird um neue meta Tags erweitert (Open Graph und Schema.org).
+
+This plugin allows you to simply place social share buttons on your website.
+It supports the most popular social networks like Facebook, Twitter, Pinterest, etc.
 
 Package name:
 
@@ -15,7 +16,7 @@ Features
 
 - Different themen
 - Icons and label may be disabled
-- Extends the site head area
+- Extends the site head area (Open Graph and Schema.org)
 - Additional site settings (titel, author, site typ, etc.)
 
 
@@ -42,20 +43,4 @@ then you can write an e-mail to support@pcsg.de.
 License
 -------
 
-GPL
-
-Entwickler
---------
-```php
-<?php
-
-// Create and assign control
-$Social = new QUI\Socialshare\Controls\Socialshare();
-$Engine->assign('Socials', $Social->create());
-
-// Create one social share button directly via Manager
-$Facebook = QUI\Socialshare\Manager::getSocial('Facebook');
-$Engine->assign('Facebook', $Facebook)
-
-?>
-```
+GPL-3.0+

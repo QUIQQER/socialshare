@@ -10,17 +10,21 @@
 
         <image src='URL_OPT_DIR/quiqqer/socialshare/bin/images/Logo.png'/>
 
+        <preview>
+            <image src="URL_OPT_DIR/quiqqer/socialshare/bin/image/preview/Socialshare_1.jpg"/>
+            <image src="URL_OPT_DIR/quiqqer/socialshare/bin/image/preview/Socialshare_2.jpg"/>
+        </preview>
+
         <support>
             <email><![CDATA[support@pcsg.de]]></email>
             <forum><![CDATA[https://community.quiqqer.com]]></forum>
             <source><![CDATA[https://dev.quiqqer.com/quiqqer/socialshare]]></source>
             <issues><![CDATA[https://dev.quiqqer.com/quiqqer/socialshare/issues]]></issues>
-            <wiki><![CDATA[https://dev.quiqqer.com/quiqqer/socialshare/wikis/home]]></wiki>
         </support>
 
         <copyright>
             <name><![CDATA[PCSG - Computer & Internet Service OHG]]></name>
-            <license><![CDATA[]]></license>
+            <license><![CDATA[GPL-3.0+]]></license>
         </copyright>
     </package>
 </quiqqer>

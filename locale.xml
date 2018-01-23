@@ -4,15 +4,16 @@
 
         <!--descritpion & title  -->
         <locale name="package.title">
-            <de><![CDATA[QUIQQER - Socialshare]]></de>
-            <en><![CDATA[QUIQQER - Socialshare]]></en>
+            <de><![CDATA[Social share]]></de>
+            <en><![CDATA[Social share]]></en>
+            <pl><![CDATA[Social share]]></pl>
         </locale>
 
         <locale name="package.description">
-            <de><![CDATA[Die Erweiterung ermöglicht das Hinzufügen von verschiedenen social share Buttons (u.a. Facebook, Twitter, Google, Whatsapp). Zusätzlich wird der Head-Bereich um neue meta Tags erweitert (Open Graph und Schema.org).]]></de>
-            <en><![CDATA[The extension allows adding different social share buttons (including Facebook, Twitter, Google, Whatsapp). In addition, the head area is extended by new meta tags (OpenGraph and Schema.org).]]></en>
+            <de><![CDATA[Die Erweiterung ermöglicht das Hinzufügen von verschiedenen social share Buttons (u.a. Facebook, Twitter, Google, Pinterest).]]></de>
+            <en><![CDATA[This plugin allows you to simply place social share buttons on your website (Facebook, Twitter, Pinterest, etc).]]></en>
+            <pl><![CDATA[Rozszerzenie pozwala w prosty sposób umieszczać przyciski udostępniania znanych portali spolecznosciowych (Facebook, Twitter, Pinterest, itp.) na swojej stronie internetowej.]]></pl>
         </locale>
-        <!-- end -->
 
         <locale name="label-facebook">
             <de><![CDATA[Teilen]]></de>
