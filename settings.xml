@@ -23,6 +23,9 @@
                     <conf name="Mail">
                         <type><![CDATA[bool]]></type>
                     </conf>
+                    <conf name="LinkedIn">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
 
 
                     <conf name="general.showLabel">
@@ -100,6 +103,12 @@
                                 <text>
                                     <locale group="quiqqer/socialshare"
                                             var="socialshare.settings.show.mail"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.LinkedIn" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.linkedin"/>
                                 </text>
                             </input>
 

@@ -91,3 +91,14 @@
     background: none;
     color: #0e76e6;
 }
+
+/* LinkedIn */
+.quiqqer-socialshare-minima.quiqqer-socialshare-linkedin .quiqqer-socialshare-wrapper{
+    background: none;
+    border: none;
+    color: #007bb6;
+}
+
+.quiqqer-socialshare-minima.quiqqer-socialshare-linkedin:hover .quiqqer-socialshare-wrapper{
+    color: #005983;
+}

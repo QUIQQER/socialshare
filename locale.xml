@@ -31,6 +31,11 @@
             <en><![CDATA[Mail]]></en>
             <pl><![CDATA[Wyślij]]></pl>
         </locale>
+        <locale name="label-linkedin">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
 
 
         <!-- page settings -->
@@ -136,17 +141,21 @@
             <en><![CDATA[WhatsApp]]></en>
             <pl><![CDATA[WhatsApp]]></pl>
         </locale>
-            <locale name="socialshare.settings.show.pinterest">
-                <de><![CDATA[Pinterest]]></de>
-                <en><![CDATA[Pinterest]]></en>
-                <pl><![CDATA[Pinterest]]></pl>
-            </locale>
-            <locale name="socialshare.settings.show.mail">
-                <de><![CDATA[E-Mail]]></de>
-                <en><![CDATA[E-Mail]]></en>
-                <pl><![CDATA[E-Mail]]></pl>
-            </locale>
-
+        <locale name="socialshare.settings.show.pinterest">
+            <de><![CDATA[Pinterest]]></de>
+            <en><![CDATA[Pinterest]]></en>
+            <pl><![CDATA[Pinterest]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.mail">
+            <de><![CDATA[E-Mail]]></de>
+            <en><![CDATA[E-Mail]]></en>
+            <pl><![CDATA[E-Mail]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.linkedin">
+            <de><![CDATA[LinkedIn]]></de>
+            <en><![CDATA[LinkedIn]]></en>
+            <pl><![CDATA[LinkedIn]]></pl>
+        </locale>
 
 
         <locale name="socialshare.settings.general.title">

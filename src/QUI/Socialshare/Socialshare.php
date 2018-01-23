@@ -29,6 +29,7 @@ abstract class Socialshare extends Control
             'showIcon'  => true,
             'showCount' => true,
             'nodeName'  => 'a',
+            'target'    => '_blank',
             'Site'      => false,
             'class'     => 'quiqqer-socialshare-link'
         ));

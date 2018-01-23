@@ -154,3 +154,13 @@
 .quiqqer-socialshare-mail:hover .quiqqer-socialshare-wrapper{
     background: #0e76e6;
 }
+
+/* LinkedIn */
+.quiqqer-socialshare-linkedin .quiqqer-socialshare-wrapper{
+    background: #007bb6;
+    border: 1px solid #006a9d;
+}
+
+.quiqqer-socialshare-linkedin:hover .quiqqer-socialshare-wrapper{
+    background: #005983;
+}
