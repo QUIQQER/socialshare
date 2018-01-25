@@ -122,10 +122,19 @@
             <pl><![CDATA[Obrazek wyróżniający]]></pl>
         </locale>
 
-        <locale name="quiqqer.socialshare.image.description">
-            <de><![CDATA[Dieses Bild wird als Vorschau im Social-Media angezeigt. (Facebook, Twitter, Google+)]]></de>
-            <en><![CDATA[This image is displayed as a preview in the social media. (Facebook, Twitter, Google+)]]></en>
-            <pl><![CDATA[]]></pl>
+        <locale name="quiqqer.socialshare.image.description" html="true">
+            <de><![CDATA[<p>Vorschausbild beim Teilen in Social Media. Für Open Graph (Facebook, Twitter, etc.) wählen Sie ein Bild mit hoher Auflösung (mindestens 1200 x 630 Pixel).</p>
+                         <p>Empfohlene Seitenverhältnisse: 1:1 (1200 x 1200 Pixel), 1.91:1 (1200 x 630 Pixel).</p>
+                         <p>Mehr Informationen unter</p>
+                         <p>https://developers.facebook.com/docs/sharing/best-practices/</p>]]></de>
+            <en><![CDATA[<p>This image is displayed as a preview in social media. For Open Graph (Facebook, Twitter, etc.) select an image with high resolution (at least 1200 x 630 pixels).</p>
+                         <p>Recommended aspect ratios: 1:1 (1200 x 1200 pixels), 1.91:1 (1200 x 630 pixels).</p>
+                         <p>More information is available at</p>
+                         <p>https://developers.facebook.com/docs/sharing/best-practices/</p>]]></en>
+            <pl><![CDATA[<p>Miniaturka podglądu strony podczas udostępniania w mediach spoleczosciowych. Dla uzyskania najlepszego efektu w przypadku użycia Open Graph (Facebook, Twitter, itp.) zaleca się wybrania obrazu o wysokiej rozdzielczości (co najmniej 1200 x 630 pikseli).</p>
+                         <p>Zalecane proporcje: 1:1 (1200 x 1200 pikseli), 1,91:1 (1200 x 630 pikseli).</p>
+                         <p>Więcej informacji pod adresem</p>
+                         <p>https://developers.facebook.com/docs/sharing/best-practices/</p>]]></pl>
         </locale>
 
         <!-- settings.xml -->
