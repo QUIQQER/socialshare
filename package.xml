@@ -11,8 +11,8 @@
         <image src='URL_OPT_DIR/quiqqer/socialshare/bin/images/Logo.png'/>
 
         <preview>
-            <image src="URL_OPT_DIR/quiqqer/socialshare/bin/image/preview/Socialshare_1.jpg"/>
-            <image src="URL_OPT_DIR/quiqqer/socialshare/bin/image/preview/Socialshare_2.jpg"/>
+            <image src="URL_OPT_DIR/quiqqer/socialshare/bin/images/preview/Socialshare_1.jpg"/>
+            <image src="URL_OPT_DIR/quiqqer/socialshare/bin/images/preview/Socialshare_2.jpg"/>
         </preview>
 
         <support>
