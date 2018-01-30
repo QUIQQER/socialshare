@@ -31,6 +31,13 @@
                     </conf>
 
 
+                    <conf name="general.useSiteImage">
+                        <type><![CDATA[bool]]></type>
+                        <default>1</default>
+                    </conf>
+                    <conf name="general.standardImage">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
                     <conf name="general.showLabel">
                         <type><![CDATA[bool]]></type>
                     </conf>
@@ -130,6 +137,31 @@
                                             var="socialshare.settings.general.title"/>
                                 </text>
                             </title>
+
+                            <input conf="socialshare.settings.general.useSiteImage"
+                                   type="checkbox" checked="checked">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.general.useSiteImage"/>
+                                </text>
+                                <description>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.general.useSiteImage.desc" />
+                                </description>
+                            </input>
+
+                            <input conf="socialshare.settings.general.standardImage"
+                                   type="text" class="media-image">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.general.standardImage"/>
+                                </text>
+                                <description>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.general.standardImage.desc"/>
+                                </description>
+                            </input>
+
                             <input conf="socialshare.settings.general.showLabel" type="checkbox">
                                 <text>
                                     <locale group="quiqqer/socialshare"

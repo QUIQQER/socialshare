@@ -86,9 +86,18 @@ class EventHandler
         /**
          * Image
          */
-        $image = $Site->getAttribute('image_site');
+        $image = false;
+
         if ($Site->getAttribute('quiqqer.socialshare.image')) {
             $image = $Site->getAttribute('quiqqer.socialshare.image');
+        }
+
+        if (!$image && $Project->getConfig('socialshare.settings.general.useSiteImage')) {
+            $image = $Site->getAttribute('image_site');
+        }
+
+        if (!$image) {
+            $image = $Project->getConfig('socialshare.settings.general.standardImage');
         }
 
         try {
