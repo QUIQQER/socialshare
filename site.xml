@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
 
-    <locale group="quiqqer/socialshare" var="admin.types.socialshare" />
+
+    <locale group="quiqqer/socialshare" var="admin.types.socialshare"/>
     <desc>
-        <locale group="quiqqer/socialshare" var="admin.types.socialshare.desc" />
+        <locale group="quiqqer/socialshare" var="admin.types.socialshare.desc"/>
     </desc>
 
     <!-- extra attributes -->
@@ -15,67 +16,80 @@
         <attribute>quiqqer.socialshare.image</attribute>
     </attributes>
 
-    <!-- social share settings -->
-    <settings>
+    <!-- extend meta settings -->
+    <window>
+        <tab name="meta-settings">
+            <text>
+                <locale group="quiqqer/meta" var="quiqqer.meta.settings.title"/>
+            </text>
 
-        <category name="socialshare-settings">
-            <settings>
-                <title>
-                    <locale group="quiqqer/socialshare" var="quiqqer.socialshare.settings.title" />
-                </title>
+            <categories>
+                <category>
+                    <settings>
+                        <title>
+                            <locale group="quiqqer/socialshare"
+                                    var="quiqqer.socialshare.settings.title"/>
+                        </title>
 
-                <input conf="quiqqer.socialshare.title">
-                    <text>
-                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.title.text" />
-                    </text>
-                </input>
+                        <input conf="quiqqer.socialshare.title">
+                            <text>
+                                <locale group="quiqqer/socialshare"
+                                        var="quiqqer.socialshare.title.text"/>
+                            </text>
+                        </input>
 
-                <input conf="quiqqer.socialshare.description">
-                    <text>
-                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.description.text" />
-                    </text>
-                </input>
+                        <input conf="quiqqer.socialshare.description">
+                            <text>
+                                <locale group="quiqqer/socialshare"
+                                        var="quiqqer.socialshare.description.text"/>
+                            </text>
+                        </input>
 
-                <select conf="quiqqer.socialshare.type">
-                    <text>
-                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.type.text" />
-                    </text>
+                        <select conf="quiqqer.socialshare.type">
+                            <text>
+                                <locale group="quiqqer/socialshare"
+                                        var="quiqqer.socialshare.type.text"/>
+                            </text>
 
-                    <description>
-                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.type.description" />
-                    </description>
+                            <option value="website">
+                                <locale group="quiqqer/socialshare"
+                                        var="quiqqer.socialshare.type.website"/>
+                            </option>
+                            <option value="article">
+                                <locale group="quiqqer/socialshare"
+                                        var="quiqqer.socialshare.type.article"/>
+                            </option>
+                            <option value="movie">
+                                <locale group="quiqqer/socialshare"
+                                        var="quiqqer.socialshare.type.movie"/>
+                            </option>
+                            <option value="blog">
+                                <locale group="quiqqer/socialshare"
+                                        var="quiqqer.socialshare.type.blog"/>
+                            </option>
+                        </select>
 
-                    <option value="website">
-                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.type.website" />
-                    </option>
-                    <option value="article">
-                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.type.article" />
-                    </option>
-                    <option value="movie">
-                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.type.movie" />
-                    </option>
-                    <option value="blog">
-                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.type.blog" />
-                    </option>
-                </select>
+                        <input conf="quiqqer.socialshare.author">
+                            <text>
+                                <locale group="quiqqer/socialshare"
+                                        var="quiqqer.socialshare.author.text"/>
+                            </text>
+                        </input>
 
-                <input conf="quiqqer.socialshare.author">
-                    <text>
-                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.author.text" />
-                    </text>
-                </input>
+                        <input conf="quiqqer.socialshare.image" type="text" class="media-image">
+                            <text>
+                                <locale group="quiqqer/socialshare"
+                                        var="quiqqer.socialshare.image.text"/>
+                            </text>
+                            <description>
+                                <locale group="quiqqer/socialshare"
+                                        var="quiqqer.socialshare.image.description"/>
+                            </description>
+                        </input>
+                    </settings>
+                </category>
+            </categories>
 
-                <input conf="quiqqer.socialshare.image" type="text" class="media-image">
-                    <text>
-                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.image.text" />
-                    </text>
-                    <description>
-                        <locale group="quiqqer/socialshare" var="quiqqer.socialshare.image.description"/>
-                    </description>
-                </input>
-            </settings>
-        </category>
-
-    </settings>
-
+        </tab>
+    </window>
 </site>
