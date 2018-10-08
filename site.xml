@@ -76,7 +76,7 @@
                             </text>
                         </input>
 
-                        <input conf="quiqqer.socialshare.image" type="text" class="media-image">
+                        <input conf="quiqqer.socialshare.image" data-qui="controls/projects/project/media/Input">
                             <text>
                                 <locale group="quiqqer/socialshare"
                                         var="quiqqer.socialshare.image.text"/>
