@@ -64,7 +64,7 @@ class Twitter extends Socialshare
         $baseurl = $Request->getScheme() . '://' . $Request->getHttpHost() . $Request->getBasePath();
         $baseurl = $baseurl . $_SERVER['REQUEST_URI'];
 
-        return 'https://twitter.com/home?status=' . $baseurl;
+        return 'https://twitter.com/intent/tweet?text=' . $baseurl;
     }
 
     /**
