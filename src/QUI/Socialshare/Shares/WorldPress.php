@@ -1,6 +1,5 @@
 <?php
 
-
 namespace QUI\Socialshare\Shares;
 
 use QUI;

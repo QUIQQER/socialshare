@@ -1,6 +1,5 @@
 <?php
 
-
 namespace QUI\Socialshare\Shares;
 
 use QUI;
@@ -80,7 +79,7 @@ class Tumblr extends Socialshare
         }
 
         $countUrl = QUI\Utils\Request\Url::get($this->getCountUrl());
-        $data     = json_decode($countUrl, true);
+        $data = json_decode($countUrl, true);
 
         if (!isset($data['data'])) {
             return 0;
@@ -107,7 +106,7 @@ class Tumblr extends Socialshare
      */
     public function getCountUrl()
     {
-        $Site    = $this->getSite();
+        $Site = $this->getSite();
         $Request = QUI::getRequest();
 
         // @todo warten auf URL Site Objekt, damit kein Request mehr verwendet wird

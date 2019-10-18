@@ -1,10 +1,9 @@
 <?php
 
-
 namespace QUI\Socialshare\Shares;
+
 use QUI;
 use QUI\Socialshare\Socialshare;
-use spec\DusanKasan\Knapsack\CollectionSpec;
 
 class Telegram extends Socialshare
 {
@@ -62,8 +61,8 @@ class Telegram extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getCount()
      * @return null
+     * @see \QUI\Socialshare\Socialshare::getCount()
      */
     public function getCount()
     {
@@ -73,8 +72,8 @@ class Telegram extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getCountUrl()
      * @return null
+     * @see \QUI\Socialshare\Socialshare::getCountUrl()
      */
     public function getCountUrl()
     {

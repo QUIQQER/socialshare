@@ -1,6 +1,5 @@
 <?php
 
-
 namespace QUI\Socialshare\Shares;
 
 use QUI;
@@ -12,7 +11,6 @@ use QUI\Socialshare\Socialshare;
  * @author  www.pcsg.de (Torsten Fink)
  * @package quiqqer/socialshare
  */
-
 class Weibo extends Socialshare
 {
     public function __construct($params = array())
@@ -73,7 +71,7 @@ class Weibo extends Socialshare
      */
     public function getCount()
     {
-         return null;
+        return null;
     }
 
     /**

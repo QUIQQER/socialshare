@@ -1,8 +1,6 @@
 <?php
 
-
 namespace QUI\Socialshare\Shares;
-
 
 use QUI;
 use QUI\Socialshare\Socialshare;
@@ -88,3 +86,4 @@ class Digg extends Socialshare
         return null;
     }
 }
+
