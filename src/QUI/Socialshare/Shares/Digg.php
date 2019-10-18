@@ -86,4 +86,3 @@ class Digg extends Socialshare
         return null;
     }
 }
-

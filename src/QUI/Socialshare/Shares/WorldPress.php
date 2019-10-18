@@ -4,6 +4,7 @@ namespace QUI\Socialshare\Shares;
 
 use QUI;
 use QUI\Socialshare\Socialshare;
+
 /**
  * Facebook class for social share
  *
