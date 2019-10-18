@@ -94,6 +94,14 @@
     background: #f1f1f1;
     text-decoration: none;
 }*/
+/*Digg*/
+.quiqqer-socialshare-digg .quiqqer-socialshare-wrapper {
+    background: #005be2;
+    border: 1px solid #0057d7;
+}
+.quiqqer-socialshare-digg:hover .quiqqer-socialshare-wrapper {
+    background: #004ebf;
+}
 /*Tumblr*/
 .quiqqer-socialshare-tumblr .quiqqer-socialshare-wrapper {
     background: #35465c;

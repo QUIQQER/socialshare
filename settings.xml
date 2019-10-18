@@ -6,6 +6,9 @@
             <config>
                 <section name="socialshare.settings">
 
+                    <conf name="Digg">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
                     <conf name="Tumblr">
                         <type><![CDATA[bool]]></type>
                     </conf>
@@ -94,6 +97,13 @@
                                             var="socialshare.settings.title"/>
                                 </text>
                             </title>
+
+                            <input conf="socialshare.settings.Digg" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.digg"/>
+                                </text>
+                            </input>
 
                             <input conf="socialshare.settings.Tumblr" type="checkbox">
                                 <text>

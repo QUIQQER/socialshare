@@ -17,6 +17,11 @@
             <pl>
                 <![CDATA[Rozszerzenie pozwala w prosty sposób umieszczać przyciski udostępniania znanych portali spolecznosciowych (Facebook, Twitter, Pinterest, itp.) na swojej stronie internetowej.]]></pl>
         </locale>
+        <locale name="label-digg">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
         <locale name="label-tumblr">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
@@ -175,6 +180,11 @@
             <de><![CDATA[Social Share anzeigen]]></de>
             <en><![CDATA[Social share display]]></en>
             <pl><![CDATA[Pokaż social share]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.digg">
+            <de><![CDATA[Tumblr]]></de>
+            <en><![CDATA[Tumblr]]></en>
+            <pl><![CDATA[Tumblr]]></pl>
         </locale>
         <locale name="socialshare.settings.show.tumblr">
             <de><![CDATA[Tumblr]]></de>
