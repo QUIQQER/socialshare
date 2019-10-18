@@ -21,6 +21,7 @@ class Manager extends QUI\Controls\Control
         'Facebook',
         'Reddit',
         'Telegram',
+        'Weibo',
         'Twitter',
         'Google',
         'Pinterest',

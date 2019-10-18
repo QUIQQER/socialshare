@@ -94,6 +94,14 @@
     background: #f1f1f1;
     text-decoration: none;
 }*/
+/*Weibo*/
+.quiqqer-socialshare-weibo .quiqqer-socialshare-wrapper {
+    background: #e31837;
+    border: 1px solid #d81734;
+}
+.quiqqer-socialshare-weibo:hover .quiqqer-socialshare-wrapper {
+    background: #b01830;
+}
 
 /*Reddit*/
 .quiqqer-socialshare-reddit .quiqqer-socialshare-wrapper {

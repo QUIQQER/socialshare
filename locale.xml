@@ -14,6 +14,11 @@
             <en><![CDATA[This plugin allows you to simply place social share buttons on your website (Facebook, Twitter, Pinterest, etc).]]></en>
             <pl><![CDATA[Rozszerzenie pozwala w prosty sposób umieszczać przyciski udostępniania znanych portali spolecznosciowych (Facebook, Twitter, Pinterest, itp.) na swojej stronie internetowej.]]></pl>
         </locale>
+        <locale name="label-weibo">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
         <locale name="label-reddit">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
@@ -157,6 +162,11 @@
             <de><![CDATA[Social Share anzeigen]]></de>
             <en><![CDATA[Social share display]]></en>
             <pl><![CDATA[Pokaż social share]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.weibo">
+            <de><![CDATA[Weibo]]></de>
+            <en><![CDATA[Weibo]]></en>
+            <pl><![CDATA[Weibo]]></pl>
         </locale>
         <locale name="socialshare.settings.show.reddit">
             <de><![CDATA[Reddit]]></de>
