@@ -94,6 +94,14 @@
     background: #f1f1f1;
     text-decoration: none;
 }*/
+/*WorldPress*/
+.quiqqer-socialshare-worldpress .quiqqer-socialshare-wrapper {
+    background: #21759b;
+    border: 1px solid #1f6f93;
+}
+.quiqqer-socialshare-worldpress:hover .quiqqer-socialshare-wrapper {
+    background: #1c6788;
+}
 /*Weibo*/
 .quiqqer-socialshare-weibo .quiqqer-socialshare-wrapper {
     background: #e31837;
