@@ -5,6 +5,9 @@
         <settings>
             <config>
                 <section name="socialshare.settings">
+                    <conf name="Reddit">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
                     <conf name="Facebook">
                         <type><![CDATA[bool]]></type>
                     </conf>
@@ -78,6 +81,14 @@
                                             var="socialshare.settings.title"/>
                                 </text>
                             </title>
+
+                            <input conf="socialshare.settings.Reddit" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.reddit"/>
+                                </text>
+                            </input>
+
 
                             <input conf="socialshare.settings.Facebook" type="checkbox">
                                 <text>

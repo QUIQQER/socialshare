@@ -95,6 +95,16 @@
     text-decoration: none;
 }*/
 
+/*Reddit*/
+.quiqqer-socialshare-reddit .quiqqer-socialshare-wrapper {
+    background: #ff4500;
+    border: 1px solid #f04100;
+}
+.quiqqer-socialshare-reddit:hover .quiqqer-socialshare-wrapper {
+    background: #e83e00;
+}
+
+
 /* Facebook */
 .quiqqer-socialshare-facebook .quiqqer-socialshare-wrapper {
     background: #3b5998;
