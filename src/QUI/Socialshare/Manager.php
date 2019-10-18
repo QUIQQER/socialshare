@@ -18,6 +18,7 @@ class Manager extends QUI\Controls\Control
      * @var array
      */
     private static $availableSocials = array(
+        'Tumblr',
         'WorldPress',
         'Facebook',
         'Reddit',

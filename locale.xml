@@ -10,9 +10,17 @@
         </locale>
 
         <locale name="package.description">
-            <de><![CDATA[Die Erweiterung ermöglicht das Hinzufügen von verschiedenen social share Buttons (u.a. Facebook, Twitter, Google, Pinterest).]]></de>
-            <en><![CDATA[This plugin allows you to simply place social share buttons on your website (Facebook, Twitter, Pinterest, etc).]]></en>
-            <pl><![CDATA[Rozszerzenie pozwala w prosty sposób umieszczać przyciski udostępniania znanych portali spolecznosciowych (Facebook, Twitter, Pinterest, itp.) na swojej stronie internetowej.]]></pl>
+            <de>
+                <![CDATA[Die Erweiterung ermöglicht das Hinzufügen von verschiedenen social share Buttons (u.a. Facebook, Twitter, Google, Pinterest).]]></de>
+            <en>
+                <![CDATA[This plugin allows you to simply place social share buttons on your website (Facebook, Twitter, Pinterest, etc).]]></en>
+            <pl>
+                <![CDATA[Rozszerzenie pozwala w prosty sposób umieszczać przyciski udostępniania znanych portali spolecznosciowych (Facebook, Twitter, Pinterest, itp.) na swojej stronie internetowej.]]></pl>
+        </locale>
+        <locale name="label-tumblr">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-worldpress">
             <de><![CDATA[Teilen]]></de>
@@ -168,6 +176,11 @@
             <en><![CDATA[Social share display]]></en>
             <pl><![CDATA[Pokaż social share]]></pl>
         </locale>
+        <locale name="socialshare.settings.show.tumblr">
+            <de><![CDATA[Tumblr]]></de>
+            <en><![CDATA[Tumblr]]></en>
+            <pl><![CDATA[Tumblr]]></pl>
+        </locale>
         <locale name="socialshare.settings.show.worldpress">
             <de><![CDATA[WorldPress]]></de>
             <en><![CDATA[WorldPress]]></en>
@@ -188,21 +201,21 @@
             <en><![CDATA[Telegram]]></en>
             <pl><![CDATA[Telegram]]></pl>
         </locale>
-            <locale name="socialshare.settings.show.facebook">
-                <de><![CDATA[Facebook]]></de>
-                <en><![CDATA[Facebook]]></en>
-                <pl><![CDATA[Facebook]]></pl>
-            </locale>
-            <locale name="socialshare.settings.show.twitter">
-                <de><![CDATA[Twitter]]></de>
-                <en><![CDATA[Twitter]]></en>
-                <pl><![CDATA[Twitter]]></pl>
-            </locale>
-            <locale name="socialshare.settings.show.google">
-                <de><![CDATA[Google]]></de>
-                <en><![CDATA[Google]]></en>
-                <pl><![CDATA[Google]]></pl>
-            </locale>
+        <locale name="socialshare.settings.show.facebook">
+            <de><![CDATA[Facebook]]></de>
+            <en><![CDATA[Facebook]]></en>
+            <pl><![CDATA[Facebook]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.twitter">
+            <de><![CDATA[Twitter]]></de>
+            <en><![CDATA[Twitter]]></en>
+            <pl><![CDATA[Twitter]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.google">
+            <de><![CDATA[Google]]></de>
+            <en><![CDATA[Google]]></en>
+            <pl><![CDATA[Google]]></pl>
+        </locale>
         <locale name="socialshare.settings.show.whatsapp">
             <de><![CDATA[WhatsApp]]></de>
             <en><![CDATA[WhatsApp]]></en>
@@ -246,7 +259,8 @@
                          das Seitenbild für Social Share verwenden.]]></de>
             <en><![CDATA[If a page has no image in meta settings, QUIQQER can use as a fallback solution
                          the page image for social share.]]></en>
-            <pl><![CDATA[Jeśli na stronie nie został ustawiony obrazek do funkcji social share (ustawienia meta), QUIQQER może użyć obrazka strony (jeśli taki został wybrany).]]></pl>
+            <pl>
+                <![CDATA[Jeśli na stronie nie został ustawiony obrazek do funkcji social share (ustawienia meta), QUIQQER może użyć obrazka strony (jeśli taki został wybrany).]]></pl>
         </locale>
 
         <locale name="socialshare.settings.general.standardImage">
@@ -254,33 +268,34 @@
             <en><![CDATA[Image]]></en>
             <pl><![CDATA[Obrazek]]></pl>
         </locale>
-            <locale name="socialshare.settings.general.standardImage.desc">
-                <de><![CDATA[Dieses Bild wird nur dann genommen, wenn auf einer Seite in Meta- oder
+        <locale name="socialshare.settings.general.standardImage.desc">
+            <de><![CDATA[Dieses Bild wird nur dann genommen, wenn auf einer Seite in Meta- oder
                              Seiteneinstellungen (Seitenbild) kein eigenes eingestellt ist.]]></de>
-                <en><![CDATA[This image will be used if site has no own image in meta or page settings (site image).]]></en>
-                <pl><![CDATA[Ten obrazek zostanie użyty wtedy, kiedy strona nie posiada własnego (w ustawieniach strony lub meta).]]></pl>
-            </locale>
+            <en><![CDATA[This image will be used if site has no own image in meta or page settings (site image).]]></en>
+            <pl>
+                <![CDATA[Ten obrazek zostanie użyty wtedy, kiedy strona nie posiada własnego (w ustawieniach strony lub meta).]]></pl>
+        </locale>
 
         <locale name="socialshare.settings.general.theme">
             <de><![CDATA[Theme]]></de>
             <en><![CDATA[Theme]]></en>
             <pl><![CDATA[Wygląd]]></pl>
         </locale>
-            <locale name="socialshare.settings.general.theme.classic">
-                <de><![CDATA[Classic]]></de>
-                <en><![CDATA[Classic]]></en>
-                <pl><![CDATA[Classic]]></pl>
-            </locale>
-            <locale name="socialshare.settings.general.theme.flat">
-                <de><![CDATA[Flat]]></de>
-                <en><![CDATA[Flat]]></en>
-                <pl><![CDATA[Flat]]></pl>
-            </locale>
-            <locale name="socialshare.settings.general.theme.minima">
-                <de><![CDATA[Minima]]></de>
-                <en><![CDATA[Minima]]></en>
-                <pl><![CDATA[Minima]]></pl>
-            </locale>
+        <locale name="socialshare.settings.general.theme.classic">
+            <de><![CDATA[Classic]]></de>
+            <en><![CDATA[Classic]]></en>
+            <pl><![CDATA[Classic]]></pl>
+        </locale>
+        <locale name="socialshare.settings.general.theme.flat">
+            <de><![CDATA[Flat]]></de>
+            <en><![CDATA[Flat]]></en>
+            <pl><![CDATA[Flat]]></pl>
+        </locale>
+        <locale name="socialshare.settings.general.theme.minima">
+            <de><![CDATA[Minima]]></de>
+            <en><![CDATA[Minima]]></en>
+            <pl><![CDATA[Minima]]></pl>
+        </locale>
 
         <locale name="socialshare.settings.general.showLabel">
             <de><![CDATA[Label anzeigen]]></de>
