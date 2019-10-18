@@ -19,6 +19,11 @@
             <en><![CDATA[Share]]></en>
             <pl><![CDATA[Udostępnij]]></pl>
         </locale>
+        <locale name="label-telegram">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
         <locale name="label-facebook">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
@@ -157,6 +162,11 @@
             <de><![CDATA[Reddit]]></de>
             <en><![CDATA[Reddit]]></en>
             <pl><![CDATA[Reddit]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.telegram">
+            <de><![CDATA[Telegram]]></de>
+            <en><![CDATA[Telegram]]></en>
+            <pl><![CDATA[Telegram]]></pl>
         </locale>
             <locale name="socialshare.settings.show.facebook">
                 <de><![CDATA[Facebook]]></de>

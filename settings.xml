@@ -8,6 +8,9 @@
                     <conf name="Reddit">
                         <type><![CDATA[bool]]></type>
                     </conf>
+                    <conf name="Telegram">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
                     <conf name="Facebook">
                         <type><![CDATA[bool]]></type>
                     </conf>
@@ -89,6 +92,12 @@
                                 </text>
                             </input>
 
+                            <input conf="socialshare.settings.Telegram" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.telegram"/>
+                                </text>
+                            </input>
 
                             <input conf="socialshare.settings.Facebook" type="checkbox">
                                 <text>

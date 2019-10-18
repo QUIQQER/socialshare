@@ -104,6 +104,14 @@
     background: #e83e00;
 }
 
+/*Telegram*/
+.quiqqer-socialshare-telegram .quiqqer-socialshare-wrapper {
+    background: #0088cc;
+    border: 1px solid #0081c1;
+}
+.quiqqer-socialshare-telegram:hover .quiqqer-socialshare-wrapper {
+    background: #006ca9;
+}
 
 /* Facebook */
 .quiqqer-socialshare-facebook .quiqqer-socialshare-wrapper {
