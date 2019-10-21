@@ -34,7 +34,7 @@ class Manager extends QUI\Controls\Control
         'Xing'
     );
 
-    // defoultsetting
+    // default settings
     private static $settings = array(
         'theme'     => 'classic',
         'showLabel' => true,
@@ -43,20 +43,12 @@ class Manager extends QUI\Controls\Control
         'nodeName'  => 'a'
     );
 
-    /*public function __construct($params = array())
-    {
-        $this->setAttributes(array(
-            'theme'     => $params['theme'],
-            'showLabel' => $params['showLabel'],
-            'showIcon'  => $params['showIcon'],
-            'showCount' => $params['showCount']
-        ));
-    }*/
-
     /**
-     * Get social
+     * Get socials
      *
+     * @param array $settings
      * @return string
+     * @throws QUI\Exception
      */
     public static function get($settings = array())
     {
@@ -80,7 +72,9 @@ class Manager extends QUI\Controls\Control
     }
 
     /**
-     * Get only one social
+     * Get single social
+     *
+     * @todo - must be implemented
      *
      * @param $social
      * @return string
@@ -88,6 +82,7 @@ class Manager extends QUI\Controls\Control
      */
     public static function getSocial($social = array())
     {
+        return;
 //        self::setSocialSettings();
 
 //        $Engine = QUI::getTemplateManager()->getEngine();
@@ -110,6 +105,9 @@ class Manager extends QUI\Controls\Control
 
     /**
      * Set the settings
+     *
+     * @param array $settings
+     * @throws QUI\Exception
      */
     private static function setSocialSettings($settings = array())
     {
@@ -119,6 +117,8 @@ class Manager extends QUI\Controls\Control
         self::$settings['showIcon']  = QUI::getRewrite()->getProject()->getConfig('socialshare.settings.general.showIcon');
         self::$settings['showCount'] = QUI::getRewrite()->getProject()->getConfig('socialshare.settings.general.showCount');
 
+
+        // todo - at the moment brick / control settings can't override general setting, if "false"
         // overwrite the general setting...
         foreach ($settings as $key => $value) {
             // ...if the setting is available in brick

@@ -25,10 +25,10 @@ class Socialshare extends Control
     {
         $this->setAttributes(array(
             'class'     => 'quiqqer-socialshare',
-            'theme'     => $params['theme'],
-            'showLabel' => $params['showLabel'],
-            'showIcon'  => $params['showIcon'],
-            'showCount' => $params['showCount']
+            'theme'     => 'classic',
+            'showLabel' => true,
+            'showIcon'  => true,
+            'showCount' => false
         ));
 
         parent::__construct($params);
