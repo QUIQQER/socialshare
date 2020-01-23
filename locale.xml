@@ -54,12 +54,12 @@
         </locale>
         <locale name="label-tweeter">
             <de><![CDATA[Teilen]]></de>
-            <en><![CDATA[Share]]></en>
+            <en><![CDATA[Tweet]]></en>
             <pl><![CDATA[Tweetnij]]></pl>
         </locale>
         <locale name="label-google">
             <de><![CDATA[Teilen]]></de>
-            <en><![CDATA[Tweet]]></en>
+            <en><![CDATA[Share]]></en>
             <pl><![CDATA[Podziel się]]></pl>
         </locale>
         <locale name="label-whatsapp">
