@@ -20,11 +20,11 @@ class SocialshareList extends QUI\Control
      */
     public function __construct($attributes = array())
     {
-
         $this->setAttributes(array(
             'class' => 'quiqqer-socialshare-brick',
             'theme' => $this->getAttribute('socialshare.brick.settings.general.theme')
         ));
+
         parent::__construct($attributes);
     }
 

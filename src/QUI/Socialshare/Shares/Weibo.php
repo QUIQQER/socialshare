@@ -1,25 +1,21 @@
 <?php
 
-/**
- * This file contains QUI\Socialshare\Shares\Twitter
- */
-
 namespace QUI\Socialshare\Shares;
 
 use QUI;
 use QUI\Socialshare\Socialshare;
 
 /**
- * Twitter class for social share
+ * Weibo class for social share
  *
- * @author  www.pcsg.de (Michael Danielczok)
+ * @author  www.pcsg.de (Torsten Fink)
  * @package quiqqer/socialshare
  */
-class Twitter extends Socialshare
+class Weibo extends Socialshare
 {
     public function __construct($params = array())
     {
-        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Twitter');
+        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Weibo');
         parent::__construct($params);
     }
 
@@ -30,7 +26,7 @@ class Twitter extends Socialshare
      */
     public function getName()
     {
-        return 'quiqqer-socialshare-twitter';
+        return 'quiqqer-socialshare-weibo';
     }
 
     /**
@@ -40,7 +36,7 @@ class Twitter extends Socialshare
      */
     public function getLabel()
     {
-        return QUI::getLocale()->get('quiqqer/socialshare', 'label-tweeter');
+        return QUI::getLocale()->get('quiqqer/socialshare', 'label-weibo');
     }
 
     /**
@@ -50,42 +46,42 @@ class Twitter extends Socialshare
      */
     public function getLogo()
     {
-        return 'fa fa-twitter';
+        return 'fa fa-weibo';
     }
 
     /**
      * (non-PHPdoc)
      *
-     * @return string
+     * @see \QUI\Socialshare\Socialshare::getShareUrl()
      */
+
     public function getShareUrl()
     {
         $Request = QUI::getRequest();
         $baseurl = $Request->getScheme() . '://' . $Request->getHttpHost() . $Request->getBasePath();
         $baseurl = $baseurl . $_SERVER['REQUEST_URI'];
 
-        return 'https://twitter.com/intent/tweet?text=' . $baseurl;
+        return 'http://service.weibo.com/share/share.php?url=' . $baseurl;
     }
 
     /**
      * (non-PHPdoc)
      *
      * @see \QUI\Socialshare\Socialshare::getCount()
-     * (no Twitter count)
      */
     public function getCount()
     {
-        return;
+        return null;
     }
 
     /**
      * (non-PHPdoc)
      *
      * @see \QUI\Socialshare\Socialshare::getCountUrl()
-     * (no Twitter count)
      */
     public function getCountUrl()
     {
-        return;
+
+        return null;
     }
 }

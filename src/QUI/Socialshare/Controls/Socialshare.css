@@ -94,6 +94,56 @@
     background: #f1f1f1;
     text-decoration: none;
 }*/
+/*Digg*/
+.quiqqer-socialshare-digg .quiqqer-socialshare-wrapper {
+    background: #005be2;
+    border: 1px solid #0057d7;
+}
+.quiqqer-socialshare-digg:hover .quiqqer-socialshare-wrapper {
+    background: #004ebf;
+}
+/*Tumblr*/
+.quiqqer-socialshare-tumblr .quiqqer-socialshare-wrapper {
+    background: #35465c;
+    border: 1px solid #304054;
+}
+.quiqqer-socialshare-tumblr:hover .quiqqer-socialshare-wrapper {
+    background: #2e3e51;
+}
+/*WorldPress*/
+.quiqqer-socialshare-worldpress .quiqqer-socialshare-wrapper {
+    background: #21759b;
+    border: 1px solid #1f6f93;
+}
+.quiqqer-socialshare-worldpress:hover .quiqqer-socialshare-wrapper {
+    background: #1c6788;
+}
+/*Weibo*/
+.quiqqer-socialshare-weibo .quiqqer-socialshare-wrapper {
+    background: #e31837;
+    border: 1px solid #d81734;
+}
+.quiqqer-socialshare-weibo:hover .quiqqer-socialshare-wrapper {
+    background: #b01830;
+}
+
+/*Reddit*/
+.quiqqer-socialshare-reddit .quiqqer-socialshare-wrapper {
+    background: #ff4500;
+    border: 1px solid #f04100;
+}
+.quiqqer-socialshare-reddit:hover .quiqqer-socialshare-wrapper {
+    background: #e83e00;
+}
+
+/*Telegram*/
+.quiqqer-socialshare-telegram .quiqqer-socialshare-wrapper {
+    background: #0088cc;
+    border: 1px solid #0081c1;
+}
+.quiqqer-socialshare-telegram:hover .quiqqer-socialshare-wrapper {
+    background: #006ca9;
+}
 
 /* Facebook */
 .quiqqer-socialshare-facebook .quiqqer-socialshare-wrapper {
