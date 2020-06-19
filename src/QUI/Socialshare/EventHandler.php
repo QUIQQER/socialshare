@@ -111,9 +111,10 @@ class EventHandler
             $image = $baseurl.$image;
         }
         
-        $Template->extendHeader('<meta property="og:image" content="' . $baseurl . $image . '" />');
-        $Template->extendHeader('<meta itemprop="image" content="' . $baseurl . $image . '" />');
-
+        $Template->extendHeader('<meta property="og:image" content="' . $image . '" />');
+        $Template->extendHeader('<meta itemprop="twitter:image" content="' . $image . '" />');
+        $Template->extendHeader('<meta itemprop="image" content="' . $image . '" />');
+    
 
         /**
          * Twitter cards
