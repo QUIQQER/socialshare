@@ -107,6 +107,10 @@ class EventHandler
             // @todo Projekt Social Icon definieren
         }
 
+        if (\strpos($image, 'http') !== 0) {
+            $image = $baseurl.$image;
+        }
+        
         $Template->extendHeader('<meta property="og:image" content="' . $baseurl . $image . '" />');
         $Template->extendHeader('<meta itemprop="image" content="' . $baseurl . $image . '" />');
 
