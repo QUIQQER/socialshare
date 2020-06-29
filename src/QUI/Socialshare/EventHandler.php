@@ -97,12 +97,12 @@ class EventHandler
          */
         $image = false;
 
-        if ($Site->getAttribute('quiqqer.socialshare.image')) {
-            $image = $Site->getAttribute('quiqqer.socialshare.image');
+        if ($Site->getAttribute('image_site')) {
+            $image = $Site->getAttribute('image_site');
         }
 
-        if (!$image && $Project->getConfig('socialshare.settings.general.useSiteImage')) {
-            $image = $Site->getAttribute('image_site');
+        if ($Site->getAttribute('quiqqer.socialshare.image')) {
+            $image = $Site->getAttribute('quiqqer.socialshare.image');
         }
 
         if (!$image) {
@@ -112,6 +112,29 @@ class EventHandler
         try {
             $Image = QUI\Projects\Media\Utils::getImageByUrl($image);
             $image = $Image->getSizeCacheUrl();
+
+            if (\strpos($image, '.svg') !== false) {
+                $pngImage = $image.'.png';
+
+                if (\file_exists(CMS_DIR.$pngImage)) {
+                    $image = $baseurl.$pngImage;
+                } elseif (\class_exists('\Imagick')) {
+                    $svg = \file_get_contents(CMS_DIR.$image);
+
+                    try {
+                        $im = new \Imagick();
+                        $im->readImageBlob($svg);
+                        $im->setImageBackgroundColor(new \ImagickPixel('transparent'));
+                        $im->setImageFormat("png24");
+                        $im->writeImage(CMS_DIR.$pngImage);
+                        $im->clear();
+                        $im->destroy();
+
+                        $image = $baseurl.$pngImage;
+                    } catch (\Exception $Exception) {
+                    }
+                }
+            }
         } catch (QUI\Exception $Exception) {
             // @todo Projekt Social Icon definieren
         }
