@@ -23,64 +23,73 @@ class EventHandler
         $Site    = QUI::getRewrite()->getSite();
         $Project = $Site->getProject();
         $Request = QUI::getRequest();
-        $baseurl = $Request->getScheme() . '://' . $Request->getHttpHost();
+        $baseurl = $Request->getScheme().'://'.$Request->getHttpHost();
 
         /**
          * Site title
          */
         $title = $Site->getAttribute('meta.seotitle');
+
         if ($Site->getAttribute('quiqqer.socialshare.title')) {
             $title = $Site->getAttribute('quiqqer.socialshare.title');
         }
-        $Template->extendHeader('<meta property="og:title" content="' .
-            htmlspecialchars($title) . '" />');
-        $Template->extendHeader('<meta itemprop="name" content="' .
-            htmlspecialchars($title) . '" />');
+
+        $Template->extendHeader('<meta property="og:title" content="'.\htmlspecialchars($title).'" />');
+        $Template->extendHeader('<meta itemprop="name" content="'.\htmlspecialchars($title).'" />');
 
         /**
          * Site short description
          */
         $description = $Site->getAttribute('short');
+
         if ($Site->getAttribute('quiqqer.socialshare.description')) {
             $description = $Site->getAttribute('quiqqer.socialshare.description');
         }
-        $Template->extendHeader('<meta property="og:description" content="' .
-            htmlspecialchars($description) . '" />');
-        $Template->extendHeader('<meta itemprop="description" content="' .
-            htmlspecialchars($description) . '" />');
+
+        $Template->extendHeader('<meta property="og:description" content="'.\htmlspecialchars($description).'" />');
+        $Template->extendHeader('<meta itemprop="description" content="'.\htmlspecialchars($description).'" />');
 
         /**
          * Site type, e.g. "website", "article", "movie" etc.
          */
         $type = 'website';
+
         if ($Site->getAttribute('quiqqer.socialshare.type')) {
             $type = $Site->getAttribute('quiqqer.socialshare.type');
         }
-        $Template->extendHeader('<meta property="og:type" content="' .
-            htmlspecialchars($type) . '" />');
+
+        $Template->extendHeader('<meta property="og:type" content="'.\htmlspecialchars($type).'" />');
 
         /**
          * Site url
          */
-        $url = $baseurl . $Site->getUrlRewritten();
-        $Template->extendHeader('<meta property="og:url" content="' . $url . '" />');
+        if ($Site->getAttribute('quiqqer.socialshare.url')) {
+            $url = $Site->getAttribute('quiqqer.socialshare.url');
+        } else {
+            $url = $baseurl.$Site->getUrlRewritten();
+        }
+
+        $Template->extendHeader('<meta property="og:url" content="'.$url.'" />');
 
         /**
          * Site name, e.g. "The New Yor Times"
          * Not the base url
          */
         if ($Project->getAttribute('socialshare.settings.general.siteName')) {
-            $Template->extendHeader('<meta property="og:site_name" content="' .
-                htmlspecialchars($Project->getAttribute('socialshare.settings.general.siteName')) .
-                '" />');
+            $Template->extendHeader(
+                '<meta property="og:site_name" content="'.
+                \htmlspecialchars($Project->getAttribute('socialshare.settings.general.siteName')).'" />'
+            );
         }
 
         /**
          * Author
          */
         if ($Site->getAttribute('quiqqer.socialshare.author')) {
-            $Template->extendHeader('<meta property="article:author" content="' .
-                htmlspecialchars($Site->getAttribute('quiqqer.socialshare.author')) . '" />');
+            $Template->extendHeader(
+                '<meta property="article:author" content="'.
+                \htmlspecialchars($Site->getAttribute('quiqqer.socialshare.author')).'" />'
+            );
         }
 
         /**
@@ -110,20 +119,27 @@ class EventHandler
         if (\strpos($image, 'http') !== 0) {
             $image = $baseurl.$image;
         }
-        
-        $Template->extendHeader('<meta property="og:image" content="' . $image . '" />');
-        $Template->extendHeader('<meta itemprop="twitter:image" content="' . $image . '" />');
-        $Template->extendHeader('<meta itemprop="image" content="' . $image . '" />');
-    
+
+        $Template->extendHeader('<meta property="og:image" content="'.$image.'" />');
+        $Template->extendHeader('<meta itemprop="twitter:image" content="'.$image.'" />');
+        $Template->extendHeader('<meta itemprop="image" content="'.$image.'" />');
+
+        if (\strpos($image, 'https://') !== false) {
+            $Template->extendHeader('<meta itemprop="og:image:secure" content="'.$image.'" />');
+            $Template->extendHeader('<meta itemprop="og:image:secure_url" content="'.$image.'" />');
+            $Template->extendHeader('<meta property="image:secure" content="'.$image.'" />');
+            $Template->extendHeader('<meta property="image:secure_url" content="'.$image.'" />');
+        }
 
         /**
          * Twitter cards
          */
         $card = 'summary';
+
         if ($Site->getAttribute('quiqqer.socialshare.twitter.card')) {
             $card = $Site->getAttribute('quiqqer.socialshare.twitter.card');
         }
-        $Template->extendHeader('<meta name="twitter:card" content="' .
-            htmlspecialchars($card) . '" />');
+
+        $Template->extendHeader('<meta name="twitter:card" content="'.\htmlspecialchars($card).'" />');
     }
 }
