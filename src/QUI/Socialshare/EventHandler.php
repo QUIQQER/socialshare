@@ -143,7 +143,6 @@ class EventHandler
             QUI\Projects\Media\Utils::isMediaUrl($image)) {
             $image = $baseurl.$image;
         }
-        QUI\System\Log::writeRecursive($image);
 
         $Template->extendHeader('<meta property="og:image" content="'.$image.'" />');
         $Template->extendHeader('<meta itemprop="twitter:image" content="'.$image.'" />');
