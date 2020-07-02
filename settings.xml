@@ -6,6 +6,34 @@
             <config>
                 <section name="socialshare.settings">
 
+                    <conf name="Facebook">
+                        <type><![CDATA[bool]]></type>
+                        <default>1</default>
+                    </conf>
+                    <conf name="Twitter">
+                        <type><![CDATA[bool]]></type>
+                        <default>1</default>
+                    </conf>
+                    <conf name="Google">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="Whatsapp">
+                        <type><![CDATA[bool]]></type>
+                        <default>1</default>
+                    </conf>
+                    <conf name="Pinterest">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="Mail">
+                        <type><![CDATA[bool]]></type>
+                        <default>1</default>
+                    </conf>
+                    <conf name="LinkedIn">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="Xing">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
                     <conf name="Digg">
                         <type><![CDATA[bool]]></type>
                     </conf>
@@ -22,30 +50,6 @@
                         <type><![CDATA[bool]]></type>
                     </conf>
                     <conf name="Telegram">
-                        <type><![CDATA[bool]]></type>
-                    </conf>
-                    <conf name="Facebook">
-                        <type><![CDATA[bool]]></type>
-                    </conf>
-                    <conf name="Twitter">
-                        <type><![CDATA[bool]]></type>
-                    </conf>
-                    <conf name="Google">
-                        <type><![CDATA[bool]]></type>
-                    </conf>
-                    <conf name="Whatsapp">
-                        <type><![CDATA[bool]]></type>
-                    </conf>
-                    <conf name="Pinterest">
-                        <type><![CDATA[bool]]></type>
-                    </conf>
-                    <conf name="Mail">
-                        <type><![CDATA[bool]]></type>
-                    </conf>
-                    <conf name="LinkedIn">
-                        <type><![CDATA[bool]]></type>
-                    </conf>
-                    <conf name="Xing">
                         <type><![CDATA[bool]]></type>
                     </conf>
 
@@ -98,48 +102,6 @@
                                 </text>
                             </title>
 
-                            <input conf="socialshare.settings.Digg" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.digg"/>
-                                </text>
-                            </input>
-
-                            <input conf="socialshare.settings.Tumblr" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.tumblr"/>
-                                </text>
-                            </input>
-
-                            <input conf="socialshare.settings.WorldPress" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.worldpress"/>
-                                </text>
-                            </input>
-
-                            <input conf="socialshare.settings.Weibo" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.weibo"/>
-                                </text>
-                            </input>
-
-                            <input conf="socialshare.settings.Reddit" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.reddit"/>
-                                </text>
-                            </input>
-
-                            <input conf="socialshare.settings.Telegram" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.telegram"/>
-                                </text>
-                            </input>
-
                             <input conf="socialshare.settings.Facebook" type="checkbox">
                                 <text>
                                     <locale group="quiqqer/socialshare"
@@ -186,6 +148,48 @@
                                 <text>
                                     <locale group="quiqqer/socialshare"
                                             var="socialshare.settings.show.xing"/>
+                                </text>
+                            </input>
+
+                            <input conf="socialshare.settings.Digg" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.digg"/>
+                                </text>
+                            </input>
+
+                            <input conf="socialshare.settings.Tumblr" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.tumblr"/>
+                                </text>
+                            </input>
+
+                            <input conf="socialshare.settings.WorldPress" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.worldpress"/>
+                                </text>
+                            </input>
+
+                            <input conf="socialshare.settings.Weibo" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.weibo"/>
+                                </text>
+                            </input>
+
+                            <input conf="socialshare.settings.Reddit" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.reddit"/>
+                                </text>
+                            </input>
+
+                            <input conf="socialshare.settings.Telegram" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.telegram"/>
                                 </text>
                             </input>
 
