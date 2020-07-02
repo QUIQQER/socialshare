@@ -108,7 +108,7 @@ class EventHandler
         if (!$image) {
             $image = $Project->getConfig('socialshare.settings.general.standardImage');
         }
-
+        
         try {
             $Image = QUI\Projects\Media\Utils::getImageByUrl($image);
             $image = $Image->getSizeCacheUrl();
@@ -139,9 +139,11 @@ class EventHandler
             // @todo Projekt Social Icon definieren
         }
 
-        if (\strpos($image, 'http') !== 0) {
+        if (\strpos($image, 'http') !== 0 &&
+            QUI\Projects\Media\Utils::isMediaUrl($image)) {
             $image = $baseurl.$image;
         }
+        QUI\System\Log::writeRecursive($image);
 
         $Template->extendHeader('<meta property="og:image" content="'.$image.'" />');
         $Template->extendHeader('<meta itemprop="twitter:image" content="'.$image.'" />');
