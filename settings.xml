@@ -10,6 +10,18 @@
                         <type><![CDATA[bool]]></type>
                         <default>1</default>
                     </conf>
+                    <conf name="Blogger">
+                        <type><![CDATA[bool]]></type>
+                        <default>1</default>
+                    </conf>
+                    <conf name="Baidu">
+                        <type><![CDATA[bool]]></type>
+                        <default>1</default>
+                    </conf>
+                    <conf name="Buffer">
+                        <type><![CDATA[bool]]></type>
+                        <default>1</default>
+                    </conf>
                     <conf name="Twitter">
                         <type><![CDATA[bool]]></type>
                         <default>1</default>
@@ -106,6 +118,24 @@
                                 <text>
                                     <locale group="quiqqer/socialshare"
                                             var="socialshare.settings.show.facebook"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.Blogger" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.blogger"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.Baidu" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.baidu"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.Buffer" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.buffer"/>
                                 </text>
                             </input>
                             <input conf="socialshare.settings.Twitter" type="checkbox">

@@ -22,6 +22,21 @@
             <en><![CDATA[Share]]></en>
             <pl><![CDATA[Udostępnij]]></pl>
         </locale>
+        <locale name="label-buffer">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
+        <locale name="label-blogger">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
+        <locale name="label-baidu">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
         <locale name="label-tumblr">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
@@ -185,6 +200,21 @@
             <de><![CDATA[Tumblr]]></de>
             <en><![CDATA[Tumblr]]></en>
             <pl><![CDATA[Tumblr]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.buffer">
+            <de><![CDATA[Buffer]]></de>
+            <en><![CDATA[Buffer]]></en>
+            <pl><![CDATA[Buffer]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.blogger">
+            <de><![CDATA[Blogger]]></de>
+            <en><![CDATA[Blogger]]></en>
+            <pl><![CDATA[Blogger]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.baidu">
+            <de><![CDATA[Baidu]]></de>
+            <en><![CDATA[Baidu]]></en>
+            <pl><![CDATA[Baidu]]></pl>
         </locale>
         <locale name="socialshare.settings.show.tumblr">
             <de><![CDATA[Tumblr]]></de>
