@@ -3,7 +3,6 @@
 
 namespace QUI\Socialshare\Shares;
 
-
 use QUI;
 use QUI\Socialshare\Socialshare;
 
