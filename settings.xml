@@ -10,6 +10,10 @@
                         <type><![CDATA[bool]]></type>
                         <default>1</default>
                     </conf>
+                    <conf name="Viber">
+                        <type><![CDATA[bool]]></type>
+                        <default>1</default>
+                    </conf>
                     <conf name="StumbleUpon">
                         <type><![CDATA[bool]]></type>
                         <default>1</default>
@@ -129,6 +133,12 @@
                                 <text>
                                     <locale group="quiqqer/socialshare"
                                             var="socialshare.settings.show.facebook"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.Viber" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.viber"/>
                                 </text>
                             </input>
                             <input conf="socialshare.settings.StumbleUpon" type="checkbox">

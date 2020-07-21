@@ -22,6 +22,11 @@
             <en><![CDATA[Share]]></en>
             <pl><![CDATA[Udostępnij]]></pl>
         </locale>
+        <locale name="label-viber">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
         <locale name="label-stumbleupon">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
@@ -215,6 +220,11 @@
             <de><![CDATA[Digg]]></de>
             <en><![CDATA[Digg]]></en>
             <pl><![CDATA[Digg]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.viber">
+            <de><![CDATA[Viber]]></de>
+            <en><![CDATA[Viber]]></en>
+            <pl><![CDATA[Viber]]></pl>
         </locale>
         <locale name="socialshare.settings.show.stumbleupon">
             <de><![CDATA[StumbleUpon]]></de>
