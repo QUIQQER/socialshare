@@ -22,6 +22,11 @@
             <en><![CDATA[Share]]></en>
             <pl><![CDATA[Udostępnij]]></pl>
         </locale>
+        <locale name="label-stumbleupon">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
         <locale name="label-evernote">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
@@ -210,6 +215,11 @@
             <de><![CDATA[Digg]]></de>
             <en><![CDATA[Digg]]></en>
             <pl><![CDATA[Digg]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.stumbleupon">
+            <de><![CDATA[StumbleUpon]]></de>
+            <en><![CDATA[StumbleUpon]]></en>
+            <pl><![CDATA[StumbleUpon]]></pl>
         </locale>
         <locale name="socialshare.settings.show.evernote">
             <de><![CDATA[Evernote]]></de>
