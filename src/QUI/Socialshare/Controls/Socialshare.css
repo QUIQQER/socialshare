@@ -166,6 +166,14 @@
 .quiqqer-socialshare-delicious:hover .quiqqer-socialshare-wrapper {
     background: #9a6651;
 }
+/*Viber*/
+.quiqqer-socialshare-line .quiqqer-socialshare-wrapper {
+    background: #00b900;
+    border: 1px solid #0a680a;
+}
+.quiqqer-socialshare-line:hover .quiqqer-socialshare-wrapper {
+    background: #00b900;
+}
 /*Tumblr*/
 .quiqqer-socialshare-tumblr .quiqqer-socialshare-wrapper {
     background: #35465c;
