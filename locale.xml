@@ -22,6 +22,11 @@
             <en><![CDATA[Share]]></en>
             <pl><![CDATA[Udostępnij]]></pl>
         </locale>
+        <locale name="label-delicious">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
         <locale name="label-viber">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
@@ -220,6 +225,11 @@
             <de><![CDATA[Digg]]></de>
             <en><![CDATA[Digg]]></en>
             <pl><![CDATA[Digg]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.delicious">
+            <de><![CDATA[Delicious]]></de>
+            <en><![CDATA[Delicious]]></en>
+            <pl><![CDATA[Delicious]]></pl>
         </locale>
         <locale name="socialshare.settings.show.viber">
             <de><![CDATA[Viber]]></de>
