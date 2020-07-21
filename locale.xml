@@ -22,6 +22,11 @@
             <en><![CDATA[Share]]></en>
             <pl><![CDATA[Udostępnij]]></pl>
         </locale>
+        <locale name="label-line">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
         <locale name="label-delicious">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
@@ -225,6 +230,11 @@
             <de><![CDATA[Digg]]></de>
             <en><![CDATA[Digg]]></en>
             <pl><![CDATA[Digg]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.line">
+            <de><![CDATA[Line]]></de>
+            <en><![CDATA[Line]]></en>
+            <pl><![CDATA[Line]]></pl>
         </locale>
         <locale name="socialshare.settings.show.delicious">
             <de><![CDATA[Delicious]]></de>
