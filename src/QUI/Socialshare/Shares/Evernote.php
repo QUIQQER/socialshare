@@ -12,7 +12,7 @@ use QUI\Socialshare\Socialshare;
  * @author  www.pcsg.de (Torsten Fink)
  * @package quiqqer/socialshare
  */
-class Instapaper extends Socialshare
+class Evernote extends Socialshare
 {
     public function __construct($params = array())
     {
