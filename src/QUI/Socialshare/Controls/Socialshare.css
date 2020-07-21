@@ -150,6 +150,22 @@
 .quiqqer-socialshare-stumbleupon:hover .quiqqer-socialshare-wrapper {
     background: #EB471D;
 }
+/*Viber*/
+.quiqqer-socialshare-viber .quiqqer-socialshare-wrapper {
+    background: #539dec;
+    border: 1px solid #1473d9;
+}
+.quiqqer-socialshare-viber:hover .quiqqer-socialshare-wrapper {
+    background: #539dec;
+}
+/*Viber*/
+.quiqqer-socialshare-delicious .quiqqer-socialshare-wrapper {
+    background: #9a6651;
+    border: 1px solid #994d2e;
+}
+.quiqqer-socialshare-delicious:hover .quiqqer-socialshare-wrapper {
+    background: #9a6651;
+}
 /*Tumblr*/
 .quiqqer-socialshare-tumblr .quiqqer-socialshare-wrapper {
     background: #35465c;
