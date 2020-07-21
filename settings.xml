@@ -10,6 +10,10 @@
                         <type><![CDATA[bool]]></type>
                         <default>1</default>
                     </conf>
+                    <conf name="StumbleUpon">
+                        <type><![CDATA[bool]]></type>
+                        <default>1</default>
+                    </conf>
                     <conf name="Evernote">
                         <type><![CDATA[bool]]></type>
                         <default>1</default>
