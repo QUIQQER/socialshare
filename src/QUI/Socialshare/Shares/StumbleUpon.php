@@ -48,7 +48,7 @@ class StumbleUpon extends Socialshare
      */
     public function getLogo()
     {
-        return 'fa fa-share-square-o';
+        return 'fa fa-stumbleupon';
     }
 
     /**
