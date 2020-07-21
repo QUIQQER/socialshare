@@ -62,7 +62,7 @@ class Delicious extends Socialshare
         $baseurl = $Request->getScheme() . '://' . $Request->getHttpHost() . $Request->getBasePath();
         $baseurl = $baseurl . $_SERVER['REQUEST_URI'];
 
-        return 'viber://forward?text=' . $baseurl;
+        return 'https://del.icio.us/save?url=' . $baseurl;
     }
 
     /**
