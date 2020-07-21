@@ -10,6 +10,10 @@
                         <type><![CDATA[bool]]></type>
                         <default>1</default>
                     </conf>
+                    <conf name="Evernote">
+                        <type><![CDATA[bool]]></type>
+                        <default>1</default>
+                    </conf>
                     <conf name="Instapaper">
                         <type><![CDATA[bool]]></type>
                         <default>1</default>
@@ -117,11 +121,16 @@
                                             var="socialshare.settings.title"/>
                                 </text>
                             </title>
-
                             <input conf="socialshare.settings.Facebook" type="checkbox">
                                 <text>
                                     <locale group="quiqqer/socialshare"
                                             var="socialshare.settings.show.facebook"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.Evernote" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.evernote"/>
                                 </text>
                             </input>
                             <input conf="socialshare.settings.Instapaper" type="checkbox">

@@ -22,6 +22,11 @@
             <en><![CDATA[Share]]></en>
             <pl><![CDATA[Udostępnij]]></pl>
         </locale>
+        <locale name="label-evernote">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
         <locale name="label-instapaper">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
@@ -205,6 +210,11 @@
             <de><![CDATA[Digg]]></de>
             <en><![CDATA[Digg]]></en>
             <pl><![CDATA[Digg]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.evernote">
+            <de><![CDATA[Evernote]]></de>
+            <en><![CDATA[Evernote]]></en>
+            <pl><![CDATA[Evernote]]></pl>
         </locale>
         <locale name="socialshare.settings.show.instapaper">
             <de><![CDATA[Instapaper]]></de>
