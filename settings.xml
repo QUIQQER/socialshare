@@ -146,6 +146,7 @@
                                     <locale group="quiqqer/socialshare"
                                             var="socialshare.settings.show.facebook"/>
                                 </text>
+                            </input>
                             <input conf="socialshare.settings.Liveinternet" type="checkbox">
                                 <text>
                                     <locale group="quiqqer/socialshare"
