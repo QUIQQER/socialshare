@@ -10,6 +10,10 @@
                         <type><![CDATA[bool]]></type>
                         <default>1</default>
                     </conf>
+                    <conf name="Liveinternet">
+                        <type><![CDATA[bool]]></type>
+                        <default>1</default>
+                    </conf>
                     <conf name="Line">
                         <type><![CDATA[bool]]></type>
                         <default>1</default>
@@ -141,6 +145,11 @@
                                 <text>
                                     <locale group="quiqqer/socialshare"
                                             var="socialshare.settings.show.facebook"/>
+                                </text>
+                            <input conf="socialshare.settings.Liveinternet" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.liveinternet"/>
                                 </text>
                             </input>
                             <input conf="socialshare.settings.Line" type="checkbox">
