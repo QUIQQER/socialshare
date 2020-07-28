@@ -102,6 +102,14 @@
 .quiqqer-socialshare-digg:hover .quiqqer-socialshare-wrapper {
     background: #0099e5;
 }
+/*Livejornal*/
+.quiqqer-socialshare-livejornal .quiqqer-socialshare-wrapper {
+    background: #0de7ff;
+    border: 1px solid #0de7ff;
+}
+.quiqqer-socialshare-livejornal:hover .quiqqer-socialshare-wrapper {
+    background: #10c2d5;
+}
 /*Liveinternet*/
 .quiqqer-socialshare-liveinternet .quiqqer-socialshare-wrapper {
     background: #ffb200;
