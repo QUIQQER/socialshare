@@ -22,6 +22,11 @@
             <en><![CDATA[Share]]></en>
             <pl><![CDATA[Udostępnij]]></pl>
         </locale>
+        <locale name="label-moimir">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
         <locale name="label-livejornal">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
@@ -240,6 +245,11 @@
             <de><![CDATA[Digg]]></de>
             <en><![CDATA[Digg]]></en>
             <pl><![CDATA[Digg]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.moimir">
+            <de><![CDATA[MoiMir]]></de>
+            <en><![CDATA[MoiMir]]></en>
+            <pl><![CDATA[MoiMir]]></pl>
         </locale>
         <locale name="socialshare.settings.show.livejornal">
             <de><![CDATA[Livejornal]]></de>
