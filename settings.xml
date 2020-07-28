@@ -10,6 +10,10 @@
                         <type><![CDATA[bool]]></type>
                         <default>1</default>
                     </conf>
+                    <conf name="Livejornal">
+                        <type><![CDATA[bool]]></type>
+                        <default>1</default>
+                    </conf>
                     <conf name="Liveinternet">
                         <type><![CDATA[bool]]></type>
                         <default>1</default>
@@ -145,6 +149,12 @@
                                 <text>
                                     <locale group="quiqqer/socialshare"
                                             var="socialshare.settings.show.facebook"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.Livejornal" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.livejornal"/>
                                 </text>
                             </input>
                             <input conf="socialshare.settings.Liveinternet" type="checkbox">

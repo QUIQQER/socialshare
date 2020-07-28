@@ -22,6 +22,11 @@
             <en><![CDATA[Share]]></en>
             <pl><![CDATA[Udostępnij]]></pl>
         </locale>
+        <locale name="label-livejornal">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
         <locale name="label-liveinternet">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
@@ -235,6 +240,11 @@
             <de><![CDATA[Digg]]></de>
             <en><![CDATA[Digg]]></en>
             <pl><![CDATA[Digg]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.livejornal">
+            <de><![CDATA[Livejornal]]></de>
+            <en><![CDATA[Livejornal]]></en>
+            <pl><![CDATA[Livejornal]]></pl>
         </locale>
         <locale name="socialshare.settings.show.liveinternet">
             <de><![CDATA[Liveinternet]]></de>
