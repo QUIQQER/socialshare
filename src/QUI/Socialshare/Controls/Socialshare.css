@@ -102,6 +102,14 @@
 .quiqqer-socialshare-digg:hover .quiqqer-socialshare-wrapper {
     background: #0099e5;
 }
+/*MoiMir*/
+.quiqqer-socialshare-moimir .quiqqer-socialshare-wrapper {
+    background: #005be2;
+    border: 1px solid #0057d7;
+}
+.quiqqer-socialshare-moimir:hover .quiqqer-socialshare-wrapper {
+    background: #0099e5;
+}
 /*Livejornal*/
 .quiqqer-socialshare-livejornal .quiqqer-socialshare-wrapper {
     background: #0de7ff;
