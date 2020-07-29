@@ -10,6 +10,10 @@
                         <type><![CDATA[bool]]></type>
                         <default>1</default>
                     </conf>
+                    <conf name="Surfingbird">
+                        <type><![CDATA[bool]]></type>
+                        <default>1</default>
+                    </conf>
                     <conf name="RenRen">
                         <type><![CDATA[bool]]></type>
                         <default>1</default>
@@ -199,6 +203,12 @@
                                 <text>
                                     <locale group="quiqqer/socialshare"
                                             var="socialshare.settings.show.telegram"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.Surfingbird" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.surfingbird"/>
                                 </text>
                             </input>
                             <input conf="socialshare.settings.Readability" type="checkbox">
