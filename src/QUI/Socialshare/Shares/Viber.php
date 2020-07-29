@@ -27,7 +27,7 @@ class Viber extends Socialshare
      */
     public function getName()
     {
-        return 'quiqqer-socialshare-Viber';
+        return 'quiqqer-socialshare-viber';
     }
 
     /**
@@ -37,7 +37,7 @@ class Viber extends Socialshare
      */
     public function getLabel()
     {
-        return QUI::getLocale()->get('quiqqer/socialshare', 'label-Viber');
+        return QUI::getLocale()->get('quiqqer/socialshare', 'label-viber');
     }
 
     /**

@@ -27,7 +27,7 @@ class Baidu extends Socialshare
      */
     public function getName()
     {
-        return 'quiqqer-socialshare-Baidu';
+        return 'quiqqer-socialshare-baidu';
     }
 
     /**
@@ -37,7 +37,7 @@ class Baidu extends Socialshare
      */
     public function getLabel()
     {
-        return QUI::getLocale()->get('quiqqer/socialshare', 'label-Baidu');
+        return QUI::getLocale()->get('quiqqer/socialshare', 'label-baidu');
     }
 
     /**

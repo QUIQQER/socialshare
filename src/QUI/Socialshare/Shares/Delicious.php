@@ -27,7 +27,7 @@ class Delicious extends Socialshare
      */
     public function getName()
     {
-        return 'quiqqer-socialshare-Delicious';
+        return 'quiqqer-socialshare-delicious';
     }
 
     /**
@@ -37,7 +37,7 @@ class Delicious extends Socialshare
      */
     public function getLabel()
     {
-        return QUI::getLocale()->get('quiqqer/socialshare', 'label-Delicious');
+        return QUI::getLocale()->get('quiqqer/socialshare', 'label-delicious');
     }
 
     /**

@@ -27,7 +27,7 @@ class Odnoklassniki extends Socialshare
      */
     public function getName()
     {
-        return 'quiqqer-socialshare-Odnoklassniki';
+        return 'quiqqer-socialshare-odnoklassniki';
     }
 
     /**
@@ -37,7 +37,7 @@ class Odnoklassniki extends Socialshare
      */
     public function getLabel()
     {
-        return QUI::getLocale()->get('quiqqer/socialshare', 'label-Odnoklassniki');
+        return QUI::getLocale()->get('quiqqer/socialshare', 'label-odnoklassniki');
     }
 
     /**

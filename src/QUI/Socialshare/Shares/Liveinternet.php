@@ -27,7 +27,7 @@ class Liveinternet extends Socialshare
      */
     public function getName()
     {
-        return 'quiqqer-socialshare-Liveinternet';
+        return 'quiqqer-socialshare-liveinternet';
     }
 
     /**
@@ -37,7 +37,7 @@ class Liveinternet extends Socialshare
      */
     public function getLabel()
     {
-        return QUI::getLocale()->get('quiqqer/socialshare', 'label-Liveinternet');
+        return QUI::getLocale()->get('quiqqer/socialshare', 'label-liveinternet');
     }
 
     /**

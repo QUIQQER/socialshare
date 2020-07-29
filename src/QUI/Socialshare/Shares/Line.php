@@ -27,7 +27,7 @@ class Line extends Socialshare
      */
     public function getName()
     {
-        return 'quiqqer-socialshare-Line';
+        return 'quiqqer-socialshare-line';
     }
 
     /**
@@ -37,7 +37,7 @@ class Line extends Socialshare
      */
     public function getLabel()
     {
-        return QUI::getLocale()->get('quiqqer/socialshare', 'label-Line');
+        return QUI::getLocale()->get('quiqqer/socialshare', 'label-line');
     }
 
     /**

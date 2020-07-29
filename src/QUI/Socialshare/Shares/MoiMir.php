@@ -27,7 +27,7 @@ class MoiMir extends Socialshare
      */
     public function getName()
     {
-        return 'quiqqer-socialshare-MoiMir';
+        return 'quiqqer-socialshare-moiMir';
     }
 
     /**
@@ -37,7 +37,7 @@ class MoiMir extends Socialshare
      */
     public function getLabel()
     {
-        return QUI::getLocale()->get('quiqqer/socialshare', 'label-MoiMir');
+        return QUI::getLocale()->get('quiqqer/socialshare', 'label-moiMir');
     }
 
     /**
