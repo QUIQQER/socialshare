@@ -14,7 +14,7 @@
                         <type><![CDATA[bool]]></type>
                         <default>1</default>
                     </conf>
-                    <conf name="Livejornal">
+                    <conf name="Livejournal">
                         <type><![CDATA[bool]]></type>
                         <default>1</default>
                     </conf>
@@ -161,10 +161,10 @@
                                             var="socialshare.settings.show.moimir"/>
                                 </text>
                             </input>
-                            <input conf="socialshare.settings.Livejornal" type="checkbox">
+                            <input conf="socialshare.settings.Livejournal" type="checkbox">
                                 <text>
                                     <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.livejornal"/>
+                                            var="socialshare.settings.show.livejournal"/>
                                 </text>
                             </input>
                             <input conf="socialshare.settings.Liveinternet" type="checkbox">

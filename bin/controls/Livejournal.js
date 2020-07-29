@@ -1,4 +1,4 @@
-define('package/quiqqer/socialshare/bin/controls/Livejornal', [
+define('package/quiqqer/socialshare/bin/controls/Livejournal', [
 
     'qui/QUI',
     'qui/controls/Control',
@@ -11,7 +11,7 @@ define('package/quiqqer/socialshare/bin/controls/Livejornal', [
     return new Class({
 
         Extends: QUIControl,
-        Type   : 'package/quiqqer/socialshare/bin/controls/Livejornal',
+        Type   : 'package/quiqqer/socialshare/bin/controls/Livejournal',
 
         Binds: [
             '$onImport'

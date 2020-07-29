@@ -27,7 +27,7 @@
             <en><![CDATA[Share]]></en>
             <pl><![CDATA[Udostępnij]]></pl>
         </locale>
-        <locale name="label-livejornal">
+        <locale name="label-livejournal">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
             <pl><![CDATA[Udostępnij]]></pl>
@@ -251,10 +251,10 @@
             <en><![CDATA[MoiMir]]></en>
             <pl><![CDATA[MoiMir]]></pl>
         </locale>
-        <locale name="socialshare.settings.show.livejornal">
-            <de><![CDATA[Livejornal]]></de>
-            <en><![CDATA[Livejornal]]></en>
-            <pl><![CDATA[Livejornal]]></pl>
+        <locale name="socialshare.settings.show.livejournal">
+            <de><![CDATA[Livejournal]]></de>
+            <en><![CDATA[Livejournal]]></en>
+            <pl><![CDATA[Livejournal]]></pl>
         </locale>
         <locale name="socialshare.settings.show.liveinternet">
             <de><![CDATA[Liveinternet]]></de>

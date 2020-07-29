@@ -12,7 +12,7 @@ use QUI\Socialshare\Socialshare;
  * @author  www.pcsg.de (Torsten Fink)
  * @package quiqqer/socialshare
  */
-class Buffer extends Socialshare
+class MoiMir extends Socialshare
 {
     public function __construct($params = array())
     {

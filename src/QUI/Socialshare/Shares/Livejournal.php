@@ -7,16 +7,16 @@ use QUI;
 use QUI\Socialshare\Socialshare;
 
 /**
- * Livejornal class for social share
+ * Livejournal class for social share
  *
  * @author  www.pcsg.de (Torsten Fink)
  * @package quiqqer/socialshare
  */
-class Livejornal extends Socialshare
+class Livejournal extends Socialshare
 {
     public function __construct($params = array())
     {
-        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Livejornal');
+        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Livejournal');
         parent::__construct($params);
     }
 
@@ -27,7 +27,7 @@ class Livejornal extends Socialshare
      */
     public function getName()
     {
-        return 'quiqqer-socialshare-Livejornal';
+        return 'quiqqer-socialshare-Livejournal';
     }
 
     /**
@@ -37,7 +37,7 @@ class Livejornal extends Socialshare
      */
     public function getLabel()
     {
-        return QUI::getLocale()->get('quiqqer/socialshare', 'label-Livejornal');
+        return QUI::getLocale()->get('quiqqer/socialshare', 'label-Livejournal');
     }
 
     /**
