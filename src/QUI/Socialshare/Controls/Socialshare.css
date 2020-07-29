@@ -102,6 +102,14 @@
 .quiqqer-socialshare-digg:hover .quiqqer-socialshare-wrapper {
     background: #0099e5;
 }
+/*Odnoklassniki*/
+.quiqqer-socialshare-odnoklassniki .quiqqer-socialshare-wrapper {
+    background: #f58220;
+    border: 1px solid #f58220;
+}
+.quiqqer-socialshare-odnoklassniki:hover .quiqqer-socialshare-wrapper {
+    background: #bd5c0a;
+}
 /*MoiMir*/
 .quiqqer-socialshare-moimir .quiqqer-socialshare-wrapper {
     background: #005be2;
