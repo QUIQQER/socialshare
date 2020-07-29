@@ -22,6 +22,11 @@
             <en><![CDATA[Share]]></en>
             <pl><![CDATA[Udostępnij]]></pl>
         </locale>
+        <locale name="label-pocket">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
         <locale name="label-odnoklassniki">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
@@ -250,6 +255,11 @@
             <de><![CDATA[Digg]]></de>
             <en><![CDATA[Digg]]></en>
             <pl><![CDATA[Digg]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.pocket">
+            <de><![CDATA[Pocket]]></de>
+            <en><![CDATA[Pocket]]></en>
+            <pl><![CDATA[Pocket]]></pl>
         </locale>
         <locale name="socialshare.settings.show.odnoklassniki">
             <de><![CDATA[Odnoklassniki]]></de>
