@@ -22,6 +22,11 @@
             <en><![CDATA[Share]]></en>
             <pl><![CDATA[Udostępnij]]></pl>
         </locale>
+        <locale name="label-readability">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
         <locale name="label-pocket">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
@@ -255,6 +260,11 @@
             <de><![CDATA[Digg]]></de>
             <en><![CDATA[Digg]]></en>
             <pl><![CDATA[Digg]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.readability">
+            <de><![CDATA[Readability]]></de>
+            <en><![CDATA[Readability]]></en>
+            <pl><![CDATA[Readability]]></pl>
         </locale>
         <locale name="socialshare.settings.show.pocket">
             <de><![CDATA[Pocket]]></de>

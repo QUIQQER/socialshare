@@ -10,7 +10,7 @@
                         <type><![CDATA[bool]]></type>
                         <default>1</default>
                     </conf>
-                    <conf name="pocket">
+                    <conf name="Pocket">
                         <type><![CDATA[bool]]></type>
                         <default>1</default>
                     </conf>
@@ -157,6 +157,12 @@
                                             var="socialshare.settings.title"/>
                                 </text>
                             </title>
+                            <input conf="socialshare.settings.Readability" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.readability"/>
+                                </text>
+                            </input>
                             <input conf="socialshare.settings.Facebook" type="checkbox">
                                 <text>
                                     <locale group="quiqqer/socialshare"
