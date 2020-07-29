@@ -102,13 +102,21 @@
 .quiqqer-socialshare-digg:hover .quiqqer-socialshare-wrapper {
     background: #0099e5;
 }
-/*Digg*/
+/*Surfingbird*/
 .quiqqer-socialshare-surfingbird .quiqqer-socialshare-wrapper {
     background: #31bcff;
     border: 1px solid #31bcff;
 }
 .quiqqer-socialshare-surfingbird:hover .quiqqer-socialshare-wrapper {
     background: #2c9bd0;
+}
+/*VK*/
+.quiqqer-socialshare-vk .quiqqer-socialshare-wrapper {
+    background: #5181b8;
+    border: 1px solid #5181b8;
+}
+.quiqqer-socialshare-vk:hover .quiqqer-socialshare-wrapper {
+    background: #335174;
 }
 /*RenRen*/
 .quiqqer-socialshare-renren .quiqqer-socialshare-wrapper {
