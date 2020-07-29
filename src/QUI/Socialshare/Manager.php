@@ -19,7 +19,7 @@ class Manager extends QUI\Controls\Control
      */
     private static $availableSocials = array(
         'Baidu',
-        'Pocket',
+        'Readability',
         'Odnoklassniki',
         'MoiMir',
         'Livejournal',

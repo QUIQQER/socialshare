@@ -7,16 +7,16 @@ use QUI;
 use QUI\Socialshare\Socialshare;
 
 /**
- * Pocket class for social share
+ * Readability class for social share
  *
  * @author  www.pcsg.de (Torsten Fink)
  * @package quiqqer/socialshare
  */
-class Pocket extends Socialshare
+class Readability extends Socialshare
 {
     public function __construct($params = array())
     {
-        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Pocket');
+        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Readability');
         parent::__construct($params);
     }
 
@@ -27,7 +27,7 @@ class Pocket extends Socialshare
      */
     public function getName()
     {
-        return 'quiqqer-socialshare-pocket';
+        return 'quiqqer-socialshare-readability';
     }
 
     /**
@@ -37,7 +37,7 @@ class Pocket extends Socialshare
      */
     public function getLabel()
     {
-        return QUI::getLocale()->get('quiqqer/socialshare', 'label-pocket');
+        return QUI::getLocale()->get('quiqqer/socialshare', 'label-readability');
     }
 
     /**
@@ -47,7 +47,7 @@ class Pocket extends Socialshare
      */
     public function getLogo()
     {
-        return 'fa fa-get-pocket';
+        return 'fa fa-share-square ';
     }
 
     /**
@@ -62,7 +62,7 @@ class Pocket extends Socialshare
         $baseurl = $Request->getScheme() . '://' . $Request->getHttpHost() . $Request->getBasePath();
         $baseurl = $baseurl . $_SERVER['REQUEST_URI'];
 
-        return 'https://getpocket.com/save?url=' . $baseurl;
+        return 'http://www.readability.com/save?url=' . $baseurl;
     }
 
     /**
@@ -107,24 +107,6 @@ class Pocket extends Socialshare
      */
     public function getCountUrl()
     {
-        $Site    = $this->getSite();
-        $Request = QUI::getRequest();
-
-        // @todo warten auf URL Site Objekt, damit kein Request mehr verwendet wird
-        // hier ist sonst noch ein fehler mit den vhosts
-        $baseurl = $Request->getScheme() . '://' . $Request->getHttpHost();
-        $baseurl = $baseurl . $Site->getUrlRewritten();
-        $encoded = urlencode($baseurl);
-
-        $url = "https://widgets.getpocket.com/v1/button?label=pocket&count=vertical&align=left&v=1&url=";
-        $url .= http_build_query(array(
-            'q' => "SELECT total_count FROM link_stat WHERE url='{$encoded}'"
-        ));
-
-//        $url .= QUI::getRewrite()->getUrlFromSite(array(
-//            'site' => $Site
-//        ));
-//        echo $url;
-        return $url;
+        return false;
     }
 }
