@@ -10,6 +10,10 @@
                         <type><![CDATA[bool]]></type>
                         <default>1</default>
                     </conf>
+                    <conf name="RenRen">
+                        <type><![CDATA[bool]]></type>
+                        <default>1</default>
+                    </conf>
                     <conf name="Readability">
                         <type><![CDATA[bool]]></type>
                         <default>1</default>
@@ -161,16 +165,52 @@
                                             var="socialshare.settings.title"/>
                                 </text>
                             </title>
+                            <input conf="socialshare.settings.Facebook" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.facebook"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.Twitter" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.twitter"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.Google" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.google"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.Whatsapp" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.whatsapp"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.Reddit" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.reddit"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.Telegram" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.telegram"/>
+                                </text>
+                            </input>
                             <input conf="socialshare.settings.Readability" type="checkbox">
                                 <text>
                                     <locale group="quiqqer/socialshare"
                                             var="socialshare.settings.show.readability"/>
                                 </text>
                             </input>
-                            <input conf="socialshare.settings.Facebook" type="checkbox">
+                            <input conf="socialshare.settings.RenRen" type="checkbox">
                                 <text>
                                     <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.facebook"/>
+                                            var="socialshare.settings.show.renren"/>
                                 </text>
                             </input>
                             <input conf="socialshare.settings.Pocket" type="checkbox">
@@ -257,24 +297,6 @@
                                             var="socialshare.settings.show.buffer"/>
                                 </text>
                             </input>
-                            <input conf="socialshare.settings.Twitter" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.twitter"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.Google" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.google"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.Whatsapp" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.whatsapp"/>
-                                </text>
-                            </input>
                             <input conf="socialshare.settings.Pinterest" type="checkbox">
                                 <text>
                                     <locale group="quiqqer/socialshare"
@@ -328,19 +350,6 @@
                                 </text>
                             </input>
 
-                            <input conf="socialshare.settings.Reddit" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.reddit"/>
-                                </text>
-                            </input>
-
-                            <input conf="socialshare.settings.Telegram" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.telegram"/>
-                                </text>
-                            </input>
 
                         </settings>
 

@@ -22,6 +22,11 @@
             <en><![CDATA[Share]]></en>
             <pl><![CDATA[Udostępnij]]></pl>
         </locale>
+        <locale name="label-renren">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
         <locale name="label-readability">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
@@ -260,6 +265,11 @@
             <de><![CDATA[Digg]]></de>
             <en><![CDATA[Digg]]></en>
             <pl><![CDATA[Digg]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.renren">
+            <de><![CDATA[RenRen]]></de>
+            <en><![CDATA[RenRen]]></en>
+            <pl><![CDATA[RenRen]]></pl>
         </locale>
         <locale name="socialshare.settings.show.readability">
             <de><![CDATA[Readability]]></de>
