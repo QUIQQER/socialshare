@@ -10,6 +10,10 @@
                         <type><![CDATA[bool]]></type>
                         <default>1</default>
                     </conf>
+                    <conf name="Odnoklassniki">
+                        <type><![CDATA[bool]]></type>
+                        <default>1</default>
+                    </conf>
                     <conf name="MoiMir">
                         <type><![CDATA[bool]]></type>
                         <default>1</default>
@@ -153,6 +157,12 @@
                                 <text>
                                     <locale group="quiqqer/socialshare"
                                             var="socialshare.settings.show.facebook"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.Odnoklassniki" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.odnoklassniki"/>
                                 </text>
                             </input>
                             <input conf="socialshare.settings.MoiMir" type="checkbox">

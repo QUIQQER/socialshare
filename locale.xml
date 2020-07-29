@@ -22,6 +22,11 @@
             <en><![CDATA[Share]]></en>
             <pl><![CDATA[Udostępnij]]></pl>
         </locale>
+        <locale name="label-odnoklassniki">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
         <locale name="label-moimir">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
@@ -245,6 +250,11 @@
             <de><![CDATA[Digg]]></de>
             <en><![CDATA[Digg]]></en>
             <pl><![CDATA[Digg]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.odnoklassniki">
+            <de><![CDATA[Odnoklassniki]]></de>
+            <en><![CDATA[Odnoklassniki]]></en>
+            <pl><![CDATA[Odnoklassniki]]></pl>
         </locale>
         <locale name="socialshare.settings.show.moimir">
             <de><![CDATA[MoiMir]]></de>
