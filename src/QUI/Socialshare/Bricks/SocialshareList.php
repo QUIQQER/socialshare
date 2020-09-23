@@ -40,6 +40,10 @@ class SocialshareList extends QUI\Control
             'showCount' => $this->getAttribute('socialshare.brick.settings.showCount'),
         ));
 
-        return $Control->create();
+        $result = $Control->create();
+
+        $this->addCSSFiles($Control->getCSSFiles());
+
+        return $result;
     }
 }

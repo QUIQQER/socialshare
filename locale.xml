@@ -22,6 +22,96 @@
             <en><![CDATA[Share]]></en>
             <pl><![CDATA[Udostępnij]]></pl>
         </locale>
+        <locale name="label-surfingbird">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
+        <locale name="label-vk">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
+        <locale name="label-renren">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
+        <locale name="label-readability">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
+        <locale name="label-pocket">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
+        <locale name="label-odnoklassniki">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
+        <locale name="label-moimir">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
+        <locale name="label-livejournal">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
+        <locale name="label-liveinternet">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
+        <locale name="label-line">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
+        <locale name="label-delicious">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
+        <locale name="label-viber">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
+        <locale name="label-stumbleupon">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
+        <locale name="label-evernote">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
+        <locale name="label-instapaper">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
+        <locale name="label-buffer">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
+        <locale name="label-blogger">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
+        <locale name="label-baidu">
+            <de><![CDATA[Teilen]]></de>
+            <en><![CDATA[Share]]></en>
+            <pl><![CDATA[Udostępnij]]></pl>
+        </locale>
         <locale name="label-tumblr">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
@@ -182,9 +272,99 @@
             <pl><![CDATA[Pokaż social share]]></pl>
         </locale>
         <locale name="socialshare.settings.show.digg">
-            <de><![CDATA[Tumblr]]></de>
-            <en><![CDATA[Tumblr]]></en>
-            <pl><![CDATA[Tumblr]]></pl>
+            <de><![CDATA[Digg]]></de>
+            <en><![CDATA[Digg]]></en>
+            <pl><![CDATA[Digg]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.surfingbird">
+            <de><![CDATA[Surfingbird]]></de>
+            <en><![CDATA[Surfingbird]]></en>
+            <pl><![CDATA[Surfingbird]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.vk">
+            <de><![CDATA[VK]]></de>
+            <en><![CDATA[VK]]></en>
+            <pl><![CDATA[VK]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.renren">
+            <de><![CDATA[RenRen]]></de>
+            <en><![CDATA[RenRen]]></en>
+            <pl><![CDATA[RenRen]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.readability">
+            <de><![CDATA[Readability]]></de>
+            <en><![CDATA[Readability]]></en>
+            <pl><![CDATA[Readability]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.pocket">
+            <de><![CDATA[Pocket]]></de>
+            <en><![CDATA[Pocket]]></en>
+            <pl><![CDATA[Pocket]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.odnoklassniki">
+            <de><![CDATA[Odnoklassniki]]></de>
+            <en><![CDATA[Odnoklassniki]]></en>
+            <pl><![CDATA[Odnoklassniki]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.moimir">
+            <de><![CDATA[MoiMir]]></de>
+            <en><![CDATA[MoiMir]]></en>
+            <pl><![CDATA[MoiMir]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.livejournal">
+            <de><![CDATA[Livejournal]]></de>
+            <en><![CDATA[Livejournal]]></en>
+            <pl><![CDATA[Livejournal]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.liveinternet">
+            <de><![CDATA[Liveinternet]]></de>
+            <en><![CDATA[Liveinternet]]></en>
+            <pl><![CDATA[Liveinternet]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.line">
+            <de><![CDATA[Line]]></de>
+            <en><![CDATA[Line]]></en>
+            <pl><![CDATA[Line]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.delicious">
+            <de><![CDATA[Delicious]]></de>
+            <en><![CDATA[Delicious]]></en>
+            <pl><![CDATA[Delicious]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.viber">
+            <de><![CDATA[Viber]]></de>
+            <en><![CDATA[Viber]]></en>
+            <pl><![CDATA[Viber]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.stumbleupon">
+            <de><![CDATA[StumbleUpon]]></de>
+            <en><![CDATA[StumbleUpon]]></en>
+            <pl><![CDATA[StumbleUpon]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.evernote">
+            <de><![CDATA[Evernote]]></de>
+            <en><![CDATA[Evernote]]></en>
+            <pl><![CDATA[Evernote]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.instapaper">
+            <de><![CDATA[Instapaper]]></de>
+            <en><![CDATA[Instapaper]]></en>
+            <pl><![CDATA[Instapaper]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.buffer">
+            <de><![CDATA[Buffer]]></de>
+            <en><![CDATA[Buffer]]></en>
+            <pl><![CDATA[Buffer]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.blogger">
+            <de><![CDATA[Blogger]]></de>
+            <en><![CDATA[Blogger]]></en>
+            <pl><![CDATA[Blogger]]></pl>
+        </locale>
+        <locale name="socialshare.settings.show.baidu">
+            <de><![CDATA[Baidu]]></de>
+            <en><![CDATA[Baidu]]></en>
+            <pl><![CDATA[Baidu]]></pl>
         </locale>
         <locale name="socialshare.settings.show.tumblr">
             <de><![CDATA[Tumblr]]></de>
