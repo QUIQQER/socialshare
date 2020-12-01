@@ -60,6 +60,25 @@ class EventHandler
 
         $Template->extendHeader('<meta property="og:type" content="'.\htmlspecialchars($type).'" />');
 
+        // itemscope itemtype="http://schema.org/WebPage"
+        switch ($type) {
+            case 'blog':
+                $Site->setAttribute('meta.itemscope', 'http://schema.org/BlogPosting');
+                break;
+                
+            case 'movie':
+                $Site->setAttribute('meta.itemscope', 'http://schema.org/Movie');
+                break;
+
+            case 'article':
+                $Site->setAttribute('meta.itemscope', 'http://schema.org/Article');
+                break;
+
+            default:
+            case 'website':
+                $Site->setAttribute('meta.itemscope', 'http://schema.org/WebPage');
+        }
+
         /**
          * Site url
          */
@@ -108,7 +127,7 @@ class EventHandler
         if (!$image) {
             $image = $Project->getConfig('socialshare.settings.general.standardImage');
         }
-        
+
         try {
             $Image = QUI\Projects\Media\Utils::getImageByUrl($image);
             $image = $Image->getSizeCacheUrl();
