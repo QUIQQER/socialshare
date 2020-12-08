@@ -17,7 +17,7 @@ class Manager extends QUI\Controls\Control
     /**
      * @var array
      */
-    private static $availableSocials = array(
+    private static $availableSocials = [
         'Baidu',
         'VK',
         'Surfingbird',
@@ -50,55 +50,60 @@ class Manager extends QUI\Controls\Control
         'Whatsapp',
         'LinkedIn',
         'Xing'
-    );
+    ];
 
     // default settings
-    private static $settings = array(
+    private static $settings = [
         'theme'     => 'classic',
         'showLabel' => true,
         'showIcon'  => true,
         'showCount' => false,
         'nodeName'  => 'a'
-    );
+    ];
 
     /**
      * Get socials
      *
      * @param array $settings
-     * @return string
-     * @throws QUI\Exception
+     * @return array
      */
-    public static function get($settings = array())
+    public static function get($settings = [])
     {
-        self::setSocialSettings($settings);
+        try {
+            self::setSocialSettings($settings);
+            $Project = QUI::getRewrite()->getProject();
+        } catch (QUI\Exception $Exception) {
+            return [];
+        }
 
-        $htmlSocial = "";
+        $networks = [];
 
         foreach (self::$availableSocials as $social) {
-            $setting = 'socialshare.settings.' . $social;
-            if (!QUI::getRewrite()->getProject()->getConfig($setting)) {
+            $setting = 'socialshare.settings.'.$social;
+
+            if (!$Project->getConfig($setting)) {
                 continue;
             }
 
-            $class  = 'QUI\Socialshare\Shares\\' . $social;
+            $class  = 'QUI\Socialshare\Shares\\'.$social;
             $Social = new $class(self::$settings);
 
-            $htmlSocial .= $Social->create();
-        };
+            $networks[] = $Social;
+        }
 
-        return $htmlSocial;
+        return $networks;
     }
 
     /**
      * Get single social
      *
-     * @todo - must be implemented
-     *
      * @param $social
      * @return string
      * @throws QUI\Exception
+     * @todo - must be implemented
+     *
      */
-    public static function getSocial($social = array())
+    public static function getSocial($social = [])
     {
         return;
 //        self::setSocialSettings();
@@ -109,10 +114,10 @@ class Manager extends QUI\Controls\Control
 
         $htmlSocial = "";
         if (!isset(self::$availableSocials[$social])) {
-            throw new QUI\Exception('Social class "' . $social . '" not exist. First letter capitalized?', 404);
+            throw new QUI\Exception('Social class "'.$social.'" not exist. First letter capitalized?', 404);
         }
 
-        $class      = 'QUI\Socialshare\Shares\\' . $social;
+        $class      = 'QUI\Socialshare\Shares\\'.$social;
         $Social     = new $class(self::$settings);
         $htmlSocial = $Social->create();
 //        $Engine->assign('htmlSocial', $htmlSocial);
@@ -127,7 +132,7 @@ class Manager extends QUI\Controls\Control
      * @param array $settings
      * @throws QUI\Exception
      */
-    private static function setSocialSettings($settings = array())
+    private static function setSocialSettings($settings = [])
     {
         // set the general settings
         self::$settings['theme']     = QUI::getRewrite()->getProject()->getConfig('socialshare.settings.general.theme');
