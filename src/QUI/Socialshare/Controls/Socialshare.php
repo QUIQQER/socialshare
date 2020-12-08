@@ -64,7 +64,7 @@ class Socialshare extends Control
 
         $Engine->assign([
             'this'    => $this,
-            'socials' => $socials
+            'socials' => $html
         ]);
 
         return $Engine->fetch(dirname(__FILE__).'/Socialshare.html');
