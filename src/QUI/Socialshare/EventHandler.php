@@ -159,7 +159,7 @@ class EventHandler
         }
 
         if (\strpos($image, 'http') !== 0 &&
-            QUI\Projects\Media\Utils::isMediaUrl($image)) {
+            !QUI\Projects\Media\Utils::isMediaUrl($image)) {
             $image = $baseurl.$image;
         }
 
