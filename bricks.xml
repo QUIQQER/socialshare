@@ -39,6 +39,10 @@
                         <locale group="quiqqer/socialshare"
                                 var="socialshare.settings.general.theme"/>
                     </text>
+                    <option value="">
+                        <locale group="quiqqer/socialshare"
+                                var="socialshare.settings.general.theme.default"/>
+                    </option>
                     <option value="classic">
                         <locale group="quiqqer/socialshare"
                                 var="socialshare.settings.general.theme.classic"/>

@@ -471,6 +471,11 @@
             <en><![CDATA[Theme]]></en>
             <pl><![CDATA[Wygląd]]></pl>
         </locale>
+        <locale name="socialshare.settings.general.theme.default">
+            <de><![CDATA[Standard Einstellung übernehmen]]></de>
+            <en><![CDATA[Use global setting]]></en>
+            <pl><![CDATA[Użyj globalnego ustawienia]]></pl>
+        </locale>
         <locale name="socialshare.settings.general.theme.classic">
             <de><![CDATA[Classic]]></de>
             <en><![CDATA[Classic]]></en>
