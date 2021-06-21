@@ -447,6 +447,10 @@
                                     <locale group="quiqqer/socialshare"
                                             var="socialshare.settings.general.theme.minima"/>
                                 </option>
+                                <option value="dark">
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.general.theme.dark"/>
+                                </option>
                             </select>
                         </settings>
 

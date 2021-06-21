@@ -1,0 +1,30 @@
+.quiqqer-socialshare-dark .quiqqer-socialshare-wrapper {
+    padding: 4px 0;
+}
+
+.quiqqer-socialshare-dark.quiqqer-socialshare-icon-spacing  .quiqqer-socialshare-wrapper span:first-child {
+    margin-right: .15em;
+}
+
+.quiqqer-socialshare-dark .quiqqer-socialshare-logo {
+	margin: 0 10px;
+}
+
+.quiqqer-socialshare-dark .quiqqer-socialshare-logo, 
+.quiqqer-socialshare-dark .quiqqer-socialshare-label {
+	color: #777;
+}
+
+.quiqqer-socialshare-dark .quiqqer-socialshare-wrapper {
+	background: none;
+	border: none;
+}
+
+.quiqqer-socialshare-dark .quiqqer-socialshare-wrapper:hover .quiqqer-socialshare-logo,
+.quiqqer-socialshare-dark .quiqqer-socialshare-wrapper:hover .quiqqer-socialshare-label {
+	color: #111;
+}
+
+.quiqqer-socialshare-dark:hover .quiqqer-socialshare-wrapper{
+    background: none;
+}

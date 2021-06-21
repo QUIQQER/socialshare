@@ -491,6 +491,11 @@
             <en><![CDATA[Minima]]></en>
             <pl><![CDATA[Minima]]></pl>
         </locale>
+        <locale name="socialshare.settings.general.theme.dark">
+            <de><![CDATA[Dunkel]]></de>
+            <en><![CDATA[Dark]]></en>
+            <pl><![CDATA[Ciemny]]></pl>
+        </locale>
 
         <locale name="socialshare.settings.general.showLabel">
             <de><![CDATA[Label anzeigen]]></de>
