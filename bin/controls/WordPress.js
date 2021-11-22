@@ -1,4 +1,4 @@
-define('package/quiqqer/socialshare/bin/controls/WorldPress', [
+define('package/quiqqer/socialshare/bin/controls/WordPress', [
 
     'qui/QUI',
     'qui/controls/Control',
@@ -11,7 +11,7 @@ define('package/quiqqer/socialshare/bin/controls/WorldPress', [
     return new Class({
 
         Extends: QUIControl,
-        Type   : 'package/quiqqer/socialshare/bin/controls/WorldPress',
+        Type   : 'package/quiqqer/socialshare/bin/controls/WordPress',
 
         Binds: [
             '$onImport'
@@ -73,7 +73,7 @@ define('package/quiqqer/socialshare/bin/controls/WorldPress', [
             }.bind(this), {                                  // weitere Parameter
                 'package': 'quiqqer/socialshare', // was für ein Package das ist
                 url      : window.location.toString(),
-                social   : 'WorldPress',
+                social   : 'WordPress',
                 project  : JSON.encode(QUIQQER_PROJECT),
                 siteId   : QUIQQER_SITE.id
             });
