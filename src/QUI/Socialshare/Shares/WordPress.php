@@ -6,16 +6,16 @@ use QUI;
 use QUI\Socialshare\Socialshare;
 
 /**
- * Facebook class for social share
+ * Wordpress class for social share
  *
  * @author  www.pcsg.de (Torsten Fink)
  * @package quiqqer/socialshare
  */
-class WorldPress extends Socialshare
+class WordPress extends Socialshare
 {
     public function __construct($params = array())
     {
-        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/WorldPress');
+        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/WordPress');
         parent::__construct($params);
     }
 
@@ -26,7 +26,7 @@ class WorldPress extends Socialshare
      */
     public function getName()
     {
-        return 'quiqqer-socialshare-worldpress';
+        return 'quiqqer-socialshare-wordpress';
     }
 
     /**
@@ -36,7 +36,7 @@ class WorldPress extends Socialshare
      */
     public function getLabel()
     {
-        return QUI::getLocale()->get('quiqqer/socialshare', 'label-worldpress');
+        return QUI::getLocale()->get('quiqqer/socialshare', 'label-wordpress');
     }
 
     /**

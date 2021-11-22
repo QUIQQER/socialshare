@@ -11,7 +11,7 @@
 
         <locale name="package.description">
             <de>
-                <![CDATA[Die Erweiterung ermöglicht das Hinzufügen von verschiedenen social share Buttons (u.a. Facebook, Twitter, Google, Pinterest).]]></de>
+                <![CDATA[Die Erweiterung ermöglicht das Hinzufügen von verschiedenen social share Buttons (u.a. Facebook, Twitter, Pinterest).]]></de>
             <en>
                 <![CDATA[This plugin allows you to simply place social share buttons on your website (Facebook, Twitter, Pinterest, etc).]]></en>
             <pl>
@@ -117,7 +117,7 @@
             <en><![CDATA[Share]]></en>
             <pl><![CDATA[Udostępnij]]></pl>
         </locale>
-        <locale name="label-worldpress">
+        <locale name="label-wordpress">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
             <pl><![CDATA[Udostępnij]]></pl>
@@ -147,11 +147,7 @@
             <en><![CDATA[Tweet]]></en>
             <pl><![CDATA[Tweetnij]]></pl>
         </locale>
-        <locale name="label-google">
-            <de><![CDATA[Teilen]]></de>
-            <en><![CDATA[Share]]></en>
-            <pl><![CDATA[Podziel się]]></pl>
-        </locale>
+
         <locale name="label-whatsapp">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
@@ -371,10 +367,10 @@
             <en><![CDATA[Tumblr]]></en>
             <pl><![CDATA[Tumblr]]></pl>
         </locale>
-        <locale name="socialshare.settings.show.worldpress">
-            <de><![CDATA[WorldPress]]></de>
-            <en><![CDATA[WorldPress]]></en>
-            <pl><![CDATA[WorldPress]]></pl>
+        <locale name="socialshare.settings.show.wordpress">
+            <de><![CDATA[WordPress]]></de>
+            <en><![CDATA[WordPress]]></en>
+            <pl><![CDATA[WordPress]]></pl>
         </locale>
         <locale name="socialshare.settings.show.weibo">
             <de><![CDATA[Weibo]]></de>
@@ -401,11 +397,7 @@
             <en><![CDATA[Twitter]]></en>
             <pl><![CDATA[Twitter]]></pl>
         </locale>
-        <locale name="socialshare.settings.show.google">
-            <de><![CDATA[Google]]></de>
-            <en><![CDATA[Google]]></en>
-            <pl><![CDATA[Google]]></pl>
-        </locale>
+
         <locale name="socialshare.settings.show.whatsapp">
             <de><![CDATA[WhatsApp]]></de>
             <en><![CDATA[WhatsApp]]></en>
