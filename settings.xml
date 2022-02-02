@@ -10,84 +10,9 @@
                         <type><![CDATA[bool]]></type>
                         <default>1</default>
                     </conf>
-                    <conf name="Surfingbird">
-                        <type><![CDATA[bool]]></type>
-                        <default>1</default>
-                    </conf>
-                    <conf name="VK">
-                        <type><![CDATA[bool]]></type>
-                        <default>1</default>
-                    </conf>
-                    <conf name="RenRen">
-                        <type><![CDATA[bool]]></type>
-                        <default>1</default>
-                    </conf>
-                    <conf name="Readability">
-                        <type><![CDATA[bool]]></type>
-                        <default>1</default>
-                    </conf>
-                    <conf name="Pocket">
-                        <type><![CDATA[bool]]></type>
-                        <default>1</default>
-                    </conf>
-                    <conf name="Odnoklassniki">
-                        <type><![CDATA[bool]]></type>
-                        <default>1</default>
-                    </conf>
-                    <conf name="MoiMir">
-                        <type><![CDATA[bool]]></type>
-                        <default>1</default>
-                    </conf>
-                    <conf name="Livejournal">
-                        <type><![CDATA[bool]]></type>
-                        <default>1</default>
-                    </conf>
-                    <conf name="Liveinternet">
-                        <type><![CDATA[bool]]></type>
-                        <default>1</default>
-                    </conf>
-                    <conf name="Line">
-                        <type><![CDATA[bool]]></type>
-                        <default>1</default>
-                    </conf>
-                    <conf name="Viber">
-                        <type><![CDATA[bool]]></type>
-                        <default>1</default>
-                    </conf>
-                    <conf name="Delicious">
-                        <type><![CDATA[bool]]></type>
-                        <default>1</default>
-                    </conf>
-                    <conf name="StumbleUpon">
-                        <type><![CDATA[bool]]></type>
-                        <default>1</default>
-                    </conf>
-                    <conf name="Evernote">
-                        <type><![CDATA[bool]]></type>
-                        <default>1</default>
-                    </conf>
-                    <conf name="Instapaper">
-                        <type><![CDATA[bool]]></type>
-                        <default>1</default>
-                    </conf>
-                    <conf name="Blogger">
-                        <type><![CDATA[bool]]></type>
-                        <default>1</default>
-                    </conf>
-                    <conf name="Baidu">
-                        <type><![CDATA[bool]]></type>
-                        <default>1</default>
-                    </conf>
-                    <conf name="Buffer">
-                        <type><![CDATA[bool]]></type>
-                        <default>1</default>
-                    </conf>
                     <conf name="Twitter">
                         <type><![CDATA[bool]]></type>
                         <default>1</default>
-                    </conf>
-                    <conf name="Google">
-                        <type><![CDATA[bool]]></type>
                     </conf>
                     <conf name="Whatsapp">
                         <type><![CDATA[bool]]></type>
@@ -106,22 +31,77 @@
                     <conf name="Xing">
                         <type><![CDATA[bool]]></type>
                     </conf>
-                    <conf name="Digg">
-                        <type><![CDATA[bool]]></type>
-                    </conf>
-                    <conf name="Tumblr">
-                        <type><![CDATA[bool]]></type>
-                    </conf>
-                    <conf name="WorldPress">
-                        <type><![CDATA[bool]]></type>
-                    </conf>
-                    <conf name="Weibo">
+                    <conf name="WordPress">
                         <type><![CDATA[bool]]></type>
                     </conf>
                     <conf name="Reddit">
                         <type><![CDATA[bool]]></type>
                     </conf>
                     <conf name="Telegram">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+
+                    <conf name="Surfingbird">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="VK">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="RenRen">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="Readability">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="Pocket">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="Odnoklassniki">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="MoiMir">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="Livejournal">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="Liveinternet">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="Line">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="Viber">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="Delicious">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="StumbleUpon">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="Evernote">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="Instapaper">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="Blogger">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="Baidu">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="Buffer">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="Digg">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="Tumblr">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="Weibo">
                         <type><![CDATA[bool]]></type>
                     </conf>
 
@@ -165,213 +145,6 @@
                                     var="socialshare.settings.category"/>
                         </text>
                         <icon>fa fa-facebook</icon>
-
-                        <settings title="socialshare.settings" name="socialshare.settings">
-                            <title>
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.title"/>
-                                </text>
-                            </title>
-                            <input conf="socialshare.settings.Facebook" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.facebook"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.Twitter" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.twitter"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.Google" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.google"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.Whatsapp" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.whatsapp"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.Reddit" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.reddit"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.Telegram" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.telegram"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.VK" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.vk"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.Surfingbird" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.surfingbird"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.Readability" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.readability"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.RenRen" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.renren"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.Pocket" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.pocket"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.Odnoklassniki" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.odnoklassniki"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.MoiMir" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.moimir"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.Livejournal" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.livejournal"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.Liveinternet" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.liveinternet"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.Line" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.line"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.Viber" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.viber"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.Delicious" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.delicious"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.StumbleUpon" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.stumbleupon"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.Evernote" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.evernote"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.Instapaper" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.instapaper"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.Blogger" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.blogger"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.Baidu" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.baidu"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.Buffer" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.buffer"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.Pinterest" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.pinterest"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.Mail" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.mail"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.LinkedIn" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.linkedin"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.Xing" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.xing"/>
-                                </text>
-                            </input>
-
-                            <input conf="socialshare.settings.Digg" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.digg"/>
-                                </text>
-                            </input>
-
-                            <input conf="socialshare.settings.Tumblr" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.tumblr"/>
-                                </text>
-                            </input>
-
-                            <input conf="socialshare.settings.WorldPress" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.worldpress"/>
-                                </text>
-                            </input>
-
-                            <input conf="socialshare.settings.Weibo" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.show.weibo"/>
-                                </text>
-                            </input>
-
-
-                        </settings>
 
                         <settings title="socialshare.settings" name="socialshare.settings.general">
                             <title>
@@ -447,6 +220,10 @@
                                     <locale group="quiqqer/socialshare"
                                             var="socialshare.settings.general.theme.minima"/>
                                 </option>
+                                <option value="dark">
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.general.theme.dark"/>
+                                </option>
                             </select>
                         </settings>
 
@@ -476,6 +253,204 @@
                                             var="socialshare.settings.twitter.card.player" />
                                 </option>
                             </select>
+                        </settings>
+
+                        <settings title="socialshare.settings" name="socialshare.settings">
+                            <title>
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.title"/>
+                                </text>
+                            </title>
+                            <input conf="socialshare.settings.Facebook" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.facebook"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.Twitter" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.twitter"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.Whatsapp" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.whatsapp"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.Pinterest" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.pinterest"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.Mail" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.mail"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.LinkedIn" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.linkedin"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.Xing" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.xing"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.WordPress" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.wordpress"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.Reddit" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.reddit"/>
+                                </text>
+                            </input>
+                            <input conf="socialshare.settings.Telegram" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.show.telegram"/>
+                                </text>
+                            </input>
+<!--                            <input conf="socialshare.settings.VK" type="checkbox">-->
+<!--                                <text>-->
+<!--                                    <locale group="quiqqer/socialshare"-->
+<!--                                            var="socialshare.settings.show.vk"/>-->
+<!--                                </text>-->
+<!--                            </input>-->
+<!--                            <input conf="socialshare.settings.Surfingbird" type="checkbox">-->
+<!--                                <text>-->
+<!--                                    <locale group="quiqqer/socialshare"-->
+<!--                                            var="socialshare.settings.show.surfingbird"/>-->
+<!--                                </text>-->
+<!--                            </input>-->
+<!--                            <input conf="socialshare.settings.Readability" type="checkbox">-->
+<!--                                <text>-->
+<!--                                    <locale group="quiqqer/socialshare"-->
+<!--                                            var="socialshare.settings.show.readability"/>-->
+<!--                                </text>-->
+<!--                            </input>-->
+<!--                            <input conf="socialshare.settings.RenRen" type="checkbox">-->
+<!--                                <text>-->
+<!--                                    <locale group="quiqqer/socialshare"-->
+<!--                                            var="socialshare.settings.show.renren"/>-->
+<!--                                </text>-->
+<!--                            </input>-->
+<!--                            <input conf="socialshare.settings.Pocket" type="checkbox">-->
+<!--                                <text>-->
+<!--                                    <locale group="quiqqer/socialshare"-->
+<!--                                            var="socialshare.settings.show.pocket"/>-->
+<!--                                </text>-->
+<!--                            </input>-->
+<!--                            <input conf="socialshare.settings.Odnoklassniki" type="checkbox">-->
+<!--                                <text>-->
+<!--                                    <locale group="quiqqer/socialshare"-->
+<!--                                            var="socialshare.settings.show.odnoklassniki"/>-->
+<!--                                </text>-->
+<!--                            </input>-->
+<!--                            <input conf="socialshare.settings.MoiMir" type="checkbox">-->
+<!--                                <text>-->
+<!--                                    <locale group="quiqqer/socialshare"-->
+<!--                                            var="socialshare.settings.show.moimir"/>-->
+<!--                                </text>-->
+<!--                            </input>-->
+<!--                            <input conf="socialshare.settings.Livejournal" type="checkbox">-->
+<!--                                <text>-->
+<!--                                    <locale group="quiqqer/socialshare"-->
+<!--                                            var="socialshare.settings.show.livejournal"/>-->
+<!--                                </text>-->
+<!--                            </input>-->
+<!--                            <input conf="socialshare.settings.Liveinternet" type="checkbox">-->
+<!--                                <text>-->
+<!--                                    <locale group="quiqqer/socialshare"-->
+<!--                                            var="socialshare.settings.show.liveinternet"/>-->
+<!--                                </text>-->
+<!--                            </input>-->
+<!--                            <input conf="socialshare.settings.Line" type="checkbox">-->
+<!--                                <text>-->
+<!--                                    <locale group="quiqqer/socialshare"-->
+<!--                                            var="socialshare.settings.show.line"/>-->
+<!--                                </text>-->
+<!--                            </input>-->
+<!--                            <input conf="socialshare.settings.Viber" type="checkbox">-->
+<!--                                <text>-->
+<!--                                    <locale group="quiqqer/socialshare"-->
+<!--                                            var="socialshare.settings.show.viber"/>-->
+<!--                                </text>-->
+<!--                            </input>-->
+<!--                            <input conf="socialshare.settings.Delicious" type="checkbox">-->
+<!--                                <text>-->
+<!--                                    <locale group="quiqqer/socialshare"-->
+<!--                                            var="socialshare.settings.show.delicious"/>-->
+<!--                                </text>-->
+<!--                            </input>-->
+<!--                            <input conf="socialshare.settings.StumbleUpon" type="checkbox">-->
+<!--                                <text>-->
+<!--                                    <locale group="quiqqer/socialshare"-->
+<!--                                            var="socialshare.settings.show.stumbleupon"/>-->
+<!--                                </text>-->
+<!--                            </input>-->
+<!--                            <input conf="socialshare.settings.Evernote" type="checkbox">-->
+<!--                                <text>-->
+<!--                                    <locale group="quiqqer/socialshare"-->
+<!--                                            var="socialshare.settings.show.evernote"/>-->
+<!--                                </text>-->
+<!--                            </input>-->
+<!--                            <input conf="socialshare.settings.Instapaper" type="checkbox">-->
+<!--                                <text>-->
+<!--                                    <locale group="quiqqer/socialshare"-->
+<!--                                            var="socialshare.settings.show.instapaper"/>-->
+<!--                                </text>-->
+<!--                            </input>-->
+<!--                            <input conf="socialshare.settings.Blogger" type="checkbox">-->
+<!--                                <text>-->
+<!--                                    <locale group="quiqqer/socialshare"-->
+<!--                                            var="socialshare.settings.show.blogger"/>-->
+<!--                                </text>-->
+<!--                            </input>-->
+<!--                            <input conf="socialshare.settings.Baidu" type="checkbox">-->
+<!--                                <text>-->
+<!--                                    <locale group="quiqqer/socialshare"-->
+<!--                                            var="socialshare.settings.show.baidu"/>-->
+<!--                                </text>-->
+<!--                            </input>-->
+<!--                            <input conf="socialshare.settings.Buffer" type="checkbox">-->
+<!--                                <text>-->
+<!--                                    <locale group="quiqqer/socialshare"-->
+<!--                                            var="socialshare.settings.show.buffer"/>-->
+<!--                                </text>-->
+<!--                            </input>-->
+<!--                            <input conf="socialshare.settings.Digg" type="checkbox">-->
+<!--                                <text>-->
+<!--                                    <locale group="quiqqer/socialshare"-->
+<!--                                            var="socialshare.settings.show.digg"/>-->
+<!--                                </text>-->
+<!--                            </input>-->
+
+<!--                            <input conf="socialshare.settings.Tumblr" type="checkbox">-->
+<!--                                <text>-->
+<!--                                    <locale group="quiqqer/socialshare"-->
+<!--                                            var="socialshare.settings.show.tumblr"/>-->
+<!--                                </text>-->
+<!--                            </input>-->
+<!--                            <input conf="socialshare.settings.Weibo" type="checkbox">-->
+<!--                                <text>-->
+<!--                                    <locale group="quiqqer/socialshare"-->
+<!--                                            var="socialshare.settings.show.weibo"/>-->
+<!--                                </text>-->
+<!--                            </input>-->
+
+
                         </settings>
                     </category>
                 </categories>

@@ -1,4 +1,4 @@
-define('package/quiqqer/socialshare/bin/controls/Line', [
+define('package/quiqqer/socialshare/bin/controls/WordPress', [
 
     'qui/QUI',
     'qui/controls/Control'
@@ -9,7 +9,7 @@ define('package/quiqqer/socialshare/bin/controls/Line', [
     return new Class({
 
         Extends: QUIControl,
-        Type   : 'package/quiqqer/socialshare/bin/controls/Line',
+        Type   : 'package/quiqqer/socialshare/bin/controls/WordPress',
 
         Binds: [
             '$onImport'

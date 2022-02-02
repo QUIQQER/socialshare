@@ -104,6 +104,9 @@ abstract class Socialshare extends Control
         $this->setAttribute('target', '_blank');
 
         $this->addCSSClass($this->getName());
+        
+        QUI\System\Log::writeRecursive('<-------------------------------------->');
+        QUI\System\Log::writeRecursive($this->getAttribute('theme'));
 
         switch ($this->getAttribute('theme')) {
             case 'flat':
@@ -113,6 +116,10 @@ abstract class Socialshare extends Control
             case 'minima':
                 $this->addCSSClass('quiqqer-socialshare-minima');
                 $this->addCSSFile(dirname(__FILE__).'/Themes/Minima.css');
+                break;
+            case 'dark':
+                $this->addCSSClass('quiqqer-socialshare-dark');
+                $this->addCSSFile(dirname(__FILE__).'/Themes/Dark.css');
                 break;
             case 'classic':
             default:
