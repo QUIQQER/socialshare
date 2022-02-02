@@ -87,8 +87,6 @@ abstract class Socialshare extends Control
     public function getBody()
     {
         $body = '<span class="quiqqer-socialshare-wrapper">';
-//        $body = '';
-//        $this->addCSSClass('quiqqer-socialshare-container');
 
         if ($this->getAttribute('showIcon')) {
             $body .= $this->createLogo();
@@ -104,9 +102,7 @@ abstract class Socialshare extends Control
         $this->setAttribute('target', '_blank');
 
         $this->addCSSClass($this->getName());
-        
-        QUI\System\Log::writeRecursive('<-------------------------------------->');
-        QUI\System\Log::writeRecursive($this->getAttribute('theme'));
+
 
         switch ($this->getAttribute('theme')) {
             case 'flat':
@@ -129,7 +125,6 @@ abstract class Socialshare extends Control
         }
 
         $body .= '</span>';
-//        $body .= '';
 
         // todo counter implementieren
         /*if ($this->getAttribute('showCount')) {
