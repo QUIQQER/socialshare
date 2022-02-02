@@ -1,11 +1,9 @@
 define('package/quiqqer/socialshare/bin/controls/WordPress', [
 
     'qui/QUI',
-    'qui/controls/Control',
-    'qui/controls/windows/Popup',
-    'Ajax'
+    'qui/controls/Control'
 
-], function (QUI, QUIControl, QUIPopup, Ajax) {
+], function (QUI, QUIControl) {
     "use strict";
 
     return new Class({
@@ -26,58 +24,17 @@ define('package/quiqqer/socialshare/bin/controls/WordPress', [
         },
 
         $onImport: function () {
-            var self = this;
-
             this.$Count = this.getElm().getElement('.quiqqer-socialshare-count');
 
             this.getElm().addEvent('click', function (event) {
                 event.stop();
-
-                // var href = this.get('href');
 
                 window.open(
                     this.get('href'),
                     'social',
                     'width=500,height=400, location=0, menubar=0, scrollbars=0, status=0, titlebar=0, toolbar=0'
                 );
-
-                // var Popup = new QUIPopup({
-                //     title : 'huhu',
-                //     icon  : 'fa fa-trash',
-                //     events: {
-                //         onOpen: function (Win) {
-                //             new Element('iframe', {
-                //                 styles: {},
-                //                 src   : href
-                //             }).inject(Win.getContent());
-                //         }
-                //     }
-                // });
-                //
-                // Popup.open();
-                //
-                // (function() {
-                //     Popup.setAttribute('maxWidth', 200);
-                //     Popup.setAttribute('maxHeight', 200);
-                //     Popup.resize();
-                // }).delay(3000);
-            });
-
-            this.refresh();
-        },
-
-        refresh: function () {
-            return;
-            Ajax.get('package_quiqqer_socialshare_ajax_getCount', function (result) {
-                this.$Count.set('html', result);
-            }.bind(this), {                                  // weitere Parameter
-                'package': 'quiqqer/socialshare', // was für ein Package das ist
-                url      : window.location.toString(),
-                social   : 'WordPress',
-                project  : JSON.encode(QUIQQER_PROJECT),
-                siteId   : QUIQQER_SITE.id
             });
         }
-
     });
 });
