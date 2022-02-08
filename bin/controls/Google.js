@@ -1,10 +1,9 @@
 define('package/quiqqer/socialshare/bin/controls/Google', [
 
     'qui/QUI',
-    'qui/controls/Control',
-    'Ajax'
+    'qui/controls/Control'
 
-], function (QUI, QUIControl, Ajax) {
+], function (QUI, QUIControl) {
     "use strict";
 
     return new Class({
@@ -20,8 +19,8 @@ define('package/quiqqer/socialshare/bin/controls/Google', [
             this.$Count = null;
 
             this.addEvents({
-                               onImport: this.$onImport
-                           });
+               onImport: this.$onImport
+           });
         },
 
         $onImport: function () {
@@ -31,21 +30,6 @@ define('package/quiqqer/socialshare/bin/controls/Google', [
                 event.stop();
                 window.open(this.get('href'), 'social', 'height=700,width=492');
             });
-
-            this.refresh();
         },
-
-        refresh: function () {
-            return;
-            Ajax.get('package_quiqqer_socialshare_ajax_getCount', function (result) {
-                this.$Count.set('html', result);
-            }.bind(this), {
-                         'package': 'quiqqer/socialshare',
-                         url      : window.location.toString(),
-                         social   : 'Google',
-                project  : JSON.encode(QUIQQER_PROJECT),
-                siteId   : QUIQQER_SITE.id
-                     });
-        }
     });
 });
