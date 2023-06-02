@@ -66,6 +66,10 @@ class EventHandler
                 $Site->setAttribute('meta.itemscope', 'http://schema.org/BlogPosting');
                 break;
                 
+            case 'product':
+                $Site->setAttribute('meta.itemscope', 'http://schema.org/Product');
+                break;
+
             case 'movie':
                 $Site->setAttribute('meta.itemscope', 'http://schema.org/Movie');
                 break;
