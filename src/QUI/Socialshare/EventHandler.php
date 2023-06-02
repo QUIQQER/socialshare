@@ -98,10 +98,10 @@ class EventHandler
          * Site name, e.g. "The New Yor Times"
          * Not the base url
          */
-        if ($Project->getAttribute('socialshare.settings.general.siteName')) {
+        if ($Project->getConfig('socialshare.settings.general.siteName')) {
             $Template->extendHeader(
                 '<meta property="og:site_name" content="'.
-                \htmlspecialchars($Project->getAttribute('socialshare.settings.general.siteName')).'" />'
+                \htmlspecialchars($Project->getConfig('socialshare.settings.general.siteName')).'" />'
             );
         }
 
