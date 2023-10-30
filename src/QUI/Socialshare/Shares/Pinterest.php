@@ -43,7 +43,6 @@ class Pinterest extends Socialshare
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-pinterest');
         // TODO: Implement getCountUrl() method.
         // Warum return array|string und wie besser implementieren
-
     }
 
     /**
