@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * this file contains QUI\Socialshare\Shares\Weibo
+ */
+
 namespace QUI\Socialshare\Shares;
 
 use QUI;
@@ -13,7 +17,7 @@ use QUI\Socialshare\Socialshare;
  */
 class Weibo extends Socialshare
 {
-    public function __construct($params = array())
+    public function __construct($params = [])
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Weibo');
         parent::__construct($params);
@@ -22,7 +26,7 @@ class Weibo extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getName()
+     * @see Socialshare::getName
      */
     public function getName()
     {
@@ -32,7 +36,7 @@ class Weibo extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getLabel()
+     * @see Socialshare::getLabel
      */
     public function getLabel()
     {
@@ -42,7 +46,7 @@ class Weibo extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getLogo()
+     * @see Socialshare::getLogo
      */
     public function getLogo()
     {
@@ -52,7 +56,7 @@ class Weibo extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getShareUrl()
+     * @see Socialshare::getShareUrl
      */
 
     public function getShareUrl()
@@ -67,7 +71,7 @@ class Weibo extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getCount()
+     * @see Socialshare::getCount
      */
     public function getCount()
     {
@@ -77,11 +81,10 @@ class Weibo extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getCountUrl()
+     * @see Socialshare::getCountUrl
      */
     public function getCountUrl()
     {
-
         return null;
     }
 }

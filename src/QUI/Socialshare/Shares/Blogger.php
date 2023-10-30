@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * this file contains QUI\Socialshare\Shares\Blogger
+ */
 
 namespace QUI\Socialshare\Shares;
 
@@ -14,7 +17,7 @@ use QUI\Socialshare\Socialshare;
  */
 class Blogger extends Socialshare
 {
-    public function __construct($params = array())
+    public function __construct($params = [])
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Blogger');
         parent::__construct($params);
@@ -80,7 +83,7 @@ class Blogger extends Socialshare
         }
 
         $countUrl = QUI\Utils\Request\Url::get($this->getCountUrl());
-        $data     = json_decode($countUrl, true);
+        $data = json_decode($countUrl, true);
 
         if (!isset($data['data'])) {
             return 0;

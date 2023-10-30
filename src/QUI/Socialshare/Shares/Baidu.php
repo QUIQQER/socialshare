@@ -1,20 +1,23 @@
 <?php
 
+/**
+ * this file contains QUI\Socialshare\Shares\Baidu
+ */
 
 namespace QUI\Socialshare\Shares;
 
 use QUI;
 use QUI\Socialshare\Socialshare;
 
-    /**
-     * Baidu class for social share
-     *
-     * @author  www.pcsg.de (Torsten Fink)
-     * @package quiqqer/socialshare
-     */
+/**
+ * Baidu class for social share
+ *
+ * @author  www.pcsg.de (Torsten Fink)
+ * @package quiqqer/socialshare
+ */
 class Baidu extends Socialshare
 {
-    public function __construct($params = array())
+    public function __construct($params = [])
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Baidu');
         parent::__construct($params);
@@ -80,7 +83,7 @@ class Baidu extends Socialshare
         }
 
         $countUrl = QUI\Utils\Request\Url::get($this->getCountUrl());
-        $data     = json_decode($countUrl, true);
+        $data = json_decode($countUrl, true);
 
         if (!isset($data['data'])) {
             return 0;

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file contains QUI\Socialshare\Shares\Facebook
  */
@@ -16,7 +17,7 @@ use QUI\Socialshare\Socialshare;
  */
 class Facebook extends Socialshare
 {
-    public function __construct($params = array())
+    public function __construct($params = [])
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Facebook');
         parent::__construct($params);
@@ -25,7 +26,7 @@ class Facebook extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getName()
+     * @see Socialshare::getName
      */
     public function getName()
     {
@@ -35,7 +36,7 @@ class Facebook extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getLabel()
+     * @see Socialshare::getLabel
      */
     public function getLabel()
     {
@@ -45,7 +46,7 @@ class Facebook extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getLogo()
+     * @see Socialshare::getLogo
      */
     public function getLogo()
     {
@@ -55,7 +56,7 @@ class Facebook extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getShareUrl()
+     * @see Socialshare::getShareUrl
      */
 
     public function getShareUrl()
@@ -70,7 +71,7 @@ class Facebook extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getCount()
+     * @see Socialshare::getCount
      */
     public function getCount()
     {
@@ -82,7 +83,7 @@ class Facebook extends Socialshare
         }
 
         $countUrl = QUI\Utils\Request\Url::get($this->getCountUrl());
-        $data     = json_decode($countUrl, true);
+        $data = json_decode($countUrl, true);
 
         if (!isset($data['data'])) {
             return 0;
@@ -105,12 +106,12 @@ class Facebook extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getCountUrl()
+     * @see Socialshare::getCountUrl
      */
     public function getCountUrl()
     {
-        $Site    = $this->getSite();
-            $Request = QUI::getRequest();
+        $Site = $this->getSite();
+        $Request = QUI::getRequest();
 
         // @todo warten auf URL Site Objekt, damit kein Request mehr verwendet wird
         // hier ist sonst noch ein fehler mit den vhosts
@@ -119,9 +120,9 @@ class Facebook extends Socialshare
         $encoded = urlencode($baseurl);
 
         $url = "https://graph.facebook.com/fql?";
-        $url .= http_build_query(array(
+        $url .= http_build_query([
             'q' => "SELECT total_count FROM link_stat WHERE url='{$encoded}'"
-        ));
+        ]);
 
 //        $url .= QUI::getRewrite()->getUrlFromSite(array(
 //            'site' => $Site

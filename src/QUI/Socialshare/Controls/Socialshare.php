@@ -24,16 +24,16 @@ class Socialshare extends Control
     public function __construct($params = [])
     {
         $this->setAttributes([
-            'class'     => 'quiqqer-socialshare',
-            'theme'     => 'classic',
+            'class' => 'quiqqer-socialshare',
+            'theme' => 'classic',
             'showLabel' => true,
-            'showIcon'  => true,
+            'showIcon' => true,
             'showCount' => false
         ]);
 
         parent::__construct($params);
 
-        $this->addCSSFile(dirname(__FILE__).'/Socialshare.css');
+        $this->addCSSFile(dirname(__FILE__) . '/Socialshare.css');
     }
 
     /**
@@ -48,9 +48,9 @@ class Socialshare extends Control
         }
 
         $socials = QUI\Socialshare\Manager::get([
-            'theme'     => $this->getAttribute('theme'),
+            'theme' => $this->getAttribute('theme'),
             'showLabel' => $this->getAttribute('showLabel'),
-            'showIcon'  => $this->getAttribute('showIcon'),
+            'showIcon' => $this->getAttribute('showIcon'),
             'showCount' => $this->getAttribute('showCount'),
         ]);
 
@@ -63,10 +63,10 @@ class Socialshare extends Control
         }
 
         $Engine->assign([
-            'this'    => $this,
+            'this' => $this,
             'socials' => $html
         ]);
 
-        return $Engine->fetch(dirname(__FILE__).'/Socialshare.html');
+        return $Engine->fetch(dirname(__FILE__) . '/Socialshare.html');
     }
 }

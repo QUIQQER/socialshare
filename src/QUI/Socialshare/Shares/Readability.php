@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * this file contains QUI\Socialshare\Shares\Readability
+ */
 
 namespace QUI\Socialshare\Shares;
 
@@ -14,7 +17,7 @@ use QUI\Socialshare\Socialshare;
  */
 class Readability extends Socialshare
 {
-    public function __construct($params = array())
+    public function __construct($params = [])
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Readability');
         parent::__construct($params);
@@ -23,7 +26,7 @@ class Readability extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getName()
+     * @see Socialshare::getName
      */
     public function getName()
     {
@@ -33,7 +36,7 @@ class Readability extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getLabel()
+     * @see Socialshare::getLabel
      */
     public function getLabel()
     {
@@ -43,7 +46,7 @@ class Readability extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getLogo()
+     * @see Socialshare::getLogo
      */
     public function getLogo()
     {
@@ -53,7 +56,7 @@ class Readability extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getShareUrl()
+     * @see Socialshare::getShareUrl
      */
 
     public function getShareUrl()
@@ -68,7 +71,7 @@ class Readability extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getCount()
+     * @see Socialshare::getCount
      */
     public function getCount()
     {
@@ -80,7 +83,7 @@ class Readability extends Socialshare
         }
 
         $countUrl = QUI\Utils\Request\Url::get($this->getCountUrl());
-        $data     = json_decode($countUrl, true);
+        $data = json_decode($countUrl, true);
 
         if (!isset($data['data'])) {
             return 0;
@@ -103,7 +106,7 @@ class Readability extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getCountUrl()
+     * @see Socialshare::getCountUrl
      */
     public function getCountUrl()
     {

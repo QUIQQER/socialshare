@@ -24,14 +24,14 @@ abstract class Socialshare extends Control
     public function __construct($params = [])
     {
         $this->setAttributes([
-            'theme'     => 'classic',
+            'theme' => 'classic',
             'showLabel' => true,
-            'showIcon'  => true,
+            'showIcon' => true,
             'showCount' => true,
-            'nodeName'  => 'a',
-            'target'    => '_blank',
-            'Site'      => false,
-            'class'     => 'quiqqer-socialshare-link'
+            'nodeName' => 'a',
+            'target' => '_blank',
+            'Site' => false,
+            'class' => 'quiqqer-socialshare-link'
         ]);
 
         parent::__construct($params);
@@ -107,20 +107,20 @@ abstract class Socialshare extends Control
         switch ($this->getAttribute('theme')) {
             case 'flat':
                 $this->addCSSClass('quiqqer-socialshare-flat');
-                $this->addCSSFile(dirname(__FILE__).'/Themes/Flat.css');
+                $this->addCSSFile(dirname(__FILE__) . '/Themes/Flat.css');
                 break;
             case 'minima':
                 $this->addCSSClass('quiqqer-socialshare-minima');
-                $this->addCSSFile(dirname(__FILE__).'/Themes/Minima.css');
+                $this->addCSSFile(dirname(__FILE__) . '/Themes/Minima.css');
                 break;
             case 'dark':
                 $this->addCSSClass('quiqqer-socialshare-dark');
-                $this->addCSSFile(dirname(__FILE__).'/Themes/Dark.css');
+                $this->addCSSFile(dirname(__FILE__) . '/Themes/Dark.css');
                 break;
             case 'classic':
             default:
                 $this->addCSSClass('quiqqer-socialshare-classic');
-                $this->addCSSFile(dirname(__FILE__).'/Themes/Classic.css');
+                $this->addCSSFile(dirname(__FILE__) . '/Themes/Classic.css');
                 break;
         }
 
@@ -141,7 +141,7 @@ abstract class Socialshare extends Control
      */
     public function createLogo()
     {
-        return '<span class="quiqqer-socialshare-logo '.$this->getLogo().'"></span>';
+        return '<span class="quiqqer-socialshare-logo ' . $this->getLogo() . '"></span>';
     }
 
     /**
@@ -151,7 +151,7 @@ abstract class Socialshare extends Control
      */
     public function createLabel()
     {
-        return '<span class="quiqqer-socialshare-label">'.$this->getLabel().'</span>';
+        return '<span class="quiqqer-socialshare-label">' . $this->getLabel() . '</span>';
     }
 
     /**
