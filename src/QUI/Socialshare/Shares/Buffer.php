@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * this file contains QUI\Socialshare\Shares\Buffer
+ */
 
 namespace QUI\Socialshare\Shares;
 
@@ -14,7 +17,7 @@ use QUI\Socialshare\Socialshare;
  */
 class Buffer extends Socialshare
 {
-    public function __construct($params = array())
+    public function __construct($params = [])
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Buffer');
         parent::__construct($params);
@@ -80,7 +83,7 @@ class Buffer extends Socialshare
         }
 
         $countUrl = QUI\Utils\Request\Url::get($this->getCountUrl());
-        $data     = json_decode($countUrl, true);
+        $data = json_decode($countUrl, true);
 
         if (!isset($data['data'])) {
             return 0;
@@ -107,7 +110,7 @@ class Buffer extends Socialshare
      */
     public function getCountUrl()
     {
-        $Site    = $this->getSite();
+        $Site = $this->getSite();
         $Request = QUI::getRequest();
 
         // @todo warten auf URL Site Objekt, damit kein Request mehr verwendet wird
@@ -117,9 +120,9 @@ class Buffer extends Socialshare
         $encoded = urlencode($baseurl);
 
         $url = "https://api.bufferapp.com/1/links/shares.json?url=";
-        $url .= http_build_query(array(
+        $url .= http_build_query([
             'q' => "SELECT total_count FROM link_stat WHERE url='{$encoded}'"
-        ));
+        ]);
 
 //        $url .= QUI::getRewrite()->getUrlFromSite(array(
 //            'site' => $Site

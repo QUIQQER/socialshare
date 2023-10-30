@@ -14,15 +14,12 @@
 QUI::$Ajax->registerFunction(
     'package_quiqqer_socialshare_ajax_getCount',
     function ($social, $url, $project, $siteId) {
-
-
-
         return 0;
 
         // wird später implimentiert
-        $Social  = null;
+        $Social = null;
         $Project = QUI::getProjectManager()->decode($project);
-        $Site    = $Project->get($siteId);
+        $Site = $Project->get($siteId);
 
         $str = 'QUI\Socialshare\Shares\\' . $social;
 
@@ -40,6 +37,6 @@ QUI::$Ajax->registerFunction(
 
         return $Social->getCount();
     },
-    array('social', 'url', 'project', 'siteId'),
+    ['social', 'url', 'project', 'siteId'],
     false // Rechte
 );

@@ -123,7 +123,7 @@
                         <type><![CDATA[bool]]></type>
                     </conf>
                     <conf name="general.siteName">
-                        <type><![CDATA[bool]]></type>
+                        <type><![CDATA[string]]></type>
                     </conf>
 
                     <conf name="general.theme">
