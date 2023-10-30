@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * this file contains QUI\Socialshare\Shares\Evernote
+ */
 
 namespace QUI\Socialshare\Shares;
 

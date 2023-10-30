@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * this file contains QUI\Socialshare\Shares\Weibo
+ */
+
 namespace QUI\Socialshare\Shares;
 
 use QUI;

@@ -1,10 +1,20 @@
 <?php
 
+/**
+ * this file contains QUI\Socialshare\Shares\Reddit
+ */
+
 namespace QUI\Socialshare\Shares;
 
 use QUI;
 use QUI\Socialshare\Socialshare;
 
+/**
+ * Reddit class for social share
+ *
+ * @author  www.pcsg.de (Henning Leutz)
+ * @package quiqqer/socialshare
+ */
 class Reddit extends Socialshare
 {
     public function __construct($params = [])

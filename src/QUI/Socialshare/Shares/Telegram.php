@@ -1,10 +1,20 @@
 <?php
 
+/**
+ * this file contains QUI\Socialshare\Shares\Telegram
+ */
+
 namespace QUI\Socialshare\Shares;
 
 use QUI;
 use QUI\Socialshare\Socialshare;
 
+/**
+ * Telegram class for social share
+ *
+ * @author  www.pcsg.de (Henning Leutz)
+ * @package quiqqer/socialshare
+ */
 class Telegram extends Socialshare
 {
     public function __construct($params = [])

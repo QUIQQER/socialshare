@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * this file contains QUI\Socialshare\Shares\Viber
+ */
 
 namespace QUI\Socialshare\Shares;
 
@@ -7,7 +10,7 @@ use QUI;
 use QUI\Socialshare\Socialshare;
 
 /**
- * Baidu class for social share
+ * Viber class for social share
  *
  * @author  www.pcsg.de (Torsten Fink)
  * @package quiqqer/socialshare

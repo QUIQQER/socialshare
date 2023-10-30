@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file contains QUI\Socialshare\Shares\Mail
  */
@@ -16,7 +17,6 @@ use QUI\Socialshare\Socialshare;
  */
 class Mail extends Socialshare
 {
-
     public function __construct($params = [])
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Mail');

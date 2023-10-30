@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * this file contains QUI\Socialshare\Shares\Blogger
+ */
 
 namespace QUI\Socialshare\Shares;
 

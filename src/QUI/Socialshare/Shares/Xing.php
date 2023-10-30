@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file contains QUI\Socialshare\Shares\Xing
  */
@@ -9,7 +10,7 @@ use QUI;
 use QUI\Socialshare\Socialshare;
 
 /**
- * Facebook class for social share
+ * Xing class for social share
  *
  * @author  www.pcsg.de (Michael Danielczok)
  * @package quiqqer/socialshare

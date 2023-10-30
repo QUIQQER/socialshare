@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * this file contains QUI\Socialshare\Shares\Livejournal
+ */
 
 namespace QUI\Socialshare\Shares;
 
