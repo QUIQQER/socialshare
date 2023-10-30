@@ -17,7 +17,7 @@ use QUI\Socialshare\Socialshare;
 class Mail extends Socialshare
 {
 
-    public function __construct($params = array())
+    public function __construct($params = [])
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Mail');
         parent::__construct($params);
@@ -26,7 +26,7 @@ class Mail extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getNamew()
+     * @see Socialshare::getNamew
      */
     public function getName()
     {
@@ -45,9 +45,9 @@ class Mail extends Socialshare
 
     public function getShareUrl()
     {
-        $Site      = QUI::getRewrite()->getSite();
-        $Request   = QUI::getRequest();
-        $baseUrl   = $Request->getScheme() . '://' .
+        $Site = QUI::getRewrite()->getSite();
+        $Request = QUI::getRequest();
+        $baseUrl = $Request->getScheme() . '://' .
             $Request->getHttpHost() . $Request->getBasePath() . $Site->getUrlRewritten();
         $siteTitle = QUI::getRewrite()->getSite()->getAttribute('title');
 
@@ -57,7 +57,7 @@ class Mail extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getCount()
+     * @see Socialshare::getCount
      */
     public function getCount()
     {
@@ -68,7 +68,7 @@ class Mail extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getCountUrl
+     * @see Socialshare::getCountUrl
      */
     public function getCountUrl()
     {

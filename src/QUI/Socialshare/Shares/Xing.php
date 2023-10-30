@@ -16,7 +16,7 @@ use QUI\Socialshare\Socialshare;
  */
 class Xing extends Socialshare
 {
-    public function __construct($params = array())
+    public function __construct($params = [])
     {
         // todo social share counter
 //        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Xing');
@@ -26,7 +26,7 @@ class Xing extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getName()
+     * @see Socialshare::getName
      */
     public function getName()
     {
@@ -36,7 +36,7 @@ class Xing extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getLabel()
+     * @see Socialshare::getLabel
      */
     public function getLabel()
     {
@@ -46,7 +46,7 @@ class Xing extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getLogo()
+     * @see Socialshare::getLogo
      */
     public function getLogo()
     {
@@ -56,7 +56,7 @@ class Xing extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getShareUrl()
+     * @see Socialshare::getShareUrl
      */
 
     public function getShareUrl()
@@ -71,7 +71,7 @@ class Xing extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getCount()
+     * @see Socialshare::getCount
      */
     public function getCount()
     {
@@ -83,7 +83,7 @@ class Xing extends Socialshare
         }
 
         $countUrl = QUI\Utils\Request\Url::get($this->getCountUrl());
-        $data     = json_decode($countUrl, true);
+        $data = json_decode($countUrl, true);
 
         if (!isset($data['data'])) {
             return 0;
@@ -106,11 +106,11 @@ class Xing extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getCountUrl()
+     * @see Socialshare::getCountUrl
      */
     public function getCountUrl()
     {
-        $Site    = $this->getSite();
+        $Site = $this->getSite();
         $Request = QUI::getRequest();
 
         // @todo warten auf URL Site Objekt, damit kein Request mehr verwendet wird
@@ -119,7 +119,7 @@ class Xing extends Socialshare
         $baseurl = $baseurl . $Site->getUrlRewritten();
         $encoded = urlencode($baseurl);
 
-        $url = 'https://www.xing-share.com/app/share?op=get_share_button;counter=top;url='  . $encoded;
+        $url = 'https://www.xing-share.com/app/share?op=get_share_button;counter=top;url=' . $encoded;
 
         return $url;
     }

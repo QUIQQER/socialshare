@@ -7,7 +7,7 @@ use QUI\Socialshare\Socialshare;
 
 class Reddit extends Socialshare
 {
-    public function __construct($params = array())
+    public function __construct($params = [])
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Reddit');
         parent::__construct($params);
@@ -16,7 +16,7 @@ class Reddit extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getName()
+     * @see Socialshare::getName
      */
     public function getName()
     {
@@ -26,7 +26,7 @@ class Reddit extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getLabel()
+     * @see Socialshare::getLabel
      */
     public function getLabel()
     {
@@ -36,7 +36,7 @@ class Reddit extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getLogo()
+     * @see Socialshare::getLogo
      */
     public function getLogo()
     {
@@ -46,7 +46,7 @@ class Reddit extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getShareUrl()
+     * @see Socialshare::getShareUrl
      */
 
     public function getShareUrl()
@@ -61,7 +61,7 @@ class Reddit extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getCount()
+     * @see Socialshare::getCount
      */
     public function getCount()
     {
@@ -96,7 +96,7 @@ class Reddit extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getCountUrl()
+     * @see Socialshare::getCountUrl
      */
     public function getCountUrl()
     {
@@ -110,9 +110,9 @@ class Reddit extends Socialshare
         $encoded = urlencode($baseurl);
 
         $url = "https://reddit.com/api/info.json?url=";
-        $url .= http_build_query(array(
+        $url .= http_build_query([
             'q' => "SELECT total_count FROM link_stat WHERE url='{$encoded}'"
-        ));
+        ]);
 
 //        $url .= QUI::getRewrite()->getUrlFromSite(array(
 //            'site' => $Site

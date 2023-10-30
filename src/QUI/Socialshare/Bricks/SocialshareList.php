@@ -3,6 +3,7 @@
 /**
  * This file contains QUI\Socialshare\Bricks\SocialshareList
  */
+
 namespace QUI\Socialshare\Bricks;
 
 use QUI;
@@ -18,12 +19,12 @@ class SocialshareList extends QUI\Control
      * SocialshareList constructor.
      * @param array $attributes
      */
-    public function __construct($attributes = array())
+    public function __construct($attributes = [])
     {
-        $this->setAttributes(array(
+        $this->setAttributes([
             'class' => 'quiqqer-socialshare-brick',
             'theme' => $this->getAttribute('socialshare.brick.settings.general.theme')
-        ));
+        ]);
 
         parent::__construct($attributes);
     }
@@ -33,12 +34,12 @@ class SocialshareList extends QUI\Control
      */
     public function getBody()
     {
-        $Control = new QUI\Socialshare\Controls\Socialshare(array(
-            'theme'     => $this->getAttribute('socialshare.brick.settings.theme'),
+        $Control = new QUI\Socialshare\Controls\Socialshare([
+            'theme' => $this->getAttribute('socialshare.brick.settings.theme'),
             'showLabel' => $this->getAttribute('socialshare.brick.settings.showLabel'),
-            'showIcon'  => $this->getAttribute('socialshare.brick.settings.showIcon'),
+            'showIcon' => $this->getAttribute('socialshare.brick.settings.showIcon'),
             'showCount' => $this->getAttribute('socialshare.brick.settings.showCount'),
-        ));
+        ]);
 
         $result = $Control->create();
 

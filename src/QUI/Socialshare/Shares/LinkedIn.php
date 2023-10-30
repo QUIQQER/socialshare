@@ -16,7 +16,7 @@ use QUI\Socialshare\Socialshare;
  */
 class LinkedIn extends Socialshare
 {
-    public function __construct($params = array())
+    public function __construct($params = [])
     {
         // todo social share counter
 //        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/LinkedIn');
@@ -26,7 +26,7 @@ class LinkedIn extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getName()
+     * @see Socialshare::getName
      */
     public function getName()
     {
@@ -36,7 +36,7 @@ class LinkedIn extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getLabel()
+     * @see Socialshare::getLabel
      */
     public function getLabel()
     {
@@ -46,7 +46,7 @@ class LinkedIn extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getLogo()
+     * @see Socialshare::getLogo
      */
     public function getLogo()
     {
@@ -56,17 +56,17 @@ class LinkedIn extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getShareUrl()
+     * @see Socialshare::getShareUrl
      */
 
     public function getShareUrl()
     {
-        $Site    = $this->getSite();
+        $Site = $this->getSite();
         $Request = QUI::getRequest();
         $baseurl = $Request->getScheme() . '://' . $Request->getHttpHost() . $Request->getBasePath();
         $baseurl = urlencode($baseurl . $_SERVER['REQUEST_URI']);
 
-        $title   = 'title=' . urlencode($Site->getAttribute('title'));
+        $title = 'title=' . urlencode($Site->getAttribute('title'));
         $summary = 'summary=' . urlencode($Site->getAttribute('desc'));
 
         return 'https://www.linkedin.com/shareArticle?mini=true&url=' . $baseurl . '&' . $title . '&' . $summary;
@@ -75,7 +75,7 @@ class LinkedIn extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getCount()
+     * @see Socialshare::getCount
      */
     public function getCount()
     {
@@ -87,7 +87,7 @@ class LinkedIn extends Socialshare
         }
 
         $countUrl = QUI\Utils\Request\Url::get($this->getCountUrl());
-        $data     = json_decode($countUrl, true);
+        $data = json_decode($countUrl, true);
 
         if (!isset($data['data'])) {
             return 0;
@@ -110,11 +110,11 @@ class LinkedIn extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getCountUrl()
+     * @see Socialshare::getCountUrl
      */
     public function getCountUrl()
     {
-        $Site    = $this->getSite();
+        $Site = $this->getSite();
         $Request = QUI::getRequest();
 
         // @todo warten auf URL Site Objekt, damit kein Request mehr verwendet wird

@@ -54,11 +54,11 @@ class Manager extends QUI\Controls\Control
 
     // default settings
     private static $settings = [
-        'theme'     => 'classic',
+        'theme' => 'classic',
         'showLabel' => true,
-        'showIcon'  => true,
+        'showIcon' => true,
         'showCount' => false,
-        'nodeName'  => 'a'
+        'nodeName' => 'a'
     ];
 
     /**
@@ -79,13 +79,13 @@ class Manager extends QUI\Controls\Control
         $networks = [];
 
         foreach (self::$availableSocials as $social) {
-            $setting = 'socialshare.settings.'.$social;
+            $setting = 'socialshare.settings.' . $social;
 
             if (!$Project->getConfig($setting)) {
                 continue;
             }
 
-            $class  = 'QUI\Socialshare\Shares\\'.$social;
+            $class = 'QUI\Socialshare\Shares\\' . $social;
             $Social = new $class(self::$settings);
 
             $networks[] = $Social;
@@ -114,11 +114,11 @@ class Manager extends QUI\Controls\Control
 
         $htmlSocial = "";
         if (!isset(self::$availableSocials[$social])) {
-            throw new QUI\Exception('Social class "'.$social.'" not exist. First letter capitalized?', 404);
+            throw new QUI\Exception('Social class "' . $social . '" not exist. First letter capitalized?', 404);
         }
 
-        $class      = 'QUI\Socialshare\Shares\\'.$social;
-        $Social     = new $class(self::$settings);
+        $class = 'QUI\Socialshare\Shares\\' . $social;
+        $Social = new $class(self::$settings);
         $htmlSocial = $Social->create();
 //        $Engine->assign('htmlSocial', $htmlSocial);
 
@@ -135,10 +135,16 @@ class Manager extends QUI\Controls\Control
     private static function setSocialSettings($settings = [])
     {
         // set the general settings
-        self::$settings['theme']     = QUI::getRewrite()->getProject()->getConfig('socialshare.settings.general.theme');
-        self::$settings['showLabel'] = QUI::getRewrite()->getProject()->getConfig('socialshare.settings.general.showLabel');
-        self::$settings['showIcon']  = QUI::getRewrite()->getProject()->getConfig('socialshare.settings.general.showIcon');
-        self::$settings['showCount'] = QUI::getRewrite()->getProject()->getConfig('socialshare.settings.general.showCount');
+        self::$settings['theme'] = QUI::getRewrite()->getProject()->getConfig('socialshare.settings.general.theme');
+        self::$settings['showLabel'] = QUI::getRewrite()->getProject()->getConfig(
+            'socialshare.settings.general.showLabel'
+        );
+        self::$settings['showIcon'] = QUI::getRewrite()->getProject()->getConfig(
+            'socialshare.settings.general.showIcon'
+        );
+        self::$settings['showCount'] = QUI::getRewrite()->getProject()->getConfig(
+            'socialshare.settings.general.showCount'
+        );
 
 
         // todo - at the moment brick / control settings can't override general setting, if "false"

@@ -13,7 +13,7 @@ use QUI\Socialshare\Socialshare;
  */
 class Tumblr extends Socialshare
 {
-    public function __construct($params = array())
+    public function __construct($params = [])
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Tumblr');
         parent::__construct($params);
@@ -22,7 +22,7 @@ class Tumblr extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getName()
+     * @see Socialshare::getName
      */
     public function getName()
     {
@@ -32,7 +32,7 @@ class Tumblr extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getLabel()
+     * @see Socialshare::getLabel
      */
     public function getLabel()
     {
@@ -42,7 +42,7 @@ class Tumblr extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getLogo()
+     * @see Socialshare::getLogo
      */
     public function getLogo()
     {
@@ -52,7 +52,7 @@ class Tumblr extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getShareUrl()
+     * @see Socialshare::getShareUrl
      */
 
     public function getShareUrl()
@@ -67,7 +67,7 @@ class Tumblr extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getCount()
+     * @see Socialshare::getCount
      */
     public function getCount()
     {
@@ -102,7 +102,7 @@ class Tumblr extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getCountUrl()
+     * @see Socialshare::getCountUrl
      */
     public function getCountUrl()
     {
@@ -116,9 +116,9 @@ class Tumblr extends Socialshare
         $encoded = urlencode($baseurl);
 
         $url = "https://api.tumblr.com/v2/share/stats?url=";
-        $url .= http_build_query(array(
+        $url .= http_build_query([
             'q' => "SELECT total_count FROM link_stat WHERE url='{$encoded}'"
-        ));
+        ]);
 
 //        $url .= QUI::getRewrite()->getUrlFromSite(array(
 //            'site' => $Site

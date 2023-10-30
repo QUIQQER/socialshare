@@ -16,7 +16,7 @@ use QUI\Socialshare\Socialshare;
  */
 class Pinterest extends Socialshare
 {
-    public function __construct($params = array())
+    public function __construct($params = [])
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Pinterest');
         parent::__construct($params);
@@ -25,7 +25,7 @@ class Pinterest extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getName()
+     * @see Socialshare::getName
      */
     public function getName()
     {
@@ -48,7 +48,7 @@ class Pinterest extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getLogo()
+     * @see Socialshare::getLogo
      */
     public function getLogo()
     {
@@ -58,7 +58,7 @@ class Pinterest extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getShareUrl()
+     * @see Socialshare::getShareUrl
      */
     public function getShareUrl()
     {
@@ -72,7 +72,7 @@ class Pinterest extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getCount()
+     * @see Socialshare::getCount
      */
     public function getCount()
     {
@@ -87,7 +87,7 @@ class Pinterest extends Socialshare
 
         // keine offiziele API verfügbar, daher zuerst preg_replace und dann json_decode
         $countUrl = preg_replace('/^receiveCount\((.*)\)$/', "\\1", $countUrl);
-        $data     = json_decode($countUrl, true);
+        $data = json_decode($countUrl, true);
 
         if (!isset($data['count'])) {
             return 0;
@@ -102,7 +102,7 @@ class Pinterest extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getCountUrl
+     * @see Socialshare::getCountUrl
      */
     public function getCountUrl()
     {
