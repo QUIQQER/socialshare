@@ -13,7 +13,7 @@ use QUI;
  *
  * @package quiqqer/socialshare
  */
-class Manager extends QUI\Controls\Control
+class Manager extends QUI\Control
 {
     /**
      * @var array
@@ -114,17 +114,15 @@ class Manager extends QUI\Controls\Control
 //        self::setSocialSettings();
 
         $htmlSocial = "";
+
         if (!isset(self::$availableSocials[$social])) {
             throw new QUI\Exception('Social class "' . $social . '" not exist. First letter capitalized?', 404);
         }
 
         $class = 'QUI\Socialshare\Shares\\' . $social;
         $Social = new $class(self::$settings);
-        $htmlSocial = $Social->create();
-//        $Engine->assign('htmlSocial', $htmlSocial);
 
-//        return $Engine->fetch(dirname(__FILE__) . '/Socialshare.html');
-        return $htmlSocial;
+        return $Social->create();
     }
 
     /**
@@ -135,18 +133,13 @@ class Manager extends QUI\Controls\Control
      */
     private static function setSocialSettings(array $settings = []): void
     {
-        // set the general settings
-        self::$settings['theme'] = QUI::getRewrite()->getProject()->getConfig('socialshare.settings.general.theme');
-        self::$settings['showLabel'] = QUI::getRewrite()->getProject()->getConfig(
-            'socialshare.settings.general.showLabel'
-        );
-        self::$settings['showIcon'] = QUI::getRewrite()->getProject()->getConfig(
-            'socialshare.settings.general.showIcon'
-        );
-        self::$settings['showCount'] = QUI::getRewrite()->getProject()->getConfig(
-            'socialshare.settings.general.showCount'
-        );
+        $Project = QUI::getRewrite()->getProject();
 
+        // set the general settings
+        self::$settings['theme'] = $Project->getConfig('socialshare.settings.general.theme');
+        self::$settings['showLabel'] = $Project->getConfig('socialshare.settings.general.showLabel');
+        self::$settings['showIcon'] = $Project->getConfig('socialshare.settings.general.showIcon');
+        self::$settings['showCount'] = $Project->getConfig('socialshare.settings.general.showCount');
 
         // todo - at the moment brick / control settings can't override general setting, if "false"
         // overwrite the general setting...
