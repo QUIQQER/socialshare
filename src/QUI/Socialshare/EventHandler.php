@@ -6,7 +6,16 @@
 
 namespace QUI\Socialshare;
 
+use Imagick;
+use ImagickPixel;
 use QUI;
+use QUI\Exception;
+use QUI\Template;
+
+use function class_exists;
+use function file_exists;
+use function file_get_contents;
+use function htmlspecialchars;
 
 /**
  * Class Events
@@ -16,9 +25,10 @@ use QUI;
 class EventHandler
 {
     /**
-     * @param \QUI\Template $Template
+     * @param Template $Template
+     * @throws Exception
      */
-    public static function onTemplateGetHeader($Template)
+    public static function onTemplateGetHeader(Template $Template): void
     {
         $Site = QUI::getRewrite()->getSite();
         $Project = $Site->getProject();
@@ -34,8 +44,8 @@ class EventHandler
             $title = $Site->getAttribute('quiqqer.socialshare.title');
         }
 
-        $Template->extendHeader('<meta property="og:title" content="' . \htmlspecialchars($title) . '" />');
-        $Template->extendHeader('<meta itemprop="name" content="' . \htmlspecialchars($title) . '" />');
+        $Template->extendHeader('<meta property="og:title" content="' . htmlspecialchars($title) . '" />');
+        $Template->extendHeader('<meta itemprop="name" content="' . htmlspecialchars($title) . '" />');
 
         /**
          * Site short description
@@ -46,8 +56,8 @@ class EventHandler
             $description = $Site->getAttribute('quiqqer.socialshare.description');
         }
 
-        $Template->extendHeader('<meta property="og:description" content="' . \htmlspecialchars($description) . '" />');
-        $Template->extendHeader('<meta itemprop="description" content="' . \htmlspecialchars($description) . '" />');
+        $Template->extendHeader('<meta property="og:description" content="' . htmlspecialchars($description) . '" />');
+        $Template->extendHeader('<meta itemprop="description" content="' . htmlspecialchars($description) . '" />');
 
         /**
          * Site type, e.g. "website", "article", "movie" etc.
@@ -58,7 +68,7 @@ class EventHandler
             $type = $Site->getAttribute('quiqqer.socialshare.type');
         }
 
-        $Template->extendHeader('<meta property="og:type" content="' . \htmlspecialchars($type) . '" />');
+        $Template->extendHeader('<meta property="og:type" content="' . htmlspecialchars($type) . '" />');
 
         // itemscope itemtype="http://schema.org/WebPage"
         switch ($type) {
@@ -101,7 +111,7 @@ class EventHandler
         if ($Project->getConfig('socialshare.settings.general.siteName')) {
             $Template->extendHeader(
                 '<meta property="og:site_name" content="' .
-                \htmlspecialchars($Project->getConfig('socialshare.settings.general.siteName')) . '" />'
+                htmlspecialchars($Project->getConfig('socialshare.settings.general.siteName')) . '" />'
             );
         }
 
@@ -111,7 +121,7 @@ class EventHandler
         if ($Site->getAttribute('quiqqer.socialshare.author')) {
             $Template->extendHeader(
                 '<meta property="article:author" content="' .
-                \htmlspecialchars($Site->getAttribute('quiqqer.socialshare.author')) . '" />'
+                htmlspecialchars($Site->getAttribute('quiqqer.socialshare.author')) . '" />'
             );
         }
 
@@ -136,34 +146,34 @@ class EventHandler
             $Image = QUI\Projects\Media\Utils::getImageByUrl($image);
             $image = $Image->getSizeCacheUrl();
 
-            if (\strpos($image, '.svg') !== false) {
+            if (str_contains($image, '.svg')) {
                 $pngImage = $image . '.png';
 
-                if (\file_exists(CMS_DIR . $pngImage)) {
+                if (file_exists(CMS_DIR . $pngImage)) {
                     $image = $baseurl . $pngImage;
-                } elseif (\class_exists('\Imagick')) {
-                    $svg = \file_get_contents(CMS_DIR . $image);
+                } elseif (class_exists('\Imagick')) {
+                    $svg = file_get_contents(CMS_DIR . $image);
 
                     try {
-                        $im = new \Imagick();
+                        $im = new Imagick();
                         $im->readImageBlob($svg);
-                        $im->setImageBackgroundColor(new \ImagickPixel('transparent'));
+                        $im->setImageBackgroundColor(new ImagickPixel('transparent'));
                         $im->setImageFormat("png24");
                         $im->writeImage(CMS_DIR . $pngImage);
                         $im->clear();
                         $im->destroy();
 
                         $image = $baseurl . $pngImage;
-                    } catch (\Exception $Exception) {
+                    } catch (\Exception) {
                     }
                 }
             }
-        } catch (QUI\Exception $Exception) {
+        } catch (QUI\Exception) {
             // @todo Projekt Social Icon definieren
         }
 
         if (
-            \strpos($image, 'http') !== 0 &&
+            !str_starts_with($image, 'http') &&
             !QUI\Projects\Media\Utils::isMediaUrl($image)
         ) {
             $image = $baseurl . $image;
@@ -173,7 +183,7 @@ class EventHandler
         $Template->extendHeader('<meta itemprop="twitter:image" content="' . $image . '" />');
         $Template->extendHeader('<meta itemprop="image" content="' . $image . '" />');
 
-        if (\strpos($image, 'https://') !== false) {
+        if (str_contains($image, 'https://')) {
             $Template->extendHeader('<meta itemprop="og:image:secure" content="' . $image . '" />');
             $Template->extendHeader('<meta itemprop="og:image:secure_url" content="' . $image . '" />');
             $Template->extendHeader('<meta property="image:secure" content="' . $image . '" />');
@@ -189,6 +199,6 @@ class EventHandler
             $card = $Site->getAttribute('quiqqer.socialshare.twitter.card');
         }
 
-        $Template->extendHeader('<meta name="twitter:card" content="' . \htmlspecialchars($card) . '" />');
+        $Template->extendHeader('<meta name="twitter:card" content="' . htmlspecialchars($card) . '" />');
     }
 }

@@ -17,7 +17,7 @@ use QUI\Socialshare\Socialshare;
  */
 class Line extends Socialshare
 {
-    public function __construct($params = [])
+    public function __construct(array $params = [])
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Line');
         parent::__construct($params);
@@ -28,7 +28,7 @@ class Line extends Socialshare
      *
      * @see Socialshare::getName
      */
-    public function getName()
+    public function getName(): string
     {
         return 'quiqqer-socialshare-line';
     }
@@ -38,7 +38,7 @@ class Line extends Socialshare
      *
      * @see Socialshare::getLabel
      */
-    public function getLabel()
+    public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-line');
     }
@@ -48,7 +48,7 @@ class Line extends Socialshare
      *
      * @see Socialshare::getLogo
      */
-    public function getLogo()
+    public function getLogo(): string
     {
         return 'fab fa-line';
     }
@@ -59,7 +59,7 @@ class Line extends Socialshare
      * @see Socialshare::getShareUrl
      */
 
-    public function getShareUrl()
+    public function getShareUrl(): string
     {
         $Request = QUI::getRequest();
         $baseurl = $Request->getScheme() . '://' . $Request->getHttpHost() . $Request->getBasePath();
@@ -73,13 +73,13 @@ class Line extends Socialshare
      *
      * @see Socialshare::getCount
      */
-    public function getCount()
+    public function getCount(): int
     {
         $cacheName = 'quiqqer/socialshare/' . md5($this->getCountUrl());
 
         try {
             return QUI\Cache\Manager::get($cacheName);
-        } catch (QUI\Cache\Exception $Exception) {
+        } catch (QUI\Cache\Exception) {
         }
 
         $countUrl = QUI\Utils\Request\Url::get($this->getCountUrl());
@@ -108,8 +108,8 @@ class Line extends Socialshare
      *
      * @see Socialshare::getCountUrl
      */
-    public function getCountUrl()
+    public function getCountUrl(): string
     {
-        return false;
+        return '';
     }
 }

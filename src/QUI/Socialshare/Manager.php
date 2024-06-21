@@ -18,7 +18,7 @@ class Manager extends QUI\Controls\Control
     /**
      * @var array
      */
-    private static $availableSocials = [
+    private static array $availableSocials = [
         'Baidu',
         'VK',
         'Surfingbird',
@@ -54,7 +54,7 @@ class Manager extends QUI\Controls\Control
     ];
 
     // default settings
-    private static $settings = [
+    private static array $settings = [
         'theme' => 'classic',
         'showLabel' => true,
         'showIcon' => true,
@@ -68,12 +68,12 @@ class Manager extends QUI\Controls\Control
      * @param array $settings
      * @return array
      */
-    public static function get($settings = [])
+    public static function get(array $settings = []): array
     {
         try {
             self::setSocialSettings($settings);
             $Project = QUI::getRewrite()->getProject();
-        } catch (QUI\Exception $Exception) {
+        } catch (QUI\Exception) {
             return [];
         }
 
@@ -98,15 +98,15 @@ class Manager extends QUI\Controls\Control
     /**
      * Get single social
      *
-     * @param $social
+     * @param array $social
      * @return string
      * @throws QUI\Exception
      * @todo - must be implemented
      *
      */
-    public static function getSocial($social = [])
+    public static function getSocial(array $social = []): string
     {
-        return;
+        return '';
 //        self::setSocialSettings();
 
 //        $Engine = QUI::getTemplateManager()->getEngine();
@@ -133,7 +133,7 @@ class Manager extends QUI\Controls\Control
      * @param array $settings
      * @throws QUI\Exception
      */
-    private static function setSocialSettings($settings = [])
+    private static function setSocialSettings(array $settings = []): void
     {
         // set the general settings
         self::$settings['theme'] = QUI::getRewrite()->getProject()->getConfig('socialshare.settings.general.theme');

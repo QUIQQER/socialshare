@@ -7,6 +7,7 @@
 namespace QUI\Socialshare\Shares;
 
 use QUI;
+use QUI\Exception;
 use QUI\Socialshare\Socialshare;
 
 /**
@@ -17,7 +18,7 @@ use QUI\Socialshare\Socialshare;
  */
 class Reddit extends Socialshare
 {
-    public function __construct($params = [])
+    public function __construct(array $params = [])
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Reddit');
         parent::__construct($params);
@@ -28,7 +29,7 @@ class Reddit extends Socialshare
      *
      * @see Socialshare::getName
      */
-    public function getName()
+    public function getName(): string
     {
         return 'quiqqer-socialshare-reddit';
     }
@@ -38,7 +39,7 @@ class Reddit extends Socialshare
      *
      * @see Socialshare::getLabel
      */
-    public function getLabel()
+    public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-reddit');
     }
@@ -48,7 +49,7 @@ class Reddit extends Socialshare
      *
      * @see Socialshare::getLogo
      */
-    public function getLogo()
+    public function getLogo(): string
     {
         return 'fa fa-reddit-alien';
     }
@@ -59,7 +60,7 @@ class Reddit extends Socialshare
      * @see Socialshare::getShareUrl
      */
 
-    public function getShareUrl()
+    public function getShareUrl(): string
     {
         $Request = QUI::getRequest();
         $baseurl = $Request->getScheme() . '://' . $Request->getHttpHost() . $Request->getBasePath();
@@ -71,15 +72,16 @@ class Reddit extends Socialshare
     /**
      * (non-PHPdoc)
      *
+     * @throws Exception
      * @see Socialshare::getCount
      */
-    public function getCount()
+    public function getCount(): int
     {
         $cacheName = 'quiqqer/socialshare/' . md5($this->getCountUrl());
 
         try {
             return QUI\Cache\Manager::get($cacheName);
-        } catch (QUI\Cache\Exception $Exception) {
+        } catch (QUI\Cache\Exception) {
         }
 
         $countUrl = QUI\Utils\Request\Url::get($this->getCountUrl());
@@ -106,9 +108,10 @@ class Reddit extends Socialshare
     /**
      * (non-PHPdoc)
      *
+     * @throws Exception
      * @see Socialshare::getCountUrl
      */
-    public function getCountUrl()
+    public function getCountUrl(): string
     {
         $Site = $this->getSite();
         $Request = QUI::getRequest();
@@ -121,7 +124,7 @@ class Reddit extends Socialshare
 
         $url = "https://reddit.com/api/info.json?url=";
         $url .= http_build_query([
-            'q' => "SELECT total_count FROM link_stat WHERE url='{$encoded}'"
+            'q' => "SELECT total_count FROM link_stat WHERE url='$encoded'"
         ]);
 
 //        $url .= QUI::getRewrite()->getUrlFromSite(array(
