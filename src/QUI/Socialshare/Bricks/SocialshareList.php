@@ -6,6 +6,7 @@
 
 namespace QUI\Socialshare\Bricks;
 
+use Exception;
 use QUI;
 
 /**
@@ -19,7 +20,7 @@ class SocialshareList extends QUI\Control
      * SocialshareList constructor.
      * @param array $attributes
      */
-    public function __construct($attributes = [])
+    public function __construct(array $attributes = [])
     {
         $this->setAttributes([
             'class' => 'quiqqer-socialshare-brick',
@@ -31,8 +32,9 @@ class SocialshareList extends QUI\Control
 
     /**
      * @return string
+     * @throws Exception
      */
-    public function getBody()
+    public function getBody(): string
     {
         $Control = new QUI\Socialshare\Controls\Socialshare([
             'theme' => $this->getAttribute('socialshare.brick.settings.theme'),

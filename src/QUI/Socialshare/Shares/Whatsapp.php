@@ -17,7 +17,7 @@ use QUI\Socialshare\Socialshare;
  */
 class Whatsapp extends Socialshare
 {
-    public function __construct($params = [])
+    public function __construct(array $params = [])
     {
 //        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Whatsapp');
         parent::__construct($params);
@@ -28,7 +28,7 @@ class Whatsapp extends Socialshare
      *
      * @see Socialshare::getName
      */
-    public function getName()
+    public function getName(): string
     {
         return 'quiqqer-socialshare-whatsapp';
     }
@@ -38,7 +38,7 @@ class Whatsapp extends Socialshare
      *
      * @see Socialshare::getLabel
      */
-    public function getLabel()
+    public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-whatsapp');
     }
@@ -48,7 +48,7 @@ class Whatsapp extends Socialshare
      *
      * @see Socialshare::getLogo
      */
-    public function getLogo()
+    public function getLogo(): string
     {
         return 'fa fa-whatsapp';
     }
@@ -59,7 +59,7 @@ class Whatsapp extends Socialshare
      * @see Socialshare::getShareUrl
      */
 
-    public function getShareUrl()
+    public function getShareUrl(): string
     {
         $Request = QUI::getRequest();
         $baseurl = $Request->getScheme() . '://' . $Request->getHttpHost() . $Request->getBasePath();
@@ -73,9 +73,9 @@ class Whatsapp extends Socialshare
      *
      * @see Socialshare::getCount
      */
-    public function getCount()
+    public function getCount(): int
     {
-        return false;
+        return 0;
     }
 
     /**
@@ -83,8 +83,8 @@ class Whatsapp extends Socialshare
      *
      * @see Socialshare::getCountUrl
      */
-    public function getCountUrl()
+    public function getCountUrl(): string
     {
-        return false;
+        return '';
     }
 }

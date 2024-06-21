@@ -6,6 +6,7 @@
 
 namespace QUI\Socialshare\Controls;
 
+use Exception;
 use QUI;
 use QUI\Control;
 
@@ -21,7 +22,7 @@ class Socialshare extends Control
      * Socialshare constructor.
      * @param array $params
      */
-    public function __construct($params = [])
+    public function __construct(array $params = [])
     {
         $this->setAttributes([
             'class' => 'quiqqer-socialshare',
@@ -38,14 +39,11 @@ class Socialshare extends Control
 
     /**
      * @return string
+     * @throws Exception
      */
-    public function getBody()
+    public function getBody(): string
     {
-        try {
-            $Engine = QUI::getTemplateManager()->getEngine();
-        } catch (QUI\Exception $Exception) {
-            return '';
-        }
+        $Engine = QUI::getTemplateManager()->getEngine();
 
         $socials = QUI\Socialshare\Manager::get([
             'theme' => $this->getAttribute('theme'),

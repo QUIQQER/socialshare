@@ -8,6 +8,7 @@ namespace QUI\Socialshare;
 
 use QUI;
 use QUI\Control;
+use QUI\Exception;
 
 /**
  * Social share class
@@ -21,7 +22,7 @@ abstract class Socialshare extends Control
      * Socialshare constructor.
      * @param array $params
      */
-    public function __construct($params = [])
+    public function __construct(array $params = [])
     {
         $this->setAttributes([
             'theme' => 'classic',
@@ -42,49 +43,49 @@ abstract class Socialshare extends Control
      *
      * @return string
      */
-    abstract public function getCountUrl();
+    abstract public function getCountUrl(): string;
 
     /**
      * Return the counter
      *
-     * @return string
+     * @return int
      */
-    abstract public function getCount();
+    abstract public function getCount(): int;
 
     /**
      * Define the share url
      *
      * @return string
      */
-    abstract public function getShareUrl();
+    abstract public function getShareUrl(): string;
 
     /**
      * Set the icon (font awesome)
      *
      * @return string
      */
-    abstract public function getLogo();
+    abstract public function getLogo(): string;
 
     /**
      * Set the name (label) of a social share button
      *
      * @return string
      */
-    abstract public function getLabel();
+    abstract public function getLabel(): string;
 
     /**
-     * Set the name (facebook, twitter, etc.)
+     * Set the name (facebook, Twitter, etc.)
      *
      * @return string
      */
-    abstract public function getName();
+    abstract public function getName(): string;
 
     /**
      * Create the share button
      *
      * @return string
      */
-    public function getBody()
+    public function getBody(): string
     {
         $body = '<span class="quiqqer-socialshare-wrapper">';
 
@@ -139,7 +140,7 @@ abstract class Socialshare extends Control
      *
      * @return string
      */
-    public function createLogo()
+    public function createLogo(): string
     {
         return '<span class="quiqqer-socialshare-logo ' . $this->getLogo() . '"></span>';
     }
@@ -149,7 +150,7 @@ abstract class Socialshare extends Control
      *
      * @return string
      */
-    public function createLabel()
+    public function createLabel(): string
     {
         return '<span class="quiqqer-socialshare-label">' . $this->getLabel() . '</span>';
     }
@@ -159,11 +160,13 @@ abstract class Socialshare extends Control
      *
      * @return string
      */
-    public function createCount()
+    public function createCount(): string
     {
         if ($this->getCount() != null) {
             return '<span class="quiqqer-socialshare-count"><span class="fa fa-spinner fa-spin"></span></span>';
         }
+
+        return '';
     }
 
     /**
@@ -171,19 +174,13 @@ abstract class Socialshare extends Control
      * Default is 'classic'
      *
      * @param string $theme
-     *
-     * @return string
      */
-    public function setTheme($theme)
+    public function setTheme(string $theme): void
     {
         switch ($theme) {
-            case 'classic':
-                $this->setAttribute('theme', $theme);
-                break;
             case 'flat':
-                $this->setAttribute('theme', $theme);
-                break;
             case 'custom':
+            case 'classic':
                 $this->setAttribute('theme', $theme);
                 break;
             default:
@@ -196,7 +193,7 @@ abstract class Socialshare extends Control
      *
      * @return void
      */
-    public function showLabel()
+    public function showLabel(): void
     {
         $this->setAttribute('showLabel', true);
     }
@@ -206,7 +203,7 @@ abstract class Socialshare extends Control
      *
      * @return void
      */
-    public function hideLabel()
+    public function hideLabel(): void
     {
         $this->setAttribute('showLabel', false);
     }
@@ -216,7 +213,7 @@ abstract class Socialshare extends Control
      *
      * @return void
      */
-    public function showIcon()
+    public function showIcon(): void
     {
         $this->setAttribute('showIcon', true);
     }
@@ -226,17 +223,17 @@ abstract class Socialshare extends Control
      *
      * @return void
      */
-    public function hideIcon()
+    public function hideIcon(): void
     {
         $this->setAttribute('showIcon', false);
     }
 
-    public function showCount()
+    public function showCount(): void
     {
         $this->setAttribute('showCount', true);
     }
 
-    public function hideCount()
+    public function hideCount(): void
     {
         $this->setAttribute('showCount', false);
     }
@@ -245,8 +242,9 @@ abstract class Socialshare extends Control
      * Return the site object
      *
      * @return QUI\Projects\Site
+     * @throws Exception
      */
-    public function getSite()
+    public function getSite(): QUI\Interfaces\Projects\Site
     {
         if ($this->getAttribute('Site')) {
             return $this->getAttribute('Site');

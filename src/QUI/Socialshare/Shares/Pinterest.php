@@ -7,6 +7,7 @@
 namespace QUI\Socialshare\Shares;
 
 use QUI;
+use QUI\Exception;
 use QUI\Socialshare\Socialshare;
 
 /**
@@ -17,7 +18,7 @@ use QUI\Socialshare\Socialshare;
  */
 class Pinterest extends Socialshare
 {
-    public function __construct($params = [])
+    public function __construct(array $params = [])
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Pinterest');
         parent::__construct($params);
@@ -28,7 +29,7 @@ class Pinterest extends Socialshare
      *
      * @see Socialshare::getName
      */
-    public function getName()
+    public function getName(): string
     {
         return 'quiqqer-socialshare-pinterest';
     }
@@ -36,13 +37,11 @@ class Pinterest extends Socialshare
     /**
      *
      *
-     * @return array|string
+     * @return string
      */
-    public function getLabel()
+    public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-pinterest');
-        // TODO: Implement getCountUrl() method.
-        // Warum return array|string und wie besser implementieren
     }
 
     /**
@@ -50,7 +49,7 @@ class Pinterest extends Socialshare
      *
      * @see Socialshare::getLogo
      */
-    public function getLogo()
+    public function getLogo(): string
     {
         return 'fa fa-pinterest';
     }
@@ -60,7 +59,7 @@ class Pinterest extends Socialshare
      *
      * @see Socialshare::getShareUrl
      */
-    public function getShareUrl()
+    public function getShareUrl(): string
     {
         $Request = QUI::getRequest();
         $baseurl = $Request->getScheme() . '://' . $Request->getHttpHost() . $Request->getBasePath();
@@ -72,15 +71,16 @@ class Pinterest extends Socialshare
     /**
      * (non-PHPdoc)
      *
+     * @throws Exception
      * @see Socialshare::getCount
      */
-    public function getCount()
+    public function getCount(): int
     {
         $cacheName = 'quiqqer/socialshare/' . md5($this->getCountUrl());
 
         try {
             return QUI\Cache\Manager::get($cacheName);
-        } catch (QUI\Cache\Exception $Exception) {
+        } catch (QUI\Cache\Exception) {
         }
 
         $countUrl = QUI\Utils\Request\Url::get($this->getCountUrl());
@@ -102,9 +102,10 @@ class Pinterest extends Socialshare
     /**
      * (non-PHPdoc)
      *
+     * @throws Exception
      * @see Socialshare::getCountUrl
      */
-    public function getCountUrl()
+    public function getCountUrl(): string
     {
         $Site = $this->getSite();
         $Request = QUI::getRequest();

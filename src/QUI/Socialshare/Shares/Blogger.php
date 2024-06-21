@@ -17,7 +17,7 @@ use QUI\Socialshare\Socialshare;
  */
 class Blogger extends Socialshare
 {
-    public function __construct($params = [])
+    public function __construct(array $params = [])
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Blogger');
         parent::__construct($params);
@@ -26,9 +26,9 @@ class Blogger extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getName()
+     * @see Socialshare::getName
      */
-    public function getName()
+    public function getName(): string
     {
         return 'quiqqer-socialshare-blogger';
     }
@@ -36,9 +36,9 @@ class Blogger extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getLabel()
+     * @see Socialshare::getLabel
      */
-    public function getLabel()
+    public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-blogger');
     }
@@ -46,9 +46,9 @@ class Blogger extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getLogo()
+     * @see Socialshare::getLogo
      */
-    public function getLogo()
+    public function getLogo(): string
     {
         return 'fa fa-Blogger';
     }
@@ -56,10 +56,10 @@ class Blogger extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getShareUrl()
+     * @see Socialshare::getShareUrl
      */
 
-    public function getShareUrl()
+    public function getShareUrl(): string
     {
         $Request = QUI::getRequest();
         $baseurl = $Request->getScheme() . '://' . $Request->getHttpHost() . $Request->getBasePath();
@@ -71,15 +71,15 @@ class Blogger extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getCount()
+     * @see Socialshare::getCount
      */
-    public function getCount()
+    public function getCount(): int
     {
         $cacheName = 'quiqqer/socialshare/' . md5($this->getCountUrl());
 
         try {
             return QUI\Cache\Manager::get($cacheName);
-        } catch (QUI\Cache\Exception $Exception) {
+        } catch (QUI\Cache\Exception) {
         }
 
         $countUrl = QUI\Utils\Request\Url::get($this->getCountUrl());
@@ -106,10 +106,10 @@ class Blogger extends Socialshare
     /**
      * (non-PHPdoc)
      *
-     * @see \QUI\Socialshare\Socialshare::getCountUrl()
+     * @see Socialshare::getCountUrl
      */
-    public function getCountUrl()
+    public function getCountUrl(): string
     {
-        return false;
+        return '';
     }
 }

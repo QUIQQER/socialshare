@@ -13,12 +13,12 @@ use QUI;
  *
  * @package quiqqer/socialshare
  */
-class Manager extends QUI\Controls\Control
+class Manager extends QUI\Control
 {
     /**
      * @var array
      */
-    private static $availableSocials = [
+    private static array $availableSocials = [
         'Baidu',
         'VK',
         'Surfingbird',
@@ -54,7 +54,7 @@ class Manager extends QUI\Controls\Control
     ];
 
     // default settings
-    private static $settings = [
+    private static array $settings = [
         'theme' => 'classic',
         'showLabel' => true,
         'showIcon' => true,
@@ -68,12 +68,12 @@ class Manager extends QUI\Controls\Control
      * @param array $settings
      * @return array
      */
-    public static function get($settings = [])
+    public static function get(array $settings = []): array
     {
         try {
             self::setSocialSettings($settings);
             $Project = QUI::getRewrite()->getProject();
-        } catch (QUI\Exception $Exception) {
+        } catch (QUI\Exception) {
             return [];
         }
 
@@ -98,15 +98,15 @@ class Manager extends QUI\Controls\Control
     /**
      * Get single social
      *
-     * @param $social
+     * @param array $social
      * @return string
      * @throws QUI\Exception
      * @todo - must be implemented
      *
      */
-    public static function getSocial($social = [])
+    public static function getSocial(array $social = []): string
     {
-        return;
+        return '';
 //        self::setSocialSettings();
 
 //        $Engine = QUI::getTemplateManager()->getEngine();
@@ -114,17 +114,15 @@ class Manager extends QUI\Controls\Control
 //        self::setSocialSettings();
 
         $htmlSocial = "";
+
         if (!isset(self::$availableSocials[$social])) {
             throw new QUI\Exception('Social class "' . $social . '" not exist. First letter capitalized?', 404);
         }
 
         $class = 'QUI\Socialshare\Shares\\' . $social;
         $Social = new $class(self::$settings);
-        $htmlSocial = $Social->create();
-//        $Engine->assign('htmlSocial', $htmlSocial);
 
-//        return $Engine->fetch(dirname(__FILE__) . '/Socialshare.html');
-        return $htmlSocial;
+        return $Social->create();
     }
 
     /**
@@ -133,20 +131,15 @@ class Manager extends QUI\Controls\Control
      * @param array $settings
      * @throws QUI\Exception
      */
-    private static function setSocialSettings($settings = [])
+    private static function setSocialSettings(array $settings = []): void
     {
-        // set the general settings
-        self::$settings['theme'] = QUI::getRewrite()->getProject()->getConfig('socialshare.settings.general.theme');
-        self::$settings['showLabel'] = QUI::getRewrite()->getProject()->getConfig(
-            'socialshare.settings.general.showLabel'
-        );
-        self::$settings['showIcon'] = QUI::getRewrite()->getProject()->getConfig(
-            'socialshare.settings.general.showIcon'
-        );
-        self::$settings['showCount'] = QUI::getRewrite()->getProject()->getConfig(
-            'socialshare.settings.general.showCount'
-        );
+        $Project = QUI::getRewrite()->getProject();
 
+        // set the general settings
+        self::$settings['theme'] = $Project->getConfig('socialshare.settings.general.theme');
+        self::$settings['showLabel'] = $Project->getConfig('socialshare.settings.general.showLabel');
+        self::$settings['showIcon'] = $Project->getConfig('socialshare.settings.general.showIcon');
+        self::$settings['showCount'] = $Project->getConfig('socialshare.settings.general.showCount');
 
         // todo - at the moment brick / control settings can't override general setting, if "false"
         // overwrite the general setting...

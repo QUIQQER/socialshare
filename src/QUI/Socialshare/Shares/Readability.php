@@ -7,6 +7,7 @@
 namespace QUI\Socialshare\Shares;
 
 use QUI;
+use QUI\Exception;
 use QUI\Socialshare\Socialshare;
 
 /**
@@ -17,7 +18,7 @@ use QUI\Socialshare\Socialshare;
  */
 class Readability extends Socialshare
 {
-    public function __construct($params = [])
+    public function __construct(array $params = [])
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Readability');
         parent::__construct($params);
@@ -28,7 +29,7 @@ class Readability extends Socialshare
      *
      * @see Socialshare::getName
      */
-    public function getName()
+    public function getName(): string
     {
         return 'quiqqer-socialshare-readability';
     }
@@ -38,7 +39,7 @@ class Readability extends Socialshare
      *
      * @see Socialshare::getLabel
      */
-    public function getLabel()
+    public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-readability');
     }
@@ -48,7 +49,7 @@ class Readability extends Socialshare
      *
      * @see Socialshare::getLogo
      */
-    public function getLogo()
+    public function getLogo(): string
     {
         return 'fa fa-share-square ';
     }
@@ -59,27 +60,28 @@ class Readability extends Socialshare
      * @see Socialshare::getShareUrl
      */
 
-    public function getShareUrl()
+    public function getShareUrl(): string
     {
         $Request = QUI::getRequest();
         $baseurl = $Request->getScheme() . '://' . $Request->getHttpHost() . $Request->getBasePath();
         $baseurl = $baseurl . $_SERVER['REQUEST_URI'];
 
-        return 'http://www.readability.com/save?url=' . $baseurl;
+        return 'https://www.readability.com/save?url=' . $baseurl;
     }
 
     /**
      * (non-PHPdoc)
      *
+     * @throws Exception
      * @see Socialshare::getCount
      */
-    public function getCount()
+    public function getCount(): int
     {
         $cacheName = 'quiqqer/socialshare/' . md5($this->getCountUrl());
 
         try {
             return QUI\Cache\Manager::get($cacheName);
-        } catch (QUI\Cache\Exception $Exception) {
+        } catch (QUI\Cache\Exception) {
         }
 
         $countUrl = QUI\Utils\Request\Url::get($this->getCountUrl());
@@ -108,8 +110,8 @@ class Readability extends Socialshare
      *
      * @see Socialshare::getCountUrl
      */
-    public function getCountUrl()
+    public function getCountUrl(): string
     {
-        return false;
+        return '';
     }
 }

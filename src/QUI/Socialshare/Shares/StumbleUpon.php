@@ -7,6 +7,7 @@
 namespace QUI\Socialshare\Shares;
 
 use QUI;
+use QUI\Exception;
 use QUI\Socialshare\Socialshare;
 
 /**
@@ -28,7 +29,7 @@ class StumbleUpon extends Socialshare
      *
      * @see Socialshare::getName
      */
-    public function getName()
+    public function getName(): string
     {
         return 'quiqqer-socialshare-StumbleUpon';
     }
@@ -38,7 +39,7 @@ class StumbleUpon extends Socialshare
      *
      * @see Socialshare::getLabel
      */
-    public function getLabel()
+    public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-StumbleUpon');
     }
@@ -48,7 +49,7 @@ class StumbleUpon extends Socialshare
      *
      * @see Socialshare::getLogo
      */
-    public function getLogo()
+    public function getLogo(): string
     {
         return 'fa fa-stumbleupon';
     }
@@ -59,7 +60,7 @@ class StumbleUpon extends Socialshare
      * @see Socialshare::getShareUrl
      */
 
-    public function getShareUrl()
+    public function getShareUrl(): string
     {
         $Request = QUI::getRequest();
         $baseurl = $Request->getScheme() . '://' . $Request->getHttpHost() . $Request->getBasePath();
@@ -71,15 +72,16 @@ class StumbleUpon extends Socialshare
     /**
      * (non-PHPdoc)
      *
+     * @throws Exception
      * @see Socialshare::getCount
      */
-    public function getCount()
+    public function getCount(): int
     {
         $cacheName = 'quiqqer/socialshare/' . md5($this->getCountUrl());
 
         try {
             return QUI\Cache\Manager::get($cacheName);
-        } catch (QUI\Cache\Exception $Exception) {
+        } catch (QUI\Cache\Exception) {
         }
 
         $countUrl = QUI\Utils\Request\Url::get($this->getCountUrl());
@@ -106,9 +108,10 @@ class StumbleUpon extends Socialshare
     /**
      * (non-PHPdoc)
      *
+     * @throws Exception
      * @see Socialshare::getCountUrl
      */
-    public function getCountUrl()
+    public function getCountUrl(): string
     {
         $Site = $this->getSite();
         $Request = QUI::getRequest();
@@ -121,7 +124,7 @@ class StumbleUpon extends Socialshare
 
         $url = "https://stumbleupon.com/services/1.01/badge.getinfo?url=";
         $url .= http_build_query([
-            'q' => "SELECT total_count FROM link_stat WHERE url='{$encoded}'"
+            'q' => "SELECT total_count FROM link_stat WHERE url='$encoded'"
         ]);
 
 //        $url .= QUI::getRewrite()->getUrlFromSite(array(

@@ -17,7 +17,7 @@ use QUI\Socialshare\Socialshare;
  */
 class Telegram extends Socialshare
 {
-    public function __construct($params = [])
+    public function __construct(array $params = [])
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Telegram');
         parent::__construct($params);
@@ -28,7 +28,7 @@ class Telegram extends Socialshare
      *
      * @see Socialshare::getName
      */
-    public function getName()
+    public function getName(): string
     {
         return 'quiqqer-socialshare-telegram';
     }
@@ -38,7 +38,7 @@ class Telegram extends Socialshare
      *
      * @see Socialshare::getLabel
      */
-    public function getLabel()
+    public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-telegram');
     }
@@ -48,7 +48,7 @@ class Telegram extends Socialshare
      *
      * @see Socialshare::getLogo
      */
-    public function getLogo()
+    public function getLogo(): string
     {
         return 'fa fa-telegram';
     }
@@ -59,7 +59,7 @@ class Telegram extends Socialshare
      * @see Socialshare::getShareUrl
      */
 
-    public function getShareUrl()
+    public function getShareUrl(): string
     {
         $Request = QUI::getRequest();
         $baseurl = $Request->getScheme() . '://' . $Request->getHttpHost() . $Request->getBasePath();
@@ -68,25 +68,13 @@ class Telegram extends Socialshare
         return 'https://telegram.me/share/url?url=' . $baseurl;
     }
 
-    /**
-     * (non-PHPdoc)
-     *
-     * @return null
-     * @see Socialshare::getCount
-     */
-    public function getCount()
+    public function getCount(): int
     {
-        return null;
+        return 0;
     }
 
-    /**
-     * (non-PHPdoc)
-     *
-     * @return null
-     * @see Socialshare::getCountUrl
-     */
-    public function getCountUrl()
+    public function getCountUrl(): string
     {
-        return null;
+        return '';
     }
 }

@@ -7,6 +7,7 @@
 namespace QUI\Socialshare\Shares;
 
 use QUI;
+use QUI\Exception;
 use QUI\Socialshare\Socialshare;
 
 /**
@@ -17,7 +18,7 @@ use QUI\Socialshare\Socialshare;
  */
 class Mail extends Socialshare
 {
-    public function __construct($params = [])
+    public function __construct(array $params = [])
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Mail');
         parent::__construct($params);
@@ -28,22 +29,25 @@ class Mail extends Socialshare
      *
      * @see Socialshare::getNamew
      */
-    public function getName()
+    public function getName(): string
     {
         return 'quiqqer-socialshare-mail';
     }
 
-    public function getLabel()
+    public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-mail');
     }
 
-    public function getLogo()
+    public function getLogo(): string
     {
         return 'fa fa-at';
     }
 
-    public function getShareUrl()
+    /**
+     * @throws Exception
+     */
+    public function getShareUrl(): string
     {
         $Site = QUI::getRewrite()->getSite();
         $Request = QUI::getRequest();
@@ -59,10 +63,9 @@ class Mail extends Socialshare
      *
      * @see Socialshare::getCount
      */
-    public function getCount()
+    public function getCount(): int
     {
-        // todo man kann manuel einen Zähler setzten
-        return false;
+        return 0;
     }
 
     /**
@@ -70,8 +73,8 @@ class Mail extends Socialshare
      *
      * @see Socialshare::getCountUrl
      */
-    public function getCountUrl()
+    public function getCountUrl(): string
     {
-        return false;
+        return '';
     }
 }
