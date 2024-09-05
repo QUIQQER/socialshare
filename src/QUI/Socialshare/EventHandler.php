@@ -193,10 +193,18 @@ class EventHandler
         /**
          * Twitter cards
          */
-        $card = 'summary';
+        $card = match ($Project->getConfig('socialshare.settings.twitter.card')) {
+            'summary', 'summary_large_image', 'player' => $Project->getConfig('socialshare.settings.twitter.card'),
+            default => 'summary_large_image'
+        };
 
-        if ($Site->getAttribute('quiqqer.socialshare.twitter.card')) {
-            $card = $Site->getAttribute('quiqqer.socialshare.twitter.card');
+        // site can override this setting
+        switch ($Site->getAttribute('quiqqer.socialshare.twitter.card')) {
+            case 'summary':
+            case 'summary_large_image':
+            case 'player':
+                $card = $Site->getAttribute('quiqqer.socialshare.twitter.card');
+                break;
         }
 
         $Template->extendHeader('<meta name="twitter:card" content="' . htmlspecialchars($card) . '" />');

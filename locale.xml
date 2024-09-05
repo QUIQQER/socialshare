@@ -431,19 +431,6 @@
             <pl><![CDATA[Ustawienia ogólne]]></pl>
         </locale>
 
-        <locale name="socialshare.settings.general.useSiteImage">
-            <de><![CDATA[Seitenbild verwenden?]]></de>
-            <en><![CDATA[Use site image?]]></en>
-            <pl><![CDATA[Uzyc obrazka strony?]]></pl>
-        </locale>
-        <locale name="socialshare.settings.general.useSiteImage.desc">
-            <de><![CDATA[Wenn auf einer Seite kein Bild eingesetzt wurde, kann QUIQQER als Fallback-Lösung
-                         das Seitenbild für Social Share verwenden.]]></de>
-            <en><![CDATA[If a page has no image in meta settings, QUIQQER can use as a fallback solution
-                         the page image for social share.]]></en>
-            <pl>
-                <![CDATA[Jeśli na stronie nie został ustawiony obrazek do funkcji social share (ustawienia meta), QUIQQER może użyć obrazka strony (jeśli taki został wybrany).]]></pl>
-        </locale>
 
         <locale name="socialshare.settings.general.standardImage">
             <de><![CDATA[Bild]]></de>
@@ -451,8 +438,7 @@
             <pl><![CDATA[Obrazek]]></pl>
         </locale>
         <locale name="socialshare.settings.general.standardImage.desc">
-            <de><![CDATA[Dieses Bild wird nur dann genommen, wenn auf einer Seite in Meta- oder
-                             Seiteneinstellungen (Seitenbild) kein eigenes eingestellt ist.]]></de>
+            <de><![CDATA[Dieses Bild wird nur dann verwendet, wenn eine Seite kein Bild in Seiteneinstellungen (Seitenbild) oder in Meta-Seiteneinstellungen eingestellt hat.]]></de>
             <en><![CDATA[This image will be used if site has no own image in meta or page settings (site image).]]></en>
             <pl>
                 <![CDATA[Ten obrazek zostanie użyty wtedy, kiedy strona nie posiada własnego (w ustawieniach strony lub meta).]]></pl>
@@ -521,6 +507,11 @@
             <de><![CDATA[Tweeter Cards]]></de>
             <en><![CDATA[Tweeter Cards]]></en>
             <pl><![CDATA[Tweeter Cards]]></pl>
+        </locale>
+        <locale name="socialshare.settings.twitter.card.default">
+            <de><![CDATA[Standard Einstellung verwenden]]></de>
+            <en><![CDATA[Use default setting]]></en>
+            <pl><![CDATA[Użyj ustawień domyślnych]]></pl>
         </locale>
         <locale name="socialshare.settings.twitter.card.summary">
             <de><![CDATA[Summary Card]]></de>
