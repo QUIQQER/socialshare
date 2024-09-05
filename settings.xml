@@ -105,11 +105,6 @@
                         <type><![CDATA[bool]]></type>
                     </conf>
 
-
-                    <conf name="general.useSiteImage">
-                        <type><![CDATA[bool]]></type>
-                        <default>1</default>
-                    </conf>
                     <conf name="general.standardImage">
                         <type><![CDATA[bool]]></type>
                     </conf>
@@ -133,6 +128,7 @@
 
                     <conf name="twitter.card">
                         <type><![CDATA[string]]></type>
+                        <default>summary_large_image</default>
                     </conf>
                 </section>
             </config>
@@ -153,18 +149,6 @@
                                             var="socialshare.settings.general.title"/>
                                 </text>
                             </title>
-
-                            <input conf="socialshare.settings.general.useSiteImage"
-                                   type="checkbox" checked="checked">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.general.useSiteImage"/>
-                                </text>
-                                <description>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.general.useSiteImage.desc" />
-                                </description>
-                            </input>
 
                             <input conf="socialshare.settings.general.standardImage"
                                    type="text" class="media-image">

@@ -14,6 +14,7 @@
         <attribute>quiqqer.socialshare.type</attribute>
         <attribute>quiqqer.socialshare.author</attribute>
         <attribute>quiqqer.socialshare.image</attribute>
+        <attribute>quiqqer.socialshare.twitter.card</attribute>
     </attributes>
 
     <!-- extend meta settings -->
@@ -86,6 +87,31 @@
                                         var="quiqqer.socialshare.image.description"/>
                             </description>
                         </input>
+
+                        <select conf="quiqqer.socialshare.twitter.card">
+                            <text>
+                                <locale group="quiqqer/socialshare"
+                                        var="socialshare.settings.twitter.card"/>
+                            </text>
+
+                            <option></option>
+                            <option value="default">
+                                <locale group="quiqqer/socialshare"
+                                        var="socialshare.settings.twitter.card.default" />
+                            </option>
+                            <option value="summary">
+                                <locale group="quiqqer/socialshare"
+                                        var="socialshare.settings.twitter.card.summary" />
+                            </option>
+                            <option value="summary_large_image" selected="1">
+                                <locale group="quiqqer/socialshare"
+                                        var="socialshare.settings.twitter.card.summaryLargeImage" />
+                            </option>
+                            <option value="player">
+                                <locale group="quiqqer/socialshare"
+                                        var="socialshare.settings.twitter.card.player" />
+                            </option>
+                        </select>
                     </settings>
                 </category>
             </categories>
