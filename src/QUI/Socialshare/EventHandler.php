@@ -193,7 +193,7 @@ class EventHandler
         /**
          * Twitter cards
          */
-        $card = match($Project->getConfig('socialshare.settings.twitter.card')) {
+        $card = match ($Project->getConfig('socialshare.settings.twitter.card')) {
             'summary', 'summary_large_image', 'player' => $Project->getConfig('socialshare.settings.twitter.card'),
             default => 'summary_large_image'
         };
