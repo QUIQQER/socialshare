@@ -17,6 +17,7 @@ QUI::$Ajax->registerFunction(
         return 0;
 
         // wird später implimentiert
+        /*
         $Social = null;
         $Project = QUI::getProjectManager()->decode($project);
         $Site = $Project->get($siteId);
@@ -28,6 +29,7 @@ QUI::$Ajax->registerFunction(
         }
 
         /* @var $Social QUI\Socialshare\Socialshare */
+        /*
         $Social = new $str();
         $Social->setAttribute('Site', $Site);
 
@@ -36,6 +38,7 @@ QUI::$Ajax->registerFunction(
         }
 
         return $Social->getCount();
+        */
     },
     ['social', 'url', 'project', 'siteId'],
     false // Rechte
