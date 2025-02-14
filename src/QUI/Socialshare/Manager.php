@@ -113,6 +113,7 @@ class Manager extends QUI\Control
 
 //        self::setSocialSettings();
 
+        /*
         $htmlSocial = "";
 
         if (!isset(self::$availableSocials[$social])) {
@@ -123,6 +124,7 @@ class Manager extends QUI\Control
         $Social = new $class(self::$settings);
 
         return $Social->create();
+        */
     }
 
     /**

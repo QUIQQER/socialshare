@@ -241,13 +241,15 @@ abstract class Socialshare extends Control
     /**
      * Return the site object
      *
-     * @return QUI\Projects\Site
+     * @return QUI\Interfaces\Projects\Site
      * @throws Exception
      */
     public function getSite(): QUI\Interfaces\Projects\Site
     {
-        if ($this->getAttribute('Site')) {
-            return $this->getAttribute('Site');
+        $Site = $this->getAttribute('Site');
+
+        if ($Site instanceof QUI\Interfaces\Projects\Site) {
+            return $Site;
         }
 
         return QUI::getRewrite()->getSite();

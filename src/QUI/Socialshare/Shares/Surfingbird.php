@@ -102,7 +102,7 @@ class Surfingbird extends Socialshare
         $result = number_format($data['data'][0]['total_count']);
         QUI\Cache\Manager::set($cacheName, $result, 1800);
 
-        return $result;
+        return (int)$result;
     }
 
     /**

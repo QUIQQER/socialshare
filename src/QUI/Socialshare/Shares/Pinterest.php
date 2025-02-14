@@ -96,7 +96,7 @@ class Pinterest extends Socialshare
         $result = number_format($data['count']);
         QUI\Cache\Manager::set($cacheName, $result, 1800);
 
-        return $result;
+        return (int)$result;
     }
 
     /**
