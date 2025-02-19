@@ -6,6 +6,8 @@
 
 namespace QUI\Socialshare;
 
+use Imagick;
+use ImagickPixel;
 use QUI;
 
 /**
@@ -136,18 +138,18 @@ class EventHandler
             $Image = QUI\Projects\Media\Utils::getImageByUrl($image);
             $image = $Image->getSizeCacheUrl();
 
-            if (\strpos($image, '.svg') !== false) {
+            if (str_contains($image, '.svg')) {
                 $pngImage = $image . '.png';
 
-                if (\file_exists(CMS_DIR . $pngImage)) {
+                if (file_exists(CMS_DIR . $pngImage)) {
                     $image = $baseurl . $pngImage;
-                } elseif (\class_exists('\Imagick')) {
-                    $svg = \file_get_contents(CMS_DIR . $image);
+                } elseif (class_exists('\Imagick')) {
+                    $svg = file_get_contents(CMS_DIR . $image);
 
                     try {
-                        $im = new \Imagick();
+                        $im = new Imagick();
                         $im->readImageBlob($svg);
-                        $im->setImageBackgroundColor(new \ImagickPixel('transparent'));
+                        $im->setImageBackgroundColor(new ImagickPixel('transparent'));
                         $im->setImageFormat("png24");
                         $im->writeImage(CMS_DIR . $pngImage);
                         $im->clear();
@@ -163,21 +165,24 @@ class EventHandler
         }
 
         if (
-            \strpos($image, 'http') !== 0 &&
+            $image &&
+            !str_starts_with($image, 'http') &&
             !QUI\Projects\Media\Utils::isMediaUrl($image)
         ) {
             $image = $baseurl . $image;
         }
 
-        $Template->extendHeader('<meta property="og:image" content="' . $image . '" />');
-        $Template->extendHeader('<meta itemprop="twitter:image" content="' . $image . '" />');
-        $Template->extendHeader('<meta itemprop="image" content="' . $image . '" />');
+        if ($image) {
+            $Template->extendHeader('<meta property="og:image" content="' . $image . '" />');
+            $Template->extendHeader('<meta itemprop="twitter:image" content="' . $image . '" />');
+            $Template->extendHeader('<meta itemprop="image" content="' . $image . '" />');
 
-        if (\strpos($image, 'https://') !== false) {
-            $Template->extendHeader('<meta itemprop="og:image:secure" content="' . $image . '" />');
-            $Template->extendHeader('<meta itemprop="og:image:secure_url" content="' . $image . '" />');
-            $Template->extendHeader('<meta property="image:secure" content="' . $image . '" />');
-            $Template->extendHeader('<meta property="image:secure_url" content="' . $image . '" />');
+            if (str_contains($image, 'https://')) {
+                $Template->extendHeader('<meta itemprop="og:image:secure" content="' . $image . '" />');
+                $Template->extendHeader('<meta itemprop="og:image:secure_url" content="' . $image . '" />');
+                $Template->extendHeader('<meta property="image:secure" content="' . $image . '" />');
+                $Template->extendHeader('<meta property="image:secure_url" content="' . $image . '" />');
+            }
         }
 
         /**
