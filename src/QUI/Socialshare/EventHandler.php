@@ -45,6 +45,7 @@ class EventHandler
         }
 
         $Template->extendHeader('<meta property="og:title" content="' . htmlspecialchars($title) . '" />');
+        $Template->extendHeader('<meta property="twitter:title" content="' . htmlspecialchars($title) . '" />');
         $Template->extendHeader('<meta itemprop="name" content="' . htmlspecialchars($title) . '" />');
 
         /**
@@ -57,6 +58,7 @@ class EventHandler
         }
 
         $Template->extendHeader('<meta property="og:description" content="' . htmlspecialchars($description) . '" />');
+        $Template->extendHeader('<meta property="twitter:description" content="' . htmlspecialchars($description) . '" />');
         $Template->extendHeader('<meta itemprop="description" content="' . htmlspecialchars($description) . '" />');
 
         /**
@@ -173,21 +175,24 @@ class EventHandler
         }
 
         if (
+            $image &&
             !str_starts_with($image, 'http') &&
             !QUI\Projects\Media\Utils::isMediaUrl($image)
         ) {
             $image = $baseurl . $image;
         }
 
-        $Template->extendHeader('<meta property="og:image" content="' . $image . '" />');
-        $Template->extendHeader('<meta itemprop="twitter:image" content="' . $image . '" />');
-        $Template->extendHeader('<meta itemprop="image" content="' . $image . '" />');
+        if ($image) {
+            $Template->extendHeader('<meta property="og:image" content="' . $image . '" />');
+            $Template->extendHeader('<meta itemprop="twitter:image" content="' . $image . '" />');
+            $Template->extendHeader('<meta itemprop="image" content="' . $image . '" />');
 
-        if (str_contains($image, 'https://')) {
-            $Template->extendHeader('<meta itemprop="og:image:secure" content="' . $image . '" />');
-            $Template->extendHeader('<meta itemprop="og:image:secure_url" content="' . $image . '" />');
-            $Template->extendHeader('<meta property="image:secure" content="' . $image . '" />');
-            $Template->extendHeader('<meta property="image:secure_url" content="' . $image . '" />');
+            if (str_contains($image, 'https://')) {
+                $Template->extendHeader('<meta itemprop="og:image:secure" content="' . $image . '" />');
+                $Template->extendHeader('<meta itemprop="og:image:secure_url" content="' . $image . '" />');
+                $Template->extendHeader('<meta property="image:secure" content="' . $image . '" />');
+                $Template->extendHeader('<meta property="image:secure_url" content="' . $image . '" />');
+            }
         }
 
         /**
