@@ -19,7 +19,6 @@ class Whatsapp extends Socialshare
 {
     public function __construct(array $params = [])
     {
-//        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Whatsapp');
         parent::__construct($params);
     }
 
