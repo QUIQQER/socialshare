@@ -73,200 +73,222 @@
     width: 0;
 }
 
-/*.quiqqer-socialshare-triangle {
-    background: transparent none repeat scroll 0 0;
-    display: inline-block;
-    height: 0;
-    vertical-align: middle;
-    width: 0;
-
-    position: relative;
-    left: 1px;
-    border-right: 10px solid #f1f1f1;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-}
-.quiqqer-socialshare-count {
-    border: 1px solid transparent;
-    display: inline-block;
-    padding: 4px 10px;
-    margin: 0.3em 0;
-    background: #f1f1f1;
-    text-decoration: none;
-}*/
 /*Digg*/
 .quiqqer-socialshare-digg .quiqqer-socialshare-wrapper {
     background: #005be2;
     border: 1px solid #0057d7;
 }
+
 .quiqqer-socialshare-digg:hover .quiqqer-socialshare-wrapper {
     background: #0099e5;
 }
+
 /*Surfingbird*/
 .quiqqer-socialshare-surfingbird .quiqqer-socialshare-wrapper {
     background: #31bcff;
     border: 1px solid #31bcff;
 }
+
 .quiqqer-socialshare-surfingbird:hover .quiqqer-socialshare-wrapper {
     background: #2c9bd0;
 }
+
 /*VK*/
 .quiqqer-socialshare-vk .quiqqer-socialshare-wrapper {
     background: #5181b8;
     border: 1px solid #5181b8;
 }
+
 .quiqqer-socialshare-vk:hover .quiqqer-socialshare-wrapper {
     background: #335174;
 }
+
 /*RenRen*/
 .quiqqer-socialshare-renren .quiqqer-socialshare-wrapper {
     background: #024795;
     border: 1px solid #024795;
 }
+
 .quiqqer-socialshare-renren:hover .quiqqer-socialshare-wrapper {
     background: #02336c;
 }
+
 /*Readability*/
 .quiqqer-socialshare-readability .quiqqer-socialshare-wrapper {
     background: #cc2281;
     border: 1px solid #cc2281;
 }
+
 .quiqqer-socialshare-readability:hover .quiqqer-socialshare-wrapper {
     background: #93195d;
 }
+
 /*Pocket*/
 .quiqqer-socialshare-pocket .quiqqer-socialshare-wrapper {
     background: #ef4056;
     border: 1px solid #bb2f41;
 }
+
 .quiqqer-socialshare-pocket:hover .quiqqer-socialshare-wrapper {
     background: #ba3041;
 }
+
 /*Odnoklassniki*/
 .quiqqer-socialshare-odnoklassniki .quiqqer-socialshare-wrapper {
     background: #f58220;
     border: 1px solid #f58220;
 }
+
 .quiqqer-socialshare-odnoklassniki:hover .quiqqer-socialshare-wrapper {
     background: #bd5c0a;
 }
+
 /*MoiMir*/
 .quiqqer-socialshare-moimir .quiqqer-socialshare-wrapper {
     background: #005be2;
     border: 1px solid #0057d7;
 }
+
 .quiqqer-socialshare-moimir:hover .quiqqer-socialshare-wrapper {
     background: #0099e5;
 }
+
 /*Livejournal*/
 .quiqqer-socialshare-livejournal .quiqqer-socialshare-wrapper {
     background: #0de7ff;
     border: 1px solid #0de7ff;
 }
+
 .quiqqer-socialshare-livejournal:hover .quiqqer-socialshare-wrapper {
     background: #10c2d5;
 }
+
 /*Liveinternet*/
 .quiqqer-socialshare-liveinternet .quiqqer-socialshare-wrapper {
     background: #ffb200;
     border: 1px solid #ffb200;
 }
+
 .quiqqer-socialshare-liveinternet:hover .quiqqer-socialshare-wrapper {
     background: #a37305;
 }
+
 /*Baidu*/
 .quiqqer-socialshare-baidu .quiqqer-socialshare-wrapper {
     background: #62bbe7;
     border: 1px solid #0057d7;
 }
+
 .quiqqer-socialshare-baidu:hover .quiqqer-socialshare-wrapper {
     background: #0099e5;
 }
+
 /*Blogger*/
 .quiqqer-socialshare-blogger .quiqqer-socialshare-wrapper {
     background: #e53f0b;
     border: 1px solid #e04716;
 }
+
 .quiqqer-socialshare-blogger:hover .quiqqer-socialshare-wrapper {
     background: #FF5722;
 }
+
 /*Buffer*/
 .quiqqer-socialshare-buffer .quiqqer-socialshare-wrapper {
     background: #aa2d2d;
     border: 1px solid #b80d0d;
 }
+
 .quiqqer-socialshare-buffer:hover .quiqqer-socialshare-wrapper {
     background: #cd1212;
 }
+
 /*Evernote*/
 .quiqqer-socialshare-evernote .quiqqer-socialshare-wrapper {
     background: #53c416;
     border: 1px solid #69f130;
 }
+
 .quiqqer-socialshare-evernote:hover .quiqqer-socialshare-wrapper {
     background: #318212;
 }
+
 /*Instapaper*/
 .quiqqer-socialshare-instapaper .quiqqer-socialshare-wrapper {
     background: #4c72e5;
     border: 1px solid #1b4bdc;
 }
+
 .quiqqer-socialshare-instapaper:hover .quiqqer-socialshare-wrapper {
     background: #4c72e5;
 }
+
 /*StumbleUpon*/
 .quiqqer-socialshare-stumbleupon .quiqqer-socialshare-wrapper {
     background: #EB471D;
     border: 1px solid #c62b04;
 }
+
 .quiqqer-socialshare-stumbleupon:hover .quiqqer-socialshare-wrapper {
     background: #EB471D;
 }
+
 /*Viber*/
 .quiqqer-socialshare-viber .quiqqer-socialshare-wrapper {
     background: #539dec;
     border: 1px solid #1473d9;
 }
+
 .quiqqer-socialshare-viber:hover .quiqqer-socialshare-wrapper {
     background: #539dec;
 }
+
 /*Deliciuos*/
 .quiqqer-socialshare-delicious .quiqqer-socialshare-wrapper {
     background: #9a6651;
     border: 1px solid #994d2e;
 }
+
 .quiqqer-socialshare-delicious:hover .quiqqer-socialshare-wrapper {
     background: #9a6651;
 }
+
 /*Line*/
 .quiqqer-socialshare-line .quiqqer-socialshare-wrapper {
     background: #00b900;
     border: 1px solid #0a680a;
 }
+
 .quiqqer-socialshare-line:hover .quiqqer-socialshare-wrapper {
     background: #00b900;
 }
+
 /*Tumblr*/
 .quiqqer-socialshare-tumblr .quiqqer-socialshare-wrapper {
     background: #35465c;
     border: 1px solid #304054;
 }
+
 .quiqqer-socialshare-tumblr:hover .quiqqer-socialshare-wrapper {
     background: #2e3e51;
 }
+
 /*WorldPress*/
 .quiqqer-socialshare-worldpress .quiqqer-socialshare-wrapper {
     background: #21759b;
     border: 1px solid #1f6f93;
 }
+
 .quiqqer-socialshare-worldpress:hover .quiqqer-socialshare-wrapper {
     background: #1c6788;
 }
+
 /*Weibo*/
 .quiqqer-socialshare-weibo .quiqqer-socialshare-wrapper {
     background: #e31837;
     border: 1px solid #d81734;
 }
+
 .quiqqer-socialshare-weibo:hover .quiqqer-socialshare-wrapper {
     background: #b01830;
 }
@@ -276,6 +298,7 @@
     background: #ff4500;
     border: 1px solid #f04100;
 }
+
 .quiqqer-socialshare-reddit:hover .quiqqer-socialshare-wrapper {
     background: #e83e00;
 }
@@ -285,6 +308,7 @@
     background: #0088cc;
     border: 1px solid #0081c1;
 }
+
 .quiqqer-socialshare-telegram:hover .quiqqer-socialshare-wrapper {
     background: #006ca9;
 }
@@ -309,24 +333,17 @@
     background: #9f191f;
 }
 
-/* Tweeter */
+/* X (formerly Tweeter) */
 .quiqqer-socialshare-twitter .quiqqer-socialshare-wrapper {
-    background: #00aced;
-    border: 1px solid #0099d4;
+    --bgColor: #000;
+    --borderColor: #0a0a0a;
+
+    background: #000;
+    border: 1px solid #050505;
 }
 
 .quiqqer-socialshare-twitter:hover .quiqqer-socialshare-wrapper {
-    background: #0087ba;
-}
-
-/* Google */
-.quiqqer-socialshare-google .quiqqer-socialshare-wrapper {
-    background: #dd4b39;
-    border: 1px solid #d73925;
-}
-
-.quiqqer-socialshare-google:hover .quiqqer-socialshare-wrapper {
-    background: #c23321;
+    background: #333;
 }
 
 /* Whatsapp */
