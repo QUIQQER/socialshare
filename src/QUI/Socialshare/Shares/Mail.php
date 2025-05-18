@@ -20,7 +20,6 @@ class Mail extends Socialshare
 {
     public function __construct(array $params = [])
     {
-        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Mail');
         parent::__construct($params);
     }
 

@@ -143,9 +143,9 @@
             <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-tweeter">
-            <de><![CDATA[Teilen]]></de>
-            <en><![CDATA[Tweet]]></en>
-            <pl><![CDATA[Tweetnij]]></pl>
+            <de><![CDATA[Posten]]></de>
+            <en><![CDATA[Post]]></en>
+            <pl><![CDATA[Zapostuj]]></pl>
         </locale>
 
         <locale name="label-whatsapp">
@@ -393,9 +393,9 @@
             <pl><![CDATA[Facebook]]></pl>
         </locale>
         <locale name="socialshare.settings.show.twitter">
-            <de><![CDATA[Twitter]]></de>
-            <en><![CDATA[Twitter]]></en>
-            <pl><![CDATA[Twitter]]></pl>
+            <de><![CDATA[X (ehemalig Twitter)]]></de>
+            <en><![CDATA[X (formerly Twitter)]]></en>
+            <pl><![CDATA[X (dawniej twitter)]]></pl>
         </locale>
 
         <locale name="socialshare.settings.show.whatsapp">

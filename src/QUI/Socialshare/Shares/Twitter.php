@@ -12,6 +12,8 @@ use QUI\Socialshare\Socialshare;
 /**
  * Twitter class for social share
  *
+ * Please note: Twitter was rebranded to X in April 2023
+ *
  * @author  www.pcsg.de (Michael Danielczok)
  * @package quiqqer/socialshare
  */
@@ -30,7 +32,7 @@ class Twitter extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-twitter';
+        return 'quiqqer-socialshare-twitter quiqqer-socialshare-x';
     }
 
     /**
@@ -50,7 +52,7 @@ class Twitter extends Socialshare
      */
     public function getLogo(): string
     {
-        return 'fa fa-twitter';
+        return 'fa-brands fa-x-twitter';
     }
 
     /**
