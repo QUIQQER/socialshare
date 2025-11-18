@@ -140,7 +140,7 @@ class EventHandler
             $image = $Site->getAttribute('quiqqer.socialshare.image');
         }
 
-        if (!$image) {
+        if (!$image || substr($image, 0, 2) === 'fa') {
             $image = $Project->getConfig('socialshare.settings.general.standardImage');
         }
 
