@@ -31,6 +31,11 @@ class EventHandler
     public static function onTemplateGetHeader(Template $Template): void
     {
         $Site = QUI::getRewrite()->getSite();
+
+        if ($Site === null) {
+            return;
+        }
+
         $Project = $Site->getProject();
         $Request = QUI::getRequest();
         $baseurl = $Request->getScheme() . '://' . $Request->getHttpHost();
@@ -156,17 +161,19 @@ class EventHandler
                 } elseif (class_exists('\Imagick')) {
                     $svg = file_get_contents(CMS_DIR . $image);
 
-                    try {
-                        $im = new Imagick();
-                        $im->readImageBlob($svg);
-                        $im->setImageBackgroundColor(new ImagickPixel('transparent'));
-                        $im->setImageFormat("png24");
-                        $im->writeImage(CMS_DIR . $pngImage);
-                        $im->clear();
-                        $im->destroy();
+                    if ($svg !== false) {
+                        try {
+                            $im = new Imagick();
+                            $im->readImageBlob($svg);
+                            $im->setImageBackgroundColor(new ImagickPixel('transparent'));
+                            $im->setImageFormat("png24");
+                            $im->writeImage(CMS_DIR . $pngImage);
+                            $im->clear();
+                            $im->destroy();
 
-                        $image = $baseurl . $pngImage;
-                    } catch (\Exception) {
+                            $image = $baseurl . $pngImage;
+                        } catch (\Exception) {
+                        }
                     }
                 }
             }

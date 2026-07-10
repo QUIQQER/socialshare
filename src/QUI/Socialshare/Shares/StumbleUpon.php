@@ -18,7 +18,10 @@ use QUI\Socialshare\Socialshare;
  */
 class StumbleUpon extends Socialshare
 {
-    public function __construct($params = [])
+    /**
+     * @param array<string, mixed> $params
+     */
+    public function __construct(array $params = [])
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/StumbleUpon');
         parent::__construct($params);
@@ -85,7 +88,7 @@ class StumbleUpon extends Socialshare
         }
 
         $countUrl = QUI\Utils\Request\Url::get($this->getCountUrl());
-        $data = json_decode($countUrl, true);
+        $data = $this->decodeCountResponse($countUrl);
 
         if (!isset($data['data'])) {
             return 0;

@@ -11,7 +11,7 @@
  *
  * @return string
  */
-QUI::$Ajax->registerFunction(
+QUI::getAjax()->registerFunction(
     'package_quiqqer_socialshare_ajax_getCount',
     function ($social, $url, $project, $siteId) {
         return 0;
