@@ -438,10 +438,10 @@
             <pl><![CDATA[Obrazek]]></pl>
         </locale>
         <locale name="socialshare.settings.general.standardImage.desc">
-            <de><![CDATA[Dieses Bild wird nur dann verwendet, wenn eine Seite kein Bild in Seiteneinstellungen (Seitenbild) oder in Meta-Seiteneinstellungen eingestellt hat.]]></de>
-            <en><![CDATA[This image will be used if site has no own image in meta or page settings (site image).]]></en>
+            <de><![CDATA[Dieses Bild wird nur dann verwendet, wenn eine Seite kein Bild in Seiteneinstellungen (Seitenbild) oder in Meta-Seiteneinstellungen eingestellt hat. Empfohlene Bildgröße: 1200 × 630 Pixel.]]></de>
+            <en><![CDATA[This image will be used if the site has no image of its own in the meta or page settings (site image). Recommended image size: 1200 × 630 pixels.]]></en>
             <pl>
-                <![CDATA[Ten obrazek zostanie użyty wtedy, kiedy strona nie posiada własnego (w ustawieniach strony lub meta).]]></pl>
+                <![CDATA[Ten obrazek zostanie użyty wtedy, kiedy strona nie posiada własnego (w ustawieniach strony lub meta). Zalecany rozmiar obrazu: 1200 × 630 pikseli.]]></pl>
         </locale>
 
         <locale name="socialshare.settings.general.theme">
