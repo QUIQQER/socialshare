@@ -17,6 +17,8 @@ use function class_exists;
 use function file_exists;
 use function file_get_contents;
 use function htmlspecialchars;
+use function is_int;
+use function is_string;
 
 /**
  * Class Events
@@ -46,33 +48,47 @@ class EventHandler
          */
         $title = $Site->getAttribute('meta.seotitle');
 
-        if ($Site->getAttribute('quiqqer.socialshare.title')) {
-            $title = $Site->getAttribute('quiqqer.socialshare.title');
+        if (!is_string($title)) {
+            $title = '';
         }
 
-        $Template->extendHeader('<meta property="og:title" content="' . htmlspecialchars($title) . '" />');
-        $Template->extendHeader('<meta property="twitter:title" content="' . htmlspecialchars($title) . '" />');
-        $Template->extendHeader('<meta itemprop="name" content="' . htmlspecialchars($title) . '" />');
+        $socialTitle = $Site->getAttribute('quiqqer.socialshare.title');
+
+        if (is_string($socialTitle) && $socialTitle !== '') {
+            $title = $socialTitle;
+        }
+
+        $Template->extendHeader(self::createMetaTag('property', 'og:title', $title));
+        $Template->extendHeader(self::createMetaTag('name', 'twitter:title', $title));
+        $Template->extendHeader(self::createMetaTag('itemprop', 'name', $title));
 
         /**
          * Site short description
          */
         $description = self::getSocialDescription($Site);
 
-        $Template->extendHeader('<meta property="og:description" content="' . htmlspecialchars($description) . '" />');
-        $Template->extendHeader('<meta property="twitter:description" content="' . htmlspecialchars($description) . '" />');
-        $Template->extendHeader('<meta itemprop="description" content="' . htmlspecialchars($description) . '" />');
+        $Template->extendHeader(self::createMetaTag('property', 'og:description', $description));
+        $Template->extendHeader(self::createMetaTag('name', 'twitter:description', $description));
+        $Template->extendHeader(self::createMetaTag('itemprop', 'description', $description));
 
         /**
          * Site type, e.g. "website", "article", "movie" etc.
          */
         $type = 'website';
 
-        if ($Site->getAttribute('quiqqer.socialshare.type')) {
-            $type = $Site->getAttribute('quiqqer.socialshare.type');
+        $configuredType = $Site->getAttribute('quiqqer.socialshare.type');
+
+        if (is_string($configuredType) && $configuredType !== '') {
+            $type = $configuredType;
         }
 
-        $Template->extendHeader('<meta property="og:type" content="' . htmlspecialchars($type) . '" />');
+        $Template->extendHeader(self::createMetaTag('property', 'og:type', self::getOpenGraphType($type)));
+
+        $locale = self::getOpenGraphLocale($Project->getLang());
+
+        if ($locale !== '') {
+            $Template->extendHeader(self::createMetaTag('property', 'og:locale', $locale));
+        }
 
         // itemscope itemtype="http://schema.org/WebPage"
         switch ($type) {
@@ -100,61 +116,79 @@ class EventHandler
         /**
          * Site url
          */
-        if ($Site->getAttribute('quiqqer.socialshare.url')) {
-            $url = $Site->getAttribute('quiqqer.socialshare.url');
+        $socialUrl = $Site->getAttribute('quiqqer.socialshare.url');
+
+        if (is_string($socialUrl) && $socialUrl !== '') {
+            $url = $socialUrl;
         } else {
             $url = $baseurl . $Site->getUrlRewritten();
         }
 
-        $Template->extendHeader('<meta property="og:url" content="' . $url . '" />');
+        $Template->extendHeader(self::createMetaTag('property', 'og:url', $url));
 
         /**
          * Site name, e.g. "The New Yor Times"
          * Not the base url
          */
-        if ($Project->getConfig('socialshare.settings.general.siteName')) {
-            $Template->extendHeader(
-                '<meta property="og:site_name" content="' .
-                htmlspecialchars($Project->getConfig('socialshare.settings.general.siteName')) . '" />'
-            );
+        $siteName = $Project->getConfig('socialshare.settings.general.siteName');
+
+        if (is_string($siteName) && $siteName !== '') {
+            $Template->extendHeader(self::createMetaTag('property', 'og:site_name', $siteName));
         }
 
         /**
          * Author
          */
-        if ($Site->getAttribute('quiqqer.socialshare.author')) {
-            $Template->extendHeader(
-                '<meta property="article:author" content="' .
-                htmlspecialchars($Site->getAttribute('quiqqer.socialshare.author')) . '" />'
-            );
+        $author = $Site->getAttribute('quiqqer.socialshare.author');
+
+        if (is_string($author) && $author !== '') {
+            $Template->extendHeader(self::createMetaTag('property', 'article:author', $author));
         }
 
         /**
          * Image
          */
-        $image = false;
+        $image = '';
+        $imageAlt = '';
+        $imageType = '';
+        $imageWidth = false;
+        $imageHeight = false;
 
-        if ($Site->getAttribute('image_site')) {
-            $image = $Site->getAttribute('image_site');
+        $siteImage = $Site->getAttribute('image_site');
+
+        if (is_string($siteImage)) {
+            $image = $siteImage;
         }
 
-        if ($Site->getAttribute('quiqqer.socialshare.image')) {
-            $image = $Site->getAttribute('quiqqer.socialshare.image');
+        $socialImage = $Site->getAttribute('quiqqer.socialshare.image');
+
+        if (is_string($socialImage) && $socialImage !== '') {
+            $image = $socialImage;
         }
 
         if (!$image || substr($image, 0, 2) === 'fa') {
-            $image = $Project->getConfig('socialshare.settings.general.standardImage');
+            $standardImage = $Project->getConfig('socialshare.settings.general.standardImage');
+            $image = is_string($standardImage) ? $standardImage : '';
         }
 
         try {
             $Image = QUI\Projects\Media\Utils::getImageByUrl($image);
             $image = $Image->getSizeCacheUrl();
+            $imageAlt = $Image->getAlt();
+            $imageWidth = $Image->getWidth();
+            $imageHeight = $Image->getHeight();
+            $mimeType = $Image->getAttribute('mime_type');
+
+            if (is_string($mimeType)) {
+                $imageType = $mimeType;
+            }
 
             if (str_contains($image, '.svg')) {
                 $pngImage = $image . '.png';
 
                 if (file_exists(CMS_DIR . $pngImage)) {
                     $image = $baseurl . $pngImage;
+                    $imageType = 'image/png';
                 } elseif (class_exists('\Imagick')) {
                     $svg = file_get_contents(CMS_DIR . $image);
 
@@ -169,6 +203,7 @@ class EventHandler
                             $im->destroy();
 
                             $image = $baseurl . $pngImage;
+                            $imageType = 'image/png';
                         } catch (\Exception) {
                         }
                     }
@@ -178,24 +213,21 @@ class EventHandler
             // @todo Projekt Social Icon definieren
         }
 
-        if (
-            $image &&
-            !str_starts_with($image, 'http') &&
-            !QUI\Projects\Media\Utils::isMediaUrl($image)
-        ) {
-            $image = $baseurl . $image;
+        if ($image !== '' && !str_starts_with($image, 'http://') && !str_starts_with($image, 'https://')) {
+            $image = rtrim($baseurl, '/') . '/' . ltrim($image, '/');
         }
 
-        if ($image) {
-            $Template->extendHeader('<meta property="og:image" content="' . $image . '" />');
-            $Template->extendHeader('<meta itemprop="twitter:image" content="' . $image . '" />');
-            $Template->extendHeader('<meta itemprop="image" content="' . $image . '" />');
-
-            if (str_contains($image, 'https://')) {
-                $Template->extendHeader('<meta itemprop="og:image:secure" content="' . $image . '" />');
-                $Template->extendHeader('<meta itemprop="og:image:secure_url" content="' . $image . '" />');
-                $Template->extendHeader('<meta property="image:secure" content="' . $image . '" />');
-                $Template->extendHeader('<meta property="image:secure_url" content="' . $image . '" />');
+        if ($image !== '') {
+            foreach (
+                self::createImageMetaTags(
+                    $image,
+                    $imageType,
+                    $imageWidth,
+                    $imageHeight,
+                    $imageAlt
+                ) as $metaTag
+            ) {
+                $Template->extendHeader($metaTag);
             }
         }
 
@@ -216,7 +248,116 @@ class EventHandler
                 break;
         }
 
-        $Template->extendHeader('<meta name="twitter:card" content="' . htmlspecialchars($card) . '" />');
+        $Template->extendHeader(self::createMetaTag('name', 'twitter:card', $card));
+
+        $twitterSite = $Project->getConfig('socialshare.settings.twitter.site');
+
+        if (is_string($twitterSite) && $twitterSite !== '') {
+            $Template->extendHeader(self::createMetaTag('name', 'twitter:site', $twitterSite));
+        }
+
+        $twitterCreator = $Site->getAttribute('quiqqer.socialshare.twitter.creator');
+
+        if (!is_string($twitterCreator) || $twitterCreator === '') {
+            $twitterCreator = $Project->getConfig('socialshare.settings.twitter.creator');
+        }
+
+        if (is_string($twitterCreator) && $twitterCreator !== '') {
+            $Template->extendHeader(self::createMetaTag('name', 'twitter:creator', $twitterCreator));
+        }
+    }
+
+    /**
+     * Create an escaped metadata element
+     */
+    public static function createMetaTag(string $attribute, string $name, string $content): string
+    {
+        $allowedAttributes = ['itemprop', 'name', 'property'];
+
+        if (!in_array($attribute, $allowedAttributes, true)) {
+            throw new \InvalidArgumentException('Unsupported meta tag attribute: ' . $attribute);
+        }
+
+        return '<meta ' . $attribute . '="' . self::escape($name) . '" content="' . self::escape($content) . '" />';
+    }
+
+    /**
+     * Return valid Open Graph image metadata
+     *
+     * @return array<int, string>
+     */
+    public static function createImageMetaTags(
+        string $image,
+        string $mimeType = '',
+        bool | int $width = false,
+        bool | int $height = false,
+        string $alt = ''
+    ): array {
+        $tags = [
+            self::createMetaTag('property', 'og:image', $image),
+            self::createMetaTag('name', 'twitter:image', $image),
+            self::createMetaTag('itemprop', 'image', $image)
+        ];
+
+        if (str_starts_with($image, 'https://')) {
+            $tags[] = self::createMetaTag('property', 'og:image:secure_url', $image);
+        }
+
+        if ($mimeType !== '') {
+            $tags[] = self::createMetaTag('property', 'og:image:type', $mimeType);
+        }
+
+        if (is_int($width) && $width > 0) {
+            $tags[] = self::createMetaTag('property', 'og:image:width', (string)$width);
+        }
+
+        if (is_int($height) && $height > 0) {
+            $tags[] = self::createMetaTag('property', 'og:image:height', (string)$height);
+        }
+
+        if ($alt !== '') {
+            $tags[] = self::createMetaTag('property', 'og:image:alt', $alt);
+            $tags[] = self::createMetaTag('name', 'twitter:image:alt', $alt);
+        }
+
+        return $tags;
+    }
+
+    /**
+     * Normalize legacy page types to supported Open Graph object types
+     */
+    public static function getOpenGraphType(string $type): string
+    {
+        return match ($type) {
+            'article' => 'article',
+            'movie' => 'video.movie',
+            default => 'website'
+        };
+    }
+
+    /**
+     * Return an Open Graph locale for supported project languages
+     */
+    public static function getOpenGraphLocale(string $language): string
+    {
+        $normalized = str_replace('-', '_', $language);
+        $parts = explode('_', $normalized, 2);
+
+        if (isset($parts[1]) && $parts[0] !== '' && $parts[1] !== '') {
+            return strtolower($parts[0]) . '_' . strtoupper($parts[1]);
+        }
+
+        return match (strtolower($language)) {
+            'de' => 'de_DE',
+            'en' => 'en_US',
+            'pl' => 'pl_PL',
+            default => ''
+        };
+    }
+
+    private static function escape(string $value): string
+    {
+        return htmlspecialchars($value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
     }
 
     /**

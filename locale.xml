@@ -499,14 +499,14 @@
 
         <!-- twitter -->
         <locale name="socialshare.settings.twitter.title">
-            <de><![CDATA[Twitter]]></de>
-            <en><![CDATA[Twitter]]></en>
-            <pl><![CDATA[Twitter]]></pl>
+            <de><![CDATA[X / Twitter]]></de>
+            <en><![CDATA[X / Twitter]]></en>
+            <pl><![CDATA[X / Twitter]]></pl>
         </locale>
         <locale name="socialshare.settings.twitter.card">
-            <de><![CDATA[Tweeter Cards]]></de>
-            <en><![CDATA[Tweeter Cards]]></en>
-            <pl><![CDATA[Tweeter Cards]]></pl>
+            <de><![CDATA[X / Twitter Card]]></de>
+            <en><![CDATA[X / Twitter Card]]></en>
+            <pl><![CDATA[Karta X / Twitter]]></pl>
         </locale>
         <locale name="socialshare.settings.twitter.card.default">
             <de><![CDATA[Standard Einstellung verwenden]]></de>
@@ -527,6 +527,31 @@
             <de><![CDATA[Player Card]]></de>
             <en><![CDATA[Player Card]]></en>
             <pl><![CDATA[Player Card]]></pl>
+        </locale>
+        <locale name="socialshare.settings.twitter.site">
+            <de><![CDATA[X-Konto der Website]]></de>
+            <en><![CDATA[X account of the website]]></en>
+            <pl><![CDATA[Konto X strony internetowej]]></pl>
+        </locale>
+        <locale name="socialshare.settings.twitter.site.description">
+            <de><![CDATA[Account-Handle inklusive @, z.B. @quiqqer]]></de>
+            <en><![CDATA[Account handle including @, for example @quiqqer]]></en>
+            <pl><![CDATA[Nazwa konta z @, np. @quiqqer]]></pl>
+        </locale>
+        <locale name="socialshare.settings.twitter.creator">
+            <de><![CDATA[X-Konto des Inhaltsautors]]></de>
+            <en><![CDATA[X account of the content author]]></en>
+            <pl><![CDATA[Konto X autora treści]]></pl>
+        </locale>
+        <locale name="socialshare.settings.twitter.creator.description">
+            <de><![CDATA[Standard-Account des Inhaltsautors inklusive @]]></de>
+            <en><![CDATA[Default account of the content author including @]]></en>
+            <pl><![CDATA[Domyślne konto autora treści z @]]></pl>
+        </locale>
+        <locale name="socialshare.settings.twitter.creator.page.description">
+            <de><![CDATA[Optionaler Account des Inhaltsautors inklusive @; überschreibt die Projekteinstellung.]]></de>
+            <en><![CDATA[Optional account of the content author including @; overrides the project setting.]]></en>
+            <pl><![CDATA[Opcjonalne konto autora treści z @; zastępuje ustawienie projektu.]]></pl>
         </locale>
 
 
