@@ -18,6 +18,9 @@ use QUI\Socialshare\Socialshare;
  */
 class Surfingbird extends Socialshare
 {
+    /**
+     * @param array<string, mixed> $params
+     */
     public function __construct(array $params = [])
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Surfingbird');
@@ -85,7 +88,7 @@ class Surfingbird extends Socialshare
         }
 
         $countUrl = QUI\Utils\Request\Url::get($this->getCountUrl());
-        $data = json_decode($countUrl, true);
+        $data = $this->decodeCountResponse($countUrl);
 
         if (!isset($data['data'])) {
             return 0;

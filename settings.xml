@@ -130,6 +130,12 @@
                         <type><![CDATA[string]]></type>
                         <default>summary_large_image</default>
                     </conf>
+                    <conf name="twitter.site">
+                        <type><![CDATA[string]]></type>
+                    </conf>
+                    <conf name="twitter.creator">
+                        <type><![CDATA[string]]></type>
+                    </conf>
                 </section>
             </config>
 
@@ -237,6 +243,26 @@
                                             var="socialshare.settings.twitter.card.player" />
                                 </option>
                             </select>
+                            <input conf="socialshare.settings.twitter.site">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.twitter.site" />
+                                </text>
+                                <description>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.twitter.site.description" />
+                                </description>
+                            </input>
+                            <input conf="socialshare.settings.twitter.creator">
+                                <text>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.twitter.creator" />
+                                </text>
+                                <description>
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.twitter.creator.description" />
+                                </description>
+                            </input>
                         </settings>
 
                         <settings title="socialshare.settings" name="socialshare.settings">

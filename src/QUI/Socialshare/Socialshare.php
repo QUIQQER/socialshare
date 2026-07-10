@@ -20,7 +20,7 @@ abstract class Socialshare extends Control
 {
     /**
      * Socialshare constructor.
-     * @param array $params
+     * @param array<string, mixed> $params
      */
     public function __construct(array $params = [])
     {
@@ -162,7 +162,7 @@ abstract class Socialshare extends Control
      */
     public function createCount(): string
     {
-        if ($this->getCount() != null) {
+        if ($this->getCount() > 0) {
             return '<span class="quiqqer-socialshare-count"><span class="fa fa-spinner fa-spin"></span></span>';
         }
 
@@ -179,6 +179,8 @@ abstract class Socialshare extends Control
     {
         switch ($theme) {
             case 'flat':
+            case 'minima':
+            case 'dark':
             case 'custom':
             case 'classic':
                 $this->setAttribute('theme', $theme);
@@ -252,6 +254,28 @@ abstract class Socialshare extends Control
             return $Site;
         }
 
-        return QUI::getRewrite()->getSite();
+        $Site = QUI::getRewrite()->getSite();
+
+        if ($Site === null) {
+            throw new Exception('No site available for social sharing.');
+        }
+
+        return $Site;
+    }
+
+    /**
+     * Decode a social count API response
+     *
+     * @return array<string|int, mixed>
+     */
+    protected function decodeCountResponse(string | bool $response): array
+    {
+        if (!is_string($response)) {
+            return [];
+        }
+
+        $data = json_decode($response, true);
+
+        return is_array($data) ? $data : [];
     }
 }

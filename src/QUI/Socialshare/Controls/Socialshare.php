@@ -20,7 +20,7 @@ class Socialshare extends Control
 {
     /**
      * Socialshare constructor.
-     * @param array $params
+     * @param array<string, mixed> $params
      */
     public function __construct(array $params = [])
     {

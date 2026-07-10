@@ -2,7 +2,7 @@
     "name": "quiqqer/socialshare",
     "type": "quiqqer-module",
     "description": "This plugin allows you to simply place social share buttons on your website.",
-    "license": "GPL-3.0+",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Michael Danielczok",
@@ -16,6 +16,7 @@
         "url": "https://www.pcsg.de"
     },
     "require": {
+        "php": "^8.2",
         "quiqqer/core": "^2",
         "quiqqer/fontawesome": "^5|^6",
         "quiqqer/meta": "^3"

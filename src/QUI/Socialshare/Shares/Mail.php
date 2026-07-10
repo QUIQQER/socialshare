@@ -18,6 +18,9 @@ use QUI\Socialshare\Socialshare;
  */
 class Mail extends Socialshare
 {
+    /**
+     * @param array<string, mixed> $params
+     */
     public function __construct(array $params = [])
     {
         parent::__construct($params);
@@ -48,11 +51,11 @@ class Mail extends Socialshare
      */
     public function getShareUrl(): string
     {
-        $Site = QUI::getRewrite()->getSite();
+        $Site = $this->getSite();
         $Request = QUI::getRequest();
         $baseUrl = $Request->getScheme() . '://' .
             $Request->getHttpHost() . $Request->getBasePath() . $Site->getUrlRewritten();
-        $siteTitle = QUI::getRewrite()->getSite()->getAttribute('title');
+        $siteTitle = $Site->getAttribute('title');
 
         return 'mailto:' . '?subject=' . $siteTitle . '&body=' . $baseUrl;
     }

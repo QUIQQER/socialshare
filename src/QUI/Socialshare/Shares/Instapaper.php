@@ -17,6 +17,9 @@ use QUI\Socialshare\Socialshare;
  */
 class Instapaper extends Socialshare
 {
+    /**
+     * @param array<string, mixed> $params
+     */
     public function __construct(array $params = [])
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Instapaper');
@@ -83,7 +86,7 @@ class Instapaper extends Socialshare
         }
 
         $countUrl = QUI\Utils\Request\Url::get($this->getCountUrl());
-        $data = json_decode($countUrl, true);
+        $data = $this->decodeCountResponse($countUrl);
 
         if (!isset($data['data'])) {
             return 0;
