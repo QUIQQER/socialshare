@@ -16,7 +16,7 @@ use QUI;
 class Manager extends QUI\Control
 {
     /**
-     * @var array
+     * @var list<string>
      */
     private static array $availableSocials = [
         'Baidu',
@@ -39,13 +39,12 @@ class Manager extends QUI\Control
         'Blogger',
         'Digg',
         'Tumblr',
-        'WorldPress',
+        'WordPress',
         'Facebook',
         'Reddit',
         'Telegram',
         'Weibo',
         'Twitter',
-        'Google',
         'Pinterest',
         'Mail',
         'Whatsapp',
@@ -54,6 +53,7 @@ class Manager extends QUI\Control
     ];
 
     // default settings
+    /** @var array<string, mixed> */
     private static array $settings = [
         'theme' => 'classic',
         'showLabel' => true,
@@ -63,23 +63,37 @@ class Manager extends QUI\Control
     ];
 
     /**
+     * Return all available social share provider names
+     *
+     * @return list<string>
+     */
+    public static function getAvailableSocials(): array
+    {
+        return self::$availableSocials;
+    }
+
+    /**
      * Get socials
      *
-     * @param array $settings
-     * @return array
+     * @param array<string, mixed> $settings
+     * @return list<Socialshare>
      */
     public static function get(array $settings = []): array
     {
         try {
             self::setSocialSettings($settings);
             $Project = QUI::getRewrite()->getProject();
+
+            if ($Project === null) {
+                throw new QUI\Exception('No project available for social share configuration.');
+            }
         } catch (QUI\Exception) {
             return [];
         }
 
         $networks = [];
 
-        foreach (self::$availableSocials as $social) {
+        foreach (self::getAvailableSocials() as $social) {
             $setting = 'socialshare.settings.' . $social;
 
             if (!$Project->getConfig($setting)) {
@@ -87,6 +101,11 @@ class Manager extends QUI\Control
             }
 
             $class = 'QUI\Socialshare\Shares\\' . $social;
+
+            if (!class_exists($class) || !is_subclass_of($class, Socialshare::class)) {
+                continue;
+            }
+
             $Social = new $class(self::$settings);
 
             $networks[] = $Social;
@@ -98,7 +117,7 @@ class Manager extends QUI\Control
     /**
      * Get single social
      *
-     * @param array $social
+     * @param array<string, mixed> $social
      * @return string
      * @throws QUI\Exception
      * @todo - must be implemented
@@ -130,12 +149,16 @@ class Manager extends QUI\Control
     /**
      * Set the settings
      *
-     * @param array $settings
+     * @param array<string, mixed> $settings
      * @throws QUI\Exception
      */
     private static function setSocialSettings(array $settings = []): void
     {
         $Project = QUI::getRewrite()->getProject();
+
+        if ($Project === null) {
+            throw new QUI\Exception('No project available for social share configuration.');
+        }
 
         // set the general settings
         self::$settings['theme'] = $Project->getConfig('socialshare.settings.general.theme');

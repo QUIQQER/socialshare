@@ -15,6 +15,7 @@
         <attribute>quiqqer.socialshare.author</attribute>
         <attribute>quiqqer.socialshare.image</attribute>
         <attribute>quiqqer.socialshare.twitter.card</attribute>
+        <attribute>quiqqer.socialshare.twitter.creator</attribute>
     </attributes>
 
     <!-- extend meta settings -->
@@ -112,6 +113,17 @@
                                         var="socialshare.settings.twitter.card.player" />
                             </option>
                         </select>
+
+                        <input conf="quiqqer.socialshare.twitter.creator">
+                            <text>
+                                <locale group="quiqqer/socialshare"
+                                        var="socialshare.settings.twitter.creator" />
+                            </text>
+                            <description>
+                                <locale group="quiqqer/socialshare"
+                                        var="socialshare.settings.twitter.creator.page.description" />
+                            </description>
+                        </input>
                     </settings>
                 </category>
             </categories>

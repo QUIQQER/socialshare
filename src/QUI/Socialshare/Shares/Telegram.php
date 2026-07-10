@@ -17,6 +17,9 @@ use QUI\Socialshare\Socialshare;
  */
 class Telegram extends Socialshare
 {
+    /**
+     * @param array<string, mixed> $params
+     */
     public function __construct(array $params = [])
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Telegram');

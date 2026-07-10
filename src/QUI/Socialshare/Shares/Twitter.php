@@ -19,6 +19,9 @@ use QUI\Socialshare\Socialshare;
  */
 class Twitter extends Socialshare
 {
+    /**
+     * @param array<string, mixed> $params
+     */
     public function __construct(array $params = [])
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Twitter');

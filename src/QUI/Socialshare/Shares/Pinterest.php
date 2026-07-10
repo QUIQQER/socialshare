@@ -18,6 +18,9 @@ use QUI\Socialshare\Socialshare;
  */
 class Pinterest extends Socialshare
 {
+    /**
+     * @param array<string, mixed> $params
+     */
     public function __construct(array $params = [])
     {
         $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Pinterest');
@@ -85,9 +88,17 @@ class Pinterest extends Socialshare
 
         $countUrl = QUI\Utils\Request\Url::get($this->getCountUrl());
 
+        if (!is_string($countUrl)) {
+            return 0;
+        }
+
         // keine offiziele API verfügbar, daher zuerst preg_replace und dann json_decode
         $countUrl = preg_replace('/^receiveCount\((.*)\)$/', "\\1", $countUrl);
-        $data = json_decode($countUrl, true);
+        if ($countUrl === null) {
+            return 0;
+        }
+
+        $data = $this->decodeCountResponse($countUrl);
 
         if (!isset($data['count'])) {
             return 0;
