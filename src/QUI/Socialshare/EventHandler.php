@@ -10,6 +10,7 @@ use Imagick;
 use ImagickPixel;
 use QUI;
 use QUI\Exception;
+use QUI\Interfaces\Projects\Site;
 use QUI\Template;
 
 use function class_exists;
@@ -56,11 +57,7 @@ class EventHandler
         /**
          * Site short description
          */
-        $description = $Site->getAttribute('short');
-
-        if ($Site->getAttribute('quiqqer.socialshare.description')) {
-            $description = $Site->getAttribute('quiqqer.socialshare.description');
-        }
+        $description = self::getSocialDescription($Site);
 
         $Template->extendHeader('<meta property="og:description" content="' . htmlspecialchars($description) . '" />');
         $Template->extendHeader('<meta property="twitter:description" content="' . htmlspecialchars($description) . '" />');
@@ -220,5 +217,27 @@ class EventHandler
         }
 
         $Template->extendHeader('<meta name="twitter:card" content="' . htmlspecialchars($card) . '" />');
+    }
+
+    /**
+     * Return the best available description for social metadata
+     */
+    public static function getSocialDescription(Site $Site): string
+    {
+        $attributes = [
+            'quiqqer.socialshare.description',
+            'short',
+            'meta.description'
+        ];
+
+        foreach ($attributes as $attribute) {
+            $description = $Site->getAttribute($attribute);
+
+            if (is_string($description) && $description !== '') {
+                return $description;
+            }
+        }
+
+        return '';
     }
 }
