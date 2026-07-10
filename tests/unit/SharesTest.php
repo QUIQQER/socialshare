@@ -27,10 +27,13 @@ class SharesTest extends TestCase
     #[DataProvider('providerClasses')]
     public function testProviderMetadata(string $class): void
     {
+        $_SERVER['REQUEST_URI'] = '/socialshare-test';
         $Share = new $class();
 
         self::assertNotSame('', $Share->getName());
         self::assertNotSame('', $Share->getLogo());
+        self::assertNotSame('', $Share->getLabel());
+        self::assertNotSame('', $Share->getShareUrl());
         self::assertIsString($Share->getCountUrl());
     }
 }
