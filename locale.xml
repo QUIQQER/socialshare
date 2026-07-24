@@ -11,11 +11,11 @@
 
         <locale name="package.description">
             <de>
-                <![CDATA[Die Erweiterung ermöglicht das Hinzufügen von verschiedenen social share Buttons (u.a. Facebook, Twitter, Pinterest).]]></de>
+                <![CDATA[Die Erweiterung ermöglicht das Hinzufügen von verschiedenen social share Buttons (u.a. Facebook, X, WhatsApp, LinkedIn).]]></de>
             <en>
-                <![CDATA[This plugin allows you to simply place social share buttons on your website (Facebook, Twitter, Pinterest, etc).]]></en>
+                <![CDATA[This plugin allows you to simply place social share buttons on your website (Facebook, X, WhatsApp, LinkedIn, etc).]]></en>
             <pl>
-                <![CDATA[Rozszerzenie pozwala w prosty sposób umieszczać przyciski udostępniania znanych portali spolecznosciowych (Facebook, Twitter, Pinterest, itp.) na swojej stronie internetowej.]]></pl>
+                <![CDATA[Rozszerzenie pozwala w prosty sposób umieszczać przyciski udostępniania znanych portali spolecznosciowych (Facebook, X, WhatsApp, LinkedIn, itp.) na swojej stronie internetowej.]]></pl>
         </locale>
         <locale name="admin.types.socialshare">
             <de><![CDATA[Social Share]]></de>
