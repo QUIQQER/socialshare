@@ -17,6 +17,18 @@
             <pl>
                 <![CDATA[Rozszerzenie pozwala w prosty sposób umieszczać przyciski udostępniania znanych portali spolecznosciowych (Facebook, Twitter, Pinterest, itp.) na swojej stronie internetowej.]]></pl>
         </locale>
+        <locale name="admin.types.socialshare">
+            <de><![CDATA[Social Share]]></de>
+            <en><![CDATA[Social Share]]></en>
+            <pl><![CDATA[Social Share]]></pl>
+        </locale>
+
+        <locale name="admin.types.socialshare.desc">
+            <de><![CDATA[Einstellungen für das Teilen dieser Seite in sozialen Netzwerken.]]></de>
+            <en><![CDATA[Settings for sharing this page on social networks.]]></en>
+            <pl><![CDATA[Ustawienia udostępniania tej strony w mediach społecznościowych.]]></pl>
+        </locale>
+
         <locale name="label-digg">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>

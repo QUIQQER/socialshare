@@ -8,25 +8,26 @@
 
                     <conf name="Facebook">
                         <type><![CDATA[bool]]></type>
-                        <default>1</default>
+                        <defaultvalue>1</defaultvalue>
                     </conf>
                     <conf name="Twitter">
                         <type><![CDATA[bool]]></type>
-                        <default>1</default>
+                        <defaultvalue>1</defaultvalue>
                     </conf>
                     <conf name="Whatsapp">
                         <type><![CDATA[bool]]></type>
-                        <default>1</default>
+                        <defaultvalue>1</defaultvalue>
                     </conf>
                     <conf name="Pinterest">
                         <type><![CDATA[bool]]></type>
                     </conf>
                     <conf name="Mail">
                         <type><![CDATA[bool]]></type>
-                        <default>1</default>
+                        <defaultvalue>1</defaultvalue>
                     </conf>
                     <conf name="LinkedIn">
                         <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
                     </conf>
                     <conf name="Xing">
                         <type><![CDATA[bool]]></type>
@@ -110,9 +111,11 @@
                     </conf>
                     <conf name="general.showLabel">
                         <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
                     </conf>
                     <conf name="general.showIcon">
                         <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
                     </conf>
                     <conf name="general.showCount">
                         <type><![CDATA[bool]]></type>
@@ -128,7 +131,7 @@
 
                     <conf name="twitter.card">
                         <type><![CDATA[string]]></type>
-                        <default>summary_large_image</default>
+                        <defaultvalue>summary_large_image</defaultvalue>
                     </conf>
                     <conf name="twitter.site">
                         <type><![CDATA[string]]></type>
