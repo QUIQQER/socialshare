@@ -52,7 +52,7 @@ class Whatsapp extends Socialshare
      */
     public function getLogo(): string
     {
-        return 'fa fa-whatsapp';
+        return 'fa-brands fa-whatsapp';
     }
 
     /**

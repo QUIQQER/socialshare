@@ -53,7 +53,7 @@ class Telegram extends Socialshare
      */
     public function getLogo(): string
     {
-        return 'fa fa-telegram';
+        return 'fa-brands fa-telegram';
     }
 
     /**

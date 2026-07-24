@@ -53,7 +53,7 @@ class Blogger extends Socialshare
      */
     public function getLogo(): string
     {
-        return 'fa fa-Blogger';
+        return 'fa-brands fa-blogger';
     }
 
     /**

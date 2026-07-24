@@ -54,7 +54,7 @@ class Facebook extends Socialshare
      */
     public function getLogo(): string
     {
-        return 'fa fa-facebook';
+        return 'fa-brands fa-facebook';
     }
 
     /**

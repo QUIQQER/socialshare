@@ -53,7 +53,7 @@ class Line extends Socialshare
      */
     public function getLogo(): string
     {
-        return 'fab fa-line';
+        return 'fa-brands fa-line';
     }
 
     /**

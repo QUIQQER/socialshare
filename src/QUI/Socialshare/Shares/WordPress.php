@@ -53,7 +53,7 @@ class WordPress extends Socialshare
      */
     public function getLogo(): string
     {
-        return 'fa fa-wordpress';
+        return 'fa-brands fa-wordpress';
     }
 
     /**

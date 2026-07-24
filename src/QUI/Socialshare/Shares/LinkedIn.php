@@ -55,7 +55,7 @@ class LinkedIn extends Socialshare
      */
     public function getLogo(): string
     {
-        return 'fa fa-linkedin';
+        return 'fa-brands fa-linkedin';
     }
 
     /**

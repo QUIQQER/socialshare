@@ -54,7 +54,7 @@ class VK extends Socialshare
      */
     public function getLogo(): string
     {
-        return 'fa fa-vk';
+        return 'fa-brands fa-vk';
     }
 
     /**

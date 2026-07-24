@@ -54,7 +54,7 @@ class Buffer extends Socialshare
      */
     public function getLogo(): string
     {
-        return 'fa fa-share-square-o';
+        return 'fa-brands fa-buffer';
     }
 
     /**

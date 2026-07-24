@@ -54,7 +54,7 @@ class Odnoklassniki extends Socialshare
      */
     public function getLogo(): string
     {
-        return 'fa fa-odnoklassniki';   // new Logo Icon <i class="fab fa-odnoklassniki"></i>
+        return 'fa-brands fa-odnoklassniki';
     }
 
     /**

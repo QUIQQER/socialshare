@@ -53,7 +53,7 @@ class Baidu extends Socialshare
      */
     public function getLogo(): string
     {
-        return 'fa fa-share';
+        return 'fa-solid fa-share';
     }
 
     /**

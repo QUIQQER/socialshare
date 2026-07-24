@@ -54,7 +54,7 @@ class Pocket extends Socialshare
      */
     public function getLogo(): string
     {
-        return 'fa fa-get-pocket';
+        return 'fa-brands fa-get-pocket';
     }
 
     /**

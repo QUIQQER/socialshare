@@ -54,7 +54,7 @@ class Reddit extends Socialshare
      */
     public function getLogo(): string
     {
-        return 'fa fa-reddit-alien';
+        return 'fa-brands fa-reddit-alien';
     }
 
     /**

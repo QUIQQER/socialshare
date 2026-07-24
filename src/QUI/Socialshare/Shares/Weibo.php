@@ -53,7 +53,7 @@ class Weibo extends Socialshare
      */
     public function getLogo(): string
     {
-        return 'fa fa-weibo';
+        return 'fa-brands fa-weibo';
     }
 
     /**

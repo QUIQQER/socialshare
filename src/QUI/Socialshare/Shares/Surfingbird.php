@@ -54,7 +54,7 @@ class Surfingbird extends Socialshare
      */
     public function getLogo(): string
     {
-        return 'fa fa-share-square';
+        return 'fa-solid fa-share-from-square';
     }
 
     /**

@@ -54,7 +54,7 @@ class Tumblr extends Socialshare
      */
     public function getLogo(): string
     {
-        return 'fa fa-tumblr';
+        return 'fa-brands fa-tumblr';
     }
 
     /**

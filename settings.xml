@@ -149,7 +149,7 @@
                             <locale group="quiqqer/socialshare"
                                     var="socialshare.settings.category"/>
                         </text>
-                        <icon>fa fa-facebook</icon>
+                        <icon>fa-brands fa-facebook</icon>
 
                         <settings title="socialshare.settings" name="socialshare.settings.general">
                             <title>

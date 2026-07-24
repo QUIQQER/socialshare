@@ -36,4 +36,18 @@ class SharesTest extends TestCase
         self::assertNotSame('', $Share->getShareUrl());
         self::assertIsString($Share->getCountUrl());
     }
+
+    /**
+     * @param class-string<Socialshare> $class
+     */
+    #[DataProvider('providerClasses')]
+    public function testLogoUsesFontAwesome6Style(string $class): void
+    {
+        $Share = new $class();
+
+        self::assertMatchesRegularExpression(
+            '#^fa-(brands|solid|regular) fa-[a-z0-9-]+$#',
+            $Share->getLogo()
+        );
+    }
 }

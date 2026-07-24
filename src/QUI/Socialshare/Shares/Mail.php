@@ -43,7 +43,7 @@ class Mail extends Socialshare
 
     public function getLogo(): string
     {
-        return 'fa fa-at';
+        return 'fa-solid fa-at';
     }
 
     /**

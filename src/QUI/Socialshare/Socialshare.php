@@ -163,7 +163,7 @@ abstract class Socialshare extends Control
     public function createCount(): string
     {
         if ($this->getCount() > 0) {
-            return '<span class="quiqqer-socialshare-count"><span class="fa fa-spinner fa-spin"></span></span>';
+            return '<span class="quiqqer-socialshare-count"><span class="fa-solid fa-spinner fa-spin"></span></span>';
         }
 
         return '';

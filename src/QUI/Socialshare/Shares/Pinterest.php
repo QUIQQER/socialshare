@@ -54,7 +54,7 @@ class Pinterest extends Socialshare
      */
     public function getLogo(): string
     {
-        return 'fa fa-pinterest';
+        return 'fa-brands fa-pinterest';
     }
 
     /**

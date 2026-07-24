@@ -53,7 +53,7 @@ class Digg extends Socialshare
      */
     public function getLogo(): string
     {
-        return 'fa fa-digg';
+        return 'fa-brands fa-digg';
     }
 
     /**

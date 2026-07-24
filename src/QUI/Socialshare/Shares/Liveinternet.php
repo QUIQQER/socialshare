@@ -53,7 +53,7 @@ class Liveinternet extends Socialshare
      */
     public function getLogo(): string
     {
-        return 'fa fa-share-square-o';
+        return 'fa-solid fa-share-from-square';
     }
 
     /**

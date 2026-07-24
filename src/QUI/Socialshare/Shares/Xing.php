@@ -55,7 +55,7 @@ class Xing extends Socialshare
      */
     public function getLogo(): string
     {
-        return 'fa fa-xing';
+        return 'fa-brands fa-xing';
     }
 
     /**

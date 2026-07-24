@@ -54,7 +54,7 @@ class RenRen extends Socialshare
      */
     public function getLogo(): string
     {
-        return 'fa fa-renren';
+        return 'fa-brands fa-renren';
     }
 
     /**
