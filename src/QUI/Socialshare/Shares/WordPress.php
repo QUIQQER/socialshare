@@ -80,24 +80,4 @@ class WordPress extends Socialshare
 
         return 'https://wordpress.com/wp-admin/press-this.php?u=' . $baseurl;
     }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCount
-     */
-    public function getCount(): int
-    {
-        return 0;
-    }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCountUrl
-     */
-    public function getCountUrl(): string
-    {
-        return '';
-    }
 }

@@ -71,7 +71,6 @@ class Telegram extends Socialshare
      *
      * @see Socialshare::getShareUrl
      */
-
     public function getShareUrl(): string
     {
         $Request = QUI::getRequest();
@@ -79,15 +78,5 @@ class Telegram extends Socialshare
         $baseurl = $baseurl . $_SERVER['REQUEST_URI'];
 
         return 'https://telegram.me/share/url?url=' . $baseurl;
-    }
-
-    public function getCount(): int
-    {
-        return 0;
-    }
-
-    public function getCountUrl(): string
-    {
-        return '';
     }
 }

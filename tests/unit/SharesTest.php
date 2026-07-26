@@ -34,7 +34,6 @@ class SharesTest extends TestCase
         self::assertNotSame('', $Share->getLogo());
         self::assertNotSame('', $Share->getLabel());
         self::assertNotSame('', $Share->getShareUrl());
-        self::assertIsString($Share->getCountUrl());
     }
 
     /**

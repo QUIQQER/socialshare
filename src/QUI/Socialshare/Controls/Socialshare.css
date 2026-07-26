@@ -166,19 +166,3 @@
 .quiqqer-socialshare__link--whatsapp { --_brand: var(--quiqqer-socialshare-whatsapp-brand, #29a628); }
 .quiqqer-socialshare__link--wordpress { --_brand: var(--quiqqer-socialshare-wordpress-brand, #21759b); }
 .quiqqer-socialshare__link--xing { --_brand: var(--quiqqer-socialshare-xing-brand, #006567); }
-
-/* ------------------------------------------------------------------ *
- * Counter (still todo, kept for later)                               *
- * ------------------------------------------------------------------ */
-
-.quiqqer-socialshare__count {
-    position: relative;
-    display: inline-block;
-    margin: 0.3em 0.5em;
-    padding: 4px 10px;
-    border: 1px solid transparent;
-    border-radius: var(--qui-btn-borderRadius, 0.25rem);
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
-    line-height: 1.7em;
-    text-decoration: none;
-}

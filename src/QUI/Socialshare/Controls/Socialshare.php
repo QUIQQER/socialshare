@@ -28,8 +28,7 @@ class Socialshare extends Control
             'class' => 'quiqqer-socialshare',
             'theme' => 'button-classic',
             'showLabel' => true,
-            'showIcon' => true,
-            'showCount' => false
+            'showIcon' => true
         ]);
 
         parent::__construct($params);
@@ -49,7 +48,6 @@ class Socialshare extends Control
             'theme' => $this->getAttribute('theme'),
             'showLabel' => $this->getAttribute('showLabel'),
             'showIcon' => $this->getAttribute('showIcon'),
-            'showCount' => $this->getAttribute('showCount'),
         ]);
 
         $html = '';

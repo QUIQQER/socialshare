@@ -80,24 +80,4 @@ class Weibo extends Socialshare
 
         return 'http://service.weibo.com/share/share.php?url=' . $baseurl;
     }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCount
-     */
-    public function getCount(): int
-    {
-        return 0;
-    }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCountUrl
-     */
-    public function getCountUrl(): string
-    {
-        return '';
-    }
 }

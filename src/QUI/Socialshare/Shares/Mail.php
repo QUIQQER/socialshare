@@ -69,24 +69,4 @@ class Mail extends Socialshare
 
         return 'mailto:' . '?subject=' . $siteTitle . '&body=' . $baseUrl;
     }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCount
-     */
-    public function getCount(): int
-    {
-        return 0;
-    }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCountUrl
-     */
-    public function getCountUrl(): string
-    {
-        return '';
-    }
 }

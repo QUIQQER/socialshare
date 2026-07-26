@@ -80,24 +80,4 @@ class Digg extends Socialshare
 
         return 'http://digg.com/submit?url=' . $baseurl;
     }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCount
-     */
-    public function getCount(): int
-    {
-        return 0;
-    }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCountUrl
-     */
-    public function getCountUrl(): string
-    {
-        return '';
-    }
 }

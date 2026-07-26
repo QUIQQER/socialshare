@@ -80,49 +80,4 @@ class Evernote extends Socialshare
 
         return 'https://www.evernote.com/clip.action?url=' . $baseurl;
     }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCount
-     */
-    public function getCount(): int
-    {
-        $cacheName = 'quiqqer/socialshare/' . md5($this->getCountUrl());
-
-        try {
-            return QUI\Cache\Manager::get($cacheName);
-        } catch (QUI\Cache\Exception) {
-        }
-
-        $countUrl = QUI\Utils\Request\Url::get($this->getCountUrl());
-        $data = $this->decodeCountResponse($countUrl);
-
-        if (!isset($data['data'])) {
-            return 0;
-        }
-
-        if (!isset($data['data'][0])) {
-            return 0;
-        }
-
-        if (!isset($data['data'][0]['total_count'])) {
-            return 0;
-        }
-
-        $result = number_format($data['data'][0]['total_count']);
-        QUI\Cache\Manager::set($cacheName, $result, 1800);
-
-        return (int)$result;
-    }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCountUrl
-     */
-    public function getCountUrl(): string
-    {
-        return '';
-    }
 }

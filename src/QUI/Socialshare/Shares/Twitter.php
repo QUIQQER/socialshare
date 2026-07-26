@@ -81,26 +81,4 @@ class Twitter extends Socialshare
 
         return 'https://twitter.com/intent/tweet?text=' . $baseurl;
     }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCount
-     * (no Twitter count)
-     */
-    public function getCount(): int
-    {
-        return 0;
-    }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCountUrl
-     * (no Twitter count)
-     */
-    public function getCountUrl(): string
-    {
-        return '';
-    }
 }

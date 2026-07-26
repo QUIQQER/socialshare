@@ -117,9 +117,6 @@
                         <type><![CDATA[bool]]></type>
                         <defaultvalue>1</defaultvalue>
                     </conf>
-                    <conf name="general.showCount">
-                        <type><![CDATA[bool]]></type>
-                    </conf>
                     <conf name="general.siteName">
                         <type><![CDATA[string]]></type>
                     </conf>
@@ -181,12 +178,6 @@
                                 <text>
                                     <locale group="quiqqer/socialshare"
                                             var="socialshare.settings.general.showIcon"/>
-                                </text>
-                            </input>
-                            <input conf="socialshare.settings.general.showCount" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.general.showCount"/>
                                 </text>
                             </input>
                             <input conf="socialshare.settings.general.siteName">

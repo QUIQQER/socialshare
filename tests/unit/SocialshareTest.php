@@ -42,17 +42,13 @@ class SocialshareTest extends TestCase
 
         $Share->hideIcon();
         $Share->hideLabel();
-        $Share->hideCount();
         self::assertFalse($Share->getAttribute('showIcon'));
         self::assertFalse($Share->getAttribute('showLabel'));
-        self::assertFalse($Share->getAttribute('showCount'));
 
         $Share->showIcon();
         $Share->showLabel();
-        $Share->showCount();
         self::assertTrue($Share->getAttribute('showIcon'));
         self::assertTrue($Share->getAttribute('showLabel'));
-        self::assertTrue($Share->getAttribute('showCount'));
 
         foreach (['button-classic', 'button', 'button-outline', 'link', 'link-muted', 'custom'] as $theme) {
             $Share->setTheme($theme);
@@ -67,25 +63,5 @@ class SocialshareTest extends TestCase
 
         $Share->setTheme('invalid');
         self::assertSame('button-classic', $Share->getAttribute('theme'));
-    }
-
-    public function testCounterRenderingDependsOnCount(): void
-    {
-        $Share = new TestSocialshare();
-
-        self::assertSame('', $Share->createCount());
-
-        $Share->count = 5;
-        self::assertStringContainsString('quiqqer-socialshare__count', $Share->createCount());
-    }
-
-    public function testCountResponsesAreDecodedSafely(): void
-    {
-        $Share = new TestSocialshare();
-
-        self::assertSame([], $Share->decode(false));
-        self::assertSame([], $Share->decode(true));
-        self::assertSame([], $Share->decode('invalid'));
-        self::assertSame(['count' => 3], $Share->decode('{"count":3}'));
     }
 }

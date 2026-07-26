@@ -533,10 +533,6 @@
             <de><![CDATA[Icon anzeigen]]></de>
             <en><![CDATA[Show icon]]></en>
         </locale>
-        <locale name="socialshare.settings.general.showCount">
-            <de><![CDATA[Zähler anzeigen]]></de>
-            <en><![CDATA[Show counter]]></en>
-        </locale>
         <locale name="socialshare.settings.general.siteName">
             <de><![CDATA[Seitenname, z.B. "PC Welt"]]></de>
             <en><![CDATA[Site name, for example. "The New York Times"]]></en>

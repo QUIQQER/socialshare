@@ -58,7 +58,6 @@ abstract class Socialshare extends Control
             'theme' => self::DEFAULT_THEME,
             'showLabel' => true,
             'showIcon' => true,
-            'showCount' => true,
             'nodeName' => 'a',
             'target' => '_blank',
             'Site' => false,
@@ -67,20 +66,6 @@ abstract class Socialshare extends Control
 
         parent::__construct($params);
     }
-
-    /**
-     * ??????
-     *
-     * @return string
-     */
-    abstract public function getCountUrl(): string;
-
-    /**
-     * Return the counter
-     *
-     * @return int
-     */
-    abstract public function getCount(): int;
 
     /**
      * Define the share url
@@ -156,11 +141,6 @@ abstract class Socialshare extends Control
         $this->addCSSClass($this->getName());
         $this->addCSSClass('quiqqer-socialshare__link--' . $this->getThemeClass());
 
-        // todo counter implementieren
-        /*if ($this->getAttribute('showCount')) {
-            $body .= $this->createCount();
-        }*/
-
         return $body;
     }
 
@@ -212,20 +192,6 @@ abstract class Socialshare extends Control
         }
 
         return parent::isAllowedAttribute($attribute);
-    }
-
-    /**
-     * Create the counter
-     *
-     * @return string
-     */
-    public function createCount(): string
-    {
-        if ($this->getCount() > 0) {
-            return '<span class="quiqqer-socialshare__count"><span class="fa-solid fa-spinner fa-spin"></span></span>';
-        }
-
-        return '';
     }
 
     /**
@@ -283,16 +249,6 @@ abstract class Socialshare extends Control
         $this->setAttribute('showIcon', false);
     }
 
-    public function showCount(): void
-    {
-        $this->setAttribute('showCount', true);
-    }
-
-    public function hideCount(): void
-    {
-        $this->setAttribute('showCount', false);
-    }
-
     /**
      * Return the site object
      *
@@ -314,21 +270,5 @@ abstract class Socialshare extends Control
         }
 
         return $Site;
-    }
-
-    /**
-     * Decode a social count API response
-     *
-     * @return array<string|int, mixed>
-     */
-    protected function decodeCountResponse(string | bool $response): array
-    {
-        if (!is_string($response)) {
-            return [];
-        }
-
-        $data = json_decode($response, true);
-
-        return is_array($data) ? $data : [];
     }
 }
