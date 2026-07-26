@@ -22,7 +22,7 @@ class Baidu extends Socialshare
      */
     public function __construct(array $params = [])
     {
-        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Baidu');
+        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Share');
         parent::__construct($params);
     }
 

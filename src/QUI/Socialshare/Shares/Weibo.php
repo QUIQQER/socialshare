@@ -22,7 +22,7 @@ class Weibo extends Socialshare
      */
     public function __construct(array $params = [])
     {
-        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Weibo');
+        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Share');
         parent::__construct($params);
     }
 

@@ -22,7 +22,7 @@ class Evernote extends Socialshare
      */
     public function __construct(array $params = [])
     {
-        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Evernote');
+        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Share');
         parent::__construct($params);
     }
 
