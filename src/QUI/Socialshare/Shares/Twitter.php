@@ -35,7 +35,7 @@ class Twitter extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-twitter quiqqer-socialshare-x';
+        return 'quiqqer-socialshare__link--twitter quiqqer-socialshare__link--x';
     }
 
     /**
@@ -46,6 +46,16 @@ class Twitter extends Socialshare
     public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-tweeter');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-tweeter');
     }
 
     /**

@@ -33,7 +33,7 @@ class Telegram extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-telegram';
+        return 'quiqqer-socialshare__link--telegram';
     }
 
     /**
@@ -44,6 +44,16 @@ class Telegram extends Socialshare
     public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-telegram');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-telegram');
     }
 
     /**

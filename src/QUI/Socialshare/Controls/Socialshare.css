@@ -1,387 +1,184 @@
+/**
+ * Social share buttons.
+ *
+ * Block:    quiqqer-socialshare (the container).
+ * Element:  quiqqer-socialshare__link is each button (an <a> holding the
+ *           __logo and __label spans directly, no wrapper element).
+ * Modifiers on the link carry the network (--facebook), the theme
+ *           (--buttonClassic, --button, --buttonOutline, --linkColored,
+ *           --linkMuted, --custom) and the icon-only state (--iconOnly).
+ *
+ * The buttons ride the template's shared .btn component: layout, radius,
+ * transition, focus and the hover colour swap all come from .btn. A theme only
+ * maps the network brand colour (--_brand) and its readable text colour
+ * (--_contrast) into the .btn colour hooks (--qui-btn-color / --qui-btn-bgColor
+ * / --qui-btn-borderColor and their --hover partners) — exactly like
+ * .btn-primary and friends do.
+ *
+ * Network colours live once in the brand registry at the bottom as
+ * --_brand (background) and --_contrast (readable text on that background).
+ * Both are overridable per network from :root through the long
+ * --quiqqer-socialshare-<network>-brand / -contrast variables, and globally
+ * for unknown networks through --quiqqer-socialshare-brand / -contrast.
+ */
+
 .quiqqer-socialshare {
-    margin: 6px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--quiqqer-socialshare-button-gap, 0.75rem);
 }
 
-.quiqqer-socialshare-link {
-    display: inline-block;
-}
+.quiqqer-socialshare__link {
+    /* keep the shared .btn compact for share buttons */
+    --padding-block: var(--quiqqer-socialshare-padding-y, 4px);
+    --padding-inline: var(--quiqqer-socialshare-padding-x, 10px);
+    --qui-btn-gap: var(--quiqqer-socialshare-gap, 0.5em);
 
-.quiqqer-socialshare-wrapper {
-    display: inline-block;
-    text-decoration: none;
-    padding: 4px 10px;
-    color: #fff;
-    vertical-align: top;
-    margin: 3px;
-    transition: all 200ms ease-in-out;
-    font-weight: normal;
+    /* per-network colours, overridable from outside; grey/white defaults so an
+       unknown network still renders visibly and readably */
+    --_brand: var(--quiqqer-socialshare-brand, #444);
+    --_contrast: var(--quiqqer-socialshare-contrast, #fff);
+
     overflow: hidden;
 }
 
-.quiqqer-socialshare-logo {
-    width: 1em;
-    vertical-align: middle;
-    font-size: 1.5em;
-    text-align: center;
+.quiqqer-socialshare__link:focus-visible {
+    outline: 2px solid var(--_brand);
+    outline-offset: 2px;
 }
 
-.quiqqer-socialshare-label {
-    vertical-align: middle;
+/* ------------------------------------------------------------------ *
+ * Themes — map --_brand / --_contrast into the shared .btn hooks      *
+ * ------------------------------------------------------------------ */
+
+/* buttonClassic: filled brand button with a subtle shadow (former solid) */
+.quiqqer-socialshare__link--buttonClassic {
+    --qui-btn-color: var(--_contrast);
+    --qui-btn-color--hover: var(--_contrast);
+    --qui-btn-bgColor: var(--_brand);
+    --qui-btn-bgColor--hover: color-mix(in srgb, var(--_brand), black 15%);
+    --qui-btn-borderColor: var(--_brand);
+    --qui-btn-borderColor--hover: color-mix(in srgb, var(--_brand), black 15%);
+
+    box-shadow: 0 1px 3px rgba(255, 255, 255, 0.3) inset,
+                0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
-.quiqqer-socialshare-icon-spacing span:first-child {
-    margin-right: 10px;
+/* button: filled brand button, without shadow (former flat) */
+.quiqqer-socialshare__link--button {
+    --qui-btn-color: var(--_contrast);
+    --qui-btn-color--hover: var(--_contrast);
+    --qui-btn-bgColor: var(--_brand);
+    --qui-btn-bgColor--hover: color-mix(in srgb, var(--_brand), black 15%);
+    --qui-btn-borderColor: var(--_brand);
+    --qui-btn-borderColor--hover: color-mix(in srgb, var(--_brand), black 15%);
 }
 
-.quiqqer-socialshare-count {
-    /*border: 1px solid #eee;*/
-    border-radius: 0.3em;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
-    line-height: 1.7em;
+/* buttonOutline: brand border and text, transparent fill; on hover it fills
+   with the full brand colour and the text flips to the readable contrast */
+.quiqqer-socialshare__link--buttonOutline {
+    --qui-btn-color: var(--_brand);
+    --qui-btn-color--hover: var(--_contrast);
+    --qui-btn-bgColor: transparent;
+    --qui-btn-bgColor--hover: var(--_brand);
+    --qui-btn-borderColor: var(--_brand);
+    --qui-btn-borderColor--hover: var(--_brand);
+}
+
+/* linkColored: transparent, logo and label in the brand colour; on hover a
+   light transparent brand tint appears behind it (former tinted) */
+.quiqqer-socialshare__link--linkColored {
+    --padding-inline: 0.5em;
+    --qui-btn-color: var(--_brand);
+    --qui-btn-color--hover: color-mix(in srgb, var(--_brand), black 15%);
+    --qui-btn-bgColor: transparent;
+    --qui-btn-bgColor--hover: color-mix(in srgb, var(--_brand) 10%, transparent);
+    --qui-btn-borderColor: transparent;
+    --qui-btn-borderColor--hover: transparent;
+}
+
+/* linkMuted: monochrome, ignores the brand colour and inherits the
+   surrounding text colour (slightly faded); on hover it goes to the full
+   inherited colour with a light currentColor tint behind it (former neutral) */
+.quiqqer-socialshare__link--linkMuted {
+    --padding-inline: 0.5em;
+    --qui-btn-color: var(
+        --quiqqer-socialshare-link-muted-color,
+        color-mix(in srgb, currentColor 70%, transparent)
+    );
+    --qui-btn-color--hover: var(--quiqqer-socialshare-link-muted-color-hover, currentColor);
+    --qui-btn-bgColor: transparent;
+    --qui-btn-bgColor--hover: color-mix(in srgb, currentColor 10%, transparent);
+    --qui-btn-borderColor: transparent;
+    --qui-btn-borderColor--hover: transparent;
+}
+
+/* custom: no built-in colours, project styles everything through --qui-btn-* */
+.quiqqer-socialshare__link--custom {
+    --qui-btn-bgColor: transparent;
+    --qui-btn-borderColor: transparent;
+}
+
+/* iconOnly: keep a comfortable, square tap target (WCAG target size).
+   .btn already centers the icon. */
+.quiqqer-socialshare__link--iconOnly {
+    --padding-inline: 0;
+    min-width: var(--quiqqer-socialshare-icon-only-size, 40px);
+    min-height: var(--quiqqer-socialshare-icon-only-size, 40px);
+}
+
+/* ------------------------------------------------------------------ *
+ * Network brand registry (single source of truth)                    *
+ * --_brand:    background colour                                      *
+ * The text colour --_contrast defaults to #fff (base rule) and is not *
+ * overridden per network; override per network from :root via         *
+ *   --quiqqer-socialshare-<network>-brand / -contrast                 *
+ * ------------------------------------------------------------------ */
+
+.quiqqer-socialshare__link--baidu { --_brand: var(--quiqqer-socialshare-baidu-brand, #62bbe7); }
+.quiqqer-socialshare__link--blogger { --_brand: var(--quiqqer-socialshare-blogger-brand, #e53f0b); }
+.quiqqer-socialshare__link--buffer { --_brand: var(--quiqqer-socialshare-buffer-brand, #aa2d2d); }
+.quiqqer-socialshare__link--delicious { --_brand: var(--quiqqer-socialshare-delicious-brand, #9a6651); }
+.quiqqer-socialshare__link--digg { --_brand: var(--quiqqer-socialshare-digg-brand, #005be2); }
+.quiqqer-socialshare__link--evernote { --_brand: var(--quiqqer-socialshare-evernote-brand, #53c416); }
+.quiqqer-socialshare__link--facebook { --_brand: var(--quiqqer-socialshare-facebook-brand, #3b5998); }
+.quiqqer-socialshare__link--instapaper { --_brand: var(--quiqqer-socialshare-instapaper-brand, #4c72e5); }
+.quiqqer-socialshare__link--line { --_brand: var(--quiqqer-socialshare-line-brand, #00b900); }
+.quiqqer-socialshare__link--linkedin { --_brand: var(--quiqqer-socialshare-linkedin-brand, #007bb6); }
+.quiqqer-socialshare__link--liveinternet { --_brand: var(--quiqqer-socialshare-liveinternet-brand, #ffb200); }
+.quiqqer-socialshare__link--livejournal { --_brand: var(--quiqqer-socialshare-livejournal-brand, #0de7ff); }
+.quiqqer-socialshare__link--mail { --_brand: var(--quiqqer-socialshare-mail-brand, #3490f3); }
+.quiqqer-socialshare__link--moimir { --_brand: var(--quiqqer-socialshare-moimir-brand, #005be2); }
+.quiqqer-socialshare__link--odnoklassniki { --_brand: var(--quiqqer-socialshare-odnoklassniki-brand, #f58220); }
+.quiqqer-socialshare__link--pinterest { --_brand: var(--quiqqer-socialshare-pinterest-brand, #cb2027); }
+.quiqqer-socialshare__link--pocket { --_brand: var(--quiqqer-socialshare-pocket-brand, #ef4056); }
+.quiqqer-socialshare__link--readability { --_brand: var(--quiqqer-socialshare-readability-brand, #cc2281); }
+.quiqqer-socialshare__link--reddit { --_brand: var(--quiqqer-socialshare-reddit-brand, #ff4500); }
+.quiqqer-socialshare__link--renren { --_brand: var(--quiqqer-socialshare-renren-brand, #024795); }
+.quiqqer-socialshare__link--stumbleupon { --_brand: var(--quiqqer-socialshare-stumbleupon-brand, #eb471d); }
+.quiqqer-socialshare__link--surfingbird { --_brand: var(--quiqqer-socialshare-surfingbird-brand, #31bcff); }
+.quiqqer-socialshare__link--telegram { --_brand: var(--quiqqer-socialshare-telegram-brand, #0088cc); }
+.quiqqer-socialshare__link--tumblr { --_brand: var(--quiqqer-socialshare-tumblr-brand, #35465c); }
+.quiqqer-socialshare__link--twitter { --_brand: var(--quiqqer-socialshare-twitter-brand, #000); }
+.quiqqer-socialshare__link--vk { --_brand: var(--quiqqer-socialshare-vk-brand, #5181b8); }
+.quiqqer-socialshare__link--viber { --_brand: var(--quiqqer-socialshare-viber-brand, #539dec); }
+.quiqqer-socialshare__link--weibo { --_brand: var(--quiqqer-socialshare-weibo-brand, #e31837); }
+.quiqqer-socialshare__link--whatsapp { --_brand: var(--quiqqer-socialshare-whatsapp-brand, #29a628); }
+.quiqqer-socialshare__link--wordpress { --_brand: var(--quiqqer-socialshare-wordpress-brand, #21759b); }
+.quiqqer-socialshare__link--xing { --_brand: var(--quiqqer-socialshare-xing-brand, #006567); }
+
+/* ------------------------------------------------------------------ *
+ * Counter (still todo, kept for later)                               *
+ * ------------------------------------------------------------------ */
+
+.quiqqer-socialshare__count {
     position: relative;
-
-    border: 1px solid transparent;
     display: inline-block;
-    padding: 4px 10px;
     margin: 0.3em 0.5em;
+    padding: 4px 10px;
+    border: 1px solid transparent;
+    border-radius: var(--qui-btn-borderRadius, 0.25rem);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+    line-height: 1.7em;
     text-decoration: none;
-}
-
-.quiqqer-socialshare-count:after {
-    border-color: #fff transparent;
-    border-style: solid;
-    border-width: 6px 7px 0;
-    content: "";
-    display: block;
-    left: -11px;
-    position: absolute;
-    top: 0.92em;
-    transform: rotate(90deg);
-    width: 0;
-}
-
-.quiqqer-socialshare-count:before {
-    border-color: #dcdcdc transparent;
-    border-style: solid;
-    border-width: 8px 8px 0;
-    content: "";
-    display: block;
-    left: -13px;
-    position: absolute;
-    top: 0.9em;
-    transform: rotate(90deg);
-    width: 0;
-}
-
-/*Digg*/
-.quiqqer-socialshare-digg .quiqqer-socialshare-wrapper {
-    background: #005be2;
-    border: 1px solid #0057d7;
-}
-
-.quiqqer-socialshare-digg:hover .quiqqer-socialshare-wrapper {
-    background: #0099e5;
-}
-
-/*Surfingbird*/
-.quiqqer-socialshare-surfingbird .quiqqer-socialshare-wrapper {
-    background: #31bcff;
-    border: 1px solid #31bcff;
-}
-
-.quiqqer-socialshare-surfingbird:hover .quiqqer-socialshare-wrapper {
-    background: #2c9bd0;
-}
-
-/*VK*/
-.quiqqer-socialshare-vk .quiqqer-socialshare-wrapper {
-    background: #5181b8;
-    border: 1px solid #5181b8;
-}
-
-.quiqqer-socialshare-vk:hover .quiqqer-socialshare-wrapper {
-    background: #335174;
-}
-
-/*RenRen*/
-.quiqqer-socialshare-renren .quiqqer-socialshare-wrapper {
-    background: #024795;
-    border: 1px solid #024795;
-}
-
-.quiqqer-socialshare-renren:hover .quiqqer-socialshare-wrapper {
-    background: #02336c;
-}
-
-/*Readability*/
-.quiqqer-socialshare-readability .quiqqer-socialshare-wrapper {
-    background: #cc2281;
-    border: 1px solid #cc2281;
-}
-
-.quiqqer-socialshare-readability:hover .quiqqer-socialshare-wrapper {
-    background: #93195d;
-}
-
-/*Pocket*/
-.quiqqer-socialshare-pocket .quiqqer-socialshare-wrapper {
-    background: #ef4056;
-    border: 1px solid #bb2f41;
-}
-
-.quiqqer-socialshare-pocket:hover .quiqqer-socialshare-wrapper {
-    background: #ba3041;
-}
-
-/*Odnoklassniki*/
-.quiqqer-socialshare-odnoklassniki .quiqqer-socialshare-wrapper {
-    background: #f58220;
-    border: 1px solid #f58220;
-}
-
-.quiqqer-socialshare-odnoklassniki:hover .quiqqer-socialshare-wrapper {
-    background: #bd5c0a;
-}
-
-/*MoiMir*/
-.quiqqer-socialshare-moimir .quiqqer-socialshare-wrapper {
-    background: #005be2;
-    border: 1px solid #0057d7;
-}
-
-.quiqqer-socialshare-moimir:hover .quiqqer-socialshare-wrapper {
-    background: #0099e5;
-}
-
-/*Livejournal*/
-.quiqqer-socialshare-livejournal .quiqqer-socialshare-wrapper {
-    background: #0de7ff;
-    border: 1px solid #0de7ff;
-}
-
-.quiqqer-socialshare-livejournal:hover .quiqqer-socialshare-wrapper {
-    background: #10c2d5;
-}
-
-/*Liveinternet*/
-.quiqqer-socialshare-liveinternet .quiqqer-socialshare-wrapper {
-    background: #ffb200;
-    border: 1px solid #ffb200;
-}
-
-.quiqqer-socialshare-liveinternet:hover .quiqqer-socialshare-wrapper {
-    background: #a37305;
-}
-
-/*Baidu*/
-.quiqqer-socialshare-baidu .quiqqer-socialshare-wrapper {
-    background: #62bbe7;
-    border: 1px solid #0057d7;
-}
-
-.quiqqer-socialshare-baidu:hover .quiqqer-socialshare-wrapper {
-    background: #0099e5;
-}
-
-/*Blogger*/
-.quiqqer-socialshare-blogger .quiqqer-socialshare-wrapper {
-    background: #e53f0b;
-    border: 1px solid #e04716;
-}
-
-.quiqqer-socialshare-blogger:hover .quiqqer-socialshare-wrapper {
-    background: #FF5722;
-}
-
-/*Buffer*/
-.quiqqer-socialshare-buffer .quiqqer-socialshare-wrapper {
-    background: #aa2d2d;
-    border: 1px solid #b80d0d;
-}
-
-.quiqqer-socialshare-buffer:hover .quiqqer-socialshare-wrapper {
-    background: #cd1212;
-}
-
-/*Evernote*/
-.quiqqer-socialshare-evernote .quiqqer-socialshare-wrapper {
-    background: #53c416;
-    border: 1px solid #69f130;
-}
-
-.quiqqer-socialshare-evernote:hover .quiqqer-socialshare-wrapper {
-    background: #318212;
-}
-
-/*Instapaper*/
-.quiqqer-socialshare-instapaper .quiqqer-socialshare-wrapper {
-    background: #4c72e5;
-    border: 1px solid #1b4bdc;
-}
-
-.quiqqer-socialshare-instapaper:hover .quiqqer-socialshare-wrapper {
-    background: #4c72e5;
-}
-
-/*StumbleUpon*/
-.quiqqer-socialshare-stumbleupon .quiqqer-socialshare-wrapper {
-    background: #EB471D;
-    border: 1px solid #c62b04;
-}
-
-.quiqqer-socialshare-stumbleupon:hover .quiqqer-socialshare-wrapper {
-    background: #EB471D;
-}
-
-/*Viber*/
-.quiqqer-socialshare-viber .quiqqer-socialshare-wrapper {
-    background: #539dec;
-    border: 1px solid #1473d9;
-}
-
-.quiqqer-socialshare-viber:hover .quiqqer-socialshare-wrapper {
-    background: #539dec;
-}
-
-/*Deliciuos*/
-.quiqqer-socialshare-delicious .quiqqer-socialshare-wrapper {
-    background: #9a6651;
-    border: 1px solid #994d2e;
-}
-
-.quiqqer-socialshare-delicious:hover .quiqqer-socialshare-wrapper {
-    background: #9a6651;
-}
-
-/*Line*/
-.quiqqer-socialshare-line .quiqqer-socialshare-wrapper {
-    background: #00b900;
-    border: 1px solid #0a680a;
-}
-
-.quiqqer-socialshare-line:hover .quiqqer-socialshare-wrapper {
-    background: #00b900;
-}
-
-/*Tumblr*/
-.quiqqer-socialshare-tumblr .quiqqer-socialshare-wrapper {
-    background: #35465c;
-    border: 1px solid #304054;
-}
-
-.quiqqer-socialshare-tumblr:hover .quiqqer-socialshare-wrapper {
-    background: #2e3e51;
-}
-
-/*WorldPress*/
-.quiqqer-socialshare-worldpress .quiqqer-socialshare-wrapper {
-    background: #21759b;
-    border: 1px solid #1f6f93;
-}
-
-.quiqqer-socialshare-worldpress:hover .quiqqer-socialshare-wrapper {
-    background: #1c6788;
-}
-
-/*Weibo*/
-.quiqqer-socialshare-weibo .quiqqer-socialshare-wrapper {
-    background: #e31837;
-    border: 1px solid #d81734;
-}
-
-.quiqqer-socialshare-weibo:hover .quiqqer-socialshare-wrapper {
-    background: #b01830;
-}
-
-/*Reddit*/
-.quiqqer-socialshare-reddit .quiqqer-socialshare-wrapper {
-    background: #ff4500;
-    border: 1px solid #f04100;
-}
-
-.quiqqer-socialshare-reddit:hover .quiqqer-socialshare-wrapper {
-    background: #e83e00;
-}
-
-/*Telegram*/
-.quiqqer-socialshare-telegram .quiqqer-socialshare-wrapper {
-    background: #0088cc;
-    border: 1px solid #0081c1;
-}
-
-.quiqqer-socialshare-telegram:hover .quiqqer-socialshare-wrapper {
-    background: #006ca9;
-}
-
-/* Facebook */
-.quiqqer-socialshare-facebook .quiqqer-socialshare-wrapper {
-    background: #3b5998;
-    border: 1px solid #344e86;
-}
-
-.quiqqer-socialshare-facebook:hover .quiqqer-socialshare-wrapper {
-    background: #2d4373;
-}
-
-/* Pinterest */
-.quiqqer-socialshare-pinterest .quiqqer-socialshare-wrapper {
-    background: #cb2027;
-    border: 1px solid #b51d23;
-}
-
-.quiqqer-socialshare-pinterest:hover .quiqqer-socialshare-wrapper {
-    background: #9f191f;
-}
-
-/* X (formerly Tweeter) */
-.quiqqer-socialshare-twitter .quiqqer-socialshare-wrapper {
-    --bgColor: #000;
-    --borderColor: #0a0a0a;
-
-    background: #000;
-    border: 1px solid #050505;
-}
-
-.quiqqer-socialshare-twitter:hover .quiqqer-socialshare-wrapper {
-    background: #333;
-}
-
-/* Whatsapp */
-.quiqqer-socialshare-whatsapp .quiqqer-socialshare-wrapper {
-    background: #29a628;
-    border: 1px solid #29a628;
-}
-
-.quiqqer-socialshare-whatsapp:hover .quiqqer-socialshare-wrapper {
-    background: #1f7d1e;
-}
-
-/* Mail */
-.quiqqer-socialshare-mail .quiqqer-socialshare-wrapper {
-    background: #3490f3;
-    border: 1px solid #3490f3;
-}
-
-.quiqqer-socialshare-mail:hover .quiqqer-socialshare-wrapper {
-    background: #0e76e6;
-}
-
-/* LinkedIn */
-.quiqqer-socialshare-linkedin .quiqqer-socialshare-wrapper {
-    background: #007bb6;
-    border: 1px solid #006a9d;
-}
-
-.quiqqer-socialshare-linkedin:hover .quiqqer-socialshare-wrapper {
-    background: #005983;
-}
-
-/* Xing */
-.quiqqer-socialshare-xing .quiqqer-socialshare-wrapper {
-    background: #006567;
-    border: 1px solid #004b58;
-}
-
-.quiqqer-socialshare-xing:hover .quiqqer-socialshare-wrapper {
-    background: #005456;
 }

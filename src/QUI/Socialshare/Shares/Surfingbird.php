@@ -34,7 +34,7 @@ class Surfingbird extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-surfingbird';
+        return 'quiqqer-socialshare__link--surfingbird';
     }
 
     /**
@@ -45,6 +45,16 @@ class Surfingbird extends Socialshare
     public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-surfingbird');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-surfingbird');
     }
 
     /**

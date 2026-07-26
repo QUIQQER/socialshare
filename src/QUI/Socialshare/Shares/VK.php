@@ -34,7 +34,7 @@ class VK extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-vk';
+        return 'quiqqer-socialshare__link--vk';
     }
 
     /**
@@ -45,6 +45,16 @@ class VK extends Socialshare
     public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-vk');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-vk');
     }
 
     /**

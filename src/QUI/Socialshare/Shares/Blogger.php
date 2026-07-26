@@ -33,7 +33,7 @@ class Blogger extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-blogger';
+        return 'quiqqer-socialshare__link--blogger';
     }
 
     /**
@@ -44,6 +44,16 @@ class Blogger extends Socialshare
     public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-blogger');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-blogger');
     }
 
     /**

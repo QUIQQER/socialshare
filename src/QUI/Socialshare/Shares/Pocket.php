@@ -34,7 +34,7 @@ class Pocket extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-pocket';
+        return 'quiqqer-socialshare__link--pocket';
     }
 
     /**
@@ -45,6 +45,16 @@ class Pocket extends Socialshare
     public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-pocket');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-pocket');
     }
 
     /**

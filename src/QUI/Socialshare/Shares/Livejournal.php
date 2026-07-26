@@ -34,7 +34,7 @@ class Livejournal extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-livejournal';
+        return 'quiqqer-socialshare__link--livejournal';
     }
 
     /**
@@ -45,6 +45,16 @@ class Livejournal extends Socialshare
     public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-livejournal');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-livejournal');
     }
 
     /**

@@ -34,7 +34,7 @@ class RenRen extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-renren';
+        return 'quiqqer-socialshare__link--renren';
     }
 
     /**
@@ -45,6 +45,16 @@ class RenRen extends Socialshare
     public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-renren');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-renren');
     }
 
     /**

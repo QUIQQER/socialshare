@@ -33,7 +33,7 @@ class Weibo extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-weibo';
+        return 'quiqqer-socialshare__link--weibo';
     }
 
     /**
@@ -44,6 +44,16 @@ class Weibo extends Socialshare
     public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-weibo');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-weibo');
     }
 
     /**

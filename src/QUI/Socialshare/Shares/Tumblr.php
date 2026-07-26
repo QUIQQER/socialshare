@@ -34,7 +34,7 @@ class Tumblr extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-tumblr';
+        return 'quiqqer-socialshare__link--tumblr';
     }
 
     /**
@@ -45,6 +45,16 @@ class Tumblr extends Socialshare
     public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-tumblr');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-tumblr');
     }
 
     /**

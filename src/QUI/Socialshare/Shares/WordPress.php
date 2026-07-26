@@ -33,7 +33,7 @@ class WordPress extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-wordpress';
+        return 'quiqqer-socialshare__link--wordpress';
     }
 
     /**
@@ -44,6 +44,16 @@ class WordPress extends Socialshare
     public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-wordpress');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-wordpress');
     }
 
     /**

@@ -32,7 +32,7 @@ class Whatsapp extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-whatsapp';
+        return 'quiqqer-socialshare__link--whatsapp';
     }
 
     /**
@@ -43,6 +43,16 @@ class Whatsapp extends Socialshare
     public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-whatsapp');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-whatsapp');
     }
 
     /**

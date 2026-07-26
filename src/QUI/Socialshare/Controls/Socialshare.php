@@ -26,7 +26,7 @@ class Socialshare extends Control
     {
         $this->setAttributes([
             'class' => 'quiqqer-socialshare',
-            'theme' => 'classic',
+            'theme' => 'button-classic',
             'showLabel' => true,
             'showIcon' => true,
             'showCount' => false

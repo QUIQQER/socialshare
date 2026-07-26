@@ -31,6 +31,11 @@ class TestSocialshare extends Socialshare
         return 'Test label';
     }
 
+    public function getShareTitle(): string
+    {
+        return 'Auf Test teilen';
+    }
+
     public function getName(): string
     {
         return 'test-share';

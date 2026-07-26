@@ -34,7 +34,7 @@ class Reddit extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-reddit';
+        return 'quiqqer-socialshare__link--reddit';
     }
 
     /**
@@ -45,6 +45,16 @@ class Reddit extends Socialshare
     public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-reddit');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-reddit');
     }
 
     /**

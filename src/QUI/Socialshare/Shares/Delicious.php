@@ -33,7 +33,7 @@ class Delicious extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-delicious';
+        return 'quiqqer-socialshare__link--delicious';
     }
 
     /**
@@ -44,6 +44,16 @@ class Delicious extends Socialshare
     public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-delicious');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-delicious');
     }
 
     /**

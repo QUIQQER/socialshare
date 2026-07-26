@@ -34,7 +34,7 @@ class Buffer extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-buffer';
+        return 'quiqqer-socialshare__link--buffer';
     }
 
     /**
@@ -45,6 +45,16 @@ class Buffer extends Socialshare
     public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-buffer');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-buffer');
     }
 
     /**

@@ -35,7 +35,7 @@ class Xing extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-xing';
+        return 'quiqqer-socialshare__link--xing';
     }
 
     /**
@@ -46,6 +46,16 @@ class Xing extends Socialshare
     public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-xing');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-xing');
     }
 
     /**

@@ -35,7 +35,7 @@ class LinkedIn extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-linkedin';
+        return 'quiqqer-socialshare__link--linkedin';
     }
 
     /**
@@ -46,6 +46,16 @@ class LinkedIn extends Socialshare
     public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-linkedin');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-linkedin');
     }
 
     /**

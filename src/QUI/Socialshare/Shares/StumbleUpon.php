@@ -34,7 +34,7 @@ class StumbleUpon extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-StumbleUpon';
+        return 'quiqqer-socialshare__link--stumbleupon';
     }
 
     /**
@@ -45,6 +45,16 @@ class StumbleUpon extends Socialshare
     public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-StumbleUpon');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-StumbleUpon');
     }
 
     /**

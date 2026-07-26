@@ -55,7 +55,7 @@ class Manager extends QUI\Control
     // default settings
     /** @var array<string, mixed> */
     private static array $settings = [
-        'theme' => 'classic',
+        'theme' => 'button-classic',
         'showLabel' => true,
         'showIcon' => true,
         'showCount' => false,

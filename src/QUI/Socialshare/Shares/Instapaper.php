@@ -33,7 +33,7 @@ class Instapaper extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-instapaper';
+        return 'quiqqer-socialshare__link--instapaper';
     }
 
     /**
@@ -44,6 +44,16 @@ class Instapaper extends Socialshare
     public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-instapaper');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-instapaper');
     }
 
     /**

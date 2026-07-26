@@ -33,12 +33,22 @@ class Mail extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-mail';
+        return 'quiqqer-socialshare__link--mail';
     }
 
     public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-mail');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-mail');
     }
 
     public function getLogo(): string
