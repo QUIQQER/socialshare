@@ -22,7 +22,7 @@ class WordPress extends Socialshare
      */
     public function __construct(array $params = [])
     {
-        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/WordPress');
+        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Share');
         parent::__construct($params);
     }
 
@@ -33,7 +33,7 @@ class WordPress extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-wordpress';
+        return 'quiqqer-socialshare__link--wordpress';
     }
 
     /**
@@ -49,11 +49,21 @@ class WordPress extends Socialshare
     /**
      * (non-PHPdoc)
      *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-wordpress');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
      * @see Socialshare::getLogo
      */
     public function getLogo(): string
     {
-        return 'fa fa-wordpress';
+        return 'fa-brands fa-wordpress';
     }
 
     /**
@@ -69,25 +79,5 @@ class WordPress extends Socialshare
         $baseurl = $baseurl . $_SERVER['REQUEST_URI'];
 
         return 'https://wordpress.com/wp-admin/press-this.php?u=' . $baseurl;
-    }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCount
-     */
-    public function getCount(): int
-    {
-        return 0;
-    }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCountUrl
-     */
-    public function getCountUrl(): string
-    {
-        return '';
     }
 }

@@ -3,22 +3,24 @@
     "type": "quiqqer-module",
     "description": "This plugin allows you to simply place social share buttons on your website.",
     "license": "GPL-3.0-or-later",
+    "homepage": "https://www.quiqqer.com",
     "authors": [
         {
-            "name": "Michael Danielczok",
-            "email": "michael@pcsg.de",
-            "homepage": "https://www.pcsg.de",
-            "role": "Developer"
+            "name": "PCSG - Computer & Internet Service OHG",
+            "email": "info@quiqqer.com",
+            "homepage": "https://www.quiqqer.com",
+            "role": "Maintainer"
         }
     ],
     "support": {
         "email": "support@pcsg.de",
-        "url": "https://www.pcsg.de"
+        "issues": "https://dev.quiqqer.com/quiqqer/socialshare/-/work_items",
+        "source": "https://dev.quiqqer.com/quiqqer/socialshare"
     },
     "require": {
         "php": "^8.2",
         "quiqqer/core": "^2",
-        "quiqqer/fontawesome": "^5|^6",
+        "quiqqer/fontawesome": "^6",
         "quiqqer/meta": "^3"
     },
     "autoload": {

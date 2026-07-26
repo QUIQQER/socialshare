@@ -33,7 +33,7 @@ class Mail extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-mail';
+        return 'quiqqer-socialshare__link--mail';
     }
 
     public function getLabel(): string
@@ -41,9 +41,19 @@ class Mail extends Socialshare
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-mail');
     }
 
+    /**
+     * (non-PHPdoc)
+     *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-mail');
+    }
+
     public function getLogo(): string
     {
-        return 'fa fa-at';
+        return 'fa-solid fa-at';
     }
 
     /**
@@ -58,25 +68,5 @@ class Mail extends Socialshare
         $siteTitle = $Site->getAttribute('title');
 
         return 'mailto:' . '?subject=' . $siteTitle . '&body=' . $baseUrl;
-    }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCount
-     */
-    public function getCount(): int
-    {
-        return 0;
-    }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCountUrl
-     */
-    public function getCountUrl(): string
-    {
-        return '';
     }
 }

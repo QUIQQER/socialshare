@@ -17,9 +17,8 @@
 
         <support>
             <email><![CDATA[support@pcsg.de]]></email>
-            <forum><![CDATA[https://community.quiqqer.com]]></forum>
             <source><![CDATA[https://dev.quiqqer.com/quiqqer/socialshare]]></source>
-            <issues><![CDATA[https://dev.quiqqer.com/quiqqer/socialshare/issues]]></issues>
+            <issues><![CDATA[https://dev.quiqqer.com/quiqqer/socialshare/-/work_items]]></issues>
         </support>
 
         <copyright>

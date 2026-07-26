@@ -8,25 +8,26 @@
 
                     <conf name="Facebook">
                         <type><![CDATA[bool]]></type>
-                        <default>1</default>
+                        <defaultvalue>1</defaultvalue>
                     </conf>
                     <conf name="Twitter">
                         <type><![CDATA[bool]]></type>
-                        <default>1</default>
+                        <defaultvalue>1</defaultvalue>
                     </conf>
                     <conf name="Whatsapp">
                         <type><![CDATA[bool]]></type>
-                        <default>1</default>
+                        <defaultvalue>1</defaultvalue>
                     </conf>
                     <conf name="Pinterest">
                         <type><![CDATA[bool]]></type>
                     </conf>
                     <conf name="Mail">
                         <type><![CDATA[bool]]></type>
-                        <default>1</default>
+                        <defaultvalue>1</defaultvalue>
                     </conf>
                     <conf name="LinkedIn">
                         <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
                     </conf>
                     <conf name="Xing">
                         <type><![CDATA[bool]]></type>
@@ -110,12 +111,11 @@
                     </conf>
                     <conf name="general.showLabel">
                         <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
                     </conf>
                     <conf name="general.showIcon">
                         <type><![CDATA[bool]]></type>
-                    </conf>
-                    <conf name="general.showCount">
-                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
                     </conf>
                     <conf name="general.siteName">
                         <type><![CDATA[string]]></type>
@@ -128,7 +128,7 @@
 
                     <conf name="twitter.card">
                         <type><![CDATA[string]]></type>
-                        <default>summary_large_image</default>
+                        <defaultvalue>summary_large_image</defaultvalue>
                     </conf>
                     <conf name="twitter.site">
                         <type><![CDATA[string]]></type>
@@ -146,7 +146,7 @@
                             <locale group="quiqqer/socialshare"
                                     var="socialshare.settings.category"/>
                         </text>
-                        <icon>fa fa-facebook</icon>
+                        <icon>fa-solid fa-share-nodes</icon>
 
                         <settings title="socialshare.settings" name="socialshare.settings.general">
                             <title>
@@ -180,12 +180,6 @@
                                             var="socialshare.settings.general.showIcon"/>
                                 </text>
                             </input>
-                            <input conf="socialshare.settings.general.showCount" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.general.showCount"/>
-                                </text>
-                            </input>
                             <input conf="socialshare.settings.general.siteName">
                                 <text>
                                     <locale group="quiqqer/socialshare"
@@ -198,21 +192,25 @@
                                     <locale group="quiqqer/socialshare"
                                             var="socialshare.settings.general.theme"/>
                                 </text>
-                                <option value="classic">
+                                <option value="button-classic">
                                     <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.general.theme.classic"/>
+                                            var="socialshare.settings.general.theme.button-classic"/>
                                 </option>
-                                <option value="flat">
+                                <option value="button">
                                     <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.general.theme.flat"/>
+                                            var="socialshare.settings.general.theme.button"/>
                                 </option>
-                                <option value="minima">
+                                <option value="button-outline">
                                     <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.general.theme.minima"/>
+                                            var="socialshare.settings.general.theme.button-outline"/>
                                 </option>
-                                <option value="dark">
+                                <option value="link">
                                     <locale group="quiqqer/socialshare"
-                                            var="socialshare.settings.general.theme.dark"/>
+                                            var="socialshare.settings.general.theme.link"/>
+                                </option>
+                                <option value="link-muted">
+                                    <locale group="quiqqer/socialshare"
+                                            var="socialshare.settings.general.theme.link-muted"/>
                                 </option>
                             </select>
                         </settings>

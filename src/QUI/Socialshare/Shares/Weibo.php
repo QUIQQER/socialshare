@@ -22,7 +22,7 @@ class Weibo extends Socialshare
      */
     public function __construct(array $params = [])
     {
-        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Weibo');
+        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Share');
         parent::__construct($params);
     }
 
@@ -33,7 +33,7 @@ class Weibo extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-weibo';
+        return 'quiqqer-socialshare__link--weibo';
     }
 
     /**
@@ -49,11 +49,21 @@ class Weibo extends Socialshare
     /**
      * (non-PHPdoc)
      *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-weibo');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
      * @see Socialshare::getLogo
      */
     public function getLogo(): string
     {
-        return 'fa fa-weibo';
+        return 'fa-brands fa-weibo';
     }
 
     /**
@@ -69,25 +79,5 @@ class Weibo extends Socialshare
         $baseurl = $baseurl . $_SERVER['REQUEST_URI'];
 
         return 'http://service.weibo.com/share/share.php?url=' . $baseurl;
-    }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCount
-     */
-    public function getCount(): int
-    {
-        return 0;
-    }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCountUrl
-     */
-    public function getCountUrl(): string
-    {
-        return '';
     }
 }

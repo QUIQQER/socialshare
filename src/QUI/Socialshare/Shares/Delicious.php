@@ -22,7 +22,7 @@ class Delicious extends Socialshare
      */
     public function __construct(array $params = [])
     {
-        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Delicious');
+        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Share');
         parent::__construct($params);
     }
 
@@ -33,7 +33,7 @@ class Delicious extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-delicious';
+        return 'quiqqer-socialshare__link--delicious';
     }
 
     /**
@@ -49,11 +49,21 @@ class Delicious extends Socialshare
     /**
      * (non-PHPdoc)
      *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-delicious');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
      * @see Socialshare::getLogo
      */
     public function getLogo(): string
     {
-        return 'fa fa-share-square-o';
+        return 'fa-brands fa-delicious';
     }
 
     /**
@@ -69,50 +79,5 @@ class Delicious extends Socialshare
         $baseurl = $baseurl . $_SERVER['REQUEST_URI'];
 
         return 'https://del.icio.us/save?url=' . $baseurl;
-    }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCount
-     */
-    public function getCount(): int
-    {
-        $cacheName = 'quiqqer/socialshare/' . md5($this->getCountUrl());
-
-        try {
-            return QUI\Cache\Manager::get($cacheName);
-        } catch (QUI\Cache\Exception) {
-        }
-
-        $countUrl = QUI\Utils\Request\Url::get($this->getCountUrl());
-        $data = $this->decodeCountResponse($countUrl);
-
-        if (!isset($data['data'])) {
-            return 0;
-        }
-
-        if (!isset($data['data'][0])) {
-            return 0;
-        }
-
-        if (!isset($data['data'][0]['total_count'])) {
-            return 0;
-        }
-
-        $result = number_format($data['data'][0]['total_count']);
-        QUI\Cache\Manager::set($cacheName, $result, 1800);
-
-        return (int)$result;
-    }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCountUrl
-     */
-    public function getCountUrl(): string
-    {
-        return '';
     }
 }

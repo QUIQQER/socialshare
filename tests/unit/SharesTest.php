@@ -34,6 +34,40 @@ class SharesTest extends TestCase
         self::assertNotSame('', $Share->getLogo());
         self::assertNotSame('', $Share->getLabel());
         self::assertNotSame('', $Share->getShareUrl());
-        self::assertIsString($Share->getCountUrl());
+    }
+
+    /**
+     * @param class-string<Socialshare> $class
+     */
+    #[DataProvider('providerClasses')]
+    public function testLogoUsesFontAwesome6Style(string $class): void
+    {
+        $Share = new $class();
+
+        self::assertMatchesRegularExpression(
+            '#^fa-(brands|solid|regular) fa-[a-z0-9-]+$#',
+            $Share->getLogo()
+        );
+    }
+
+    /**
+     * Every network that opens a popup must use the single shared JavaScript
+     * control; per-network control modules were consolidated into Share.js.
+     *
+     * @param class-string<Socialshare> $class
+     */
+    #[DataProvider('providerClasses')]
+    public function testPopupControlUsesSharedModule(string $class): void
+    {
+        $Share = new $class();
+        $control = $Share->getAttribute('data-qui');
+
+        if ($control === false || $control === null) {
+            self::assertTrue(true, 'network without a JavaScript control (e.g. mail)');
+
+            return;
+        }
+
+        self::assertSame('package/quiqqer/socialshare/bin/controls/Share', $control);
     }
 }

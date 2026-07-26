@@ -40,7 +40,6 @@ class SocialshareList extends QUI\Control
             'theme' => $this->getAttribute('socialshare.brick.settings.theme'),
             'showLabel' => $this->getAttribute('socialshare.brick.settings.showLabel'),
             'showIcon' => $this->getAttribute('socialshare.brick.settings.showIcon'),
-            'showCount' => $this->getAttribute('socialshare.brick.settings.showCount'),
         ]);
 
         $result = $Control->create();

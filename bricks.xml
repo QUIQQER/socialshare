@@ -43,21 +43,25 @@
                         <locale group="quiqqer/socialshare"
                                 var="socialshare.settings.general.theme.default"/>
                     </option>
-                    <option value="classic">
+                    <option value="button-classic">
                         <locale group="quiqqer/socialshare"
-                                var="socialshare.settings.general.theme.classic"/>
+                                var="socialshare.settings.general.theme.button-classic"/>
                     </option>
-                    <option value="flat">
+                    <option value="button">
                         <locale group="quiqqer/socialshare"
-                                var="socialshare.settings.general.theme.flat"/>
+                                var="socialshare.settings.general.theme.button"/>
                     </option>
-                    <option value="minima">
+                    <option value="button-outline">
                         <locale group="quiqqer/socialshare"
-                                var="socialshare.settings.general.theme.minima"/>
+                                var="socialshare.settings.general.theme.button-outline"/>
                     </option>
-                    <option value="dark">
+                    <option value="link">
                         <locale group="quiqqer/socialshare"
-                                var="socialshare.settings.general.theme.dark"/>
+                                var="socialshare.settings.general.theme.link"/>
+                    </option>
+                    <option value="link-muted">
+                        <locale group="quiqqer/socialshare"
+                                var="socialshare.settings.general.theme.link-muted"/>
                     </option>
                 </setting>
 

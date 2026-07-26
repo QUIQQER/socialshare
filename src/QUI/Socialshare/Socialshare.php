@@ -19,38 +19,53 @@ use QUI\Exception;
 abstract class Socialshare extends Control
 {
     /**
+     * Map of theme names to their BEM modifier suffix. The suffix is appended
+     * to the "quiqqer-socialshare__link--" element base; note the "link" theme
+     * maps to the "linkColored" modifier because "quiqqer-socialshare__link" is
+     * already the element class on every button. The released legacy theme
+     * names (classic, flat, minima, dark) are kept as aliases so existing
+     * project and brick configurations keep working.
+     *
+     * @var array<string, string>
+     */
+    private const THEMES = [
+        'button-classic' => 'buttonClassic',
+        'button' => 'button',
+        'button-outline' => 'buttonOutline',
+        'link' => 'linkColored',
+        'link-muted' => 'linkMuted',
+        'custom' => 'custom',
+        // legacy aliases (released names)
+        'classic' => 'buttonClassic',
+        'flat' => 'button',
+        'minima' => 'linkColored',
+        'dark' => 'linkMuted'
+    ];
+
+    /**
+     * Default theme name, used when no theme is set or an unknown value is
+     * given.
+     */
+    private const DEFAULT_THEME = 'button-classic';
+
+    /**
      * Socialshare constructor.
      * @param array<string, mixed> $params
      */
     public function __construct(array $params = [])
     {
         $this->setAttributes([
-            'theme' => 'classic',
+            'theme' => self::DEFAULT_THEME,
             'showLabel' => true,
             'showIcon' => true,
-            'showCount' => true,
             'nodeName' => 'a',
             'target' => '_blank',
             'Site' => false,
-            'class' => 'quiqqer-socialshare-link'
+            'class' => 'quiqqer-socialshare__link'
         ]);
 
         parent::__construct($params);
     }
-
-    /**
-     * ??????
-     *
-     * @return string
-     */
-    abstract public function getCountUrl(): string;
-
-    /**
-     * Return the counter
-     *
-     * @return int
-     */
-    abstract public function getCount(): int;
 
     /**
      * Define the share url
@@ -74,6 +89,16 @@ abstract class Socialshare extends Control
     abstract public function getLabel(): string;
 
     /**
+     * Descriptive name of the share action, naming the network. Unlike the
+     * visible label (which is just the action, e.g. "Teilen"), this reads
+     * "Auf Facebook teilen". Used as the title tooltip when the label is
+     * visible and as the aria-label when only the icon is shown.
+     *
+     * @return string
+     */
+    abstract public function getShareTitle(): string;
+
+    /**
      * Set the name (facebook, Twitter, etc.)
      *
      * @return string
@@ -87,52 +112,48 @@ abstract class Socialshare extends Control
      */
     public function getBody(): string
     {
-        $body = '<span class="quiqqer-socialshare-wrapper">';
+        $this->addCSSFile(dirname(__FILE__) . '/Controls/Socialshare.css');
+
+        $body = '';
 
         if ($this->getAttribute('showIcon')) {
             $body .= $this->createLogo();
         }
+
+        // The network is named via getShareTitle() ("Auf Facebook teilen"),
+        // because the visible label is only the action ("Teilen") and the icon
+        // is decorative. When the label is visible it becomes the title tooltip;
+        // in icon-only mode it becomes the aria-label (the accessible name).
         if ($this->getAttribute('showLabel')) {
-            if ($this->getAttribute('showIcon')) {
-                $this->addCSSClass('quiqqer-socialshare-icon-spacing');
-            }
             $body .= $this->createLabel();
+            $this->setAttribute('title', $this->getShareTitle());
+        } else {
+            $this->setAttribute('aria-label', $this->getShareTitle());
+            $this->addCSSClass('quiqqer-socialshare__link--iconOnly');
         }
 
         $this->setAttribute('href', $this->getShareUrl());
         $this->setAttribute('target', '_blank');
+        $this->setAttribute('rel', 'noopener noreferrer');
 
+        // ride the template's shared .btn component (layout, radius, hover swap)
+        $this->addCSSClass('btn');
         $this->addCSSClass($this->getName());
-
-
-        switch ($this->getAttribute('theme')) {
-            case 'flat':
-                $this->addCSSClass('quiqqer-socialshare-flat');
-                $this->addCSSFile(dirname(__FILE__) . '/Themes/Flat.css');
-                break;
-            case 'minima':
-                $this->addCSSClass('quiqqer-socialshare-minima');
-                $this->addCSSFile(dirname(__FILE__) . '/Themes/Minima.css');
-                break;
-            case 'dark':
-                $this->addCSSClass('quiqqer-socialshare-dark');
-                $this->addCSSFile(dirname(__FILE__) . '/Themes/Dark.css');
-                break;
-            case 'classic':
-            default:
-                $this->addCSSClass('quiqqer-socialshare-classic');
-                $this->addCSSFile(dirname(__FILE__) . '/Themes/Classic.css');
-                break;
-        }
-
-        $body .= '</span>';
-
-        // todo counter implementieren
-        /*if ($this->getAttribute('showCount')) {
-            $body .= $this->createCount();
-        }*/
+        $this->addCSSClass('quiqqer-socialshare__link--' . $this->getThemeClass());
 
         return $body;
+    }
+
+    /**
+     * Return the BEM modifier suffix for the current theme (without the
+     * "quiqqer-socialshare__link--" prefix). Falls back to the default theme
+     * for unknown or legacy values.
+     */
+    private function getThemeClass(): string
+    {
+        $theme = strtolower((string)$this->getAttribute('theme'));
+
+        return self::THEMES[$theme] ?? self::THEMES[self::DEFAULT_THEME];
     }
 
     /**
@@ -142,7 +163,7 @@ abstract class Socialshare extends Control
      */
     public function createLogo(): string
     {
-        return '<span class="quiqqer-socialshare-logo ' . $this->getLogo() . '"></span>';
+        return '<span class="quiqqer-socialshare__logo ' . $this->getLogo() . '" aria-hidden="true"></span>';
     }
 
     /**
@@ -152,42 +173,40 @@ abstract class Socialshare extends Control
      */
     public function createLabel(): string
     {
-        return '<span class="quiqqer-socialshare-label">' . $this->getLabel() . '</span>';
+        return '<span class="quiqqer-socialshare__label">' . $this->getLabel() . '</span>';
     }
 
     /**
-     * Create the counter
+     * The share link is rendered directly as this control's <a> node (an
+     * unusual case for a QUIControl), so it needs a couple of attributes the
+     * default whitelist does not allow: aria-label for the icon-only
+     * accessible name and rel for the target="_blank" link. Kept local to this
+     * control so every other QUIControl keeps the default whitelist.
      *
-     * @return string
+     * @param string $attribute
      */
-    public function createCount(): string
+    protected function isAllowedAttribute($attribute): bool
     {
-        if ($this->getCount() > 0) {
-            return '<span class="quiqqer-socialshare-count"><span class="fa fa-spinner fa-spin"></span></span>';
+        if ($attribute === 'aria-label' || $attribute === 'rel') {
+            return true;
         }
 
-        return '';
+        return parent::isAllowedAttribute($attribute);
     }
 
     /**
-     * Switch between available themes for the social share
-     * Default is 'classic'
+     * Switch between available themes for the social share.
+     * Accepts the current names (button-classic, button, button-outline, link,
+     * link-muted, custom) as well as the released legacy names (classic, flat,
+     * minima, dark). Default is 'button-classic'.
      *
      * @param string $theme
      */
     public function setTheme(string $theme): void
     {
-        switch ($theme) {
-            case 'flat':
-            case 'minima':
-            case 'dark':
-            case 'custom':
-            case 'classic':
-                $this->setAttribute('theme', $theme);
-                break;
-            default:
-                $this->setAttribute('theme', 'classic');
-        }
+        $theme = strtolower($theme);
+
+        $this->setAttribute('theme', isset(self::THEMES[$theme]) ? $theme : self::DEFAULT_THEME);
     }
 
     /**
@@ -230,16 +249,6 @@ abstract class Socialshare extends Control
         $this->setAttribute('showIcon', false);
     }
 
-    public function showCount(): void
-    {
-        $this->setAttribute('showCount', true);
-    }
-
-    public function hideCount(): void
-    {
-        $this->setAttribute('showCount', false);
-    }
-
     /**
      * Return the site object
      *
@@ -261,21 +270,5 @@ abstract class Socialshare extends Control
         }
 
         return $Site;
-    }
-
-    /**
-     * Decode a social count API response
-     *
-     * @return array<string|int, mixed>
-     */
-    protected function decodeCountResponse(string | bool $response): array
-    {
-        if (!is_string($response)) {
-            return [];
-        }
-
-        $data = json_decode($response, true);
-
-        return is_array($data) ? $data : [];
     }
 }

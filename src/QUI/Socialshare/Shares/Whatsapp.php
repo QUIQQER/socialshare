@@ -32,7 +32,7 @@ class Whatsapp extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-whatsapp';
+        return 'quiqqer-socialshare__link--whatsapp';
     }
 
     /**
@@ -48,11 +48,21 @@ class Whatsapp extends Socialshare
     /**
      * (non-PHPdoc)
      *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-whatsapp');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
      * @see Socialshare::getLogo
      */
     public function getLogo(): string
     {
-        return 'fa fa-whatsapp';
+        return 'fa-brands fa-whatsapp';
     }
 
     /**
@@ -68,25 +78,5 @@ class Whatsapp extends Socialshare
         $baseurl = $baseurl . $_SERVER['REQUEST_URI'];
 
         return 'whatsapp://send?text=' . $baseurl;
-    }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCount
-     */
-    public function getCount(): int
-    {
-        return 0;
-    }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCountUrl
-     */
-    public function getCountUrl(): string
-    {
-        return '';
     }
 }
