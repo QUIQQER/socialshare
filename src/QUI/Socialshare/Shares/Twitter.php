@@ -24,7 +24,7 @@ class Twitter extends Socialshare
      */
     public function __construct(array $params = [])
     {
-        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Twitter');
+        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Share');
         parent::__construct($params);
     }
 
@@ -35,7 +35,7 @@ class Twitter extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-twitter quiqqer-socialshare-x';
+        return 'quiqqer-socialshare__link--twitter quiqqer-socialshare__link--x';
     }
 
     /**
@@ -46,6 +46,16 @@ class Twitter extends Socialshare
     public function getLabel(): string
     {
         return QUI::getLocale()->get('quiqqer/socialshare', 'label-tweeter');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-tweeter');
     }
 
     /**
@@ -70,27 +80,5 @@ class Twitter extends Socialshare
         $baseurl = $baseurl . $_SERVER['REQUEST_URI'];
 
         return 'https://twitter.com/intent/tweet?text=' . $baseurl;
-    }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCount
-     * (no Twitter count)
-     */
-    public function getCount(): int
-    {
-        return 0;
-    }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCountUrl
-     * (no Twitter count)
-     */
-    public function getCountUrl(): string
-    {
-        return '';
     }
 }

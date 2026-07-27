@@ -1,48 +1,76 @@
 ![QUIQQER Social Share](bin/images/Readme.jpg)
 
-# Social Share
+QUIQQER Social Share
+========
 
-This plugin allows you to simply place social share buttons on your website.
-It supports the most popular social networks like Facebook, Twitter, Pinterest, etc.
+Social Share allows you to simply place social share buttons on your website.
 
-## Features
+Visitors can share a page with one click on the most popular social networks.
+Facebook, X, WhatsApp, LinkedIn and Mail are enabled by default, further
+networks such as Pinterest, Xing, Reddit or Telegram can be activated per
+project.
 
-- Different themes
-- Icons and label may be disabled
-- Extends the site head area (Open Graph and Schema.org)
-- Additional site settings (title, author, site type, etc.)
+In addition, the package extends the head area of your pages with Open Graph,
+Schema.org and X / Twitter Card information, so shared links are displayed with
+the correct title, description and image.
 
 
-## Requirements
+Package name:
 
-- PHP 8.2 or newer
-- QUIQQER 2.x
+    quiqqer/socialshare
 
-## Installation
 
-```shell
-composer require quiqqer/socialshare
-```
+Features
+--------
 
-## Development
+- Share buttons for the most popular social networks
+- Networks can be activated and deactivated for each project individually
+- Different themes (classic, flat, minima, dark)
+- Icons and labels may be disabled
+- Extends the site head area (Open Graph, Schema.org and X / Twitter Cards)
+- Additional site settings (title, description, author, site type, image)
 
-```shell
-composer dev:init
-composer test
-```
 
-## Contributing
+Installation
+------------
+
+The package name: quiqqer/socialshare
+
+
+Configuration
+-------------
+
+The available networks and the appearance are configured for each project
+under *Project settings -> Social Share*.
+
+The information used for sharing a single page can be adjusted in the site
+settings under *Meta settings -> Social Share*.
+
+
+Usage
+-----
+
+Place the *Social Share* brick in a template area, or render the control
+directly in a template:
+
+    {control control="\QUI\Socialshare\Controls\Socialshare"}
+
+
+Contribution
+----------
 
 - Project: https://dev.quiqqer.com/quiqqer/socialshare
-- Issue Tracker: https://dev.quiqqer.com/quiqqer/socialshare/issues
+- Issue Tracker: https://dev.quiqqer.com/quiqqer/socialshare/-/work_items
 - Source Code: https://dev.quiqqer.com/quiqqer/socialshare
 
 
-## Support
+Support
+-------
 
-If you have found a bug or want to make improvements,
-then you can write an e-mail to support@pcsg.de.
+If you have found an error or want improvements, please send an e-mail to support@pcsg.de.
 
-## License
 
-GNU General Public License v3.0 or later (`GPL-3.0-or-later`).
+License
+-------
+
+GPL-3.0-or-later

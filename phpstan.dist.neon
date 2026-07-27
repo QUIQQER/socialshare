@@ -8,7 +8,6 @@ parameters:
     level: 8
     paths:
         - src
-        - ajax
     bootstrapFiles:
         - tests/phpstan-bootstrap.php
     tipsOfTheDay: false

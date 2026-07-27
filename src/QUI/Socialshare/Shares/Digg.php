@@ -22,7 +22,7 @@ class Digg extends Socialshare
      */
     public function __construct(array $params = [])
     {
-        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Digg');
+        $this->setAttribute('data-qui', 'package/quiqqer/socialshare/bin/controls/Share');
         parent::__construct($params);
     }
 
@@ -33,7 +33,7 @@ class Digg extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-digg';
+        return 'quiqqer-socialshare__link--digg';
     }
 
     /**
@@ -49,11 +49,21 @@ class Digg extends Socialshare
     /**
      * (non-PHPdoc)
      *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-digg');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
      * @see Socialshare::getLogo
      */
     public function getLogo(): string
     {
-        return 'fa fa-digg';
+        return 'fa-brands fa-digg';
     }
 
     /**
@@ -69,25 +79,5 @@ class Digg extends Socialshare
         $baseurl = $baseurl . $_SERVER['REQUEST_URI'];
 
         return 'http://digg.com/submit?url=' . $baseurl;
-    }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCount
-     */
-    public function getCount(): int
-    {
-        return 0;
-    }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @see Socialshare::getCountUrl
-     */
-    public function getCountUrl(): string
-    {
-        return '';
     }
 }

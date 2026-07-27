@@ -55,10 +55,9 @@ class Manager extends QUI\Control
     // default settings
     /** @var array<string, mixed> */
     private static array $settings = [
-        'theme' => 'classic',
+        'theme' => 'button-classic',
         'showLabel' => true,
         'showIcon' => true,
-        'showCount' => false,
         'nodeName' => 'a'
     ];
 
@@ -164,7 +163,6 @@ class Manager extends QUI\Control
         self::$settings['theme'] = $Project->getConfig('socialshare.settings.general.theme');
         self::$settings['showLabel'] = $Project->getConfig('socialshare.settings.general.showLabel');
         self::$settings['showIcon'] = $Project->getConfig('socialshare.settings.general.showIcon');
-        self::$settings['showCount'] = $Project->getConfig('socialshare.settings.general.showCount');
 
         // todo - at the moment brick / control settings can't override general setting, if "false"
         // overwrite the general setting...

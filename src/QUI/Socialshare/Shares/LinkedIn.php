@@ -35,7 +35,7 @@ class LinkedIn extends Socialshare
      */
     public function getName(): string
     {
-        return 'quiqqer-socialshare-linkedin';
+        return 'quiqqer-socialshare__link--linkedin';
     }
 
     /**
@@ -51,11 +51,21 @@ class LinkedIn extends Socialshare
     /**
      * (non-PHPdoc)
      *
+     * @see Socialshare::getShareTitle
+     */
+    public function getShareTitle(): string
+    {
+        return QUI::getLocale()->get('quiqqer/socialshare', 'share-title-linkedin');
+    }
+
+    /**
+     * (non-PHPdoc)
+     *
      * @see Socialshare::getLogo
      */
     public function getLogo(): string
     {
-        return 'fa fa-linkedin';
+        return 'fa-brands fa-linkedin';
     }
 
     /**
@@ -76,61 +86,5 @@ class LinkedIn extends Socialshare
         $summary = 'summary=' . urlencode($Site->getAttribute('desc'));
 
         return 'https://www.linkedin.com/shareArticle?mini=true&url=' . $baseurl . '&' . $title . '&' . $summary;
-    }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @throws Exception
-     * @see Socialshare::getCount
-     */
-    public function getCount(): int
-    {
-        $cacheName = 'quiqqer/socialshare/' . md5($this->getCountUrl());
-
-        try {
-            return QUI\Cache\Manager::get($cacheName);
-        } catch (QUI\Cache\Exception) {
-        }
-
-        $countUrl = QUI\Utils\Request\Url::get($this->getCountUrl());
-        $data = $this->decodeCountResponse($countUrl);
-
-        if (!isset($data['data'])) {
-            return 0;
-        }
-
-        if (!isset($data['data'][0])) {
-            return 0;
-        }
-
-        if (!isset($data['data'][0]['total_count'])) {
-            return 0;
-        }
-
-        $result = number_format($data['data'][0]['total_count']);
-        QUI\Cache\Manager::set($cacheName, $result, 1800);
-
-        return (int)$result;
-    }
-
-    /**
-     * (non-PHPdoc)
-     *
-     * @throws Exception
-     * @see Socialshare::getCountUrl
-     */
-    public function getCountUrl(): string
-    {
-        $Site = $this->getSite();
-        $Request = QUI::getRequest();
-
-        // @todo warten auf URL Site Objekt, damit kein Request mehr verwendet wird
-        // hier ist sonst noch ein fehler mit den vhosts
-        $baseurl = $Request->getScheme() . '://' . $Request->getHttpHost();
-        $baseurl = $baseurl . $Site->getUrlRewritten();
-        $encoded = urlencode($baseurl);
-
-        return 'https://www.linkedin.com/countserv/count/share?url=' . $encoded;
     }
 }
