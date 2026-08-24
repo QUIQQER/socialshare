@@ -8,6 +8,22 @@
             <locale group="quiqqer/socialshare" var="package.description"/>
         </description>
 
+        <capabilities schemaVersion="1">
+            <capability id="communication.social-sharing">
+                <title>Social sharing</title>
+                <description>
+                    Provides configurable page-sharing controls for selected social networks and e-mail with network-specific share links, accessible labels, popup handling, and customizable button themes.
+                </description>
+            </capability>
+
+            <capability id="seo.social-preview-metadata">
+                <title>Social preview metadata</title>
+                <description>
+                    Publishes configurable per-page Open Graph, X / Twitter Card, and Schema.org metadata for accurate social link titles, descriptions, content types, authors, locales, URLs, and images.
+                </description>
+            </capability>
+        </capabilities>
+
         <image src='URL_OPT_DIR/quiqqer/socialshare/bin/images/Logo.jpg'/>
 
         <preview>
