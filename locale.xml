@@ -6,148 +6,322 @@
         <locale name="package.title">
             <de><![CDATA[Social share]]></de>
             <en><![CDATA[Social share]]></en>
+            <es><![CDATA[Compartir en redes sociales]]></es>
+            <pt><![CDATA[Partilha nas redes sociais]]></pt>
+            <fr><![CDATA[Partage sur les réseaux sociaux]]></fr>
+            <it><![CDATA[Condivisione sui social]]></it>
+            <pl><![CDATA[Udostępnianie w mediach społecznościowych]]></pl>
         </locale>
 
         <locale name="package.description">
-            <de>
-                <![CDATA[Die Erweiterung ermöglicht das Hinzufügen von verschiedenen social share Buttons (u.a. Facebook, X, WhatsApp, LinkedIn).]]></de>
+            <de><![CDATA[Die Erweiterung ermöglicht das Hinzufügen verschiedener Social-Share-Buttons, unter anderem für Facebook, X, WhatsApp und LinkedIn.]]></de>
             <en>
                 <![CDATA[This plugin allows you to simply place social share buttons on your website (Facebook, X, WhatsApp, LinkedIn, etc).]]></en>
+            <es><![CDATA[Esta extensión permite añadir botones para compartir en redes sociales, como Facebook, X, WhatsApp y LinkedIn.]]></es>
+            <pt><![CDATA[Esta extensão permite adicionar botões de partilha nas redes sociais, como Facebook, X, WhatsApp e LinkedIn.]]></pt>
+            <fr><![CDATA[Cette extension permet d’ajouter des boutons de partage sur les réseaux sociaux, notamment Facebook, X, WhatsApp et LinkedIn.]]></fr>
+            <it><![CDATA[Questa estensione permette di aggiungere pulsanti di condivisione sui social, tra cui Facebook, X, WhatsApp e LinkedIn.]]></it>
+            <pl><![CDATA[Rozszerzenie umożliwia dodawanie przycisków udostępniania w mediach społecznościowych, takich jak Facebook, X, WhatsApp i LinkedIn.]]></pl>
         </locale>
         <locale name="admin.types.socialshare">
             <de><![CDATA[Social Share]]></de>
             <en><![CDATA[Social Share]]></en>
+            <es><![CDATA[Compartir en redes sociales]]></es>
+            <pt><![CDATA[Partilha nas redes sociais]]></pt>
+            <fr><![CDATA[Partage sur les réseaux sociaux]]></fr>
+            <it><![CDATA[Condivisione sui social]]></it>
+            <pl><![CDATA[Udostępnianie w mediach społecznościowych]]></pl>
         </locale>
 
         <locale name="admin.types.socialshare.desc">
             <de><![CDATA[Einstellungen für das Teilen dieser Seite in sozialen Netzwerken.]]></de>
             <en><![CDATA[Settings for sharing this page on social networks.]]></en>
+            <es><![CDATA[Configuración para compartir esta página en redes sociales.]]></es>
+            <pt><![CDATA[Definições para partilhar esta página nas redes sociais.]]></pt>
+            <fr><![CDATA[Paramètres de partage de cette page sur les réseaux sociaux.]]></fr>
+            <it><![CDATA[Impostazioni per condividere questa pagina sui social.]]></it>
+            <pl><![CDATA[Ustawienia udostępniania tej strony w mediach społecznościowych.]]></pl>
         </locale>
 
         <locale name="label-digg">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-surfingbird">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-vk">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-renren">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-readability">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-pocket">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-odnoklassniki">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-moimir">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-livejournal">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-liveinternet">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-line">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-delicious">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-viber">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-stumbleupon">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-evernote">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-instapaper">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-buffer">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-blogger">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-baidu">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-tumblr">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-wordpress">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-weibo">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-reddit">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-telegram">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-facebook">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-tweeter">
             <de><![CDATA[Posten]]></de>
             <en><![CDATA[Post]]></en>
+            <es><![CDATA[Publicar]]></es>
+            <pt><![CDATA[Publicar]]></pt>
+            <fr><![CDATA[Publier]]></fr>
+            <it><![CDATA[Pubblica]]></it>
+            <pl><![CDATA[Opublikuj]]></pl>
         </locale>
 
         <locale name="label-whatsapp">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-pinterest">
             <de><![CDATA[Pin it!]]></de>
             <en><![CDATA[Pin it!]]></en>
+            <es><![CDATA[Guardar]]></es>
+            <pt><![CDATA[Guardar]]></pt>
+            <fr><![CDATA[Enregistrer]]></fr>
+            <it><![CDATA[Salva]]></it>
+            <pl><![CDATA[Zapisz]]></pl>
         </locale>
         <locale name="label-mail">
             <de><![CDATA[Mailen]]></de>
             <en><![CDATA[Mail]]></en>
+            <es><![CDATA[Enviar por correo]]></es>
+            <pt><![CDATA[Enviar por e-mail]]></pt>
+            <fr><![CDATA[Envoyer par e-mail]]></fr>
+            <it><![CDATA[Invia per e-mail]]></it>
+            <pl><![CDATA[Wyślij e-mailem]]></pl>
         </locale>
         <locale name="label-linkedin">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
         <locale name="label-xing">
             <de><![CDATA[Teilen]]></de>
             <en><![CDATA[Share]]></en>
+            <es><![CDATA[Compartir]]></es>
+            <pt><![CDATA[Partilhar]]></pt>
+            <fr><![CDATA[Partager]]></fr>
+            <it><![CDATA[Condividi]]></it>
+            <pl><![CDATA[Udostępnij]]></pl>
         </locale>
 
 
@@ -156,185 +330,395 @@
         <locale name="share-title-baidu">
             <de><![CDATA[Auf Baidu teilen]]></de>
             <en><![CDATA[Share on Baidu]]></en>
+            <es><![CDATA[Compartir en Baidu]]></es>
+            <pt><![CDATA[Partilhar no Baidu]]></pt>
+            <fr><![CDATA[Partager sur Baidu]]></fr>
+            <it><![CDATA[Condividi su Baidu]]></it>
+            <pl><![CDATA[Udostępnij w serwisie Baidu]]></pl>
         </locale>
         <locale name="share-title-blogger">
             <de><![CDATA[Auf Blogger teilen]]></de>
             <en><![CDATA[Share on Blogger]]></en>
+            <es><![CDATA[Compartir en Blogger]]></es>
+            <pt><![CDATA[Partilhar no Blogger]]></pt>
+            <fr><![CDATA[Partager sur Blogger]]></fr>
+            <it><![CDATA[Condividi su Blogger]]></it>
+            <pl><![CDATA[Udostępnij w serwisie Blogger]]></pl>
         </locale>
         <locale name="share-title-buffer">
             <de><![CDATA[Mit Buffer teilen]]></de>
             <en><![CDATA[Share with Buffer]]></en>
+            <es><![CDATA[Compartir con Buffer]]></es>
+            <pt><![CDATA[Partilhar com o Buffer]]></pt>
+            <fr><![CDATA[Partager avec Buffer]]></fr>
+            <it><![CDATA[Condividi con Buffer]]></it>
+            <pl><![CDATA[Udostępnij za pomocą Buffer]]></pl>
         </locale>
         <locale name="share-title-delicious">
             <de><![CDATA[Auf Delicious teilen]]></de>
             <en><![CDATA[Share on Delicious]]></en>
+            <es><![CDATA[Compartir en Delicious]]></es>
+            <pt><![CDATA[Partilhar no Delicious]]></pt>
+            <fr><![CDATA[Partager sur Delicious]]></fr>
+            <it><![CDATA[Condividi su Delicious]]></it>
+            <pl><![CDATA[Udostępnij w serwisie Delicious]]></pl>
         </locale>
         <locale name="share-title-digg">
             <de><![CDATA[Auf Digg teilen]]></de>
             <en><![CDATA[Share on Digg]]></en>
+            <es><![CDATA[Compartir en Digg]]></es>
+            <pt><![CDATA[Partilhar no Digg]]></pt>
+            <fr><![CDATA[Partager sur Digg]]></fr>
+            <it><![CDATA[Condividi su Digg]]></it>
+            <pl><![CDATA[Udostępnij w serwisie Digg]]></pl>
         </locale>
         <locale name="share-title-evernote">
             <de><![CDATA[In Evernote speichern]]></de>
             <en><![CDATA[Save to Evernote]]></en>
+            <es><![CDATA[Guardar en Evernote]]></es>
+            <pt><![CDATA[Guardar no Evernote]]></pt>
+            <fr><![CDATA[Enregistrer sur Evernote]]></fr>
+            <it><![CDATA[Salva su Evernote]]></it>
+            <pl><![CDATA[Zapisz w serwisie Evernote]]></pl>
         </locale>
         <locale name="share-title-facebook">
             <de><![CDATA[Auf Facebook teilen]]></de>
             <en><![CDATA[Share on Facebook]]></en>
+            <es><![CDATA[Compartir en Facebook]]></es>
+            <pt><![CDATA[Partilhar no Facebook]]></pt>
+            <fr><![CDATA[Partager sur Facebook]]></fr>
+            <it><![CDATA[Condividi su Facebook]]></it>
+            <pl><![CDATA[Udostępnij w serwisie Facebook]]></pl>
         </locale>
         <locale name="share-title-instapaper">
             <de><![CDATA[In Instapaper speichern]]></de>
             <en><![CDATA[Save to Instapaper]]></en>
+            <es><![CDATA[Guardar en Instapaper]]></es>
+            <pt><![CDATA[Guardar no Instapaper]]></pt>
+            <fr><![CDATA[Enregistrer sur Instapaper]]></fr>
+            <it><![CDATA[Salva su Instapaper]]></it>
+            <pl><![CDATA[Zapisz w serwisie Instapaper]]></pl>
         </locale>
         <locale name="share-title-line">
             <de><![CDATA[Über LINE teilen]]></de>
             <en><![CDATA[Share via LINE]]></en>
+            <es><![CDATA[Compartir por LINE]]></es>
+            <pt><![CDATA[Partilhar através do LINE]]></pt>
+            <fr><![CDATA[Partager via LINE]]></fr>
+            <it><![CDATA[Condividi tramite LINE]]></it>
+            <pl><![CDATA[Udostępnij przez LINE]]></pl>
         </locale>
         <locale name="share-title-linkedin">
             <de><![CDATA[Auf LinkedIn teilen]]></de>
             <en><![CDATA[Share on LinkedIn]]></en>
+            <es><![CDATA[Compartir en LinkedIn]]></es>
+            <pt><![CDATA[Partilhar no LinkedIn]]></pt>
+            <fr><![CDATA[Partager sur LinkedIn]]></fr>
+            <it><![CDATA[Condividi su LinkedIn]]></it>
+            <pl><![CDATA[Udostępnij w serwisie LinkedIn]]></pl>
         </locale>
         <locale name="share-title-liveinternet">
             <de><![CDATA[Auf LiveInternet teilen]]></de>
             <en><![CDATA[Share on LiveInternet]]></en>
+            <es><![CDATA[Compartir en LiveInternet]]></es>
+            <pt><![CDATA[Partilhar no LiveInternet]]></pt>
+            <fr><![CDATA[Partager sur LiveInternet]]></fr>
+            <it><![CDATA[Condividi su LiveInternet]]></it>
+            <pl><![CDATA[Udostępnij w serwisie LiveInternet]]></pl>
         </locale>
         <locale name="share-title-livejournal">
             <de><![CDATA[Auf LiveJournal teilen]]></de>
             <en><![CDATA[Share on LiveJournal]]></en>
+            <es><![CDATA[Compartir en LiveJournal]]></es>
+            <pt><![CDATA[Partilhar no LiveJournal]]></pt>
+            <fr><![CDATA[Partager sur LiveJournal]]></fr>
+            <it><![CDATA[Condividi su LiveJournal]]></it>
+            <pl><![CDATA[Udostępnij w serwisie LiveJournal]]></pl>
         </locale>
         <locale name="share-title-mail">
             <de><![CDATA[Per E-Mail teilen]]></de>
             <en><![CDATA[Share via email]]></en>
+            <es><![CDATA[Compartir por correo electrónico]]></es>
+            <pt><![CDATA[Partilhar por e-mail]]></pt>
+            <fr><![CDATA[Partager par e-mail]]></fr>
+            <it><![CDATA[Condividi per e-mail]]></it>
+            <pl><![CDATA[Udostępnij e-mailem]]></pl>
         </locale>
         <locale name="share-title-moiMir">
             <de><![CDATA[Auf Moi Mir teilen]]></de>
             <en><![CDATA[Share on Moi Mir]]></en>
+            <es><![CDATA[Compartir en Moi Mir]]></es>
+            <pt><![CDATA[Partilhar no Moi Mir]]></pt>
+            <fr><![CDATA[Partager sur Moi Mir]]></fr>
+            <it><![CDATA[Condividi su Moi Mir]]></it>
+            <pl><![CDATA[Udostępnij w serwisie Moi Mir]]></pl>
         </locale>
         <locale name="share-title-odnoklassniki">
             <de><![CDATA[Auf Odnoklassniki teilen]]></de>
             <en><![CDATA[Share on Odnoklassniki]]></en>
+            <es><![CDATA[Compartir en Odnoklassniki]]></es>
+            <pt><![CDATA[Partilhar no Odnoklassniki]]></pt>
+            <fr><![CDATA[Partager sur Odnoklassniki]]></fr>
+            <it><![CDATA[Condividi su Odnoklassniki]]></it>
+            <pl><![CDATA[Udostępnij w serwisie Odnoklassniki]]></pl>
         </locale>
         <locale name="share-title-pinterest">
             <de><![CDATA[Auf Pinterest merken]]></de>
             <en><![CDATA[Save on Pinterest]]></en>
+            <es><![CDATA[Guardar en Pinterest]]></es>
+            <pt><![CDATA[Guardar no Pinterest]]></pt>
+            <fr><![CDATA[Enregistrer sur Pinterest]]></fr>
+            <it><![CDATA[Salva su Pinterest]]></it>
+            <pl><![CDATA[Zapisz w serwisie Pinterest]]></pl>
         </locale>
         <locale name="share-title-pocket">
             <de><![CDATA[In Pocket speichern]]></de>
             <en><![CDATA[Save to Pocket]]></en>
+            <es><![CDATA[Guardar en Pocket]]></es>
+            <pt><![CDATA[Guardar no Pocket]]></pt>
+            <fr><![CDATA[Enregistrer sur Pocket]]></fr>
+            <it><![CDATA[Salva su Pocket]]></it>
+            <pl><![CDATA[Zapisz w serwisie Pocket]]></pl>
         </locale>
         <locale name="share-title-readability">
             <de><![CDATA[Auf Readability teilen]]></de>
             <en><![CDATA[Share on Readability]]></en>
+            <es><![CDATA[Compartir en Readability]]></es>
+            <pt><![CDATA[Partilhar no Readability]]></pt>
+            <fr><![CDATA[Partager sur Readability]]></fr>
+            <it><![CDATA[Condividi su Readability]]></it>
+            <pl><![CDATA[Udostępnij w serwisie Readability]]></pl>
         </locale>
         <locale name="share-title-reddit">
             <de><![CDATA[Auf Reddit teilen]]></de>
             <en><![CDATA[Share on Reddit]]></en>
+            <es><![CDATA[Compartir en Reddit]]></es>
+            <pt><![CDATA[Partilhar no Reddit]]></pt>
+            <fr><![CDATA[Partager sur Reddit]]></fr>
+            <it><![CDATA[Condividi su Reddit]]></it>
+            <pl><![CDATA[Udostępnij w serwisie Reddit]]></pl>
         </locale>
         <locale name="share-title-renren">
             <de><![CDATA[Auf Renren teilen]]></de>
             <en><![CDATA[Share on Renren]]></en>
+            <es><![CDATA[Compartir en Renren]]></es>
+            <pt><![CDATA[Partilhar no Renren]]></pt>
+            <fr><![CDATA[Partager sur Renren]]></fr>
+            <it><![CDATA[Condividi su Renren]]></it>
+            <pl><![CDATA[Udostępnij w serwisie Renren]]></pl>
         </locale>
         <locale name="share-title-StumbleUpon">
             <de><![CDATA[Auf StumbleUpon teilen]]></de>
             <en><![CDATA[Share on StumbleUpon]]></en>
+            <es><![CDATA[Compartir en StumbleUpon]]></es>
+            <pt><![CDATA[Partilhar no StumbleUpon]]></pt>
+            <fr><![CDATA[Partager sur StumbleUpon]]></fr>
+            <it><![CDATA[Condividi su StumbleUpon]]></it>
+            <pl><![CDATA[Udostępnij w serwisie StumbleUpon]]></pl>
         </locale>
         <locale name="share-title-surfingbird">
             <de><![CDATA[Auf Surfingbird teilen]]></de>
             <en><![CDATA[Share on Surfingbird]]></en>
+            <es><![CDATA[Compartir en Surfingbird]]></es>
+            <pt><![CDATA[Partilhar no Surfingbird]]></pt>
+            <fr><![CDATA[Partager sur Surfingbird]]></fr>
+            <it><![CDATA[Condividi su Surfingbird]]></it>
+            <pl><![CDATA[Udostępnij w serwisie Surfingbird]]></pl>
         </locale>
         <locale name="share-title-telegram">
             <de><![CDATA[Über Telegram teilen]]></de>
             <en><![CDATA[Share via Telegram]]></en>
+            <es><![CDATA[Compartir por Telegram]]></es>
+            <pt><![CDATA[Partilhar através do Telegram]]></pt>
+            <fr><![CDATA[Partager via Telegram]]></fr>
+            <it><![CDATA[Condividi tramite Telegram]]></it>
+            <pl><![CDATA[Udostępnij przez Telegram]]></pl>
         </locale>
         <locale name="share-title-tumblr">
             <de><![CDATA[Auf Tumblr teilen]]></de>
             <en><![CDATA[Share on Tumblr]]></en>
+            <es><![CDATA[Compartir en Tumblr]]></es>
+            <pt><![CDATA[Partilhar no Tumblr]]></pt>
+            <fr><![CDATA[Partager sur Tumblr]]></fr>
+            <it><![CDATA[Condividi su Tumblr]]></it>
+            <pl><![CDATA[Udostępnij w serwisie Tumblr]]></pl>
         </locale>
         <locale name="share-title-tweeter">
             <de><![CDATA[Auf X posten]]></de>
             <en><![CDATA[Post on X]]></en>
+            <es><![CDATA[Publicar en X]]></es>
+            <pt><![CDATA[Publicar no X]]></pt>
+            <fr><![CDATA[Publier sur X]]></fr>
+            <it><![CDATA[Pubblica su X]]></it>
+            <pl><![CDATA[Opublikuj w serwisie X]]></pl>
         </locale>
         <locale name="share-title-vk">
             <de><![CDATA[Auf VK teilen]]></de>
             <en><![CDATA[Share on VK]]></en>
+            <es><![CDATA[Compartir en VK]]></es>
+            <pt><![CDATA[Partilhar no VK]]></pt>
+            <fr><![CDATA[Partager sur VK]]></fr>
+            <it><![CDATA[Condividi su VK]]></it>
+            <pl><![CDATA[Udostępnij w serwisie VK]]></pl>
         </locale>
         <locale name="share-title-viber">
             <de><![CDATA[Über Viber teilen]]></de>
             <en><![CDATA[Share via Viber]]></en>
+            <es><![CDATA[Compartir por Viber]]></es>
+            <pt><![CDATA[Partilhar através do Viber]]></pt>
+            <fr><![CDATA[Partager via Viber]]></fr>
+            <it><![CDATA[Condividi tramite Viber]]></it>
+            <pl><![CDATA[Udostępnij przez Viber]]></pl>
         </locale>
         <locale name="share-title-weibo">
             <de><![CDATA[Auf Weibo teilen]]></de>
             <en><![CDATA[Share on Weibo]]></en>
+            <es><![CDATA[Compartir en Weibo]]></es>
+            <pt><![CDATA[Partilhar no Weibo]]></pt>
+            <fr><![CDATA[Partager sur Weibo]]></fr>
+            <it><![CDATA[Condividi su Weibo]]></it>
+            <pl><![CDATA[Udostępnij w serwisie Weibo]]></pl>
         </locale>
         <locale name="share-title-whatsapp">
             <de><![CDATA[Über WhatsApp teilen]]></de>
             <en><![CDATA[Share via WhatsApp]]></en>
+            <es><![CDATA[Compartir por WhatsApp]]></es>
+            <pt><![CDATA[Partilhar através do WhatsApp]]></pt>
+            <fr><![CDATA[Partager via WhatsApp]]></fr>
+            <it><![CDATA[Condividi tramite WhatsApp]]></it>
+            <pl><![CDATA[Udostępnij przez WhatsApp]]></pl>
         </locale>
         <locale name="share-title-wordpress">
             <de><![CDATA[Auf WordPress teilen]]></de>
             <en><![CDATA[Share on WordPress]]></en>
+            <es><![CDATA[Compartir en WordPress]]></es>
+            <pt><![CDATA[Partilhar no WordPress]]></pt>
+            <fr><![CDATA[Partager sur WordPress]]></fr>
+            <it><![CDATA[Condividi su WordPress]]></it>
+            <pl><![CDATA[Udostępnij w serwisie WordPress]]></pl>
         </locale>
         <locale name="share-title-xing">
             <de><![CDATA[Auf XING teilen]]></de>
             <en><![CDATA[Share on XING]]></en>
+            <es><![CDATA[Compartir en XING]]></es>
+            <pt><![CDATA[Partilhar no XING]]></pt>
+            <fr><![CDATA[Partager sur XING]]></fr>
+            <it><![CDATA[Condividi su XING]]></it>
+            <pl><![CDATA[Udostępnij w serwisie XING]]></pl>
         </locale>
 
 
         <!-- page settings -->
 
         <locale name="quiqqer.socialshare.settings.title">
-            <de><![CDATA[Social Media Einstellungen - Metadaten]]></de>
+            <de><![CDATA[Social-Media-Einstellungen - Metadaten]]></de>
             <en><![CDATA[Social media settings - metadata]]></en>
+            <es><![CDATA[Configuración de redes sociales - Metadatos]]></es>
+            <pt><![CDATA[Definições das redes sociais - Metadados]]></pt>
+            <fr><![CDATA[Paramètres des réseaux sociaux - Métadonnées]]></fr>
+            <it><![CDATA[Impostazioni social - Metadati]]></it>
+            <pl><![CDATA[Ustawienia mediów społecznościowych - Metadane]]></pl>
         </locale>
 
         <locale name="quiqqer.socialshare.title.text">
             <de><![CDATA[Titel]]></de>
             <en><![CDATA[Title]]></en>
+            <es><![CDATA[Título]]></es>
+            <pt><![CDATA[Título]]></pt>
+            <fr><![CDATA[Titre]]></fr>
+            <it><![CDATA[Titolo]]></it>
+            <pl><![CDATA[Tytuł]]></pl>
         </locale>
 
         <locale name="quiqqer.socialshare.description.text">
             <de><![CDATA[Kurze Beschreibung]]></de>
             <en><![CDATA[Short description]]></en>
+            <es><![CDATA[Descripción breve]]></es>
+            <pt><![CDATA[Breve descrição]]></pt>
+            <fr><![CDATA[Description courte]]></fr>
+            <it><![CDATA[Breve descrizione]]></it>
+            <pl><![CDATA[Krótki opis]]></pl>
         </locale>
 
         <locale name="quiqqer.socialshare.type.text">
             <de><![CDATA[Seitentyp]]></de>
             <en><![CDATA[Site type]]></en>
+            <es><![CDATA[Tipo de página]]></es>
+            <pt><![CDATA[Tipo de página]]></pt>
+            <fr><![CDATA[Type de page]]></fr>
+            <it><![CDATA[Tipo di pagina]]></it>
+            <pl><![CDATA[Typ strony]]></pl>
         </locale>
 
         <locale name="quiqqer.socialshare.type.website">
             <de><![CDATA[Website]]></de>
             <en><![CDATA[Website]]></en>
+            <es><![CDATA[Sitio web]]></es>
+            <pt><![CDATA[Site]]></pt>
+            <fr><![CDATA[Site web]]></fr>
+            <it><![CDATA[Sito web]]></it>
+            <pl><![CDATA[Witryna internetowa]]></pl>
         </locale>
         <locale name="quiqqer.socialshare.type.article">
             <de><![CDATA[Artikel]]></de>
             <en><![CDATA[Article]]></en>
+            <es><![CDATA[Artículo]]></es>
+            <pt><![CDATA[Artigo]]></pt>
+            <fr><![CDATA[Article]]></fr>
+            <it><![CDATA[Articolo]]></it>
+            <pl><![CDATA[Artykuł]]></pl>
         </locale>
         <locale name="quiqqer.socialshare.type.movie">
             <de><![CDATA[Film]]></de>
             <en><![CDATA[Film]]></en>
+            <es><![CDATA[Película]]></es>
+            <pt><![CDATA[Filme]]></pt>
+            <fr><![CDATA[Film]]></fr>
+            <it><![CDATA[Film]]></it>
+            <pl><![CDATA[Film]]></pl>
         </locale>
         <locale name="quiqqer.socialshare.type.blog">
             <de><![CDATA[Blog]]></de>
             <en><![CDATA[Blog]]></en>
+            <es><![CDATA[Blog]]></es>
+            <pt><![CDATA[Blog]]></pt>
+            <fr><![CDATA[Blog]]></fr>
+            <it><![CDATA[Blog]]></it>
+            <pl><![CDATA[Blog]]></pl>
         </locale>
 
         <locale name="quiqqer.socialshare.url.text">
-            <de><![CDATA[Die komplette URL]]></de>
+            <de><![CDATA[Kanonische URL der Seite]]></de>
             <en><![CDATA[The canonical URL for the page]]></en>
+            <es><![CDATA[URL canónica de la página]]></es>
+            <pt><![CDATA[URL canónico da página]]></pt>
+            <fr><![CDATA[URL canonique de la page]]></fr>
+            <it><![CDATA[URL canonico della pagina]]></it>
+            <pl><![CDATA[Kanoniczny adres URL strony]]></pl>
         </locale>
 
         <locale name="quiqqer.socialshare.author.text">
             <de><![CDATA[Autor]]></de>
             <en><![CDATA[Author]]></en>
+            <es><![CDATA[Autor]]></es>
+            <pt><![CDATA[Autor]]></pt>
+            <fr><![CDATA[Auteur]]></fr>
+            <it><![CDATA[Autore]]></it>
+            <pl><![CDATA[Autor]]></pl>
         </locale>
 
         <locale name="quiqqer.socialshare.image.text">
-            <de><![CDATA[Seiten Bild]]></de>
+            <de><![CDATA[Seitenbild]]></de>
             <en><![CDATA[Site image]]></en>
+            <es><![CDATA[Imagen de la página]]></es>
+            <pt><![CDATA[Imagem da página]]></pt>
+            <fr><![CDATA[Image de la page]]></fr>
+            <it><![CDATA[Immagine della pagina]]></it>
+            <pl><![CDATA[Obraz strony]]></pl>
         </locale>
 
         <locale name="quiqqer.socialshare.image.description" html="true">
-            <de><![CDATA[<p>Vorschausbild beim Teilen in Social Media. Für Open Graph (Facebook, Twitter, etc.) wählen Sie ein Bild mit hoher Auflösung (mindestens 1200 x 630 Pixel).</p>
+            <de><![CDATA[<p>Vorschaubild beim Teilen in Social Media. Für Open Graph (Facebook, Twitter, etc.) wählen Sie ein Bild mit hoher Auflösung (mindestens 1200 x 630 Pixel).</p>
                          <p>Empfohlene Seitenverhältnisse: 1:1 (1200 x 1200 Pixel), 1.91:1 (1200 x 630 Pixel).</p>
                          <p>Mehr Informationen unter</p>
                          <p>https://developers.facebook.com/docs/sharing/best-practices/</p>]]></de>
@@ -342,200 +726,435 @@
                          <p>Recommended aspect ratios: 1:1 (1200 x 1200 pixels), 1.91:1 (1200 x 630 pixels).</p>
                          <p>More information is available at</p>
                          <p>https://developers.facebook.com/docs/sharing/best-practices/</p>]]></en>
+            <es><![CDATA[<p>Imagen de vista previa al compartir en redes sociales. Para Open Graph (Facebook, Twitter, etc.), selecciona una imagen de alta resolución (al menos 1200 x 630 píxeles).</p><p>Relaciones de aspecto recomendadas: 1:1 (1200 x 1200 píxeles), 1.91:1 (1200 x 630 píxeles).</p><p>Más información en</p><p>https://developers.facebook.com/docs/sharing/best-practices/</p>]]></es>
+            <pt><![CDATA[<p>Imagem de pré-visualização ao partilhar nas redes sociais. Para Open Graph (Facebook, Twitter, etc.), selecione uma imagem de alta resolução (pelo menos 1200 x 630 píxeis).</p><p>Proporções recomendadas: 1:1 (1200 x 1200 píxeis), 1.91:1 (1200 x 630 píxeis).</p><p>Mais informações em</p><p>https://developers.facebook.com/docs/sharing/best-practices/</p>]]></pt>
+            <fr><![CDATA[<p>Image d’aperçu lors du partage sur les réseaux sociaux. Pour Open Graph (Facebook, Twitter, etc.), sélectionnez une image en haute résolution (au moins 1200 x 630 pixels).</p><p>Formats recommandés : 1:1 (1200 x 1200 pixels), 1.91:1 (1200 x 630 pixels).</p><p>Pour en savoir plus</p><p>https://developers.facebook.com/docs/sharing/best-practices/</p>]]></fr>
+            <it><![CDATA[<p>Immagine di anteprima per la condivisione sui social. Per Open Graph (Facebook, Twitter, ecc.), seleziona un’immagine ad alta risoluzione (almeno 1200 x 630 pixel).</p><p>Proporzioni consigliate: 1:1 (1200 x 1200 pixel), 1.91:1 (1200 x 630 pixel).</p><p>Maggiori informazioni su</p><p>https://developers.facebook.com/docs/sharing/best-practices/</p>]]></it>
+            <pl><![CDATA[<p>Obraz podglądu wyświetlany podczas udostępniania w mediach społecznościowych. Dla Open Graph (Facebook, Twitter itp.) wybierz obraz o wysokiej rozdzielczości (co najmniej 1200 x 630 pikseli).</p><p>Zalecane proporcje: 1:1 (1200 x 1200 pikseli), 1.91:1 (1200 x 630 pikseli).</p><p>Więcej informacji:</p><p>https://developers.facebook.com/docs/sharing/best-practices/</p>]]></pl>
         </locale>
 
         <!-- settings.xml -->
         <locale name="socialshare.settings.category">
             <de><![CDATA[Social Share]]></de>
             <en><![CDATA[Social share]]></en>
+            <es><![CDATA[Compartir en redes sociales]]></es>
+            <pt><![CDATA[Partilha nas redes sociais]]></pt>
+            <fr><![CDATA[Partage sur les réseaux sociaux]]></fr>
+            <it><![CDATA[Condivisione sui social]]></it>
+            <pl><![CDATA[Udostępnianie w mediach społecznościowych]]></pl>
         </locale>
 
         <locale name="socialshare.settings.title">
             <de><![CDATA[Social Share anzeigen]]></de>
             <en><![CDATA[Social share display]]></en>
+            <es><![CDATA[Mostrar botones para compartir]]></es>
+            <pt><![CDATA[Mostrar botões de partilha]]></pt>
+            <fr><![CDATA[Afficher les boutons de partage]]></fr>
+            <it><![CDATA[Mostra i pulsanti di condivisione]]></it>
+            <pl><![CDATA[Wyświetlaj przyciski udostępniania]]></pl>
         </locale>
         <locale name="socialshare.settings.show.digg">
             <de><![CDATA[Digg]]></de>
             <en><![CDATA[Digg]]></en>
+            <es><![CDATA[Digg]]></es>
+            <pt><![CDATA[Digg]]></pt>
+            <fr><![CDATA[Digg]]></fr>
+            <it><![CDATA[Digg]]></it>
+            <pl><![CDATA[Digg]]></pl>
         </locale>
         <locale name="socialshare.settings.show.surfingbird">
             <de><![CDATA[Surfingbird]]></de>
             <en><![CDATA[Surfingbird]]></en>
+            <es><![CDATA[Surfingbird]]></es>
+            <pt><![CDATA[Surfingbird]]></pt>
+            <fr><![CDATA[Surfingbird]]></fr>
+            <it><![CDATA[Surfingbird]]></it>
+            <pl><![CDATA[Surfingbird]]></pl>
         </locale>
         <locale name="socialshare.settings.show.vk">
             <de><![CDATA[VK]]></de>
             <en><![CDATA[VK]]></en>
+            <es><![CDATA[VK]]></es>
+            <pt><![CDATA[VK]]></pt>
+            <fr><![CDATA[VK]]></fr>
+            <it><![CDATA[VK]]></it>
+            <pl><![CDATA[VK]]></pl>
         </locale>
         <locale name="socialshare.settings.show.renren">
             <de><![CDATA[RenRen]]></de>
             <en><![CDATA[RenRen]]></en>
+            <es><![CDATA[RenRen]]></es>
+            <pt><![CDATA[RenRen]]></pt>
+            <fr><![CDATA[RenRen]]></fr>
+            <it><![CDATA[RenRen]]></it>
+            <pl><![CDATA[RenRen]]></pl>
         </locale>
         <locale name="socialshare.settings.show.readability">
             <de><![CDATA[Readability]]></de>
             <en><![CDATA[Readability]]></en>
+            <es><![CDATA[Readability]]></es>
+            <pt><![CDATA[Readability]]></pt>
+            <fr><![CDATA[Readability]]></fr>
+            <it><![CDATA[Readability]]></it>
+            <pl><![CDATA[Readability]]></pl>
         </locale>
         <locale name="socialshare.settings.show.pocket">
             <de><![CDATA[Pocket]]></de>
             <en><![CDATA[Pocket]]></en>
+            <es><![CDATA[Pocket]]></es>
+            <pt><![CDATA[Pocket]]></pt>
+            <fr><![CDATA[Pocket]]></fr>
+            <it><![CDATA[Pocket]]></it>
+            <pl><![CDATA[Pocket]]></pl>
         </locale>
         <locale name="socialshare.settings.show.odnoklassniki">
             <de><![CDATA[Odnoklassniki]]></de>
             <en><![CDATA[Odnoklassniki]]></en>
+            <es><![CDATA[Odnoklassniki]]></es>
+            <pt><![CDATA[Odnoklassniki]]></pt>
+            <fr><![CDATA[Odnoklassniki]]></fr>
+            <it><![CDATA[Odnoklassniki]]></it>
+            <pl><![CDATA[Odnoklassniki]]></pl>
         </locale>
         <locale name="socialshare.settings.show.moimir">
             <de><![CDATA[MoiMir]]></de>
             <en><![CDATA[MoiMir]]></en>
+            <es><![CDATA[MoiMir]]></es>
+            <pt><![CDATA[MoiMir]]></pt>
+            <fr><![CDATA[MoiMir]]></fr>
+            <it><![CDATA[MoiMir]]></it>
+            <pl><![CDATA[MoiMir]]></pl>
         </locale>
         <locale name="socialshare.settings.show.livejournal">
             <de><![CDATA[Livejournal]]></de>
             <en><![CDATA[Livejournal]]></en>
+            <es><![CDATA[Livejournal]]></es>
+            <pt><![CDATA[Livejournal]]></pt>
+            <fr><![CDATA[Livejournal]]></fr>
+            <it><![CDATA[Livejournal]]></it>
+            <pl><![CDATA[Livejournal]]></pl>
         </locale>
         <locale name="socialshare.settings.show.liveinternet">
             <de><![CDATA[Liveinternet]]></de>
             <en><![CDATA[Liveinternet]]></en>
+            <es><![CDATA[Liveinternet]]></es>
+            <pt><![CDATA[Liveinternet]]></pt>
+            <fr><![CDATA[Liveinternet]]></fr>
+            <it><![CDATA[Liveinternet]]></it>
+            <pl><![CDATA[Liveinternet]]></pl>
         </locale>
         <locale name="socialshare.settings.show.line">
             <de><![CDATA[Line]]></de>
             <en><![CDATA[Line]]></en>
+            <es><![CDATA[Line]]></es>
+            <pt><![CDATA[Line]]></pt>
+            <fr><![CDATA[Line]]></fr>
+            <it><![CDATA[Line]]></it>
+            <pl><![CDATA[Line]]></pl>
         </locale>
         <locale name="socialshare.settings.show.delicious">
             <de><![CDATA[Delicious]]></de>
             <en><![CDATA[Delicious]]></en>
+            <es><![CDATA[Delicious]]></es>
+            <pt><![CDATA[Delicious]]></pt>
+            <fr><![CDATA[Delicious]]></fr>
+            <it><![CDATA[Delicious]]></it>
+            <pl><![CDATA[Delicious]]></pl>
         </locale>
         <locale name="socialshare.settings.show.viber">
             <de><![CDATA[Viber]]></de>
             <en><![CDATA[Viber]]></en>
+            <es><![CDATA[Viber]]></es>
+            <pt><![CDATA[Viber]]></pt>
+            <fr><![CDATA[Viber]]></fr>
+            <it><![CDATA[Viber]]></it>
+            <pl><![CDATA[Viber]]></pl>
         </locale>
         <locale name="socialshare.settings.show.stumbleupon">
             <de><![CDATA[StumbleUpon]]></de>
             <en><![CDATA[StumbleUpon]]></en>
+            <es><![CDATA[StumbleUpon]]></es>
+            <pt><![CDATA[StumbleUpon]]></pt>
+            <fr><![CDATA[StumbleUpon]]></fr>
+            <it><![CDATA[StumbleUpon]]></it>
+            <pl><![CDATA[StumbleUpon]]></pl>
         </locale>
         <locale name="socialshare.settings.show.evernote">
             <de><![CDATA[Evernote]]></de>
             <en><![CDATA[Evernote]]></en>
+            <es><![CDATA[Evernote]]></es>
+            <pt><![CDATA[Evernote]]></pt>
+            <fr><![CDATA[Evernote]]></fr>
+            <it><![CDATA[Evernote]]></it>
+            <pl><![CDATA[Evernote]]></pl>
         </locale>
         <locale name="socialshare.settings.show.instapaper">
             <de><![CDATA[Instapaper]]></de>
             <en><![CDATA[Instapaper]]></en>
+            <es><![CDATA[Instapaper]]></es>
+            <pt><![CDATA[Instapaper]]></pt>
+            <fr><![CDATA[Instapaper]]></fr>
+            <it><![CDATA[Instapaper]]></it>
+            <pl><![CDATA[Instapaper]]></pl>
         </locale>
         <locale name="socialshare.settings.show.buffer">
             <de><![CDATA[Buffer]]></de>
             <en><![CDATA[Buffer]]></en>
+            <es><![CDATA[Buffer]]></es>
+            <pt><![CDATA[Buffer]]></pt>
+            <fr><![CDATA[Buffer]]></fr>
+            <it><![CDATA[Buffer]]></it>
+            <pl><![CDATA[Buffer]]></pl>
         </locale>
         <locale name="socialshare.settings.show.blogger">
             <de><![CDATA[Blogger]]></de>
             <en><![CDATA[Blogger]]></en>
+            <es><![CDATA[Blogger]]></es>
+            <pt><![CDATA[Blogger]]></pt>
+            <fr><![CDATA[Blogger]]></fr>
+            <it><![CDATA[Blogger]]></it>
+            <pl><![CDATA[Blogger]]></pl>
         </locale>
         <locale name="socialshare.settings.show.baidu">
             <de><![CDATA[Baidu]]></de>
             <en><![CDATA[Baidu]]></en>
+            <es><![CDATA[Baidu]]></es>
+            <pt><![CDATA[Baidu]]></pt>
+            <fr><![CDATA[Baidu]]></fr>
+            <it><![CDATA[Baidu]]></it>
+            <pl><![CDATA[Baidu]]></pl>
         </locale>
         <locale name="socialshare.settings.show.tumblr">
             <de><![CDATA[Tumblr]]></de>
             <en><![CDATA[Tumblr]]></en>
+            <es><![CDATA[Tumblr]]></es>
+            <pt><![CDATA[Tumblr]]></pt>
+            <fr><![CDATA[Tumblr]]></fr>
+            <it><![CDATA[Tumblr]]></it>
+            <pl><![CDATA[Tumblr]]></pl>
         </locale>
         <locale name="socialshare.settings.show.wordpress">
             <de><![CDATA[WordPress]]></de>
             <en><![CDATA[WordPress]]></en>
+            <es><![CDATA[WordPress]]></es>
+            <pt><![CDATA[WordPress]]></pt>
+            <fr><![CDATA[WordPress]]></fr>
+            <it><![CDATA[WordPress]]></it>
+            <pl><![CDATA[WordPress]]></pl>
         </locale>
         <locale name="socialshare.settings.show.weibo">
             <de><![CDATA[Weibo]]></de>
             <en><![CDATA[Weibo]]></en>
+            <es><![CDATA[Weibo]]></es>
+            <pt><![CDATA[Weibo]]></pt>
+            <fr><![CDATA[Weibo]]></fr>
+            <it><![CDATA[Weibo]]></it>
+            <pl><![CDATA[Weibo]]></pl>
         </locale>
         <locale name="socialshare.settings.show.reddit">
             <de><![CDATA[Reddit]]></de>
             <en><![CDATA[Reddit]]></en>
+            <es><![CDATA[Reddit]]></es>
+            <pt><![CDATA[Reddit]]></pt>
+            <fr><![CDATA[Reddit]]></fr>
+            <it><![CDATA[Reddit]]></it>
+            <pl><![CDATA[Reddit]]></pl>
         </locale>
         <locale name="socialshare.settings.show.telegram">
             <de><![CDATA[Telegram]]></de>
             <en><![CDATA[Telegram]]></en>
+            <es><![CDATA[Telegram]]></es>
+            <pt><![CDATA[Telegram]]></pt>
+            <fr><![CDATA[Telegram]]></fr>
+            <it><![CDATA[Telegram]]></it>
+            <pl><![CDATA[Telegram]]></pl>
         </locale>
         <locale name="socialshare.settings.show.facebook">
             <de><![CDATA[Facebook]]></de>
             <en><![CDATA[Facebook]]></en>
+            <es><![CDATA[Facebook]]></es>
+            <pt><![CDATA[Facebook]]></pt>
+            <fr><![CDATA[Facebook]]></fr>
+            <it><![CDATA[Facebook]]></it>
+            <pl><![CDATA[Facebook]]></pl>
         </locale>
         <locale name="socialshare.settings.show.twitter">
-            <de><![CDATA[X (ehemalig Twitter)]]></de>
+            <de><![CDATA[X (ehemals Twitter)]]></de>
             <en><![CDATA[X (formerly Twitter)]]></en>
+            <es><![CDATA[X (antes Twitter)]]></es>
+            <pt><![CDATA[X (anteriormente Twitter)]]></pt>
+            <fr><![CDATA[X (anciennement Twitter)]]></fr>
+            <it><![CDATA[X (in precedenza Twitter)]]></it>
+            <pl><![CDATA[X (dawniej Twitter)]]></pl>
         </locale>
 
         <locale name="socialshare.settings.show.whatsapp">
             <de><![CDATA[WhatsApp]]></de>
             <en><![CDATA[WhatsApp]]></en>
+            <es><![CDATA[WhatsApp]]></es>
+            <pt><![CDATA[WhatsApp]]></pt>
+            <fr><![CDATA[WhatsApp]]></fr>
+            <it><![CDATA[WhatsApp]]></it>
+            <pl><![CDATA[WhatsApp]]></pl>
         </locale>
         <locale name="socialshare.settings.show.pinterest">
             <de><![CDATA[Pinterest]]></de>
             <en><![CDATA[Pinterest]]></en>
+            <es><![CDATA[Pinterest]]></es>
+            <pt><![CDATA[Pinterest]]></pt>
+            <fr><![CDATA[Pinterest]]></fr>
+            <it><![CDATA[Pinterest]]></it>
+            <pl><![CDATA[Pinterest]]></pl>
         </locale>
         <locale name="socialshare.settings.show.mail">
             <de><![CDATA[E-Mail]]></de>
             <en><![CDATA[E-Mail]]></en>
+            <es><![CDATA[Correo electrónico]]></es>
+            <pt><![CDATA[E-mail]]></pt>
+            <fr><![CDATA[E-mail]]></fr>
+            <it><![CDATA[E-mail]]></it>
+            <pl><![CDATA[E-mail]]></pl>
         </locale>
         <locale name="socialshare.settings.show.linkedin">
             <de><![CDATA[LinkedIn]]></de>
             <en><![CDATA[LinkedIn]]></en>
+            <es><![CDATA[LinkedIn]]></es>
+            <pt><![CDATA[LinkedIn]]></pt>
+            <fr><![CDATA[LinkedIn]]></fr>
+            <it><![CDATA[LinkedIn]]></it>
+            <pl><![CDATA[LinkedIn]]></pl>
         </locale>
         <locale name="socialshare.settings.show.xing">
             <de><![CDATA[Xing]]></de>
             <en><![CDATA[Xing]]></en>
+            <es><![CDATA[Xing]]></es>
+            <pt><![CDATA[Xing]]></pt>
+            <fr><![CDATA[Xing]]></fr>
+            <it><![CDATA[Xing]]></it>
+            <pl><![CDATA[Xing]]></pl>
         </locale>
 
 
         <locale name="socialshare.settings.general.title">
             <de><![CDATA[Allgemeine Einstellungen]]></de>
             <en><![CDATA[General settings]]></en>
+            <es><![CDATA[Configuración general]]></es>
+            <pt><![CDATA[Definições gerais]]></pt>
+            <fr><![CDATA[Paramètres généraux]]></fr>
+            <it><![CDATA[Impostazioni generali]]></it>
+            <pl><![CDATA[Ustawienia ogólne]]></pl>
         </locale>
 
 
         <locale name="socialshare.settings.general.standardImage">
             <de><![CDATA[Bild]]></de>
             <en><![CDATA[Image]]></en>
+            <es><![CDATA[Imagen]]></es>
+            <pt><![CDATA[Imagem]]></pt>
+            <fr><![CDATA[Image]]></fr>
+            <it><![CDATA[Immagine]]></it>
+            <pl><![CDATA[Obraz]]></pl>
         </locale>
         <locale name="socialshare.settings.general.standardImage.desc">
-            <de><![CDATA[Dieses Bild wird nur dann verwendet, wenn eine Seite kein Bild in Seiteneinstellungen (Seitenbild) oder in Meta-Seiteneinstellungen eingestellt hat. Empfohlene Bildgröße: 1200 × 630 Pixel.]]></de>
+            <de><![CDATA[Dieses Bild wird verwendet, wenn für eine Seite weder in den Seiteneinstellungen (Seitenbild) noch in den Meta-Seiteneinstellungen ein Bild hinterlegt ist. Empfohlene Bildgröße: 1200 × 630 Pixel.]]></de>
             <en><![CDATA[This image will be used if the site has no image of its own in the meta or page settings (site image). Recommended image size: 1200 × 630 pixels.]]></en>
+            <es><![CDATA[Esta imagen se utiliza cuando la página no tiene una imagen propia en la configuración de la página (imagen de la página) ni en la configuración de metadatos. Tamaño de imagen recomendado: 1200 × 630 píxeles.]]></es>
+            <pt><![CDATA[Esta imagem é utilizada quando a página não tem uma imagem própria nas definições da página (imagem da página) nem nas definições de metadados. Tamanho de imagem recomendado: 1200 × 630 píxeis.]]></pt>
+            <fr><![CDATA[Cette image est utilisée si la page ne possède pas d’image dans les paramètres de la page (image de la page) ni dans les paramètres des métadonnées. Taille d’image recommandée : 1200 × 630 pixels.]]></fr>
+            <it><![CDATA[Questa immagine viene utilizzata quando la pagina non ha un’immagine propria nelle impostazioni della pagina (immagine della pagina) né in quelle dei metadati. Dimensioni consigliate: 1200 × 630 pixel.]]></it>
+            <pl><![CDATA[Ten obraz jest używany, gdy strona nie ma własnego obrazu w ustawieniach strony (obraz strony) ani w ustawieniach metadanych. Zalecany rozmiar obrazu: 1200 × 630 pikseli.]]></pl>
         </locale>
 
         <locale name="socialshare.settings.general.theme">
             <de><![CDATA[Theme]]></de>
             <en><![CDATA[Theme]]></en>
+            <es><![CDATA[Tema]]></es>
+            <pt><![CDATA[Tema]]></pt>
+            <fr><![CDATA[Thème]]></fr>
+            <it><![CDATA[Tema]]></it>
+            <pl><![CDATA[Motyw]]></pl>
         </locale>
         <locale name="socialshare.settings.general.theme.default">
-            <de><![CDATA[Standard Einstellung übernehmen]]></de>
+            <de><![CDATA[Globale Einstellung übernehmen]]></de>
             <en><![CDATA[Use global setting]]></en>
+            <es><![CDATA[Usar la configuración global]]></es>
+            <pt><![CDATA[Utilizar a definição global]]></pt>
+            <fr><![CDATA[Utiliser le paramètre global]]></fr>
+            <it><![CDATA[Usa l’impostazione globale]]></it>
+            <pl><![CDATA[Użyj ustawienia globalnego]]></pl>
         </locale>
         <locale name="socialshare.settings.general.theme.button-classic">
             <de><![CDATA[Button (klassisch)]]></de>
             <en><![CDATA[Button (classic)]]></en>
+            <es><![CDATA[Botón (clásico)]]></es>
+            <pt><![CDATA[Botão (clássico)]]></pt>
+            <fr><![CDATA[Bouton (classique)]]></fr>
+            <it><![CDATA[Pulsante (classico)]]></it>
+            <pl><![CDATA[Przycisk (klasyczny)]]></pl>
         </locale>
         <locale name="socialshare.settings.general.theme.button">
             <de><![CDATA[Button]]></de>
             <en><![CDATA[Button]]></en>
+            <es><![CDATA[Botón]]></es>
+            <pt><![CDATA[Botão]]></pt>
+            <fr><![CDATA[Bouton]]></fr>
+            <it><![CDATA[Pulsante]]></it>
+            <pl><![CDATA[Przycisk]]></pl>
         </locale>
         <locale name="socialshare.settings.general.theme.button-outline">
             <de><![CDATA[Button (Outline)]]></de>
             <en><![CDATA[Button (Outline)]]></en>
+            <es><![CDATA[Botón (con contorno)]]></es>
+            <pt><![CDATA[Botão (com contorno)]]></pt>
+            <fr><![CDATA[Bouton (avec contour)]]></fr>
+            <it><![CDATA[Pulsante (con bordo)]]></it>
+            <pl><![CDATA[Przycisk (z obramowaniem)]]></pl>
         </locale>
         <locale name="socialshare.settings.general.theme.link">
             <de><![CDATA[Link (farbig)]]></de>
             <en><![CDATA[Link (colored)]]></en>
+            <es><![CDATA[Enlace (de color)]]></es>
+            <pt><![CDATA[Ligação (colorida)]]></pt>
+            <fr><![CDATA[Lien (coloré)]]></fr>
+            <it><![CDATA[Link (colorato)]]></it>
+            <pl><![CDATA[Link (kolorowy)]]></pl>
         </locale>
         <locale name="socialshare.settings.general.theme.link-muted">
             <de><![CDATA[Link (dezent)]]></de>
             <en><![CDATA[Link (muted)]]></en>
+            <es><![CDATA[Enlace (discreto)]]></es>
+            <pt><![CDATA[Ligação (discreta)]]></pt>
+            <fr><![CDATA[Lien (discret)]]></fr>
+            <it><![CDATA[Link (discreto)]]></it>
+            <pl><![CDATA[Link (stonowany)]]></pl>
         </locale>
 
         <locale name="socialshare.settings.general.showLabel">
             <de><![CDATA[Label anzeigen]]></de>
             <en><![CDATA[Show label]]></en>
+            <es><![CDATA[Mostrar texto]]></es>
+            <pt><![CDATA[Mostrar texto]]></pt>
+            <fr><![CDATA[Afficher le libellé]]></fr>
+            <it><![CDATA[Mostra il testo]]></it>
+            <pl><![CDATA[Pokaż etykietę]]></pl>
         </locale>
         <locale name="socialshare.settings.general.showIcon">
             <de><![CDATA[Icon anzeigen]]></de>
             <en><![CDATA[Show icon]]></en>
+            <es><![CDATA[Mostrar icono]]></es>
+            <pt><![CDATA[Mostrar ícone]]></pt>
+            <fr><![CDATA[Afficher l’icône]]></fr>
+            <it><![CDATA[Mostra l’icona]]></it>
+            <pl><![CDATA[Pokaż ikonę]]></pl>
         </locale>
         <locale name="socialshare.settings.general.siteName">
-            <de><![CDATA[Seitenname, z.B. "PC Welt"]]></de>
-            <en><![CDATA[Site name, for example. "The New York Times"]]></en>
+            <de><![CDATA[Seitenname, z. B. "PC Welt"]]></de>
+            <en><![CDATA[Site name, for example "The New York Times"]]></en>
+            <es><![CDATA[Nombre del sitio, por ejemplo, "The New York Times"]]></es>
+            <pt><![CDATA[Nome do site, por exemplo, "The New York Times"]]></pt>
+            <fr><![CDATA[Nom du site, par exemple « The New York Times »]]></fr>
+            <it><![CDATA[Nome del sito, ad esempio "The New York Times"]]></it>
+            <pl><![CDATA[Nazwa witryny, np. „The New York Times”]]></pl>
         </locale>
 
 
@@ -543,46 +1162,101 @@
         <locale name="socialshare.settings.twitter.title">
             <de><![CDATA[X / Twitter]]></de>
             <en><![CDATA[X / Twitter]]></en>
+            <es><![CDATA[X / Twitter]]></es>
+            <pt><![CDATA[X / Twitter]]></pt>
+            <fr><![CDATA[X / Twitter]]></fr>
+            <it><![CDATA[X / Twitter]]></it>
+            <pl><![CDATA[X / Twitter]]></pl>
         </locale>
         <locale name="socialshare.settings.twitter.card">
             <de><![CDATA[X / Twitter Card]]></de>
             <en><![CDATA[X / Twitter Card]]></en>
+            <es><![CDATA[Tarjeta de X / Twitter]]></es>
+            <pt><![CDATA[Cartão do X / Twitter]]></pt>
+            <fr><![CDATA[Carte X / Twitter]]></fr>
+            <it><![CDATA[Scheda X / Twitter]]></it>
+            <pl><![CDATA[Karta X / Twitter]]></pl>
         </locale>
         <locale name="socialshare.settings.twitter.card.default">
-            <de><![CDATA[Standard Einstellung verwenden]]></de>
+            <de><![CDATA[Standardeinstellung verwenden]]></de>
             <en><![CDATA[Use default setting]]></en>
+            <es><![CDATA[Usar la configuración predeterminada]]></es>
+            <pt><![CDATA[Utilizar a definição predefinida]]></pt>
+            <fr><![CDATA[Utiliser le paramètre par défaut]]></fr>
+            <it><![CDATA[Usa l’impostazione predefinita]]></it>
+            <pl><![CDATA[Użyj ustawienia domyślnego]]></pl>
         </locale>
         <locale name="socialshare.settings.twitter.card.summary">
             <de><![CDATA[Summary Card]]></de>
             <en><![CDATA[Summary Card]]></en>
+            <es><![CDATA[Tarjeta de resumen]]></es>
+            <pt><![CDATA[Cartão de resumo]]></pt>
+            <fr><![CDATA[Carte de résumé]]></fr>
+            <it><![CDATA[Scheda riepilogativa]]></it>
+            <pl><![CDATA[Karta podsumowania]]></pl>
         </locale>
         <locale name="socialshare.settings.twitter.card.summaryLargeImage">
             <de><![CDATA[Summary Card with Large Image]]></de>
             <en><![CDATA[Summary Card with Large Image]]></en>
+            <es><![CDATA[Tarjeta de resumen con imagen grande]]></es>
+            <pt><![CDATA[Cartão de resumo com imagem grande]]></pt>
+            <fr><![CDATA[Carte de résumé avec grande image]]></fr>
+            <it><![CDATA[Scheda riepilogativa con immagine grande]]></it>
+            <pl><![CDATA[Karta podsumowania z dużym obrazem]]></pl>
         </locale>
         <locale name="socialshare.settings.twitter.card.player">
             <de><![CDATA[Player Card]]></de>
             <en><![CDATA[Player Card]]></en>
+            <es><![CDATA[Tarjeta con reproductor]]></es>
+            <pt><![CDATA[Cartão com leitor multimédia]]></pt>
+            <fr><![CDATA[Carte avec lecteur multimédia]]></fr>
+            <it><![CDATA[Scheda con lettore multimediale]]></it>
+            <pl><![CDATA[Karta z odtwarzaczem]]></pl>
         </locale>
         <locale name="socialshare.settings.twitter.site">
             <de><![CDATA[X-Konto der Website]]></de>
             <en><![CDATA[X account of the website]]></en>
+            <es><![CDATA[Cuenta de X del sitio web]]></es>
+            <pt><![CDATA[Conta do X do site]]></pt>
+            <fr><![CDATA[Compte X du site web]]></fr>
+            <it><![CDATA[Account X del sito web]]></it>
+            <pl><![CDATA[Konto X witryny]]></pl>
         </locale>
         <locale name="socialshare.settings.twitter.site.description">
             <de><![CDATA[Account-Handle inklusive @, z.B. @quiqqer]]></de>
             <en><![CDATA[Account handle including @, for example @quiqqer]]></en>
+            <es><![CDATA[Nombre de usuario de la cuenta, incluido @, por ejemplo, @quiqqer]]></es>
+            <pt><![CDATA[Nome de utilizador da conta, incluindo @, por exemplo, @quiqqer]]></pt>
+            <fr><![CDATA[Identifiant du compte avec @, par exemple @quiqqer]]></fr>
+            <it><![CDATA[Nome utente dell’account, incluso @, ad esempio @quiqqer]]></it>
+            <pl><![CDATA[Nazwa użytkownika konta wraz z @, np. @quiqqer]]></pl>
         </locale>
         <locale name="socialshare.settings.twitter.creator">
             <de><![CDATA[X-Konto des Inhaltsautors]]></de>
             <en><![CDATA[X account of the content author]]></en>
+            <es><![CDATA[Cuenta de X del autor del contenido]]></es>
+            <pt><![CDATA[Conta do X do autor do conteúdo]]></pt>
+            <fr><![CDATA[Compte X de l’auteur du contenu]]></fr>
+            <it><![CDATA[Account X dell’autore del contenuto]]></it>
+            <pl><![CDATA[Konto X autora treści]]></pl>
         </locale>
         <locale name="socialshare.settings.twitter.creator.description">
             <de><![CDATA[Standard-Account des Inhaltsautors inklusive @]]></de>
             <en><![CDATA[Default account of the content author including @]]></en>
+            <es><![CDATA[Cuenta predeterminada del autor del contenido, incluido @]]></es>
+            <pt><![CDATA[Conta predefinida do autor do conteúdo, incluindo @]]></pt>
+            <fr><![CDATA[Compte par défaut de l’auteur du contenu, avec @]]></fr>
+            <it><![CDATA[Account predefinito dell’autore del contenuto, incluso @]]></it>
+            <pl><![CDATA[Domyślne konto autora treści wraz z @]]></pl>
         </locale>
         <locale name="socialshare.settings.twitter.creator.page.description">
             <de><![CDATA[Optionaler Account des Inhaltsautors inklusive @; überschreibt die Projekteinstellung.]]></de>
             <en><![CDATA[Optional account of the content author including @; overrides the project setting.]]></en>
+            <es><![CDATA[Cuenta opcional del autor del contenido, incluido @; sustituye la configuración del proyecto.]]></es>
+            <pt><![CDATA[Conta opcional do autor do conteúdo, incluindo @; substitui a definição do projeto.]]></pt>
+            <fr><![CDATA[Compte facultatif de l’auteur du contenu, avec @ ; remplace le paramètre du projet.]]></fr>
+            <it><![CDATA[Account facoltativo dell’autore del contenuto, incluso @; sostituisce l’impostazione del progetto.]]></it>
+            <pl><![CDATA[Opcjonalne konto autora treści wraz z @; zastępuje ustawienie projektu.]]></pl>
         </locale>
 
 
@@ -590,10 +1264,20 @@
         <locale name="bricks.socialshareList.title">
             <de><![CDATA[Social Share]]></de>
             <en><![CDATA[Social Share]]></en>
+            <es><![CDATA[Compartir en redes sociales]]></es>
+            <pt><![CDATA[Partilha nas redes sociais]]></pt>
+            <fr><![CDATA[Partage sur les réseaux sociaux]]></fr>
+            <it><![CDATA[Condivisione sui social]]></it>
+            <pl><![CDATA[Udostępnianie w mediach społecznościowych]]></pl>
         </locale>
         <locale name="bricks.socialshareList.description">
-            <de><![CDATA[Social media share buttons - geeignet zum Teilen einer Seite (Artikel, Blog, usw.).]]></de>
-            <en><![CDATA[Social media share buttons - allow to share content of your web page.]]></en>
+            <de><![CDATA[Social-Share-Buttons zum Teilen einer Seite, zum Beispiel eines Artikels oder Blogbeitrags.]]></de>
+            <en><![CDATA[Social media share buttons for sharing a page, such as an article or blog post.]]></en>
+            <es><![CDATA[Botones para compartir una página, como un artículo o una entrada de blog, en redes sociales.]]></es>
+            <pt><![CDATA[Botões para partilhar uma página, como um artigo ou uma publicação de blogue, nas redes sociais.]]></pt>
+            <fr><![CDATA[Boutons permettant de partager une page, comme un article ou un billet de blog, sur les réseaux sociaux.]]></fr>
+            <it><![CDATA[Pulsanti per condividere una pagina, ad esempio un articolo o un post del blog, sui social.]]></it>
+            <pl><![CDATA[Przyciski udostępniania strony, np. artykułu lub wpisu na blogu, w mediach społecznościowych.]]></pl>
         </locale>
     </groups>
 </locales>
