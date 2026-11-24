@@ -19,6 +19,7 @@
     },
     "require": {
         "php": "^8.2",
+        "quiqqer/controls": "^2.7.0",
         "quiqqer/core": "^2",
         "quiqqer/fontawesome": "^6",
         "quiqqer/meta": "^3"

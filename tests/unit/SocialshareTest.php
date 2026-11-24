@@ -2,6 +2,8 @@
 
 namespace QUI\Socialshare;
 
+use DOMDocument;
+use DOMElement;
 use PHPUnit\Framework\TestCase;
 
 require_once __DIR__ . '/../Fixtures/TestSocialshare.php';
@@ -31,9 +33,17 @@ class SocialshareTest extends TestCase
         // icon-only: the descriptive name becomes the aria-label
         $IconShare = new TestSocialshare();
         $IconShare->hideLabel();
-        $body = $IconShare->getBody();
-        self::assertStringNotContainsString('quiqqer-socialshare__label', $body);
-        self::assertSame('Auf Test teilen', $IconShare->getAttribute('aria-label'));
+        $html = $IconShare->create();
+        self::assertStringNotContainsString('quiqqer-socialshare__label', $html);
+
+        $Document = new DOMDocument();
+        $Document->loadHTML($html, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+        $Link = $Document->documentElement;
+        self::assertInstanceOf(DOMElement::class, $Link);
+        self::assertSame('a', $Link->tagName);
+        self::assertSame('Auf Test teilen', $Link->getAttribute('aria-label'));
+        self::assertSame('_blank', $Link->getAttribute('target'));
+        self::assertSame('noopener noreferrer', $Link->getAttribute('rel'));
     }
 
     public function testVisibilityAndThemeSettings(): void
