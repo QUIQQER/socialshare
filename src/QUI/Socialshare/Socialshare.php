@@ -177,21 +177,13 @@ abstract class Socialshare extends Control
     }
 
     /**
-     * The share link is rendered directly as this control's <a> node (an
-     * unusual case for a QUIControl), so it needs a couple of attributes the
-     * default whitelist does not allow: aria-label for the icon-only
-     * accessible name and rel for the target="_blank" link. Kept local to this
-     * control so every other QUIControl keeps the default whitelist.
+     * Allow rel on the share link for target="_blank".
      *
      * @param string $attribute
      */
     protected function isAllowedAttribute($attribute): bool
     {
-        if ($attribute === 'aria-label' || $attribute === 'rel') {
-            return true;
-        }
-
-        return parent::isAllowedAttribute($attribute);
+        return $attribute === 'rel' || parent::isAllowedAttribute($attribute);
     }
 
     /**
