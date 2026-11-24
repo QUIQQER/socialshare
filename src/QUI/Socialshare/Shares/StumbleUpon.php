@@ -43,7 +43,7 @@ class StumbleUpon extends Socialshare
      */
     public function getLabel(): string
     {
-        return QUI::getLocale()->get('quiqqer/socialshare', 'label-StumbleUpon');
+        return QUI::getLocale()->get('quiqqer/socialshare', 'label-stumbleupon');
     }
 
     /**
