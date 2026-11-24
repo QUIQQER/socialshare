@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-
-
-    <locale group="quiqqer/socialshare" var="admin.types.socialshare"/>
-    <desc>
-        <locale group="quiqqer/socialshare" var="admin.types.socialshare.desc"/>
-    </desc>
-
     <!-- extra attributes -->
     <attributes>
         <attribute>quiqqer.socialshare.title</attribute>
